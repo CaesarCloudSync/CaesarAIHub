@@ -5,7 +5,7 @@ import sys
 from CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
 from CaesarAIRealDebird.responses.StatusAndProgressResponse import StatusAndProgressResponse
 from CaesarAIRealDebird.responses.StreamingLinkResponse import StreamingLinkResponse
-uri = "http://127.0.0.1:8080" #"https://blacktechdivisionreward-hrjw5cc7pa-uc.a.run.app"
+uri = "http://127.0.0.1:8081" #"https://blacktechdivisionreward-hrjw5cc7pa-uc.a.run.app"
 title = "Solo Leveling"
 season = 1
 episode = 12
