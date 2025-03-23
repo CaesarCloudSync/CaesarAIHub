@@ -1,0 +1,6 @@
+1. Deal with API Key
+2. Create central FastAPI app that runs on port 80 and request data on different ports then serves them through that api CaesarAIMusic:8081<-CaesarAICentral:80 -> CaesarAIStream : 8080
+                                                                                                                                                |
+                                                                                                                                                Jackett: 9117
+3. Fork Stremio 
+4. Access data from API's
