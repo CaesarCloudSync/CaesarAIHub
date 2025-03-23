@@ -27,7 +27,7 @@ async def index():
 @app.get('/api/v1/get_single_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_single_episodes(title:str,season:int,episode:int):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
+        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
         response = requests.get(url)
         caejackett = CaesarAIJackett(response.content)
         torrentinfo = caejackett.get_torrent_info()
@@ -38,7 +38,7 @@ async def get_single_episodes(title:str,season:int,episode:int):
 @app.get('/api/v1/get_batch_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_batch_episodes(title:str,season:int):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
         response = requests.get(url)
         caejackett = CaesarAIJackett(response.content)
         torrentinfo = caejackett.get_torrent_info()
@@ -49,7 +49,7 @@ async def get_batch_episodes(title:str,season:int):
 @app.get('/api/v1/get_single_and_batched_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_single_and_batched_episodes(title:str,season:int,episode:int):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
+        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
         response = requests.get(url)
         caejackett = CaesarAIJackett(response.content)
         torrentinfo = caejackett.get_torrent_info()

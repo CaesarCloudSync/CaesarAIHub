@@ -2,12 +2,13 @@ import requests
 import httpx
 import asyncio
 from typing import Union
+from CaesarAIConstants import CaesarAIConstants
 from CaesarAIRealDebird.models.StreamItem import StreamItem
 from CaesarAIRealDebird.responses.StatusAndProgressResponse import StatusAndProgressResponse
 class CaesarAIRealDebrid:
     def __init__(self) -> None:
         self.url="https://api.real-debrid.com/rest/1.0/"
-        self.api_key = "ZJ5LBOGWLSG4QLF7A5HSMGBJUOSIEXGH3BKLZAM2HV4TM7ACG4DA"
+        self.api_key = CaesarAIConstants.REALDEBRID_API_KEY
         self.headers = {"Authorization": f"Bearer {self.api_key}"}
 
     def add_magnet(self,magnet:str) -> Union[str,None]:
