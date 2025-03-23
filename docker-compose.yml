@@ -2,6 +2,7 @@ services:
   moviestreaming:
     container_name: caesaraimoviestream
     build: .
+    restart: unless-stopped
     env_file:
       - .env
     ports:
