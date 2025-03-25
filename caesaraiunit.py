@@ -1,21 +1,23 @@
+import os
 import json
 import requests
 import unittest
 import sys
-
+from dotenv import load_dotenv
 from CaesarAIConstants import CaesarAIConstants
 from CaesarAITorrentParsers.CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
 from CaesarAIRealDebird.responses.StatusAndProgressResponse import StatusAndProgressResponse
 from CaesarAIRealDebird.responses.StreamingLinkResponse import StreamingLinkResponse
-base_url = "http://localhost:8081/"
 
+base_url = "https://movies.caesaraihub.org/"
+load_dotenv(".env")
 title = "Solo Leveling"
 season = 1
 episode = 12
-api_key = "ZJ5LBOGWLSG4QLF7A5HSMGBJUOSIEXGH3BKLZAM2HV4TM7ACG4DA"
+api_key= os.getenv("REALDEBRID_API_KEY")
 headers = {"Authorization": f"Bearer {api_key}"}
 
-torrent_filname ="/home/amari/Desktop/CaesarAIHub/CaesarAIMovieStream/sampledata/Frieren Beyond the Journeys End S01E01-E04 1080p NF WEB-DL AAC2.0 H 264-VARYG (Sousou no Frieren, Multi-Subs).torrent"
+
 class CaesarAIUnittest(unittest.TestCase):
     def test_get_streaming_link_torrent(self):
 
