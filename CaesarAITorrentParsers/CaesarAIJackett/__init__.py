@@ -1,10 +1,13 @@
 import xml.etree.ElementTree as ET
 from io import BytesIO
-from CaesarAIJackett.models.TorrentItem import TorrentItem
+from CaesarAITorrentParsers.models.TorrentItem import TorrentItem
 from typing import List
+import requests
 class CaesarAIJackett:
-    def __init__(self,xml) -> None:
+    def __init__(self,url) -> None:
         # Extract relevant data
+        response = requests.get(url)
+        xml = response.content
         self.namespace = {'atom': 'http://www.w3.org/2005/Atom', 'torznab': 'http://torznab.com/schemas/2015/feed'}
         tree = ET.parse(BytesIO(xml))
         self.root = tree.getroot()

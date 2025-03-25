@@ -1,5 +1,16 @@
 services:
+  jackett:
+    extends:
+      file: ../CaesarAIJackett/docker-compose.yml
+      service: jackett
+  prowlarr:
+    extends:
+      file: ../CaesarAIProwlarr/docker-compose.yml
+      service: prowlarr
   moviestreaming:
+    depends_on:
+      - jackett
+      - prowlarr # Optional
     container_name: caesaraimoviestream
     build: .
     restart: unless-stopped

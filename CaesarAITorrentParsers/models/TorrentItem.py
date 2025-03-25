@@ -1,4 +1,4 @@
-from pydantic import  BaseModel,computed_field
+from pydantic import  BaseModel,computed_field,root_validator
 from typing import List,Optional,Union
 import PTN
 import re
@@ -7,11 +7,21 @@ class TorrentItem(BaseModel):
     guid: str
     pub_date: Optional[str] = None
     size: int
-    magnet_link: str
+    magnet_link: Optional[str] = None
+    torrent_link: Optional[str] = None
     categories: Optional[List[int]]
     seeders: int
     peers: Optional[int] = None
     indexer:Optional[str] = None
+    
+    @root_validator(pre=True)
+    def validate_links(cls, values):
+        magnet_link = values.get("magnet_link")
+        torrent_link = values.get("torrent_link")
+
+        if not magnet_link and not torrent_link:
+            raise ValueError("Either 'magnet_link' or 'torrent_link' must be provided.")
+        return values
 
     @staticmethod
     def format_season_episode(season:Union[str,List[str]], episode:Union[str,List[str]]):

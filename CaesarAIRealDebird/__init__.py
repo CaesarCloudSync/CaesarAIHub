@@ -1,3 +1,4 @@
+import io
 import requests
 import httpx
 import asyncio
@@ -14,6 +15,17 @@ class CaesarAIRealDebrid:
     def add_magnet(self,magnet:str) -> Union[str,None]:
         d = {'magnet':magnet}
         response = requests.post(f"{self.url}/torrents/addMagnet", data=d,headers=self.headers)
+        if response.status_code == 201:
+            return response.json()["id"]
+        else:
+            return None
+    def add_torrent(self,torrent_link:str) -> Union[str,None]:
+        response = requests.get(torrent_link)
+
+        # Convert response.content (bytes) to a BufferedReader
+        buffered_reader = io.BufferedReader(io.BytesIO(response.content))
+        
+        response = requests.put("https://api.real-debrid.com/rest/1.0/torrents/addTorrent", headers=self.headers, data=buffered_reader)
         if response.status_code == 201:
             return response.json()["id"]
         else:

@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 import requests
 from io import BytesIO
 from typing import Optional
-from CaesarAIJackett import CaesarAIJackett
+from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
 from CaesarAIRealDebird import CaesarAIRealDebrid
 import asyncio
 url = "http://localhost:9117/api/v2.0/indexers/all/results/torznab?apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&t=tvsearch&q=Solo Leveling&season=1&ep=7"

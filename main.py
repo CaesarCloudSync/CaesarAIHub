@@ -1,10 +1,12 @@
 import uvicorn
 from fastapi import FastAPI
 import requests
+from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
-from CaesarAIJackett import CaesarAIJackett
+from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
 from CaesarAIConstants import CaesarAIConstants
-from CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
+from CaesarAITorrentParsers.CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
+from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
 from CaesarAIRealDebird.requestmodels.StreamingLinkRequest import StreamingLinkRequest
 from CaesarAIRealDebird import CaesarAIRealDebrid
 from CaesarAIRealDebird.responses.StreamingLinkResponse import StreamingLinkResponse
@@ -25,13 +27,19 @@ caesaraird = CaesarAIRealDebrid()
 async def index():
     return "Welcome to CaesarAI Template. Hello"
 @app.get('/api/v1/get_single_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
-async def get_single_episodes(title:str,season:int,episode:int):
+async def get_single_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
-        response = requests.get(url)
-        caejackett = CaesarAIJackett(response.content)
-        torrentinfo = caejackett.get_torrent_info()
-        torrentinfo = caejackett.get_single_episodes()
+        if not service or "jackett":
+            url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
+            caejackett = CaesarAIJackett(url)
+            torrentinfo = caejackett.get_torrent_info()
+            torrentinfo = caejackett.get_single_episodes()
+        else:
+            url = f"{CaesarAIConstants.BASE_PROWLER_URL}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season_episode(season,episode)}"
+            caeprowlarr = CaesarAIProwlarr(url)
+            torrentinfo = caeprowlarr.get_torrent_info()
+            torrentinfo = caeprowlarr.get_single_episodes()
+
         return {"episodes":torrentinfo}
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
@@ -39,8 +47,8 @@ async def get_single_episodes(title:str,season:int,episode:int):
 async def get_batch_episodes(title:str,season:int):
     try:
         url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
-        response = requests.get(url)
-        caejackett = CaesarAIJackett(response.content)
+        
+        caejackett = CaesarAIJackett(url)
         torrentinfo = caejackett.get_torrent_info()
         torrentinfo = caejackett.get_batch_episodes()
         return {"episodes":torrentinfo}
@@ -50,8 +58,7 @@ async def get_batch_episodes(title:str,season:int):
 async def get_single_and_batched_episodes(title:str,season:int,episode:int):
     try:
         url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
-        response = requests.get(url)
-        caejackett = CaesarAIJackett(response.content)
+        caejackett = CaesarAIJackett(url)
         torrentinfo = caejackett.get_torrent_info()
         torrentinfo_single = caejackett.get_single_episodes()
         torrentinfo_batched = caejackett.get_batch_episodes()
@@ -63,13 +70,25 @@ async def get_single_and_batched_episodes(title:str,season:int,episode:int):
 @app.post('/api/v1/torrent_magnet',response_model=StatusAndProgressResponse)# GET # allow all origins all methods.
 async def torrent_magnet(magnetdata:StreamingLinkRequest):
     try:
+        torrent_link = magnetdata.torrent_link
         magnet_link = magnetdata.magnet_link
-        _id = caesaraird.add_magnet(magnet_link)
-        caesaraird.select_files(_id)
-        return caesaraird.get_progress_and_status(_id)
+        if magnet_link:
+            magnet_link = magnetdata.magnet_link
+            _id = caesaraird.add_magnet(magnet_link)
+            caesaraird.select_files(_id)
+            return caesaraird.get_progress_and_status(_id)
+
+        elif torrent_link:
+            torrent_link = torrent_link.replace(CaesarAIConstants.BASE_LOCALHOST,CaesarAIConstants.BASE_PROWLER_CONTAINER)
+            _id = caesaraird.add_torrent(torrent_link)
+            caesaraird.select_files(_id)
+            return caesaraird.get_progress_and_status(_id)
+
+    
 
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
+
 @app.get('/api/v1/check_torrent',response_model=StatusAndProgressResponse)# GET # allow all origins all methods.
 async def check_torrent(_id:str):
     try:
