@@ -44,27 +44,42 @@ async def get_single_episodes(title:str,season:int,episode:int,service:Optional[
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 @app.get('/api/v1/get_batch_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
-async def get_batch_episodes(title:str,season:int):
+async def get_batch_episodes(title:str,season:int,service:Optional[str]=None):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
-        
-        caejackett = CaesarAIJackett(url)
-        torrentinfo = caejackett.get_torrent_info()
-        torrentinfo = caejackett.get_batch_episodes()
+        if not service or "jackett":
+            url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+            caejackett = CaesarAIJackett(url)
+            torrentinfo = caejackett.get_torrent_info()
+            torrentinfo = caejackett.get_batch_episodes()
+        else:
+            url = f"{CaesarAIConstants.BASE_PROWLER_URL}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
+            caeprowlarr = CaesarAIProwlarr(url)
+            torrentinfo = caeprowlarr.get_torrent_info()
+            torrentinfo = caeprowlarr.get_batch_episodes()
+
         return {"episodes":torrentinfo}
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 @app.get('/api/v1/get_single_and_batched_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
-async def get_single_and_batched_episodes(title:str,season:int,episode:int):
+async def get_single_and_batched_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:
-        url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
-        caejackett = CaesarAIJackett(url)
-        torrentinfo = caejackett.get_torrent_info()
-        torrentinfo_single = caejackett.get_single_episodes()
-        torrentinfo_batched = caejackett.get_batch_episodes()
-        
-        torrentinfo = torrentinfo_single + torrentinfo_batched
-        return {"episodes":torrentinfo}
+        if not service or "jackett":
+            url = f"{CaesarAIConstants.BASE_JACKETT_URL}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+            caejackett = CaesarAIJackett(url)
+            torrentinfo_single = caejackett.get_single_episodes()
+            torrentinfo_batched = caejackett.get_batch_episodes()
+            
+            torrentinfo = torrentinfo_single + torrentinfo_batched
+            return {"episodes":torrentinfo}
+        else:
+            url = f"{CaesarAIConstants.BASE_PROWLER_URL}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
+            caeprowlarr = CaesarAIProwlarr(url)
+            torrentinfo_single = caeprowlarr.get_single_episodes()
+            torrentinfo_batched = caeprowlarr.get_batch_episodes()
+            
+            torrentinfo = torrentinfo_single + torrentinfo_batched
+            return {"episodes":torrentinfo}
+
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 @app.post('/api/v1/torrent_magnet',response_model=StatusAndProgressResponse)# GET # allow all origins all methods.

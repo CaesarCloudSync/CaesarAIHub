@@ -14,6 +14,8 @@ class CaesarAIProwlarr:
     @staticmethod
     def format_season_episode(season:Union[str,int], episode:Union[str,int]) -> str:
         return f"S{int(season):02d}E{int(episode):02d}"
+    def format_season(season:Union[str,int]) -> str:
+        return f"S{int(season):02d}"
     def get_torrent_info(self,verbose=0) -> List[TorrentItem]:
         for item in self.items:
             magnet_link = item.get("guid") if "magnet:?xt=urn:btih:" in item.get("guid") else None
