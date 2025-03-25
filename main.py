@@ -25,7 +25,10 @@ caesaraird = CaesarAIRealDebrid()
 
 @app.get('/')# GET # allow all origins all methods.
 async def index():
-    return "Welcome to CaesarAI Template. Hello"
+    return "Welcome to CaesarAIMovieStream."
+@app.get('/healthcheck')# GET # allow all origins all methods.
+async def healthcheck():
+    return {"status":"OK"}
 @app.get('/api/v1/get_single_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_single_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:
