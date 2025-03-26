@@ -4,8 +4,9 @@ import httpx
 import asyncio
 from typing import Union
 from CaesarAIConstants import CaesarAIConstants
-from CaesarAIRealDebird.models.StreamItem import StreamItem
-from CaesarAIRealDebird.responses.StatusAndProgressResponse import StatusAndProgressResponse
+from CaesarAIRealDebrid.models.ContainerStreamItem import ContainerStreamItem
+from CaesarAIRealDebrid.models.StreamItem import StreamItem
+from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
 class CaesarAIRealDebrid:
     def __init__(self) -> None:
         self.url="https://api.real-debrid.com/rest/1.0/"
@@ -14,7 +15,9 @@ class CaesarAIRealDebrid:
 
     def add_magnet(self,magnet:str) -> Union[str,None]:
         d = {'magnet':magnet}
+
         response = requests.post(f"{self.url}/torrents/addMagnet", data=d,headers=self.headers)
+
         if response.status_code == 201:
             return response.json()["id"]
         else:
@@ -33,6 +36,14 @@ class CaesarAIRealDebrid:
     def get_torrent_info(self,_id):
         response = requests.get(f"{self.url}/torrents/info/{_id}",headers=self.headers)
         return response.json()
+    async def get_streaming_info(self,containeritem:ContainerStreamItem):
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{self.url}/streaming/mediaInfos/{containeritem.id}", headers=self.header)
+            if response.status_code == 200:
+                return StreamItem.model_validate(response.json())
+            else:
+                return response.status_code
+
     
     def get_progress_and_status(self,_id) -> StatusAndProgressResponse:
         torrentinfo = self.get_torrent_info(_id) # May have to store id in a supabase redis instance to track progress.
@@ -48,7 +59,7 @@ class CaesarAIRealDebrid:
         async with httpx.AsyncClient() as client:
             response = await client.post(f"{self.url}/unrestrict/link", headers=headers, data={"link":link})
             if response.status_code == 200:
-                return StreamItem.model_validate(response.json())
+                return ContainerStreamItem.model_validate(response.json())
             else:
                 return response.status_code
     async def get_streaming_links(self,_id):

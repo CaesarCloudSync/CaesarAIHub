@@ -7,10 +7,10 @@ from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
 from CaesarAIConstants import CaesarAIConstants
 from CaesarAITorrentParsers.CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
 from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
-from CaesarAIRealDebird.requestmodels.StreamingLinkRequest import StreamingLinkRequest
-from CaesarAIRealDebird import CaesarAIRealDebrid
-from CaesarAIRealDebird.responses.StreamingLinkResponse import StreamingLinkResponse
-from CaesarAIRealDebird.responses.StatusAndProgressResponse import StatusAndProgressResponse
+from CaesarAIRealDebrid.requestmodels.StreamingLinkRequest import StreamingLinkRequest
+from CaesarAIRealDebrid import CaesarAIRealDebrid
+from CaesarAIRealDebrid.responses.StreamingLinkResponse import StreamingLinkResponse
+from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -85,11 +85,12 @@ async def get_single_and_batched_episodes(title:str,season:int,episode:int,servi
 
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
-@app.post('/api/v1/torrent_magnet',response_model=StatusAndProgressResponse)# GET # allow all origins all methods.
+@app.post('/api/v1/torrent_magnet')# GET # allow all origins all methods.
 async def torrent_magnet(magnetdata:StreamingLinkRequest):
     try:
         torrent_link = magnetdata.torrent_link
         magnet_link = magnetdata.magnet_link
+        print(torrent_link,magnet_link)
         if magnet_link:
             magnet_link = magnetdata.magnet_link
             _id = caesaraird.add_magnet(magnet_link)
@@ -97,7 +98,7 @@ async def torrent_magnet(magnetdata:StreamingLinkRequest):
             return caesaraird.get_progress_and_status(_id)
 
         elif torrent_link:
-            torrent_link = torrent_link.replace(CaesarAIConstants.BASE_LOCALHOST,CaesarAIConstants.BASE_PROWLER_CONTAINER)
+            torrent_link = torrent_link.replace(CaesarAIConstants.BASE_LOCALHOST,CaesarAIConstants.BASE_PROWLER_CONTAINER) if "localhost" in torrent_link else torrent_link
             _id = caesaraird.add_torrent(torrent_link)
             caesaraird.select_files(_id)
             return caesaraird.get_progress_and_status(_id)

@@ -3,7 +3,7 @@ from typing import List,Optional,Union
 import PTN
 from pathlib import Path
 import re
-class StreamItem(BaseModel):
+class ContainerStreamItem(BaseModel):
     id:str
     filename:str
     download:str

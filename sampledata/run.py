@@ -5,7 +5,7 @@ import requests
 from io import BytesIO
 from typing import Optional
 from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
-from CaesarAIRealDebird import CaesarAIRealDebrid
+from CaesarAIRealDebrid import CaesarAIRealDebrid
 import asyncio
 url = "http://localhost:9117/api/v2.0/indexers/all/results/torznab?apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&t=tvsearch&q=Solo Leveling&season=1&ep=7"
 url2 = "http://localhost:9117/api/v2.0/indexers/all/results/torznab?apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&t=tvsearch&q=The Seven Deadly Sins: Four Knights of the Apocalypse&season=2&ep=1"
