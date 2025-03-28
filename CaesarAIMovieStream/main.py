@@ -31,6 +31,11 @@ async def index():
 @app.get('/healthcheck')# GET # allow all origins all methods.
 async def healthcheck():
     return {"status":"OK"}
+
+@app.get("/api/v1/get_indexers")
+async def get_indexers():
+    indexers = CaesarAIJackett.get_all_torrent_indexers()
+    return {"indexers":indexers}
 @app.get('/api/v1/stream_get_single_episodes')# GET # allow all origins all methods. ,response_model=EpisodesResponse
 async def stream_get_single_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:

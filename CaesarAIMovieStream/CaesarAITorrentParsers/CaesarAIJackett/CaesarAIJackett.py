@@ -6,6 +6,8 @@ from typing import List, AsyncGenerator
 import requests
 import json
 from CaesarAIRedis import CaesarAIRedis
+from CaesarSQLDB import caesarcrud
+from imdb import Cinemagoer
 class CaesarAIJackett:
     def __init__(self,url) -> None:
         # Extract relevant data
@@ -15,36 +17,6 @@ class CaesarAIJackett:
         tree = ET.parse(BytesIO(xml))
         self.root = tree.getroot()
         self.torrent_items:List[TorrentItem]= []
-    @staticmethod
-    def get_all_torrent_indexers():
-        cr = CaesarAIRedis()
-        if not cr.getkey("indexers"):
-            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.ALL_INDEXERS_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}"
-            response = requests.get(url)
-            indexers_data = response.json()["Indexers"]
-            indexers = list(set([indexer["ID"] for indexer in indexers_data]))
-            cr.setkey("indexers",json.dumps(indexers))
-            return indexers
-        else:
-            indexers = cr.getkey("indexers")
-            return json.loads(indexers)
-    @staticmethod
-    async def single_episode_streamer(title:str,season:int,episode:int,indexers:List[str]):
-        for indexer in indexers:
-            print(indexer)
-            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
-            caejackett = CaesarAIJackett(url)
-            torrentinfo = caejackett.get_torrent_info()
-            torrentinfo = caejackett.get_single_episodes()
-            yield '{"episodes": ['  # Start of JSON array
-            first = True
-            for torrent in torrentinfo:
-                if not first:
-                    yield ','  # Comma between JSON objects
-                first = False
-                yield json.dumps(torrent.dict())
-            yield ']}'  # End of JSON array
-
 
     def get_torrent_info(self,verbose=0) -> List[TorrentItem]:
     
@@ -106,3 +78,103 @@ class CaesarAIJackett:
         return type(x.episode) == list
     def is_single(self,x:TorrentItem):
         return type(x.episode) != list
+    @staticmethod
+    def get_all_torrent_indexers():
+        cr = CaesarAIRedis()
+        if not cr.getkey("indexers"):
+            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.ALL_INDEXERS_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}"
+            response = requests.get(url)
+            indexers_data = response.json()["Indexers"]
+            indexers = list(set([indexer["ID"] for indexer in indexers_data]))
+            cr.setkey("indexers",json.dumps(indexers))
+            return indexers
+        else:
+            indexers = cr.getkey("indexers")
+            return json.loads(indexers)
+    @staticmethod
+    def get_anilist_id(title:str):
+            query = '''
+                query ($search: String!) {
+                Page {
+                    media(search: $search, type: ANIME) {
+                    id
+                    title {
+                        romaji
+                        english
+                        native
+                    }
+                    }
+                }
+                }
+                '''
+
+            # Define our query variables and values that will be used in the query request
+            variables = {
+                    'search':title
+                }
+
+            url = 'https://graphql.anilist.co'
+
+                # Make the HTTP Api request
+            response = requests.post(url, json={'query': query, 'variables': variables})
+            data = response.json()
+            if len(data["data"]["Page"]["media"]) > 0:
+                anilist_id = data["data"]["Page"]["media"][0]["_id"]
+                return anilist_id
+            else:
+                return None
+    @staticmethod
+    def get_imdb_id(title:str):
+        cinema = Cinemagoer()
+        media_object = cinema.search_movie(title)
+        if len(media_object) > 0:
+            imdb_num_id= cinema.get_imdbID(media_object)
+            mediatype = cinema.get_movie(imdb_num_id)["kind"]
+            imdb_id = f"tt{imdb_num_id}"
+            return imdb_id,mediatype
+
+        else:
+            return None,None
+
+    @staticmethod
+    def get_series_movies_id(torrent:TorrentItem):
+        imdb_id = None
+        anilist_id = None
+        if not CaesarAIConstants.ANIME_JACKETT_CATEGORY in torrent.categories: # Anime Category
+            imdb_id = None #,mediatype = CaesarAIJackett.get_imdb_id(torrent.name)
+            mediatype= None
+        else:
+            anilist_id = CaesarAIJackett.get_anilist_id(torrent.name)
+            mediatype="tv/anime"
+        return imdb_id,anilist_id,mediatype
+            
+
+
+
+
+    @staticmethod
+    async def single_episode_streamer(title:str,season:int,episode:int,indexers:List[str]):
+        for indexer in indexers:
+            print(indexer)
+            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&ep={episode}"
+            caejackett = CaesarAIJackett(url)
+            torrentinfo = caejackett.get_torrent_info()
+            torrentinfo = caejackett.get_single_episodes()
+            
+            yield '{"episodes": ['  # Start of JSON array
+            first = True
+            for torrent in torrentinfo:
+                if not first:
+                    yield ','  # Comma between JSON objects
+                first = False
+                torrent.name
+                # Example usage
+                imdb_id,anilist_id,media_type = CaesarAIJackett.get_series_movies_id(torrent)
+                print("IMDBID:",imdb_id)
+                print("Anilist",anilist_id)
+                print("Media",media_type)
+             
+                # TODO Store in database here asynchrnously with psycog
+
+                yield json.dumps(torrent.dict())
+            yield ']}'  # End of JSON array

@@ -2,7 +2,7 @@ import asyncio
 import aiohttp
 import json
 
-STREAM_URL = "http://127.0.0.1:8081/api/v1/stream_get_single_episodes?title=Fullmetal alchemist&season=1&episode=1"  # Change if hosted elsewhere
+STREAM_URL = "http://127.0.0.1:8081/api/v1/stream_get_single_episodes?title=Friren&season=1&episode=1"  # Change if hosted elsewhere
 
 async def fetch_stream():
     async with aiohttp.ClientSession() as session:
