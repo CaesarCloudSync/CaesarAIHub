@@ -14,7 +14,6 @@ services:
   moviestreaming:
     depends_on:
       - jackett
-      - redis
       - prowlarr # Optional
     container_name: caesaraimoviestream
     build: .
@@ -26,6 +25,3 @@ services:
     volumes:
       - .:/app
 
-# Declare the volume at the bottom of the file
-volumes:
-  redis-data:  # Declare redis-data volume here
