@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:torznab="http://torznab.com/schemas/2015/feed">
+  <channel>
+    <atom:link href="http://localhost:9117/" rel="self" type="application/rss+xml" />
+    <title>AggregateSearch</title>
+    <description>This feed includes all configured trackers</description>
+    <link>http://127.0.0.1/</link>
+    <language>en-US</language>
+    <category>search</category>
+    <item>
+      <title>Princess Connect! Re:Dive S01-S02 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR)</title>
+      <guid>magnet:?xt=urn:btih:84290465d67c878d0b17be0aeccad4de77b96dd3&amp;dn=Princess%20Connect%21%20Re%3ADive%20S01-S02%20VOSTFR%201080p%20WEB%20x264%20AAC%20-Tsundere-Raws%20%28CR%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1671427</comments>
+      <pubDate>Sat, 13 May 2023 14:40:00 +0000</pubDate>
+      <size>36185100288</size>
+      <grabs>209</grabs>
+      <description>Princess Connect! Re:Dive S01-S02 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR)</description>
+      <link>magnet:?xt=urn:btih:84290465d67c878d0b17be0aeccad4de77b96dd3&amp;dn=Princess%20Connect%21%20Re%3ADive%20S01-S02%20VOSTFR%201080p%20WEB%20x264%20AAC%20-Tsundere-Raws%20%28CR%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>131088</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:84290465d67c878d0b17be0aeccad4de77b96dd3&amp;dn=Princess%20Connect%21%20Re%3ADive%20S01-S02%20VOSTFR%201080p%20WEB%20x264%20AAC%20-Tsundere-Raws%20%28CR%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="36185100288" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="131088" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="5" />
+      <torznab:attr name="peers" value="6" />
+      <torznab:attr name="infohash" value="84290465d67c878d0b17be0aeccad4de77b96dd3" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:84290465d67c878d0b17be0aeccad4de77b96dd3&amp;dn=Princess%20Connect%21%20Re%3ADive%20S01-S02%20VOSTFR%201080p%20WEB%20x264%20AAC%20-Tsundere-Raws%20%28CR%29&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E12 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:5b42150db4542bdac633bfc3e9b00758d4d070c3&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E12%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1507920</comments>
+      <pubDate>Mon, 28 Mar 2022 19:46:00 +0000</pubDate>
+      <size>493145280</size>
+      <grabs>399</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E12 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:5b42150db4542bdac633bfc3e9b00758d4d070c3&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E12%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:5b42150db4542bdac633bfc3e9b00758d4d070c3&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E12%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="493145280" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="5b42150db4542bdac633bfc3e9b00758d4d070c3" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:5b42150db4542bdac633bfc3e9b00758d4d070c3&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E12%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E01 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:84699b79ef77a1422bc0a22494c0ae7bd009853d&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E01%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1476152</comments>
+      <pubDate>Mon, 10 Jan 2022 20:19:00 +0000</pubDate>
+      <size>430125888</size>
+      <grabs>849</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E01 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:84699b79ef77a1422bc0a22494c0ae7bd009853d&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E01%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:84699b79ef77a1422bc0a22494c0ae7bd009853d&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E01%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="430125888" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="84699b79ef77a1422bc0a22494c0ae7bd009853d" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:84699b79ef77a1422bc0a22494c0ae7bd009853d&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E01%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E04 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:bd20f9eb4a3974995e70a70c29de533da762de8c&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E04%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1485396</comments>
+      <pubDate>Mon, 31 Jan 2022 23:03:00 +0000</pubDate>
+      <size>429287008</size>
+      <grabs>683</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E04 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:bd20f9eb4a3974995e70a70c29de533da762de8c&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E04%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:bd20f9eb4a3974995e70a70c29de533da762de8c&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E04%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="429287008" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="bd20f9eb4a3974995e70a70c29de533da762de8c" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:bd20f9eb4a3974995e70a70c29de533da762de8c&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E04%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E05 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:ba89947f830d972b418a37006322bfa7ad83e5ed&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E05%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1488376</comments>
+      <pubDate>Tue, 08 Feb 2022 06:22:00 +0000</pubDate>
+      <size>368364736</size>
+      <grabs>641</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E05 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:ba89947f830d972b418a37006322bfa7ad83e5ed&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E05%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:ba89947f830d972b418a37006322bfa7ad83e5ed&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E05%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="368364736" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="ba89947f830d972b418a37006322bfa7ad83e5ed" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:ba89947f830d972b418a37006322bfa7ad83e5ed&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E05%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E02 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:fe0f4a9e3652f7ba50199dcfd4c840fde1a048a7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E02%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1479362</comments>
+      <pubDate>Tue, 18 Jan 2022 06:18:00 +0000</pubDate>
+      <size>327680000</size>
+      <grabs>690</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E02 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:fe0f4a9e3652f7ba50199dcfd4c840fde1a048a7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E02%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:fe0f4a9e3652f7ba50199dcfd4c840fde1a048a7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E02%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="327680000" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="fe0f4a9e3652f7ba50199dcfd4c840fde1a048a7" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:fe0f4a9e3652f7ba50199dcfd4c840fde1a048a7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E02%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E08 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:c2cac328dd4d67564320fafb8ec78ca43d5cc6de&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E08%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1497434</comments>
+      <pubDate>Wed, 02 Mar 2022 06:50:00 +0000</pubDate>
+      <size>313943648</size>
+      <grabs>502</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E08 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:c2cac328dd4d67564320fafb8ec78ca43d5cc6de&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E08%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:c2cac328dd4d67564320fafb8ec78ca43d5cc6de&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E08%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="313943648" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="c2cac328dd4d67564320fafb8ec78ca43d5cc6de" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:c2cac328dd4d67564320fafb8ec78ca43d5cc6de&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E08%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E07 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:2dcb99bb803038da2074daafb6c88b705d6a9a4b&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E07%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1494178</comments>
+      <pubDate>Tue, 22 Feb 2022 02:46:00 +0000</pubDate>
+      <size>303877312</size>
+      <grabs>596</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E07 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:2dcb99bb803038da2074daafb6c88b705d6a9a4b&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E07%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:2dcb99bb803038da2074daafb6c88b705d6a9a4b&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E07%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="303877312" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="1" />
+      <torznab:attr name="peers" value="1" />
+      <torznab:attr name="infohash" value="2dcb99bb803038da2074daafb6c88b705d6a9a4b" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:2dcb99bb803038da2074daafb6c88b705d6a9a4b&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E07%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E11 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:fba218c117d1c94f637e4007dc6477d787f0bbc7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E11%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1505289</comments>
+      <pubDate>Mon, 21 Mar 2022 23:06:00 +0000</pubDate>
+      <size>403911488</size>
+      <grabs>470</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E11 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:fba218c117d1c94f637e4007dc6477d787f0bbc7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E11%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:fba218c117d1c94f637e4007dc6477d787f0bbc7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E11%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="403911488" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="infohash" value="fba218c117d1c94f637e4007dc6477d787f0bbc7" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:fba218c117d1c94f637e4007dc6477d787f0bbc7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E11%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E10 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:8188ff0a8267b68f2d31a4010db490272e5afe66&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E10%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1502585</comments>
+      <pubDate>Tue, 15 Mar 2022 01:18:00 +0000</pubDate>
+      <size>390280000</size>
+      <grabs>449</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E10 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:8188ff0a8267b68f2d31a4010db490272e5afe66&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E10%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:8188ff0a8267b68f2d31a4010db490272e5afe66&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E10%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="390280000" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="infohash" value="8188ff0a8267b68f2d31a4010db490272e5afe66" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:8188ff0a8267b68f2d31a4010db490272e5afe66&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E10%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E09 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:4564085bca2ef82d89adece7d208dcf33fa5ff4e&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E09%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1499973</comments>
+      <pubDate>Tue, 08 Mar 2022 08:37:00 +0000</pubDate>
+      <size>404226048</size>
+      <grabs>525</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E09 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:4564085bca2ef82d89adece7d208dcf33fa5ff4e&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E09%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:4564085bca2ef82d89adece7d208dcf33fa5ff4e&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E09%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="404226048" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="infohash" value="4564085bca2ef82d89adece7d208dcf33fa5ff4e" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:4564085bca2ef82d89adece7d208dcf33fa5ff4e&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E09%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E06 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:e6c686465253916d0a4f7df40f7e50ecc6cceef7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E06%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1491426</comments>
+      <pubDate>Tue, 15 Feb 2022 15:46:00 +0000</pubDate>
+      <size>343513504</size>
+      <grabs>602</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E06 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:e6c686465253916d0a4f7df40f7e50ecc6cceef7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E06%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:e6c686465253916d0a4f7df40f7e50ecc6cceef7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E06%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="343513504" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="infohash" value="e6c686465253916d0a4f7df40f7e50ecc6cceef7" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:e6c686465253916d0a4f7df40f7e50ecc6cceef7&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E06%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>[EMBER] Princess Connect! Re:Dive S02E03 [1080p] [HEVC WEBRip]</title>
+      <guid>magnet:?xt=urn:btih:77b234b679a7c6d0b69f45e957deae9d2223a088&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E03%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</guid>
+      <jackettindexer id="nyaasi">Nyaa.si</jackettindexer>
+      <type>public</type>
+      <comments>https://nyaa.si/view/1482421</comments>
+      <pubDate>Tue, 25 Jan 2022 03:13:00 +0000</pubDate>
+      <size>303877312</size>
+      <grabs>664</grabs>
+      <description>[EMBER] Princess Connect! Re:Dive S02E03 [1080p] [HEVC WEBRip]</description>
+      <link>magnet:?xt=urn:btih:77b234b679a7c6d0b69f45e957deae9d2223a088&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E03%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce</link>
+      <category>5070</category>
+      <category>127720</category>
+      <category>2020</category>
+      <enclosure url="magnet:?xt=urn:btih:77b234b679a7c6d0b69f45e957deae9d2223a088&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E03%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" length="303877312" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="127720" />
+      <torznab:attr name="category" value="2020" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="infohash" value="77b234b679a7c6d0b69f45e957deae9d2223a088" />
+      <torznab:attr name="magneturl" value="magnet:?xt=urn:btih:77b234b679a7c6d0b69f45e957deae9d2223a088&amp;dn=%5BEMBER%5D%20Princess%20Connect%21%20Re%3ADive%20S02E03%20%5B1080p%5D%20%5BHEVC%20WEBRip%5D&amp;tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>Princess Connect! Re_Dive S01-S02 1080p BDRip 10 bits DD x265-EMBER</title>
+      <guid>https://www.torlock.com/tor/63654039.torrent</guid>
+      <jackettindexer id="torlock">Torlock</jackettindexer>
+      <type>public</type>
+      <comments>https://www.torlock.com/torrent/63654039/princess-connect%21-re_dive-s01-s02-1080p-10-bits-dd-x265-ember.html</comments>
+      <pubDate>Sun, 19 Jun 2022 07:00:00 +0000</pubDate>
+      <size>12884901888</size>
+      <description />
+      <link>http://localhost:9117/dl/torlock/?jackett_apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&amp;path=Q2ZESjhNWERmRVJpSVo1SnQ4TEQ1YmlDN1Vha0drUWZVd1E1M2NDSy10dmgzVnpCN0ZpM3BnUDZpUVdlaWxlR0lkTEtPNlJRZVNzdVRmSkVfWnRoWDBVM1FGcTBMM2FHWWw4VWFEeGZzZVZ3dWNzeWxwRDdON2N3X0gwMGVqb2g4MnRmVTVPTXkwNlU2NjBTSGtLTWdpdHg3d0d2Ymgtd0c2STVlcXNnVnJLVXNWSU0&amp;file=Princess+Connect!+Re_Dive+S01-S02+1080p+BDRip+10+bits+DD+x265-EMBER</link>
+      <category>5070</category>
+      <category>146976</category>
+      <enclosure url="http://localhost:9117/dl/torlock/?jackett_apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&amp;path=Q2ZESjhNWERmRVJpSVo1SnQ4TEQ1YmlDN1Vha0drUWZVd1E1M2NDSy10dmgzVnpCN0ZpM3BnUDZpUVdlaWxlR0lkTEtPNlJRZVNzdVRmSkVfWnRoWDBVM1FGcTBMM2FHWWw4VWFEeGZzZVZ3dWNzeWxwRDdON2N3X0gwMGVqb2g4MnRmVTVPTXkwNlU2NjBTSGtLTWdpdHg3d0d2Ymgtd0c2STVlcXNnVnJLVXNWSU0&amp;file=Princess+Connect!+Re_Dive+S01-S02+1080p+BDRip+10+bits+DD+x265-EMBER" length="12884901888" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="146976" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+    <item>
+      <title>Princess Connect! Re-Dive S02 1080p  WEBRip AAC x265-EMBER</title>
+      <guid>https://www.torlock.com/tor/63260311.torrent</guid>
+      <jackettindexer id="torlock">Torlock</jackettindexer>
+      <type>public</type>
+      <comments>https://www.torlock.com/torrent/63260311/princess-connect%21-re-dive-s02-1080p-webrip-aac-x265-ember.html</comments>
+      <pubDate>Thu, 07 Apr 2022 07:00:00 +0000</pubDate>
+      <size>4617090048</size>
+      <description />
+      <link>http://localhost:9117/dl/torlock/?jackett_apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&amp;path=Q2ZESjhNWERmRVJpSVo1SnQ4TEQ1YmlDN1VZWEw3eWxwS0VtWjlPUUEwTFkxRmVZNDJQUDhRcnAwNjdlYTZTaHFvUEZuMjd1enFnd193WVp5LVZjN3FyYlNFdFA0OE1wcWoydmcwVEh2VUxTTXBadUVVWmpFQlFUYW1ZTFJ4Q1d0andFTmhia2w5WlFuZjV2SmlVcTFMWmJVRmt3bTFVY3RMZ1V3Nk02UnpVNW9pLV8&amp;file=Princess+Connect!+Re-Dive+S02+1080p++WEBRip+AAC+x265-EMBER</link>
+      <category>5070</category>
+      <category>146976</category>
+      <enclosure url="http://localhost:9117/dl/torlock/?jackett_apikey=fyx7w7eb8ymo3h4kd6bgrvajtf2ljndo&amp;path=Q2ZESjhNWERmRVJpSVo1SnQ4TEQ1YmlDN1VZWEw3eWxwS0VtWjlPUUEwTFkxRmVZNDJQUDhRcnAwNjdlYTZTaHFvUEZuMjd1enFnd193WVp5LVZjN3FyYlNFdFA0OE1wcWoydmcwVEh2VUxTTXBadUVVWmpFQlFUYW1ZTFJ4Q1d0andFTmhia2w5WlFuZjV2SmlVcTFMWmJVRmt3bTFVY3RMZ1V3Nk02UnpVNW9pLV8&amp;file=Princess+Connect!+Re-Dive+S02+1080p++WEBRip+AAC+x265-EMBER" length="4617090048" type="application/x-bittorrent" />
+      <torznab:attr name="category" value="5070" />
+      <torznab:attr name="category" value="146976" />
+      <torznab:attr name="seeders" value="0" />
+      <torznab:attr name="peers" value="0" />
+      <torznab:attr name="downloadvolumefactor" value="0" />
+      <torznab:attr name="uploadvolumefactor" value="1" />
+    </item>
+  </channel>
+</rss>

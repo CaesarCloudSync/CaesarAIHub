@@ -1,0 +1,709 @@
+2025-03-22 17:57:36.7127 Info Starting Jackett v0.22.1675
+2025-03-22 17:57:37.1077 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-22 17:57:37.1132 Info OS version: Unix 6.8.0.49 (64bit OS) (64bit process)
+2025-03-22 17:57:37.1153 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-22 17:57:37.1153 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-22 17:57:37.1153 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-22 17:57:37.1164 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-22 17:57:37.1164 Info App config/log directory: /config/Jackett
+2025-03-22 17:57:37.1179 Info Using proxy: Disabled
+2025-03-22 17:57:37.1179 Info Using FlareSolverr: No
+2025-03-22 17:57:37.1189 Info Using HTTP Client: HttpWebClient2
+2025-03-22 17:57:37.1214 Info Loading Native indexers ...
+2025-03-22 17:57:37.1542 Info Loaded 79 Native indexers.
+2025-03-22 17:57:37.1560 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-22 17:57:38.9930 Info Loaded 537 Cardigann indexers.
+2025-03-22 17:57:38.9932 Info Loaded 616 indexers in total
+2025-03-22 17:57:38.9986 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-22 17:57:39.0047 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-22 17:57:39.0055 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-22 17:57:39.0055 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-22 17:57:39.1165 Warn No XML encryptor configured. Key {447cc3c5-2162-499e-b7c2-c3e5b882ed46} may be persisted to storage in unencrypted form.
+2025-03-22 17:57:39.1465 Info Jackett startup finished in 2.608 s
+2025-03-22 18:00:13.3634 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 1.875407s.
+2025-03-22 18:00:15.3396 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 2.1294979s.
+2025-03-22 18:00:17.6163 Error FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+
+[v0.22.1675.0] FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.BaseWebIndexer.<>c__DisplayClass12_0.<<RequestWithCookiesAndRetryAsync>b__0>d.MoveNext() in ./Jackett.Common/Indexers/BaseIndexer.cs:line 594
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult](Func`2 callback, CancellationToken cancellationToken)
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAndRetryAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 593
+   at Jackett.Common.Indexers.Definitions.Anidex.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 201
+   at Jackett.Common.Indexers.Definitions.Anidex.ApplyConfiguration(JToken configJson) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 158
+   at Jackett.Server.Controllers.IndexerApiController.UpdateConfig(ConfigItem[] config) in ./Jackett.Server/Controllers/IndexerApiController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jackett.Server.Middleware.CustomExceptionHandler.Invoke(HttpContext httpContext) in ./Jackett.Server/Middleware/CustomExceptionHandler.cs:line 26
+
+2025-03-22 18:03:23.4840 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 2.3758561s.
+2025-03-22 18:03:26.0378 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 1.5257646s.
+2025-03-22 18:03:27.6772 Error FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+
+[v0.22.1675.0] FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.BaseWebIndexer.<>c__DisplayClass12_0.<<RequestWithCookiesAndRetryAsync>b__0>d.MoveNext() in ./Jackett.Common/Indexers/BaseIndexer.cs:line 594
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult](Func`2 callback, CancellationToken cancellationToken)
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAndRetryAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 593
+   at Jackett.Common.Indexers.Definitions.Anidex.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 201
+   at Jackett.Common.Indexers.Definitions.Anidex.ApplyConfiguration(JToken configJson) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 158
+   at Jackett.Server.Controllers.IndexerApiController.UpdateConfig(ConfigItem[] config) in ./Jackett.Server/Controllers/IndexerApiController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jackett.Server.Middleware.CustomExceptionHandler.Invoke(HttpContext httpContext) in ./Jackett.Server/Middleware/CustomExceptionHandler.cs:line 26
+
+2025-03-22 18:05:52.1332 Info Torznab search in AggregateSearch for Frieren S01 => Found 175 releases [3583ms]
+2025-03-22 18:06:12.8668 Error System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+
+[v0.22.1675.0] System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.FormatException: The input string '1ep=2' was not in a correct format.
+   at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at System.Int32.Parse(String s)
+   at Jackett.Common.Models.DTO.TorznabRequest.ToTorznabQuery(TorznabRequest request) in ./Jackett.Common/Models/DTO/TorznabRequest.cs:line 68
+   at InvokeStub_TorznabRequest.ToTorznabQuery(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   --- End of inner exception stack trace ---
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Jackett.Server.Controllers.RequiresValidQuery.OnActionExecuting(ActionExecutingContext context) in ./Jackett.Server/Controllers/ResultsController.cs:line 134
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jackett.Server.Middleware.CustomExceptionHandler.Invoke(HttpContext httpContext) in ./Jackett.Server/Middleware/CustomExceptionHandler.cs:line 26
+
+2025-03-22 18:06:21.8875 Info Torznab search in AggregateSearch for Frieren S01E02 => Found 18 releases [2482ms]
+2025-03-22 18:07:04.6999 Info Torznab search in AggregateSearch for Fate/Grand Order Absolute Demonic Front: Babylonia S01E02 => Found 13 releases [2136ms]
+2025-03-22 18:07:23.4334 Info Torznab search in AggregateSearch for Fate/Grand Order Absolute Demonic Front: Babylonia S01 => Found 18 releases [2154ms]
+2025-03-22 18:08:42.0879 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [2825ms]
+2025-03-22 18:09:04.1771 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01E01 => Found 2 releases [2190ms]
+2025-03-22 18:09:23.2425 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S02 => Found 15 releases [2503ms]
+2025-03-22 18:11:35.8925 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [229ms]
+2025-03-22 18:12:19.6621 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [194ms]
+2025-03-22 18:13:45.8908 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [113ms]
+2025-03-22 18:14:24.0050 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [108ms]
+2025-03-22 18:14:54.5079 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [147ms]
+2025-03-22 18:15:03.7185 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [124ms]
+2025-03-22 18:15:08.9846 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [621ms]
+2025-03-22 18:18:08.3228 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [1122ms]
+2025-03-22 18:19:51.3380 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [655ms]
+2025-03-22 18:21:05.5812 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S02 => Found 15 releases [604ms]
+2025-03-22 18:22:57.3732 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [333ms]
+2025-03-22 18:23:56.3963 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [649ms]
+2025-03-22 18:24:14.5082 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [235ms]
+2025-03-22 18:24:34.6362 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [113ms]
+2025-03-22 18:24:39.2602 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [130ms]
+2025-03-22 18:24:57.3126 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [384ms]
+2025-03-22 18:26:28.8144 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [111ms]
+2025-03-22 18:26:41.2289 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [725ms]
+2025-03-22 18:26:59.5816 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [823ms]
+2025-03-22 18:37:32.4924 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [553ms]
+2025-03-22 18:38:18.5820 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [128ms]
+2025-03-22 18:38:28.5257 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [286ms]
+2025-03-22 18:42:05.0012 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [176ms]
+2025-03-22 18:48:47.0213 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S02 => Found 15 releases [2404ms]
+2025-03-22 18:57:39.0202 Info Checking for updates... Jackett variant: CoreLinuxMuslAmdx64
+2025-03-22 18:57:39.9848 Info Jackett is already updated. Current version: v0.22.1675
+2025-03-22 18:59:06.5830 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [3025ms]
+2025-03-22 18:59:58.0045 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [490ms]
+2025-03-22 19:00:11.8140 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [320ms]
+2025-03-22 19:00:49.8622 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [210ms]
+2025-03-22 19:00:59.9899 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [207ms]
+2025-03-22 19:01:18.5763 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [195ms]
+2025-03-22 19:01:25.7356 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [692ms]
+2025-03-22 19:01:44.0142 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [529ms]
+2025-03-22 19:01:51.8309 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [873ms]
+2025-03-22 19:04:19.6641 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [717ms]
+2025-03-22 19:05:36.2590 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [240ms]
+2025-03-22 19:06:15.1986 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [447ms]
+2025-03-22 19:06:30.5572 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [366ms]
+2025-03-22 19:08:02.2098 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [457ms]
+2025-03-22 19:08:20.8414 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [693ms]
+2025-03-22 19:08:26.6733 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [842ms]
+2025-03-22 19:08:52.5812 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [231ms]
+2025-03-22 19:10:07.0103 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [717ms]
+2025-03-22 19:10:27.3424 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [808ms]
+2025-03-22 19:12:28.3979 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [423ms]
+2025-03-22 19:13:02.5773 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [280ms]
+2025-03-22 19:13:42.4614 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [281ms]
+2025-03-22 19:13:48.3997 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [1003ms]
+2025-03-22 19:14:54.2531 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [126ms]
+2025-03-22 19:15:50.7477 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [473ms]
+2025-03-22 19:15:56.6080 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [312ms]
+2025-03-22 19:16:24.8699 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [511ms]
+2025-03-22 19:16:55.7727 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [279ms]
+2025-03-22 19:17:00.1592 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [214ms]
+2025-03-22 19:17:39.5518 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [353ms]
+2025-03-22 19:19:13.3845 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [761ms]
+2025-03-22 19:20:30.4255 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [574ms]
+2025-03-22 19:21:58.6916 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [1025ms]
+2025-03-22 19:22:08.5233 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [487ms]
+2025-03-22 19:22:18.3899 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [430ms]
+2025-03-22 19:23:21.1916 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [436ms]
+2025-03-22 19:27:27.7515 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [840ms]
+2025-03-22 19:35:25.0050 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [3430ms]
+2025-03-22 19:35:34.3837 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [571ms]
+2025-03-22 19:36:10.4202 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [690ms]
+2025-03-22 19:36:45.9334 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [153ms]
+2025-03-22 19:37:30.4584 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [264ms]
+2025-03-22 19:37:39.3920 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [600ms]
+2025-03-22 19:37:46.1058 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S01 => Found 6 releases [610ms]
+2025-03-22 19:38:15.6638 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [2641ms]
+2025-03-22 19:38:27.3148 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [251ms]
+2025-03-22 19:38:36.0572 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [121ms]
+2025-03-22 19:38:57.7845 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [497ms]
+2025-03-22 19:40:26.2647 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [730ms]
+2025-03-22 19:40:44.1259 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [901ms]
+2025-03-22 19:41:16.0287 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [693ms]
+2025-03-22 19:41:27.8965 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [797ms]
+2025-03-22 19:41:56.0675 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [126ms]
+2025-03-22 19:42:20.3988 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [551ms]
+2025-03-22 19:42:28.9875 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [396ms]
+2025-03-22 19:42:36.5158 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [404ms]
+2025-03-22 19:42:43.8918 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [401ms]
+2025-03-22 19:42:59.8643 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [813ms]
+2025-03-22 19:43:19.5963 Info Torznab search in AggregateSearch for Solo Leveling S01E01 => Found 46 releases [2368ms]
+2025-03-22 19:48:20.5849 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [737ms]
+2025-03-22 19:48:33.8968 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [595ms]
+2025-03-22 19:48:56.7956 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [3466ms]
+2025-03-22 19:49:09.9422 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [327ms]
+2025-03-22 19:50:28.5059 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [122ms]
+2025-03-22 19:51:04.6982 Info Torznab search in AggregateSearch for Solo Leveling S02E02 => Found 33 releases [2763ms]
+2025-03-22 19:51:29.7721 Info Torznab search in AggregateSearch for Solo Leveling S01E03 => Found 38 releases [2665ms]
+2025-03-22 19:52:01.9898 Info Torznab search in AggregateSearch for Re:Zero  Starting Life in Another World S01E03 => Found 5 releases [2257ms]
+2025-03-22 19:52:35.8773 Info Torznab search in AggregateSearch for God Eater S01E03 => Found 2 releases [2590ms]
+2025-03-22 19:53:21.1450 Info Torznab search in AggregateSearch for Blue Period S01E03 => Found 17 releases [2519ms]
+2025-03-22 19:53:58.3045 Info Torznab search in AggregateSearch for Is It Wrong to Try to Pick Up Girls in a Dungeon S01E05 => Found 0 releases [2503ms]
+2025-03-22 19:54:08.3690 Info Torznab search in AggregateSearch for Is It Wrong to Try to Pick Up Girls in a Dungeon S01E05 => Found 0 releases [2665ms]
+2025-03-22 19:55:08.7469 Info Torznab search in AggregateSearch for That Time I Got Reincarnated as a Slime S01E05 => Found 2 releases [2254ms]
+2025-03-22 19:55:18.5975 Info Torznab search in AggregateSearch for That Time I Got Reincarnated as a Slime S03E05 => Found 17 releases [2547ms]
+2025-03-22 20:05:12.6455 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [881ms]
+2025-03-22 20:05:40.9157 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [519ms]
+2025-03-22 20:05:46.5188 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [213ms]
+2025-03-22 20:06:10.3192 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [265ms]
+2025-03-22 20:06:27.3426 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [375ms]
+2025-03-22 20:07:13.0679 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [159ms]
+2025-03-22 20:09:08.7775 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [721ms]
+2025-03-22 20:09:38.2678 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [1142ms]
+2025-03-22 20:10:04.3851 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [933ms]
+2025-03-22 20:10:15.3387 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [508ms]
+2025-03-22 20:11:53.4522 Info Torznab search in AggregateSearch for Solo Leveling S02E01 => Found 43 releases [2718ms]
+2025-03-22 20:20:50.2180 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [2891ms]
+2025-03-22 20:21:16.1229 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [2433ms]
+2025-03-22 20:28:00.2681 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [771ms]
+2025-03-22 20:28:22.2367 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [1630ms]
+2025-03-22 20:30:18.2098 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [233ms]
+2025-03-22 20:31:24.9135 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [396ms]
+2025-03-22 20:31:34.6981 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [415ms]
+2025-03-22 20:31:49.3035 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E02 => Found 2 releases [2403ms]
+2025-03-22 20:35:23.4773 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E06 => Found 2 releases [2339ms]
+2025-03-22 20:35:32.7843 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E60 => Found 0 releases [2537ms]
+2025-03-22 20:35:38.7334 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E60 => Found 0 releases [322ms]
+2025-03-22 20:36:27.5250 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01 => Found 27 releases [2461ms]
+2025-03-22 20:36:34.5199 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01 => Found 27 releases [327ms]
+2025-03-22 20:36:45.5285 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01 => Found 27 releases [415ms]
+2025-03-22 20:37:10.4399 Info Torznab search in AggregateSearch for Solo Leveling S01 => Found 85 releases [2324ms]
+2025-03-22 20:37:19.2457 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [2273ms]
+2025-03-22 20:37:43.5372 Info Torznab search in AggregateSearch for Solo Leveling S02 => Found 76 releases [478ms]
+2025-03-22 20:38:23.2692 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [779ms]
+2025-03-22 20:38:35.2212 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [606ms]
+2025-03-22 20:39:10.7808 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E02 => Found 2 releases [645ms]
+2025-03-22 20:39:24.2624 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S01E01 => Found 4 releases [40001ms]
+2025-03-22 20:39:25.7594 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E02 => Found 5 releases [2773ms]
+2025-03-22 20:39:46.2801 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E02 => Found 5 releases [321ms]
+2025-03-22 20:40:46.8410 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E02 => Found 5 releases [971ms]
+2025-03-22 20:40:56.2712 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E09 => Found 5 releases [3048ms]
+2025-03-22 20:41:33.5343 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E09 => Found 5 releases [126ms]
+2025-03-22 20:41:43.5456 Info Torznab search in AggregateSearch for classroom of the elite S02E09 => Found 2 releases [2165ms]
+2025-03-22 20:41:57.8217 Info Torznab search in AggregateSearch for classroom of the elite S03E09 => Found 20 releases [2945ms]
+2025-03-22 20:42:11.6807 Info Torznab search in AggregateSearch for Solo Leveling S01E01 => Found 46 releases [2183ms]
+2025-03-22 20:42:27.5906 Info Torznab search in AggregateSearch for Solo Leveling S02E01 => Found 43 releases [300ms]
+2025-03-22 20:42:44.6130 Info Torznab search in AggregateSearch for Solo Leveling S02E06 => Found 36 releases [2379ms]
+2025-03-22 20:43:39.7126 Info Torznab search in AggregateSearch for Solo Leveling S02E02 => Found 33 releases [2330ms]
+2025-03-22 20:45:03.2387 Info Torznab search in AggregateSearch for Solo Leveling S02E02 => Found 33 releases [612ms]
+2025-03-22 20:54:35.0474 Info Torznab search in AggregateSearch for Solo Leveling S02E02 => Found 33 releases [557ms]
+2025-03-22 20:54:59.9965 Info Torznab search in AggregateSearch for Solo Leveling S02E08 => Found 47 releases [2844ms]
+2025-03-22 20:55:09.5098 Info Torznab search in AggregateSearch for Solo Leveling S02E09 => Found 36 releases [2224ms]
+2025-03-22 20:55:18.8086 Info Torznab search in AggregateSearch for Solo Leveling S02E01 => Found 43 releases [2275ms]
+2025-03-22 20:55:36.3035 Info Torznab search in AggregateSearch for Solo Leveling S02E01 => Found 43 releases [1414ms]
+2025-03-22 20:55:47.7908 Info Torznab search in AggregateSearch for Solo Leveling S02E01 => Found 43 releases [740ms]
+2025-03-22 20:55:54.9655 Info Torznab search in AggregateSearch for Solo Leveling S02E10 => Found 34 releases [2496ms]
+2025-03-22 20:56:10.4596 Info Torznab search in AggregateSearch for Solo Leveling S02E14 => Found 1 releases [2186ms]
+2025-03-22 20:56:20.0983 Info Torznab search in AggregateSearch for Solo Leveling S02E13 => Found 0 releases [2489ms]
+2025-03-22 20:56:34.8011 Info Torznab search in AggregateSearch for Solo Leveling S02E12 => Found 24 releases [2327ms]
+2025-03-22 20:57:43.6957 Info Adding filter indexer ('lang:en' indexer) ...
+2025-03-22 20:57:44.3058 Info Torznab search in lang:en for Solo Leveling S02E12 => Found 24 releases [605ms]
+2025-03-22 20:58:18.6177 Info Torznab search in lang:en for Solo Leveling S02E12 => Found 24 releases [272ms]
+2025-03-22 20:59:58.3648 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [290ms]
+2025-03-22 21:05:07.5141 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [1298ms]
+2025-03-22 21:05:16.7745 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [572ms]
+2025-03-22 21:06:47.9978 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [659ms]
+2025-03-22 21:07:18.6700 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [315ms]
+2025-03-22 21:07:52.8815 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [757ms]
+2025-03-22 21:11:40.5156 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [527ms]
+2025-03-22 21:12:16.1452 Info Torznab search in lang:en for Solo Leveling S01E01 => Found 46 releases [368ms]
+2025-03-22 21:12:27.4210 Info Torznab search in lang:en for Solo Leveling S01E04 => Found 37 releases [2903ms]
+2025-03-22 21:12:36.0362 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [2406ms]
+2025-03-22 21:12:45.8542 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E09 => Found 5 releases [616ms]
+2025-03-22 21:12:56.4353 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E04 => Found 5 releases [3056ms]
+2025-03-22 21:13:10.8376 Info Torznab search in AggregateSearch for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [2400ms]
+2025-03-22 21:13:43.2804 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [115ms]
+2025-03-22 21:13:53.6783 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [566ms]
+2025-03-22 21:14:39.7091 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [257ms]
+2025-03-22 21:37:11.4887 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [671ms]
+2025-03-22 21:37:24.7071 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [489ms]
+2025-03-22 22:32:34.8871 Info Torznab search in lang:en for The Seven Deadly Sins: Four Knights of the Apocalypse S02E01 => Found 6 releases [3106ms]
+2025-03-22 22:32:43.9072 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [2357ms]
+2025-03-22 22:33:10.5978 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [118ms]
+2025-03-22 22:33:17.3412 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [604ms]
+2025-03-22 22:33:33.3925 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [545ms]
+2025-03-22 22:34:12.3610 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [741ms]
+2025-03-22 22:35:07.8212 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [327ms]
+2025-03-22 23:32:24.1803 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [2309ms]
+2025-03-22 23:33:21.8368 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [102ms]
+2025-03-22 23:40:45.6348 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [1052ms]
+2025-03-22 23:41:18.6194 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [196ms]
+2025-03-22 23:43:07.7595 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [182ms]
+2025-03-22 23:47:29.4082 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [1317ms]
+2025-03-22 23:48:24.0461 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [685ms]
+2025-03-22 23:48:34.5346 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [569ms]
+2025-03-22 23:48:47.5449 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [346ms]
+2025-03-22 23:54:47.2103 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [816ms]
+2025-03-23 00:11:24.3213 Info Torznab search in AggregateSearch for demon slayer S01E01 => Found 0 releases [2970ms]
+2025-03-23 00:12:23.5292 Info Torznab search in AggregateSearch for demon slayer S01E01 => Found 0 releases [786ms]
+2025-03-23 00:12:45.8302 Info Torznab search in AggregateSearch for Solo Leveling S01E01 => Found 46 releases [2799ms]
+2025-03-23 00:13:00.2881 Info Torznab search in AggregateSearch for Demon Slayer S01E01 => Found 0 releases [2510ms]
+2025-03-23 00:13:04.7937 Info Torznab search in AggregateSearch for Demon Slayer S01E04 => Found 5 releases [2176ms]
+2025-03-23 00:13:15.0795 Info Torznab search in AggregateSearch for Demon Slayer S01E02 => Found 1 releases [2601ms]
+2025-03-23 00:14:08.6933 Info Torznab search in AggregateSearch for Demon Slayer S01E02 => Found 1 releases [425ms]
+2025-03-23 00:14:23.4051 Info Torznab search in AggregateSearch for Demon Slayer S01E02 => Found 1 releases [446ms]
+2025-03-23 00:14:32.7859 Info Torznab search in AggregateSearch for Demon Slayer S01E06 => Found 0 releases [2213ms]
+2025-03-23 00:14:41.2550 Info Torznab search in AggregateSearch for Demon Slayer S01E10 => Found 14 releases [2510ms]
+2025-03-23 00:14:56.2047 Info Torznab search in AggregateSearch for Demon Slayer S01E11 => Found 12 releases [2170ms]
+2025-03-23 00:15:16.2826 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 0.5323333s.
+2025-03-23 00:15:16.3776 Info Test search in Anime Tosho => Found 75 releases [372ms]
+2025-03-23 00:15:16.8427 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 2.4857463s.
+2025-03-23 00:15:19.5729 Error FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+
+[v0.22.1675.0] FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.BaseWebIndexer.<>c__DisplayClass12_0.<<RequestWithCookiesAndRetryAsync>b__0>d.MoveNext() in ./Jackett.Common/Indexers/BaseIndexer.cs:line 594
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult](Func`2 callback, CancellationToken cancellationToken)
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAndRetryAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 593
+   at Jackett.Common.Indexers.Definitions.Anidex.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 201
+   at Jackett.Common.Indexers.Definitions.Anidex.ApplyConfiguration(JToken configJson) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 158
+   at Jackett.Server.Controllers.IndexerApiController.UpdateConfig(ConfigItem[] config) in ./Jackett.Server/Controllers/IndexerApiController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jackett.Server.Middleware.CustomExceptionHandler.Invoke(HttpContext httpContext) in ./Jackett.Server/Middleware/CustomExceptionHandler.cs:line 26
+
+2025-03-23 00:15:32.7643 Error Redirected to: https://asnet.pw/
+2025-03-23 00:15:32.7643 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:15:39.8250 Info Torznab search in AggregateSearch for Demon Slayer S01E01 => Found 25 releases [13653ms]
+2025-03-23 00:15:40.2565 Info Torznab search in AggregateSearch for Demon Slayer S01E01 => Found 25 releases [417ms]
+2025-03-23 00:16:25.1205 Info Torznab search in AggregateSearch for Demon Slayer S01E01 => Found 25 releases [517ms]
+2025-03-23 00:16:40.6920 Error Redirected to: https://asnet.pw/
+2025-03-23 00:16:40.6922 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:16:46.3195 Info Torznab search in AggregateSearch for Demon Slayer S01E05 => Found 26 releases [11606ms]
+2025-03-23 00:16:51.7113 Info Torznab search in AggregateSearch for Demon Slayer S01E05 => Found 26 releases [623ms]
+2025-03-23 00:17:15.2630 Info Torznab search in AggregateSearch for Demon Slayer S01E05 => Found 26 releases [941ms]
+2025-03-23 00:17:47.4134 Info Torznab search in AggregateSearch for Demon Slayer S01E05 => Found 1 releases [492ms]
+2025-03-23 00:18:20.0823 Error Redirected to: https://asnet.pw/
+2025-03-23 00:18:20.0823 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:18:25.6488 Info Torznab search in AggregateSearch for Attack on titan S01E05 => Found 20 releases [12046ms]
+2025-03-23 00:18:46.8082 Info Torznab search in AggregateSearch for Attack on titan S01E05 => Found 20 releases [626ms]
+2025-03-23 00:18:59.7093 Error Redirected to: https://asnet.pw/
+2025-03-23 00:18:59.7113 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:19:05.4436 Info Torznab search in AggregateSearch for Attack on titan S01E01 => Found 15 releases [12868ms]
+2025-03-23 00:19:20.1484 Error Redirected to: https://asnet.pw/
+2025-03-23 00:19:20.1503 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:19:25.8550 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [12727ms]
+2025-03-23 00:19:26.6422 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [465ms]
+2025-03-23 00:19:27.0780 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [286ms]
+2025-03-23 00:19:31.1494 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [366ms]
+2025-03-23 00:19:54.2938 Error Redirected to: https://asnet.pw/
+2025-03-23 00:19:54.2943 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:19:59.9221 Info Torznab search in AggregateSearch for Attack on titan S02 => Found 21 releases [11890ms]
+2025-03-23 00:20:10.9008 Error Redirected to: https://asnet.pw/
+2025-03-23 00:20:10.9012 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:20:16.1258 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [14017ms]
+2025-03-23 00:20:52.3976 Info Torznab search in AggregateSearch for Attack on titan S01E01 => Found 15 releases [731ms]
+2025-03-23 00:21:06.6267 Error Redirected to: https://asnet.pw/
+2025-03-23 00:21:06.6271 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:21:11.9588 Info Torznab search in AggregateSearch for Attack on titan S03E01 => Found 44 releases [11016ms]
+2025-03-23 00:21:26.5498 Error Redirected to: https://asnet.pw/
+2025-03-23 00:21:26.5498 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 00:21:32.2871 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [12554ms]
+2025-03-23 00:22:01.1253 Info Jackett stopped
+2025-03-23 09:36:19.6993 Info Starting Jackett v0.22.1675
+2025-03-23 09:36:20.1432 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 09:36:20.1485 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 09:36:20.1505 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 09:36:20.1505 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 09:36:20.1512 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 09:36:20.1512 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 09:36:20.1520 Info App config/log directory: /config/Jackett
+2025-03-23 09:36:20.1533 Info Using proxy: Disabled
+2025-03-23 09:36:20.1533 Info Using FlareSolverr: No
+2025-03-23 09:36:20.1544 Info Using HTTP Client: HttpWebClient2
+2025-03-23 09:36:20.1568 Info Loading Native indexers ...
+2025-03-23 09:36:20.1901 Info Loaded 79 Native indexers.
+2025-03-23 09:36:20.1923 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 09:36:22.2183 Info Loaded 537 Cardigann indexers.
+2025-03-23 09:36:22.2183 Info Loaded 616 indexers in total
+2025-03-23 09:36:22.2279 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 09:36:22.2325 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 09:36:22.2331 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 09:36:22.2331 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 09:36:22.3977 Info Jackett startup finished in 2.944 s
+2025-03-23 09:37:31.7714 Error Redirected to: https://asnet.pw/
+2025-03-23 09:37:31.7733 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 09:37:38.2376 Info Torznab search in AggregateSearch for Princess Connect Re:Dive S02 => Found 29 releases [12599ms]
+2025-03-23 09:38:01.7723 Error Redirected to: https://asnet.pw/
+2025-03-23 09:38:01.7743 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 09:38:07.5089 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [12045ms]
+2025-03-23 09:39:06.2447 Info Jackett stopped
+2025-03-23 09:39:09.6529 Info Starting Jackett v0.22.1675
+2025-03-23 09:39:10.0848 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 09:39:10.0925 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 09:39:10.0956 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 09:39:10.0956 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 09:39:10.0956 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 09:39:10.0966 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 09:39:10.0966 Info App config/log directory: /config/Jackett
+2025-03-23 09:39:10.0982 Info Using proxy: Disabled
+2025-03-23 09:39:10.0982 Info Using FlareSolverr: No
+2025-03-23 09:39:10.0994 Info Using HTTP Client: HttpWebClient2
+2025-03-23 09:39:10.1024 Info Loading Native indexers ...
+2025-03-23 09:39:10.1416 Info Loaded 79 Native indexers.
+2025-03-23 09:39:10.1447 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 09:39:12.2311 Info Loaded 537 Cardigann indexers.
+2025-03-23 09:39:12.2329 Info Loaded 616 indexers in total
+2025-03-23 09:39:12.2406 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 09:39:12.2449 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 09:39:12.2456 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 09:39:12.2456 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 09:39:12.3915 Info Jackett startup finished in 2.923 s
+2025-03-23 09:39:27.7448 Error Redirected to: https://asnet.pw/
+2025-03-23 09:39:27.7467 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 09:39:33.4705 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [12056ms]
+2025-03-23 09:40:00.0477 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [803ms]
+2025-03-23 09:42:11.1182 Error Redirected to: https://asnet.pw/
+2025-03-23 09:42:11.1182 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 09:42:18.0504 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [14200ms]
+2025-03-23 09:42:18.7539 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [499ms]
+2025-03-23 09:42:57.7637 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [599ms]
+2025-03-23 09:43:35.6997 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [930ms]
+2025-03-23 09:46:10.4230 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [189ms]
+2025-03-23 09:46:18.6925 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [336ms]
+2025-03-23 09:47:13.0915 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [896ms]
+2025-03-23 09:47:16.7376 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [1627ms]
+2025-03-23 09:53:39.8558 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [1268ms]
+2025-03-23 09:56:47.7602 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [847ms]
+2025-03-23 09:57:37.3218 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [467ms]
+2025-03-23 09:57:56.6802 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [811ms]
+2025-03-23 09:58:15.3539 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [398ms]
+2025-03-23 09:58:41.6399 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [869ms]
+2025-03-23 09:59:14.7543 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [512ms]
+2025-03-23 09:59:19.7932 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [854ms]
+2025-03-23 10:00:01.5028 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [456ms]
+2025-03-23 10:01:40.5211 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [232ms]
+2025-03-23 10:01:42.7585 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [811ms]
+2025-03-23 10:02:11.1386 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [639ms]
+2025-03-23 10:02:59.6774 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [619ms]
+2025-03-23 10:03:46.0650 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [907ms]
+2025-03-23 10:07:34.2103 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [278ms]
+2025-03-23 10:08:26.9467 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [579ms]
+2025-03-23 10:09:03.2583 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [1458ms]
+2025-03-23 10:09:14.4695 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [119ms]
+2025-03-23 10:12:12.3335 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [755ms]
+2025-03-23 10:12:35.2573 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [250ms]
+2025-03-23 10:12:46.7225 Info Torznab search in AggregateSearch for Attack on titan S03 => Found 74 releases [404ms]
+2025-03-23 10:13:14.4828 Error Redirected to: https://asnet.pw/
+2025-03-23 10:13:14.4847 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 10:13:19.8088 Info Torznab search in AggregateSearch for Attack on titan S02 => Found 21 releases [25857ms]
+2025-03-23 10:13:30.7611 Error Redirected to: https://asnet.pw/
+2025-03-23 10:13:30.7617 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 10:13:36.6510 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [13583ms]
+2025-03-23 10:15:42.8566 Info Torznab search in AggregateSearch for Attack on titan S01 => Found 64 releases [1960ms]
+2025-03-23 10:16:31.7719 Error Redirected to: https://asnet.pw/
+2025-03-23 10:16:31.7738 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 10:16:37.2950 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [11444ms]
+2025-03-23 10:17:57.6760 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [834ms]
+2025-03-23 10:19:00.0350 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [766ms]
+2025-03-23 10:19:19.6868 Info Torznab search in AggregateSearch for Attack on titan S03E06 => Found 34 releases [472ms]
+2025-03-23 10:21:58.6737 Info Adding filter indexer ('lang:en' indexer) ...
+2025-03-23 10:22:04.2894 Error Redirected to: https://asnet.pw/
+2025-03-23 10:22:04.2894 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 10:22:10.0880 Info Torznab search in lang:en for Solo Leveling S01E07 => Found 33 releases [11412ms]
+2025-03-23 10:22:35.8944 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [298ms]
+2025-03-23 10:39:12.2538 Info Checking for updates... Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 10:39:13.4146 Info New release found. Current version: v0.22.1675 New version: v0.22.1680
+2025-03-23 10:39:13.4166 Info Downloading release v0.22.1680 It could take a while...
+2025-03-23 10:39:19.3609 Info Starting updater: /run/jackett-temp/JackettUpdate-v0.22.1680-638783231578574987/Jackett/JackettUpdater --Path "/app/Jackett" --Type "Console" --Args " --NoRestart" --KillPids "156" --NoRestart
+2025-03-23 10:39:19.3639 Info Updater started process id: 459
+2025-03-23 10:39:22.0564 Info Starting Jackett v0.22.1680
+2025-03-23 10:39:22.6260 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 10:39:22.6356 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 10:39:22.6387 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 10:39:22.6387 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 10:39:22.6393 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 10:39:22.6403 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 10:39:22.6403 Info App config/log directory: /config/Jackett
+2025-03-23 10:39:22.6430 Info Using proxy: Disabled
+2025-03-23 10:39:22.6432 Info Using FlareSolverr: No
+2025-03-23 10:39:22.6450 Info Using HTTP Client: HttpWebClient2
+2025-03-23 10:39:22.6501 Info Loading Native indexers ...
+2025-03-23 10:39:22.7041 Info Loaded 79 Native indexers.
+2025-03-23 10:39:22.7068 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 10:39:24.8677 Info Loaded 538 Cardigann indexers.
+2025-03-23 10:39:24.8698 Info Loaded 617 indexers in total
+2025-03-23 10:39:24.8806 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 10:39:24.8879 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 10:39:24.8887 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 10:39:24.8887 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 10:39:24.8919 Info Deleting JackettUpdate temp files from /run/jackett-temp/JackettUpdate-v0.22.1680-638783231578574987
+2025-03-23 10:39:25.1673 Info Jackett startup finished in 3.358 s
+2025-03-23 10:41:19.1000 Error Redirected to: https://asnet.pw/
+2025-03-23 10:41:19.1005 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 10:41:24.9687 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [11654ms]
+2025-03-23 10:41:44.9301 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [264ms]
+2025-03-23 10:42:33.5672 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [504ms]
+2025-03-23 10:42:50.0506 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [655ms]
+2025-03-23 10:43:00.8002 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [599ms]
+2025-03-23 10:43:17.6094 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [729ms]
+2025-03-23 10:44:10.7547 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [1146ms]
+2025-03-23 10:52:15.1927 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [1587ms]
+2025-03-23 10:52:42.3783 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [158ms]
+2025-03-23 10:54:07.8315 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [621ms]
+2025-03-23 10:55:03.7861 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [561ms]
+2025-03-23 10:58:02.4472 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [1331ms]
+2025-03-23 11:00:23.3223 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [670ms]
+2025-03-23 11:07:26.1077 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [1222ms]
+2025-03-23 11:39:24.9764 Info Checking for updates... Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 11:39:26.1029 Info Jackett is already updated. Current version: v0.22.1680
+2025-03-23 11:47:29.2573 Error Redirected to: https://asnet.pw/
+2025-03-23 11:47:29.2573 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 11:47:34.4793 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [12429ms]
+2025-03-23 11:49:22.2077 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [1024ms]
+2025-03-23 11:50:03.5426 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [295ms]
+2025-03-23 11:50:20.3461 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [410ms]
+2025-03-23 11:52:07.0133 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [251ms]
+2025-03-23 11:54:40.6855 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [973ms]
+2025-03-23 11:55:52.8347 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [242ms]
+2025-03-23 11:56:47.1318 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [573ms]
+2025-03-23 11:57:40.2357 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [262ms]
+2025-03-23 11:59:46.3623 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [902ms]
+2025-03-23 12:00:32.6021 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [377ms]
+2025-03-23 12:01:38.3683 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [529ms]
+2025-03-23 12:02:00.6799 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [531ms]
+2025-03-23 12:03:36.5258 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [1040ms]
+2025-03-23 12:04:56.8550 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [338ms]
+2025-03-23 12:05:33.2613 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [475ms]
+2025-03-23 12:06:01.4231 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [243ms]
+2025-03-23 12:06:25.4174 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [316ms]
+2025-03-23 12:07:04.7717 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [629ms]
+2025-03-23 12:07:23.9257 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [198ms]
+2025-03-23 12:08:14.7210 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [698ms]
+2025-03-23 12:08:27.8447 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [1777ms]
+2025-03-23 12:09:00.1500 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [610ms]
+2025-03-23 12:09:10.7212 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [586ms]
+2025-03-23 12:10:08.1011 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [730ms]
+2025-03-23 12:11:09.6655 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [309ms]
+2025-03-23 12:12:21.6657 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [635ms]
+2025-03-23 12:12:50.5073 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [288ms]
+2025-03-23 12:13:06.5135 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [774ms]
+2025-03-23 12:13:47.7490 Error Redirected to: https://asnet.pw/
+2025-03-23 12:13:47.7510 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 12:13:53.2526 Info Torznab search in AggregateSearch for Solo Leveling S01E07 => Found 33 releases [11823ms]
+2025-03-23 12:15:14.4104 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [746ms]
+2025-03-23 12:15:37.1143 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [592ms]
+2025-03-23 12:15:56.1048 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [116ms]
+2025-03-23 12:16:07.8815 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [110ms]
+2025-03-23 12:19:02.9152 Info Torznab search in AggregateSearch for Solo Leveling S01E02 => Found 38 releases [274ms]
+2025-03-23 12:20:10.6907 Error Redirected to: https://asnet.pw/
+2025-03-23 12:20:10.6926 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 12:20:16.6485 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [12026ms]
+2025-03-23 12:22:42.3763 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [1105ms]
+2025-03-23 12:23:14.8743 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [390ms]
+2025-03-23 12:23:25.9868 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [360ms]
+2025-03-23 12:25:44.4440 Error Redirected to: https://asnet.pw/
+2025-03-23 12:25:44.4460 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 12:25:50.3822 Info Torznab search in AggregateSearch for Solo Leveling S01E12 => Found 30 releases [12616ms]
+2025-03-23 12:32:50.3646 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [1332ms]
+2025-03-23 12:33:24.7334 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [153ms]
+2025-03-23 12:33:53.2002 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [942ms]
+2025-03-23 12:34:45.6892 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [758ms]
+2025-03-23 12:39:14.9529 Info Torznab search in AggregateSearch for Solo Leveling S01E12 => Found 30 releases [838ms]
+2025-03-23 12:47:15.8192 Info Torznab search in AggregateSearch for Solo Leveling S01E12 => Found 30 releases [910ms]
+2025-03-23 12:47:26.1128 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [116ms]
+2025-03-23 12:50:11.5637 Info Jackett stopped
+2025-03-23 12:53:49.9597 Info Starting Jackett v0.22.1680
+2025-03-23 12:53:50.5959 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 12:53:50.6037 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 12:53:50.6067 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 12:53:50.6067 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 12:53:50.6074 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 12:53:50.6083 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 12:53:50.6083 Info App config/log directory: /config/Jackett
+2025-03-23 12:53:50.6109 Info Using proxy: Disabled
+2025-03-23 12:53:50.6111 Info Using FlareSolverr: No
+2025-03-23 12:53:50.6127 Info Using HTTP Client: HttpWebClient2
+2025-03-23 12:53:50.6172 Info Loading Native indexers ...
+2025-03-23 12:53:50.6716 Info Loaded 79 Native indexers.
+2025-03-23 12:53:50.6746 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 12:53:53.4694 Info Loaded 538 Cardigann indexers.
+2025-03-23 12:53:53.4694 Info Loaded 617 indexers in total
+2025-03-23 12:53:53.4831 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 12:53:53.4905 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 12:53:53.4913 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 12:53:53.4913 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 12:53:53.7116 Info Jackett startup finished in 4.051 s
+2025-03-23 12:53:56.5404 Info Jackett stopped
+2025-03-23 12:54:04.2796 Info Starting Jackett v0.22.1675
+2025-03-23 12:54:04.8910 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 12:54:04.9006 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 12:54:04.9038 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 12:54:04.9041 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 12:54:04.9041 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 12:54:04.9055 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 12:54:04.9055 Info App config/log directory: /config/Jackett
+2025-03-23 12:54:04.9081 Info Using proxy: Disabled
+2025-03-23 12:54:04.9081 Info Using FlareSolverr: No
+2025-03-23 12:54:04.9099 Info Using HTTP Client: HttpWebClient2
+2025-03-23 12:54:04.9143 Info Loading Native indexers ...
+2025-03-23 12:54:04.9698 Info Loaded 79 Native indexers.
+2025-03-23 12:54:04.9723 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 12:54:07.4114 Info Loaded 537 Cardigann indexers.
+2025-03-23 12:54:07.4135 Info Loaded 616 indexers in total
+2025-03-23 12:54:07.4245 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 12:54:07.4322 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 12:54:07.4332 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 12:54:07.4332 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 12:54:07.6585 Info Jackett startup finished in 3.650 s
+2025-03-23 12:54:08.2795 Info Jackett stopped
+2025-03-23 12:55:23.3809 Info Starting Jackett v0.22.1675
+2025-03-23 12:55:24.0211 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 12:55:24.0294 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 12:55:24.0326 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 12:55:24.0326 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 12:55:24.0335 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 12:55:24.0346 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 12:55:24.0346 Info App config/log directory: /config/Jackett
+2025-03-23 12:55:24.0374 Info Using proxy: Disabled
+2025-03-23 12:55:24.0374 Info Using FlareSolverr: No
+2025-03-23 12:55:24.0393 Info Using HTTP Client: HttpWebClient2
+2025-03-23 12:55:24.0437 Info Loading Native indexers ...
+2025-03-23 12:55:24.1021 Info Loaded 79 Native indexers.
+2025-03-23 12:55:24.1052 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 12:55:26.5677 Info Loaded 537 Cardigann indexers.
+2025-03-23 12:55:26.5681 Info Loaded 616 indexers in total
+2025-03-23 12:55:26.5808 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 12:55:26.5883 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 12:55:26.5883 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 12:55:26.5894 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 12:55:26.8478 Info Jackett startup finished in 3.768 s
+2025-03-23 12:57:13.0435 Info Jackett stopped
+2025-03-23 12:57:24.9156 Info Starting Jackett v0.22.1675
+2025-03-23 12:57:25.5195 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 12:57:25.5276 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 12:57:25.5312 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 12:57:25.5312 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 12:57:25.5312 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 12:57:25.5332 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 12:57:25.5332 Info App config/log directory: /config/Jackett
+2025-03-23 12:57:25.5359 Info Using proxy: Disabled
+2025-03-23 12:57:25.5361 Info Using FlareSolverr: No
+2025-03-23 12:57:25.5377 Info Using HTTP Client: HttpWebClient2
+2025-03-23 12:57:25.5427 Info Loading Native indexers ...
+2025-03-23 12:57:25.6000 Info Loaded 79 Native indexers.
+2025-03-23 12:57:25.6027 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 12:57:27.9623 Info Loaded 537 Cardigann indexers.
+2025-03-23 12:57:27.9644 Info Loaded 616 indexers in total
+2025-03-23 12:57:27.9749 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 12:57:27.9817 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 12:57:27.9829 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 12:57:27.9832 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 12:57:28.1858 Info Jackett startup finished in 3.526 s
+2025-03-23 12:57:37.1138 Error Redirected to: https://asnet.pw/
+2025-03-23 12:57:37.1141 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 12:57:42.8104 Info Torznab search in AggregateSearch for Solo Leveling S01E20 => Found 1 releases [11739ms]
+2025-03-23 12:58:06.7592 Error Redirected to: https://asnet.pw/
+2025-03-23 12:58:06.7613 Info CardigannIndexer(anisource): Relogin required
+2025-03-23 12:58:12.3800 Info Torznab search in AggregateSearch for Solo Leveling S01E12 => Found 30 releases [11584ms]
+2025-03-23 13:04:50.6096 Info Jackett stopped
+2025-03-23 14:05:59.0446 Info Starting Jackett v0.22.1675
+2025-03-23 14:05:59.7011 Info Environment version: 8.0.14 (/app/Jackett/)
+2025-03-23 14:05:59.7088 Info OS version: Unix 6.8.0.52 (64bit OS) (64bit process)
+2025-03-23 14:05:59.7121 Info Jackett variant: CoreLinuxMuslAmdx64
+2025-03-23 14:05:59.7126 Info File /etc/issue: Welcome to Alpine Linux 3.21
+2025-03-23 14:05:59.7126 Info Running in Docker: Yes (image build: v0.22.1675-ls713)
+2025-03-23 14:05:59.7140 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-03-23 14:05:59.7143 Info App config/log directory: /config/Jackett
+2025-03-23 14:05:59.7164 Info Using proxy: Disabled
+2025-03-23 14:05:59.7164 Info Using FlareSolverr: No
+2025-03-23 14:05:59.7181 Info Using HTTP Client: HttpWebClient2
+2025-03-23 14:05:59.7218 Info Loading Native indexers ...
+2025-03-23 14:05:59.7705 Info Loaded 79 Native indexers.
+2025-03-23 14:05:59.7734 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /app/Jackett/Definitions
+2025-03-23 14:06:02.1807 Info Loaded 537 Cardigann indexers.
+2025-03-23 14:06:02.1807 Info Loaded 616 indexers in total
+2025-03-23 14:06:02.1923 Info Adding aggregate indexer ('all' indexer) ...
+2025-03-23 14:06:02.1981 Info Adding filter indexer ('type:public' indexer) ...
+2025-03-23 14:06:02.1987 Info Adding filter indexer ('type:private' indexer) ...
+2025-03-23 14:06:02.1987 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-03-23 14:06:02.4214 Info Jackett startup finished in 3.704 s

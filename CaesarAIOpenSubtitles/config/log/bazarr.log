@@ -1,0 +1,10 @@
+2025-03-25 23:20:12|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
+2025-03-25 23:20:12|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|
+2025-03-25 23:23:51|ERROR   |apprise                         |Unparseable URL https://amari.dev|
+2025-03-25 23:23:51|ERROR   |apprise                         |There are no service(s) to notify|
+2025-03-25 23:23:56|ERROR   |apprise                         |Unparseable URL https://amari.dev|
+2025-03-25 23:23:56|ERROR   |apprise                         |There are no service(s) to notify|
+2025-03-25 23:24:39|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
+2025-03-25 23:24:39|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|
+2025-03-25 23:28:57|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
+2025-03-25 23:28:57|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|

@@ -1,0 +1,43 @@
+services:
+  prowlarr:
+    container_name: prowlarr
+    image: ghcr.io/hotio/prowlarr
+    ports:
+      - "9696:9696"
+    hostname: prowlarr.internal #
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+      - VPN_ENABLED=true #
+      - VPN_CONF=wg0 # READ THIS
+      - VPN_PROVIDER=proton #
+      - VPN_LAN_NETWORK=192.168.1.0/24 #
+      - VPN_LAN_LEAK_ENABLED=false
+      - VPN_EXPOSE_PORTS_ON_LAN #
+      - VPN_AUTO_PORT_FORWARD=true #
+      - VPN_AUTO_PORT_FORWARD_TO_PORTS= #
+      - VPN_KEEP_LOCAL_DNS=false #
+      - VPN_FIREWALL_TYPE=auto #
+      - VPN_HEALTHCHECK_ENABLED=false
+      - PRIVOXY_ENABLED=false
+      - UNBOUND_ENABLED=false #
+      #- FIREWALL_OUTBOUND_SUBNETS=192.168.4.0/24
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1 #
+      - net.ipv6.conf.all.disable_ipv6=1 #
+    volumes:
+      - ./config:/config
+    #devices:
+    #  - /dev/net/tun:/dev/net/tun # OPTIONAL, READ THIS
+  #flaresolverr:
+  #  container_name: flaresolverr
+  #  image: ghcr.io/flaresolverr/flaresolverr:latest
+  #  restart: unless-stopped
+  #  ports:
+  #    - "8191:8191"
+  #  environment:
+  #    - LOG_LEVEL=info

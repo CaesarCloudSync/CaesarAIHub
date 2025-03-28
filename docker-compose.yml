@@ -1,0 +1,36 @@
+services:
+  hub:
+    container_name: caesaraihub
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+  cloudflared:
+    extends:
+      file: ./CaesarAICloudFlare/docker-compose.yml
+      service: cloudflared
+  jackett:
+    extends:
+      file: ./CaesarAIJackett/docker-compose.yml
+      service: jackett
+  prowlarr:
+    extends:
+      file: ./CaesarAIProwlarr/docker-compose.yml
+      service: prowlarr
+  musicstreaming:
+    extends:
+      file: ./CaesarAIMusicStreamYT/docker-compose.yml
+      service: musicstreaming
+  moviestreaming:
+    extends:
+      file: ./CaesarAIMovieStream/docker-compose.yml
+      service: moviestreaming
+
+     
+
+
+
+      
+
