@@ -19,6 +19,10 @@ services:
     extends:
       file: ./CaesarAIRedis/docker-compose.yml
       service: redis
+  postgres:
+    extends:
+      file: ./CaesarAIPostgreSQL/docker-compose.yml
+      service: postgres
   prowlarr:
     extends:
       file: ./CaesarAIProwlarr/docker-compose.yml
@@ -31,9 +35,13 @@ services:
     extends:
       file: ./CaesarAIMovieStream/docker-compose.yml
       service: moviestreaming
-# Declare the volume at the bottom of the file
+
 volumes:
   redis-data:  
+  postgres_data:
+    driver: local
+
+  
 
      
 
