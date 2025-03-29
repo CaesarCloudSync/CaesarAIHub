@@ -12,7 +12,7 @@ from imdb import Cinemagoer
 import logging
 from collections import OrderedDict
 from CaesarAITorrentParsers.CaesarAIJackett.CaesarAIDBConditions import CaesarAIDBConditins
-
+from CaesarAIUtils import CaesarAIUtils
 class CaesarAIJackett:
     def __init__(self,url=None,db=False) -> None:
         # Extract relevant data
@@ -27,7 +27,7 @@ class CaesarAIJackett:
             self.root = tree.getroot()
 
 
-    def get_torrent_info(self,verbose=0) -> List[TorrentItem]:
+    def get_torrent_info(self,query,verbose=0) -> List[TorrentItem]:
     
         
         for item in self.root.findall(".//item"):
@@ -59,6 +59,7 @@ class CaesarAIJackett:
 
             # Create Pydantic model instance
             torrent = TorrentItem(
+                query=query,
                 title=title,
                 guid=guid,
                 pub_date=pub_date,
@@ -77,36 +78,45 @@ class CaesarAIJackett:
         return sorted(self.torrent_items, key=lambda x: ( x.size and x.seeders)or 0 , reverse=True)
     def get_single_episodes(self) -> List[TorrentItem]:
         return list(filter(lambda x:self.is_single(x) and self.not_torrent_only_magnet(x),self.torrent_items))
+    def sort_torrents(self,torrent:TorrentItem):
+        # Prioritize 'BATCH' episodes by putting them first
+        if torrent.episode == "BATCH":
+            return (-1, 0)  # 'BATCH' comes first, ignore the actual episode number
+        if isinstance(torrent.episode,list):
+            return (-1,0)
+        return (1, torrent.episode)  # Otherwise, sort by the episode number
+
     def get_batch_episodes(self)-> List[TorrentItem]:
-        return list(filter(lambda x:self.is_batch and self.not_torrent_only_magnet(x),self.torrent_items))
+        return list(sorted(filter(lambda x:self.is_batch and self.not_torrent_only_magnet(x),self.torrent_items),key=self.sort_torrents))
     def filter_unique_episodes(self,torrents: List[TorrentItem]) -> List[TorrentItem]:
-        unique_episodes = OrderedDict()
 
+        seen = set()
+        unique_torrents = []
+        
         for torrent in torrents:
-                # Ensure episode is treated as a list, even if it's a single string
-                episodes = torrent.episode if isinstance(torrent.episode, list) else [torrent.episode]
+            episode_key = frozenset(torrent.episode) if isinstance(torrent.episode, list) else torrent.episode  # Handle lists or strings
+            if episode_key not in seen:
+                seen.add(episode_key)
+                unique_torrents.append(torrent)
+    
+        return unique_torrents
 
-                # Iterate through the list of episodes
-                for ep in episodes:
-                    if ep not in unique_episodes:
-                        unique_episodes[ep] = torrent
-        return list(unique_episodes.values())
-
-    def check_batch_episodes_db(self,title:str,season:int):
-        print(CaesarAIDBConditins.name_and_season.format(title=title,season=season))
-        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.name_and_season.format(title=title,season=season))
+    def check_batch_episodes_db(self,query:str,season:int):
+        print(CaesarAIDBConditins.name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
+        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
         return exists
 
-    def get_batch_episodes_db(self,title:str,season:int) -> List[TorrentItem]:
+    def get_batch_episodes_db(self,query:str,season:int) -> List[TorrentItem]:
      
-        results:List[TorrentItem] = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.name_and_season.format(title=title,season=season))
-        return results
+        results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
+        results:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results))
+        return sorted(results,key=self.sort_torrents)
 
     def save_batch_episode(self,torrentitem:TorrentItem) -> bool:
         try:
             
             result = self.crud.post_data(self.cardb.MOVISERIESFIELDS,
-                                (torrentitem.title,torrentitem.name,torrentitem.displayname,None,None,str(torrentitem.season),str(torrentitem.episode),torrentitem.size,torrentitem.resolution,str(torrentitem.languages),"tv/series/anime/movie",torrentitem.pub_date,
+                                (torrentitem.query,torrentitem.title,torrentitem.name,torrentitem.displayname,None,None,str(torrentitem.season),str(torrentitem.episode),torrentitem.size,torrentitem.resolution,str(torrentitem.languages),"tv/series/anime/movie",torrentitem.pub_date,
                                 torrentitem.guid,torrentitem.magnet_link,torrentitem.torrent_link,torrentitem.categories,torrentitem.seeders,torrentitem.peers,torrentitem.indexer,str(torrentitem.dual_audio),str(torrentitem.subtitles),
                                 torrentitem.is_multi_audio
                                 ),
@@ -146,61 +156,18 @@ class CaesarAIJackett:
         else:
             indexers = cr.getkey("indexers")
             return json.loads(indexers)
-    @staticmethod
-    def get_anilist_id(title:str):
-            query = '''
-                query ($search: String!) {
-                Page {
-                    media(search: $search, type: ANIME) {
-                    id
-                    title {
-                        romaji
-                        english
-                        native
-                    }
-                    }
-                }
-                }
-                '''
 
-            # Define our query variables and values that will be used in the query request
-            variables = {
-                    'search':title
-                }
 
-            url = 'https://graphql.anilist.co'
-
-                # Make the HTTP Api request
-            response = requests.post(url, json={'query': query, 'variables': variables})
-            data = response.json()
-            if len(data["data"]["Page"]["media"]) > 0:
-                anilist_id = data["data"]["Page"]["media"][0]["id"]
-                return anilist_id
-            else:
-                return None
-    @staticmethod
-    def get_imdb_id(title:str):
-        cinema = Cinemagoer()
-        media_object = cinema.search_movie(title)
-        if len(media_object) > 0:
-            imdb_num_id= cinema.get_imdbID(media_object)
-            mediatype = cinema.get_movie(imdb_num_id)["kind"]
-            imdb_id = f"tt{imdb_num_id}"
-            return imdb_id,mediatype
-
-        else:
-            return None,None
-
-    @staticmethod
-    def get_series_movies_id(torrent:TorrentItem):
-        imdb_id = None
-        anilist_id = None
-        if not CaesarAIConstants.ANIME_JACKETT_CATEGORY in torrent.categories: # Anime Category
-            imdb_id,mediatype = None,None #,CaesarAIJackett.get_imdb_id(torrent.name)
-        else:
-            anilist_id = CaesarAIJackett.get_anilist_id(torrent.name)
-            mediatype="tv/anime"
-        return imdb_id,anilist_id,mediatype
+    #@staticmethod
+    #def get_series_movies_id(torrent:TorrentItem):
+    #    imdb_id = None
+    #    anilist_id = None
+    #    if not CaesarAIConstants.ANIME_JACKETT_CATEGORY in torrent.categories: # Anime Category
+   #         imdb_id,mediatype = None,None #,CaesarAIJackett.get_imdb_id(torrent.name)
+    #    else:
+    #        anilist_id = CaesarAIJackett.get_anilist_id(torrent.name)
+    #        mediatype="tv/anime"
+    #    return imdb_id,anilist_id,mediatype
             
 
 

@@ -1,8 +1,11 @@
-from pydantic import  BaseModel,computed_field,root_validator
+from pydantic import  BaseModel,computed_field,root_validator,field_validator
 from typing import List,Optional,Union
 import PTN
 import re
+from CaesarAIConstants import CaesarAIConstants
+from CaesarAIUtils import CaesarAIUtils
 class TorrentItem(BaseModel):
+    query:str
     title: str
     guid: str
     pub_date: Optional[str] = None
@@ -13,6 +16,12 @@ class TorrentItem(BaseModel):
     seeders: int
     peers: Optional[int] = None
     indexer:Optional[str] = None
+    @field_validator("query")
+    @classmethod
+    def sanitize_query(cls, value):
+        value = CaesarAIUtils.sanitize_text(value)
+        return value
+ 
     
     @root_validator(pre=True)
     def validate_links(cls, values):
@@ -40,7 +49,10 @@ class TorrentItem(BaseModel):
     @computed_field
     @property
     def displayname(self) -> Optional[str]:
-        format_se = self.format_season_episode(self.season,self.episode) if self.episode and self.season else ""
+        if self.episode != "BATCH" and self.season != "BATCH":
+            format_se = self.format_season_episode(self.season,self.episode) if (self.episode and self.season) else ""
+        else:
+            format_se = "BATCH"
         resolution = self.resolution if self.resolution else ""
         dual_audio = self.dual_audio if self.dual_audio else ""
         return f"{self.name} {format_se} {resolution} {dual_audio}".strip()
@@ -48,17 +60,18 @@ class TorrentItem(BaseModel):
     @property
     def name(self) -> Optional[str]:
         info = PTN.parse(self.title)
+        
         return info.get("title") if info.get("title") else None
     @computed_field
     @property
-    def season(self) -> Optional[Union[int,List[str]]]:
+    def season(self) -> Optional[Union[int,str,List[str]]]:
         info = PTN.parse(self.title)
-        return info.get("season") if info.get("season") else None
+        return info.get("season") if info.get("season") else "BATCH"
     @computed_field
     @property
-    def episode(self) -> Optional[Union[int,List[int]]]:
+    def episode(self) -> Optional[Union[int,str,List[int]]]:
         info = PTN.parse(self.title)
-        return info.get("episode") if info.get("episode") else None
+        return info.get("episode") if info.get("episode") else "BATCH"
     @computed_field
     @property
     def resolution(self) -> Optional[str]:
