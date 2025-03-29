@@ -12,3 +12,4 @@ class CaesarAIConstants:
     ENDPOINT="tvsearch"
     REALDEBRID_API_KEY= os.environ.get("REALDEBRID_API_KEY")
     ANIME_JACKETT_CATEGORY=5070
+    MOVIESRIES_TABLE="moviesandseries"

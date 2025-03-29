@@ -9,7 +9,7 @@ class TorrentItem(BaseModel):
     size: int
     magnet_link: Optional[str] = None
     torrent_link: Optional[str] = None
-    categories: Optional[List[int]]
+    categories: Union[Optional[List[int]],str]
     seeders: int
     peers: Optional[int] = None
     indexer:Optional[str] = None

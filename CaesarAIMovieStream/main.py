@@ -12,6 +12,8 @@ from CaesarAIRealDebrid import CaesarAIRealDebrid
 from CaesarAIRealDebrid.responses.StreamingLinkResponse import StreamingLinkResponse
 from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
 from fastapi.responses import StreamingResponse
+from CaesarSQLDB.caesar_create_tables import CaesarCreateTables
+from CaesarSQLDB.caesarcrud import CaesarCRUD
 import json
 app = FastAPI()
 app.add_middleware(
@@ -22,9 +24,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+caesarcrud = CaesarCRUD()
 caesaraird = CaesarAIRealDebrid()
-
+cartable = CaesarCreateTables()
+cartable.create(caesarcrud)
 @app.get('/')# GET # allow all origins all methods.
 async def index():
     return "Welcome to CaesarAIMovieStream."
@@ -68,13 +71,20 @@ async def get_single_episodes(title:str,season:int,episode:int,service:Optional[
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 @app.get('/api/v1/get_batch_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
-async def get_batch_episodes(title:str,season:int,service:Optional[str]=None):
+async def get_batch_episodes(title:str,season:int,save:Optional[bool]=True,service:Optional[str]=None):
     try:
         if not service or "jackett":
-            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
-            caejackett = CaesarAIJackett(url)
-            torrentinfo = caejackett.get_torrent_info()
-            torrentinfo = caejackett.get_batch_episodes()
+            caejackett = CaesarAIJackett(db=True)
+            if caejackett.check_batch_episodes_db(title,season):
+                torrentinfo = caejackett.get_batch_episodes_db(title,season)
+                save = False
+            else:
+                url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+                caejackett = CaesarAIJackett(url)
+                torrentinfo = caejackett.get_torrent_info()
+                torrentinfo = caejackett.get_batch_episodes()
+            if save:
+                caejackett.save_batch_episodes(torrentinfo)
         else:
             url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
             caeprowlarr = CaesarAIProwlarr(url)
