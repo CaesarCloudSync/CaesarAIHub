@@ -9,7 +9,7 @@ from CaesarAITorrentParsers.CaesarAIJackett.responses.EpisodesResponse import Ep
 from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
 from CaesarAIRealDebrid.responses.StreamingLinkResponse import StreamingLinkResponse
 
-base_url = "http://localhost:8081"
+base_url = "http://localhost:8082"
 
 title = "Solo Leveling"
 season = 1

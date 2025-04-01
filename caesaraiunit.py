@@ -3,7 +3,7 @@ import requests
 import unittest
 import sys
 
-base_url_movies = "http://localhost:8081" #"https://blacktechdivisionreward-hrjw5cc7pa-uc.a.run.app"
+base_url_movies = "http://localhost:8082" #"https://blacktechdivisionreward-hrjw5cc7pa-uc.a.run.app"
 base_url_music = "https://music.caesaraihub.org"
 class CaesarAIUnittest(unittest.TestCase):
     def test_music_stream(self):

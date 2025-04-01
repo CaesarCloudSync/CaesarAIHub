@@ -7,6 +7,7 @@ from CaesarAIConstants import CaesarAIConstants
 from CaesarAIRealDebrid.models.ContainerStreamItem import ContainerStreamItem
 from CaesarAIRealDebrid.models.StreamItem import StreamItem
 from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
+from CaesarAIRealDebrid.responses.StreamRealDebridResponse import StreamRealDebridResponse
 class CaesarAIRealDebrid:
     def __init__(self) -> None:
         self.url="https://api.real-debrid.com/rest/1.0/"
@@ -36,11 +37,15 @@ class CaesarAIRealDebrid:
     def get_torrent_info(self,_id):
         response = requests.get(f"{self.url}/torrents/info/{_id}",headers=self.headers)
         return response.json()
-    async def get_streaming_info(self,containeritem:ContainerStreamItem):
+    
+
+    async def get_streaming_info(self,containeritem:ContainerStreamItem) -> StreamRealDebridResponse:
         async with httpx.AsyncClient() as client:
-            response = await client.get(f"{self.url}/streaming/mediaInfos/{containeritem.id}", headers=self.header)
+            response = await client.get(f"{self.url}/streaming/mediaInfos/{containeritem.id}", headers=self.headers)
             if response.status_code == 200:
-                return StreamItem.model_validate(response.json())
+                #print(response.json())
+                return response.json() # StreamRealDebridResponse.model_validate()
+                
             else:
                 return response.status_code
 
@@ -51,7 +56,6 @@ class CaesarAIRealDebrid:
     
     def get_restricted_links(self,_id):
         return self.get_torrent_info(_id)["links"]
-
     async def unrestrict_link(self,link:str):
         headers = dict()
         headers["Authorization"] = self.headers["Authorization"]
@@ -62,7 +66,12 @@ class CaesarAIRealDebrid:
                 return ContainerStreamItem.model_validate(response.json())
             else:
                 return response.status_code
+
+
     async def get_streaming_links(self,_id):
+        tasks = [self.get_streaming_info(await self.unrestrict_link(url) )for url in self.get_restricted_links(_id)]
+        return await asyncio.gather(*tasks)
+    async def get_container_links(self,_id):
         tasks = [self.unrestrict_link(url) for url in self.get_restricted_links(_id)]
         return await asyncio.gather(*tasks)
     def select_files(self,_id) -> Union[str,None]:
