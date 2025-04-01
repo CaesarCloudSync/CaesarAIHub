@@ -115,8 +115,8 @@ async def get_batch_episodes(title:str,season:int,save:Optional[bool]=True,servi
         if not service or "jackett":
             caejackett = CaesarAIJackett(db=True)
             print("Starting...")
-            if caejackett.check_batch_episodes_db(title,season):
-                torrentinfo = caejackett.get_batch_episodes_db(title,season)
+            if caejackett.check_batch_seasons_db(title,season):
+                torrentinfo = caejackett.get_batch_season_db(title,season)
                 save = False
             else:
                 print("Extracting")

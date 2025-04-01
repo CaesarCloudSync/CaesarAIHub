@@ -100,26 +100,44 @@ class CaesarAIJackett:
                 unique_torrents.append(torrent)
     
         return unique_torrents
+    def check_batch_episodes_db(self,query:str,season:int,episode:int):
+        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
+        exists_batch = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
+        return exists or exists_batch
+    def check_batch_seasons_db(self,query:str,season:int):
+        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.season_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season))
+        exists_batch = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
+        return exists or exists_batch
 
-    def check_batch_episodes_db(self,query:str,season:int):
-        print(CaesarAIDBConditins.batch_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
-        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
-        return exists
-    def check_episodes_db(self,query:str,season:int,episode:int):
-        print(CaesarAIDBConditins.episodes_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
-        exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episodes_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
-        return exists
     def get_episodes_db(self,query:str,season:int,episode:int) -> List[TorrentItem]:
      
-        results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episodes_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
-        results:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results))
-        return sorted(results,key=self.sort_torrents)
+        results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
+        results_batch = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
+        if isinstance(results_batch,list) and isinstance(results,list):
+            results_new = results + results_batch
+        elif isinstance(results,list) and not isinstance(results_batch,list):
+            results_new = results
+        elif not isinstance(results,list) and isinstance(results_batch,list):
+            results_new = results_batch
+        else:
+            raise Exception("No Episodes exist in db when getting. This shouldn't happen here")
+        results_new:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results_new))
+        return sorted(results_new,key=self.sort_torrents)
     
-    def get_batch_episodes_db(self,query:str,season:int) -> List[TorrentItem]:
+    def get_batch_season_db(self,query:str,season:int) -> List[TorrentItem]:
      
-        results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_name_and_season.format(query=CaesarAIUtils.sanitize_text(query),season=season))
-        results:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results))
-        return sorted(results,key=self.sort_torrents)
+        results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.season_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season))
+        results_batch = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
+        if isinstance(results_batch,list) and isinstance(results,list):
+            results_new = results + results_batch
+        elif isinstance(results,list) and not isinstance(results_batch,list):
+            results_new = results
+        elif not isinstance(results,list) and isinstance(results_batch,list):
+            results_new = results_batch
+        else:
+            raise Exception("No Episodes exist in db when getting. This shouldn't happen here")
+        results_new:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results_new))
+        return sorted(results_new,key=self.sort_torrents)
 
     def save_batch_episode(self,torrentitem:TorrentItem) -> bool:
         try:
@@ -186,7 +204,7 @@ class CaesarAIJackett:
         yield "event: open\ndata:open\n\n"
         for indexer in indexers:            
             print("Starting...")
-            if caejackett.check_episodes_db(title,season,episode):
+            if caejackett.check_batch_episodes_db(title,season,episode):
                 torrentinfo = caejackett.get_episodes_db(title,season,episode)
                 save = False
             else:
