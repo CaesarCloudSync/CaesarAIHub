@@ -109,19 +109,17 @@ class CaesarAIJackett:
         exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.season_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season))
         exists_batch = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
         return exists or exists_batch
-
+    def merge_lists(self,*lists):
+        return sum(filter(bool, lists), [])
     def get_episodes_db(self,query:str,season:int,episode:int) -> List[TorrentItem]:
      
         results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
+        results_list = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_list_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
         results_batch = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
-        if isinstance(results_batch,list) and isinstance(results,list):
-            results_new = results + results_batch
-        elif isinstance(results,list) and not isinstance(results_batch,list):
-            results_new = results
-        elif not isinstance(results,list) and isinstance(results_batch,list):
-            results_new = results_batch
-        else:
+        results_new = self.merge_lists(results,results_batch,results_list)
+        if len(results_new) == 0:
             raise Exception("No Episodes exist in db when getting. This shouldn't happen here")
+        
         results_new:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results_new))
         return sorted(results_new,key=self.sort_torrents)
     
@@ -129,13 +127,8 @@ class CaesarAIJackett:
      
         results = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.season_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season))
         results_batch = self.crud.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
-        if isinstance(results_batch,list) and isinstance(results,list):
-            results_new = results + results_batch
-        elif isinstance(results,list) and not isinstance(results_batch,list):
-            results_new = results
-        elif not isinstance(results,list) and isinstance(results_batch,list):
-            results_new = results_batch
-        else:
+        results_new = self.merge_lists(results,results_batch)
+        if len(results_new) == 0:
             raise Exception("No Episodes exist in db when getting. This shouldn't happen here")
         results_new:List[TorrentItem] = list(map(lambda x:TorrentItem.parse_obj(x),results_new))
         return sorted(results_new,key=self.sort_torrents)
