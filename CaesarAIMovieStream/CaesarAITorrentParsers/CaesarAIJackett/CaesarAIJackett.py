@@ -88,7 +88,8 @@ class CaesarAIJackett:
 
     def get_batch_episodes(self)-> List[TorrentItem]:
         return list(sorted(filter(lambda x:self.is_batch and self.not_torrent_only_magnet(x),self.torrent_items),key=self.sort_torrents))
-    def filter_unique_episodes(self,torrents: List[TorrentItem]) -> List[TorrentItem]:
+    @staticmethod
+    def filter_unique_episodes(torrents: List[TorrentItem]) -> List[TorrentItem]:
 
         seen = set()
         unique_torrents = []
@@ -157,7 +158,7 @@ class CaesarAIJackett:
             return False
 
     def save_batch_episodes(self,torrentitems:List[TorrentItem]) -> List[bool]:
-        unique_episodes = self.filter_unique_episodes(torrentitems)
+        unique_episodes = CaesarAIJackett.filter_unique_episodes(torrentitems)
       
         print(unique_episodes)
         return list(map(self.save_batch_episode,unique_episodes))
@@ -215,10 +216,12 @@ class CaesarAIJackett:
                 torrentinfo_single = caejackett.get_single_episodes()
                 torrentinfo_batch =  caejackett.get_batch_episodes()
                 torrentinfo = torrentinfo_batch + torrentinfo_single
-                print(torrentinfo)
+                
+                #print(torrentinfo)
             if save:
                 print("Saving...")
                 caejackett.save_batch_episodes(torrentinfo)
+            
 
 
 
@@ -226,6 +229,8 @@ class CaesarAIJackett:
             for index,torrent in enumerate(torrentinfo):
                 data = json.dumps({"index":index,"total":len(torrentinfo),"episodes":torrent.dict()})
                 yield f"event: episodes\n\ndata: {data}\n\n"
+            if not save:
+                break
         yield "event: close\ndata:close\n\n"
 
 
