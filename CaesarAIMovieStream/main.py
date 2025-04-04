@@ -43,15 +43,24 @@ async def get_indexers():
 @app.get('/api/v1/get_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:
+        caejackett = CaesarAIJackett(db=True)
         if not service or "jackett":
-            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&episode=${episode}"
-            caejackett = CaesarAIJackett(url)
-            torrentinfo = caejackett.get_torrent_info(query=title)
-            torrentinfo_single = caejackett.get_single_episodes()
-            torrentinfo_batched = caejackett.get_batch_episodes()
+            if caejackett.check_batch_episodes_db(title,season,episode):
+                torrentinfo = caejackett.get_episodes_db(title,season,episode)
+                return {"episodes":torrentinfo}
+               
+            else:
+                url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}&episode=${episode}"
+                caejackett = CaesarAIJackett(url)
+                torrentinfo = caejackett.get_torrent_info(query=title)
+                torrentinfo_single = caejackett.get_single_episodes()
+                torrentinfo_batched = caejackett.get_batch_episodes()
+                caejackett.save_batch_episodes(torrentinfo)
+                torrentinfo = torrentinfo_batched + torrentinfo_single 
+                return {"episodes":torrentinfo}
+
             
-            torrentinfo = torrentinfo_batched + torrentinfo_single 
-            return {"episodes":torrentinfo}
+            
         else:
             url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
             caeprowlarr = CaesarAIProwlarr(url)

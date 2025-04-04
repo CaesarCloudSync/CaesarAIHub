@@ -6760,3 +6760,26 @@
 2025-04-02 10:49:02.2105 Info Torznab search in Nyaa.si for My One-Hit Kill Sister S01 => Found 38 releases [4596ms]
 2025-04-02 10:50:00.0008 Info Torznab search in Nyaa.si for Breaking Bad S01 => Found 0 releases [3199ms]
 2025-04-02 10:50:02.6703 Info Torznab search in The Pirate Bay for Breaking Bad S01 => Found 50 releases [2111ms]
+2025-04-04 18:20:21.1857 Info Starting Jackett v0.22.1712
+2025-04-04 18:20:21.9891 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-04 18:20:22.0032 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-04 18:20:22.0074 Info Jackett variant: CoreLinuxAmdx64
+2025-04-04 18:20:22.0074 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-04 18:20:22.0083 Info Running in Docker: Yes (image build: unknown)
+2025-04-04 18:20:22.0096 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-04 18:20:22.0096 Info App config/log directory: /config/Jackett
+2025-04-04 18:20:22.0130 Info Using proxy: Disabled
+2025-04-04 18:20:22.0130 Info Using FlareSolverr: No
+2025-04-04 18:20:22.0154 Info Using HTTP Client: HttpWebClient2
+2025-04-04 18:20:22.0207 Info Loading Native indexers ...
+2025-04-04 18:20:22.0859 Info Loaded 79 Native indexers.
+2025-04-04 18:20:22.0888 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-04 18:20:24.6194 Info Loaded 537 Cardigann indexers.
+2025-04-04 18:20:24.6194 Info Loaded 616 indexers in total
+2025-04-04 18:20:24.6257 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-04 18:20:24.6293 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-04 18:20:24.6293 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-04 18:20:24.6293 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-04 18:20:24.7408 Info Jackett startup finished in 3.904 s
+2025-04-04 19:20:24.7311 Info Checking for updates... Jackett variant: CoreLinuxAmdx64
+2025-04-04 19:20:24.7870 Info Updates are disabled via --NoUpdates.
