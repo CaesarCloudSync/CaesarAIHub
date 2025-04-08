@@ -18,7 +18,7 @@ class CaesarSQLAsync:
             'host': p.hostname,
             "autocommit" : True
         }
-        self.aconn = await psycopg.AsyncConnection.connect(pg_connection_dict)
+        self.aconn = await psycopg.AsyncConnection.connect(**pg_connection_dict)
         return self
     def check_exists(self,result :Any):
         # Checks if an entity exists from an SQL Command.
@@ -93,7 +93,7 @@ class CaesarSQLAsync:
                with open(filename) as f:
                    sqlcommand = f.read()
             
-            async with self.connection.cursor() as cursor:
+            async with self.aconn.cursor() as cursor:
                 #print(datatuple)
                 await cursor.execute(sqlcommand,datatuple)
 
@@ -136,6 +136,7 @@ class CaesarSQLAsync:
         return {table:final_json}       
     async def __aexit__(self, exc_type, exc, tb):
         pass
+        #await self.aconn.close()
                     
 class CaesarSQL:
     def __init__(self) -> None:

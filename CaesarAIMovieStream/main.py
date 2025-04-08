@@ -5,7 +5,8 @@ from typing import Optional
 from fastapi.middleware.cors import CORSMiddleware
 from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
 from CaesarAIConstants import CaesarAIConstants
-from CaesarAITorrentParsers.CaesarAIJackett.responses.EpisodesResponse import EpisodesResponse
+from CaesarAITorrentParsers.CaesarAIJackett.responsemodels.EpisodesResponse import EpisodesResponse
+from CaesarAITorrentParsers.CaesarAIJackett.requestmodels.EpisodesRequest import EpisodesRequest
 from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
 from CaesarAIRealDebrid.requestmodels.StreamingLinkRequest import StreamingLinkRequest
 from CaesarAIRealDebrid import CaesarAIRealDebrid
@@ -15,6 +16,7 @@ from fastapi.responses import StreamingResponse
 from CaesarSQLDB.caesar_create_tables import CaesarCreateTables
 from CaesarSQLDB.caesarcrud import CaesarCRUD
 from CaesarAIUtils import CaesarAIUtils
+from starlette.websockets import WebSocketDisconnect,WebSocketState
 
 import json
 app = FastAPI()
@@ -42,6 +44,22 @@ async def healthcheck():
 async def get_indexers():
     indexers = CaesarAIJackett.get_all_torrent_indexers()
     return {"indexers":indexers}
+@app.websocket("/api/v1/stream_get_single_episodews")
+async def stream_get_single_episodews(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            data = EpisodesRequest.model_validate(await websocket.receive_json())
+            async for event in CaesarAIJackett.stream_get_single_episodews(data.title,data.season,data.episode,indexers,data.save):
+                #print(event)
+                await websocket.send_json(event)
+    except WebSocketDisconnect as wex:
+        pass
+    finally:
+        # Just in case it's still open, close it
+        if websocket.client_state != WebSocketState.DISCONNECTED:
+            await websocket.close(code=1000)
+
 @app.get('/api/v1/get_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:
@@ -94,16 +112,7 @@ async def stream_get_single_episodes(title:str,season:int,episode:int,service:Op
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 
-@app.websocket("/api/v1/stream_get_single_episodews")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    while True:
-        data = await websocket.receive_json()
-        title = data["title"]
-        season = data["season"]
-        episode = data["episode"]
-        for event in CaesarAIJackett.single_episode_wsstreamer(title,season,episode,indexers):
-            await websocket.send_json(event)
+
 @app.get('/api/v1/get_single_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_single_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
     try:

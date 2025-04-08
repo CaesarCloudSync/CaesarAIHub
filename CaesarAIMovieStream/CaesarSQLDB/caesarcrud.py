@@ -236,7 +236,7 @@ class CaesarCRUDAsync:
 
             #values = tuple(map(convert_to_hex,values))
             async with CaesarSQLAsync() as caesarsqlcm:
-                result = caesarsqlcm.run_command(f"INSERT INTO {table} {fieldstr} VALUES {valuestr} returning {fields[0]};",caesarsqlcm.fetch,datatuple=values)
+                result = await caesarsqlcm.run_command(f"INSERT INTO {table} {fieldstr} VALUES {valuestr} returning {fields[0]};",caesarsqlcm.fetch,datatuple=values)
 
             if len(result) != 0:
                 return True
@@ -274,7 +274,7 @@ class CaesarCRUDAsync:
         if condition:
             #print(f"""SELECT {fieldstr} FROM {table} WHERE {condition};""")
             async with CaesarSQLAsync() as caesarsqlcm:
-                result = caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} WHERE {condition} LIMIT {str(getamount)};""",caesarsqlcm.fetch)
+                result = await caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} WHERE {condition} LIMIT {str(getamount)};""",caesarsqlcm.fetch)
             if len(result) == 0:
                 return False
             elif len(result) != 0 and type(result) == list:
@@ -284,7 +284,7 @@ class CaesarCRUDAsync:
                 return {"error":"error syntax error.","error":result}
         else:
             async with CaesarSQLAsync() as caesarsqlcm:
-                result = caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} LIMIT {str(getamount)};""",caesarsqlcm.fetch)
+                result = await caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} LIMIT {str(getamount)};""",caesarsqlcm.fetch)
             if len(result) == 0:
                 return False
             elif len(result) != 0 and type(result) == list:
@@ -374,7 +374,7 @@ class CaesarCRUDAsync:
         if condition:
             #print(f"""SELECT {fieldstr} FROM {table} WHERE {condition};""")
             async with CaesarSQLAsync() as caesarsqlcm:
-                result = caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} WHERE {condition};""",caesarsqlcm.check_exists)
+                result = await caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table} WHERE {condition};""",caesarsqlcm.check_exists)
             if result == True or result == False:
                 return result
             else:
@@ -382,7 +382,7 @@ class CaesarCRUDAsync:
                 
         else:
             async with CaesarSQLAsync() as caesarsqlcm:
-                result = caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table};""",caesarsqlcm.check_exists)
+                result = await caesarsqlcm.run_command(f"""SELECT {fieldstr} FROM {table};""",caesarsqlcm.check_exists)
             if result == True or result == False:
                 return result
             else:
@@ -390,4 +390,4 @@ class CaesarCRUDAsync:
 
     
     async def __aexit__(self, exc_type, exc, tb):
-        await self.aconn.close()
+        pass
