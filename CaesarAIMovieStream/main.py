@@ -17,8 +17,18 @@ from CaesarSQLDB.caesar_create_tables import CaesarCreateTables
 from CaesarSQLDB.caesarcrud import CaesarCRUD
 from CaesarAIUtils import CaesarAIUtils
 from starlette.websockets import WebSocketDisconnect,WebSocketState
-
+from websockets.exceptions import ConnectionClosedError,ConnectionClosedOK
+from CaesarAICelery.tasks import get_unfinished_episodes
+from CaesarAIRedis import CaesarAIRedis
 import json
+
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+)
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -44,21 +54,31 @@ async def healthcheck():
 async def get_indexers():
     indexers = CaesarAIJackett.get_all_torrent_indexers()
     return {"indexers":indexers}
-@app.websocket("/api/v1/stream_get_single_episodews")
-async def stream_get_single_episodews(websocket: WebSocket):
+@app.get("/api/v1/schedule_interrupted_episodes")
+async def schedule_interrupted_episodes():
+    result = get_unfinished_episodes.delay()
+    return {"task_id": result.id}
+@app.websocket("/api/v1/stream_get_episodews")
+async def stream_get_episodews(websocket: WebSocket):
     await websocket.accept()
     try:
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
-            async for event in CaesarAIJackett.stream_get_single_episodews(data.title,data.season,data.episode,indexers,data.save):
+            async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers,data.save):
                 #print(event)
                 await websocket.send_json(event)
-    except WebSocketDisconnect as wex:
+    except ConnectionClosedError as cex:
+        cj = CaesarAIJackett(db=True,asynchronous=True)
+        cr = CaesarAIRedis(async_mode=True)
+        episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=data.title,season=data.season,episode=data.episode)
+        if not await cj.check_batch_episodes_db_async(data.title,data.season,data.episode) and not await cr.async_hget_episode_task(episode_id):
+            print(episode_id,flush=True)
+            await cr.async_set_episode_task(episode_id,"pending")
+
+    except (WebSocketDisconnect,ConnectionClosedOK) as wex:
+        # This indicates that all data has been sent.
         pass
-    finally:
-        # Just in case it's still open, close it
-        if websocket.client_state != WebSocketState.DISCONNECTED:
-            await websocket.close(code=1000)
+
 
 @app.get('/api/v1/get_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.
 async def get_episodes(title:str,season:int,episode:int,service:Optional[str]=None):
