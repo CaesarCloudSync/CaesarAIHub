@@ -88,14 +88,16 @@ async def stream_get_episodews(websocket: WebSocket):
     try:
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
-            async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers,data.save):
+            async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers):
                 #print(event)
                 await websocket.send_json(event)
     except (WebSocketDisconnect,ConnectionClosedOK,ConnectionClosedError) as cex:
         cj = CaesarAIJackett(db=True,asynchronous=True)
         cr = CaesarAIRedis(async_mode=True)
         episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=data.title,season=data.season,episode=data.episode)
-        if not await cj.check_batch_episodes_db_async(data.title,data.season,data.episode) and not await cr.async_hget_episode_task(episode_id):
+        episodes_exists_in_db = await cj.check_batch_episodes_db_async(data.title,data.season,data.episode)
+        task_to_save_in_db_exists = await cr.async_hget_episode_task(episode_id)
+        if not episodes_exists_in_db and not task_to_save_in_db_exists:
             print(episode_id,flush=True)
             logging.info(episode_id)
             await cr.async_set_episode_task(episode_id,"pending")

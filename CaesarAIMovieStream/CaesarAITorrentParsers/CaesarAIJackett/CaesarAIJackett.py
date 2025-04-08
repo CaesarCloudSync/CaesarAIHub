@@ -306,17 +306,17 @@ class CaesarAIJackett:
         yield json.dumps({"event":{"data":"close"}})
 
     @staticmethod
-    async def stream_get_episodews(title:str,season:int,episode:int,indexers:List[str],save:Union[bool,None]):
+    async def stream_get_episodews(title:str,season:int,episode:int,indexers:List[str]):
         all_torrents = []
         cr = CaesarAIRedis(async_mode=True)
         caejackett = CaesarAIJackett(db=True,asynchronous=True)
         yield {"event":{"open":{"data":"open"}}}
         for indexer in indexers:            
-            if await caejackett.check_batch_episodes_db_async(title,season,episode) and not save:
+            if await caejackett.check_batch_episodes_db_async(title,season,episode):
                 #print("Hello")
                 yield {"event":{"log":"extracting db"}}
                 torrentinfo = await caejackett.get_episodes_db_async(title,season,episode)
-                save = False
+
             else:
                 yield {"event":{"log":"extracting jackett"}}
                 url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
@@ -325,7 +325,7 @@ class CaesarAIJackett:
                 torrentinfo_single = caejackett.get_single_episodes()
                 torrentinfo_batch =  caejackett.get_batch_episodes()
                 torrentinfo = torrentinfo_batch + torrentinfo_single
-                save = True
+  
                 
                 #print(torrentinfo)
  
@@ -333,9 +333,11 @@ class CaesarAIJackett:
             for index,torrent in enumerate(torrentinfo):
                 data = {"index":index,"total":len(torrentinfo),"episodes":torrent.model_dump()}
                 yield {"event":{"episodes":{"data":data}}}
+                
         redis_episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=title,season=season,episode=episode)
-        
-        if save and not await cr.async_hget_episode_task(redis_episode_id) :
+        episodes_exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)
+        task_to_save_in_db_exists = await cr.async_hget_episode_task(redis_episode_id)
+        if not episodes_exists_in_db and not task_to_save_in_db_exists:
             flattened_all_torrents = list(chain.from_iterable(all_torrents))
             #print(flattened_all_torrents,flush=True)
             await caejackett.save_batch_episodes_async(flattened_all_torrents)
