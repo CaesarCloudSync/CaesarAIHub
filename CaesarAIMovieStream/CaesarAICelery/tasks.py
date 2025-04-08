@@ -15,7 +15,7 @@ async def async_get_unfinished_episodes(interuptted_episode_tasks,indexers,redis
         title, season, episode = episode_task.split('_')
         redis_instance.delete_episode_task(episode_task)
         logger.info(f"Extracting: {title},{season},{episode}") 
-        async for event in CaesarAIJackett.stream_get_episodews(title,season,episode,indexers):
+        async for event in CaesarAIJackett.stream_get_episodews(title,season,episode,indexers,save=True):
             logger.info(str(event))
         
 
