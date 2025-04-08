@@ -20,6 +20,12 @@ from starlette.websockets import WebSocketDisconnect,WebSocketState
 from websockets.exceptions import ConnectionClosedError,ConnectionClosedOK
 from CaesarAICelery.tasks import get_unfinished_episodes
 from CaesarAIRedis import CaesarAIRedis
+from fastapi import FastAPI
+from datetime import datetime
+from contextlib import asynccontextmanager
+from apscheduler.schedulers.background import BackgroundScheduler  # runs tasks in the background
+from apscheduler.triggers.cron import CronTrigger  # allows us to specify a recurring time for execution
+
 import json
 
 import logging
@@ -28,6 +34,18 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
+logging.getLogger('apscheduler').setLevel(logging.WARNING) # This hides the apscedhuler events
+def schedule_interrupted_episodes():
+    logging.info(f"Creating interrupted episodes task...")
+    result = get_unfinished_episodes.delay()
+    logging.info(f"Interrupted episodes task created.")
+    return {"task_id":result.id}
+# Set up the scheduler
+scheduler = BackgroundScheduler()
+trigger = CronTrigger(year="*", month="*", day="*", hour="*", minute="*")  # every minute
+scheduler.add_job(schedule_interrupted_episodes, trigger)
+scheduler.start()
+
 
 app = FastAPI()
 app.add_middleware(
@@ -43,6 +61,14 @@ caesaraird = CaesarAIRealDebrid()
 cartable = CaesarCreateTables()
 indexers = CaesarAIJackett.get_all_torrent_indexers()
 cartable.create(caesarcrud)
+
+# Ensure the scheduler shuts down properly on application exit.
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    yield
+    scheduler.shutdown()
+
+
 @app.get('/')# GET # allow all origins all methods.
 async def index():
     return "Welcome to CaesarAIMovieStream."
@@ -54,10 +80,8 @@ async def healthcheck():
 async def get_indexers():
     indexers = CaesarAIJackett.get_all_torrent_indexers()
     return {"indexers":indexers}
-@app.get("/api/v1/schedule_interrupted_episodes")
-async def schedule_interrupted_episodes():
-    result = get_unfinished_episodes.delay()
-    return {"task_id": result.id}
+
+
 @app.websocket("/api/v1/stream_get_episodews")
 async def stream_get_episodews(websocket: WebSocket):
     await websocket.accept()
@@ -73,6 +97,7 @@ async def stream_get_episodews(websocket: WebSocket):
         episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=data.title,season=data.season,episode=data.episode)
         if not await cj.check_batch_episodes_db_async(data.title,data.season,data.episode) and not await cr.async_hget_episode_task(episode_id):
             print(episode_id,flush=True)
+            logging.info(episode_id)
             await cr.async_set_episode_task(episode_id,"pending")
 
     except (WebSocketDisconnect,ConnectionClosedOK) as wex:

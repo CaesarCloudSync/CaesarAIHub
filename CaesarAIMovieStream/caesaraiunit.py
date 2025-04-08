@@ -26,7 +26,7 @@ class CaesarAIUnittest(unittest.TestCase):
 
         async def hello():
             async with connect("ws://localhost:8082/api/v1/stream_get_episodews") as websocket:
-                await websocket.send(json.dumps({"title":"The Eminence in Shadow","season":1,"episode":1}))
+                await websocket.send(json.dumps({"title":"Black Summoner","season":1,"episode":1}))
                 while True:
                     data = json.loads(await websocket.recv())
                     print(data)

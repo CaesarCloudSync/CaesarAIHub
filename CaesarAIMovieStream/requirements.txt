@@ -25,3 +25,4 @@ redis
 cinemagoer
 websockets
 celery
+apscheduler
