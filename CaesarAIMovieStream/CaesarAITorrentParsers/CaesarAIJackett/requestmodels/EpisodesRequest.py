@@ -5,4 +5,4 @@ class EpisodesRequest(BaseModel):
     title:str
     season:int
     episode:int
-    save: Optional[str,None] = None
+    save: Optional[str] = None
