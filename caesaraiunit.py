@@ -15,6 +15,7 @@ class CaesarAIUnittest(unittest.TestCase):
         url = f"{base_url_movies}/api/v1/get_single_episodes"
         response = requests.get(url,params={"title":"Solo Leveling","season":1,"episode":1})
         print(response.json())
+    
 
 
 
