@@ -91,7 +91,7 @@ async def stream_get_episodews(websocket: WebSocket):
             async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers,data.save):
                 #print(event)
                 await websocket.send_json(event)
-    except ConnectionClosedError as cex:
+    except (WebSocketDisconnect,ConnectionClosedOK,ConnectionClosedError) as cex:
         cj = CaesarAIJackett(db=True,asynchronous=True)
         cr = CaesarAIRedis(async_mode=True)
         episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=data.title,season=data.season,episode=data.episode)
@@ -100,9 +100,6 @@ async def stream_get_episodews(websocket: WebSocket):
             logging.info(episode_id)
             await cr.async_set_episode_task(episode_id,"pending")
 
-    except (WebSocketDisconnect,ConnectionClosedOK) as wex:
-        # This indicates that all data has been sent.
-        pass
 
 
 @app.get('/api/v1/get_episodes',response_model=EpisodesResponse)# GET # allow all origins all methods.

@@ -335,7 +335,7 @@ class CaesarAIJackett:
                 yield {"event":{"episodes":{"data":data}}}
         redis_episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=title,season=season,episode=episode)
         
-        if save and not await cr.async_hget_episode_task(redis_episode_id):
+        if save and not await cr.async_hget_episode_task(redis_episode_id) :
             flattened_all_torrents = list(chain.from_iterable(all_torrents))
             #print(flattened_all_torrents,flush=True)
             await caejackett.save_batch_episodes_async(flattened_all_torrents)
