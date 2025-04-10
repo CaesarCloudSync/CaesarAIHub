@@ -14,6 +14,7 @@ from collections import OrderedDict
 from CaesarAITorrentParsers.CaesarAIJackett.CaesarAIDBConditions import CaesarAIDBConditins
 from CaesarAIUtils import CaesarAIUtils
 from CaesarSQLDB.caesarcrud import CaesarCRUDAsync
+from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
 from itertools import chain
 class CaesarAIJackett:
     def __init__(self,url=None,db=False,asynchronous=False) -> None:
@@ -71,7 +72,8 @@ class CaesarAIJackett:
                 categories=categories,
                 seeders=seeders,
                 peers=peers,
-                indexer=indexer
+                indexer=indexer,
+                service="jackett"
             )
             self.torrent_items.append(torrent)
         return self.torrent_items
@@ -104,7 +106,11 @@ class CaesarAIJackett:
                 unique_torrents.append(torrent)
     
         return unique_torrents
-
+    def get_db_field_values(self,torrentitem:TorrentItem):
+        return (torrentitem.query,torrentitem.title,torrentitem.name,torrentitem.displayname,None,None,str(torrentitem.season),str(torrentitem.episode),torrentitem.size,torrentitem.resolution,str(torrentitem.languages),"tv/series/anime/movie",torrentitem.pub_date,
+            torrentitem.guid,torrentitem.magnet_link,torrentitem.torrent_link,torrentitem.categories,torrentitem.seeders,torrentitem.peers,torrentitem.indexer,str(torrentitem.dual_audio),str(torrentitem.subtitles),
+            torrentitem.is_multi_audio,torrentitem.service
+            )
 
     def check_batch_episodes_db(self,query:str,season:int,episode:int):
         exists = self.crud.check_exists(("*"),CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
@@ -160,12 +166,7 @@ class CaesarAIJackett:
     def save_batch_episode(self,torrentitem:TorrentItem) -> bool:
         try:
             
-            result = self.crud.post_data(self.cardb.MOVISERIESFIELDS,
-                                (torrentitem.query,torrentitem.title,torrentitem.name,torrentitem.displayname,None,None,str(torrentitem.season),str(torrentitem.episode),torrentitem.size,torrentitem.resolution,str(torrentitem.languages),"tv/series/anime/movie",torrentitem.pub_date,
-                                torrentitem.guid,torrentitem.magnet_link,torrentitem.torrent_link,torrentitem.categories,torrentitem.seeders,torrentitem.peers,torrentitem.indexer,str(torrentitem.dual_audio),str(torrentitem.subtitles),
-                                torrentitem.is_multi_audio
-                                ),
-                                CaesarAIConstants.MOVIESRIES_TABLE)
+            result = self.crud.post_data(self.cardb.MOVISERIESFIELDS,self.get_db_field_values(torrentitem),CaesarAIConstants.MOVIESRIES_TABLE)
             if result:
                 return True
             else:
@@ -176,12 +177,7 @@ class CaesarAIJackett:
     async def save_batch_episode_async(self,torrentitem:TorrentItem) -> bool:
         try:
             async with CaesarCRUDAsync() as cax:
-                result = await cax.post_data(self.cardb.MOVISERIESFIELDS,
-                                    (torrentitem.query,torrentitem.title,torrentitem.name,torrentitem.displayname,None,None,str(torrentitem.season),str(torrentitem.episode),torrentitem.size,torrentitem.resolution,str(torrentitem.languages),"tv/series/anime/movie",torrentitem.pub_date,
-                                    torrentitem.guid,torrentitem.magnet_link,torrentitem.torrent_link,torrentitem.categories,torrentitem.seeders,torrentitem.peers,torrentitem.indexer,str(torrentitem.dual_audio),str(torrentitem.subtitles),
-                                    torrentitem.is_multi_audio
-                                    ),
-                                    CaesarAIConstants.MOVIESRIES_TABLE)
+                result = await cax.post_data(self.cardb.MOVISERIESFIELDS,self.get_db_field_values(torrentitem),CaesarAIConstants.MOVIESRIES_TABLE)
             if result:
                 return True
             else:
@@ -320,7 +316,7 @@ class CaesarAIJackett:
         yield json.dumps({"event":{"data":"close"}})
 
     @staticmethod
-    async def stream_get_episodews(title:str,season:int,episode:int,indexers:List[str]):
+    async def stream_get_episodews(title:str,season:int,episode:int,indexers:List[str],service:str="jackett"):
         all_torrents = []
         cr = CaesarAIRedis(async_mode=True)
         caejackett = CaesarAIJackett(db=True,asynchronous=True)
@@ -336,16 +332,29 @@ class CaesarAIJackett:
                 break
 
             else:
-                yield {"event":{"log":"extracting jackett"}}
-                url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
-                caejackett = CaesarAIJackett(url)
-                torrentinfo = caejackett.get_torrent_info(title)
-                torrentinfo_single = caejackett.get_single_episodes()
-                torrentinfo_batch =  caejackett.get_batch_episodes()
-                torrentinfo = torrentinfo_batch + torrentinfo_single
+                if service == "jackett":
+                    yield {"event":{"log":"extracting jackett"}}
+                    url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+                    caejackett = CaesarAIJackett(url)
+                    torrentinfo = caejackett.get_torrent_info(title)
+                    torrentinfo_single = caejackett.get_single_episodes()
+                    torrentinfo_batch =  caejackett.get_batch_episodes()
+                    torrentinfo = torrentinfo_batch + torrentinfo_single
+                elif service == "prowlarr":
+                    url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
+                    caeprowlarr = CaesarAIProwlarr(url)
+                    torrentinfo = caeprowlarr.get_torrent_info(title)
+                    torrentinfo_single = caeprowlarr.get_single_episodes()
+                    torrentinfo_batched = caeprowlarr.get_batch_episodes()
+                    
+                    torrentinfo = torrentinfo_single + torrentinfo_batched
+                else:
+                    raise Exception("Indexing Service does not exist.")
+
                 for index,torrent in enumerate(torrentinfo):
                     data = {"index":index,"total":len(torrentinfo),"episodes":torrent.model_dump()}
                     yield {"event":{"episodes":{"data":data}}}
+     
   
                 
                 #print(torrentinfo)

@@ -27,7 +27,7 @@ class CaesarAIUnittest(unittest.TestCase):
         async def hello():
             datares = []
             async with connect("ws://localhost:8082/api/v1/stream_get_episodews") as websocket:
-                await websocket.send(json.dumps({"title":"Dr Stone","season":1,"episode":1}))
+                await websocket.send(json.dumps({"title":"Solo Leveling","season":1,"episode":1}))
                 while True:
                     data = json.loads(await websocket.recv())
                     if "close" in data["event"]:
