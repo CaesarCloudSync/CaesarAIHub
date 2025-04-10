@@ -87,6 +87,7 @@ async def stream_get_episodews(websocket: WebSocket):
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
             indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
+            indexers = CaesarAIJackett.sort_indexers(indexers)
             async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers):
                 #print(event)
                 await websocket.send_json(event)

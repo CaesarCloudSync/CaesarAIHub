@@ -5,7 +5,7 @@
   <EnableSsl>False</EnableSsl>
   <LaunchBrowser>True</LaunchBrowser>
   <ApiKey>474140d729194819b654e64276e55976</ApiKey>
-  <AuthenticationMethod>Forms</AuthenticationMethod>
+  <AuthenticationMethod>External</AuthenticationMethod>
   <AuthenticationRequired>Enabled</AuthenticationRequired>
   <Branch>master</Branch>
   <LogLevel>debug</LogLevel>

@@ -370,5 +370,9 @@ class CaesarAIJackett:
             await caejackett.save_batch_episodes_async(flattened_all_torrents)
             yield {"event":{"log":"saving"}}
         yield {"event":{"close":{"data":"close"}}}
-            
+    @staticmethod
+    def sort_indexers(data):
+        priority = {"Nyaa.si": 0, "EZTV": 1}  # Lower numbers = higher priority
+        indexers = sorted(data, key=lambda x: (priority.get(x, 2), x))
+        return indexers
 

@@ -3390,3 +3390,747 @@
 2025-04-10 22:30:50.6|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-04-10 22:30:50.6|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-04-10 22:30:50.6|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:45:39.2|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:45:39.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:45:39.2|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 22:45:39.2|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:45:39.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:45:39.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:45:39.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:45:39.3|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:45:39.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0454845s
+2025-04-10 22:45:39.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:45:39.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0474997s
+2025-04-10 22:45:39.4|Debug|MigrationController|Took: 00:00:00.1605822
+2025-04-10 22:45:39.4|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:45:39.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:45:39.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:45:39.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:45:39.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:45:39.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0018123s
+2025-04-10 22:45:39.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:45:39.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0021305s
+2025-04-10 22:45:39.4|Debug|MigrationController|Took: 00:00:00.0162820
+2025-04-10 22:45:39.6|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:45:39.7|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:45:39.7|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:45:39.7|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:45:39.8|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:45:40.8|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-10 22:45:40.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:45:40.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:45:41.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:45:41.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:45:41.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:45:41.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:45:41.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:45:41.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:46:10.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:46:10.0|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Dr%20Stone%20S01: 404.NotFound (69 ms)
+2025-04-10 22:47:31.9|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:47:31.9|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:47:31.9|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 22:47:31.9|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:47:32.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:47:32.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:47:32.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:47:32.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0439508s
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0464218s
+2025-04-10 22:47:32.1|Debug|MigrationController|Took: 00:00:00.1737941
+2025-04-10 22:47:32.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:47:32.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:47:32.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015376s
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:47:32.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0018104s
+2025-04-10 22:47:32.1|Debug|MigrationController|Took: 00:00:00.0109635
+2025-04-10 22:47:32.4|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:47:32.5|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:47:32.5|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:47:32.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:47:32.6|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:47:33.4|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-10 22:47:33.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:47:33.5|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:47:33.5|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:47:33.5|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:47:33.5|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:47:33.5|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:47:33.5|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:47:33.5|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:47:56.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:47:57.0|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Dr%20Stone%20S01: 404.NotFound (118 ms)
+2025-04-10 22:49:09.3|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:49:09.3|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:49:09.3|Debug|ProcessProvider| - [318] Prowlarr
+2025-04-10 22:49:09.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:49:09.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:49:09.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:49:09.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:49:09.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:49:09.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0456909s
+2025-04-10 22:49:09.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:49:09.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0477091s
+2025-04-10 22:49:09.5|Debug|MigrationController|Took: 00:00:00.1678255
+2025-04-10 22:49:09.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:49:09.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:49:09.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:49:09.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:49:09.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:49:09.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0012114s
+2025-04-10 22:49:09.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:49:09.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014796s
+2025-04-10 22:49:09.5|Debug|MigrationController|Took: 00:00:00.0084842
+2025-04-10 22:49:09.7|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:49:09.8|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:49:09.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:49:09.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:49:09.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:49:10.9|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-10 22:49:10.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:49:10.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:49:11.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:49:11.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:49:11.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:49:11.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:49:11.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:49:11.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:49:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:49:40.1|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Dr%20Stone%20S01: 404.NotFound (139 ms)
+2025-04-10 22:51:12.2|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:51:12.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:51:12.2|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 22:51:12.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:51:12.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:51:12.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:51:12.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:51:12.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:51:12.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0711768s
+2025-04-10 22:51:12.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:51:12.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0747302s
+2025-04-10 22:51:12.6|Debug|MigrationController|Took: 00:00:00.2911474
+2025-04-10 22:51:12.6|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:51:12.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:51:12.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:51:12.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:51:12.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:51:12.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0020643s
+2025-04-10 22:51:12.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:51:12.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0025344s
+2025-04-10 22:51:12.6|Debug|MigrationController|Took: 00:00:00.0161553
+2025-04-10 22:51:12.9|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:51:13.1|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:51:13.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:51:13.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:51:13.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:51:14.5|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-10 22:51:14.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:51:14.6|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:51:14.7|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:51:14.7|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:51:14.7|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:51:14.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:51:14.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:51:14.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:53:20.2|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:53:20.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:53:20.2|Debug|ProcessProvider| - [317] Prowlarr
+2025-04-10 22:53:20.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:53:20.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:53:20.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:53:20.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:53:20.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.045424s
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0475031s
+2025-04-10 22:53:20.4|Debug|MigrationController|Took: 00:00:00.1635396
+2025-04-10 22:53:20.4|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:53:20.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:53:20.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.001209s
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:53:20.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014475s
+2025-04-10 22:53:20.4|Debug|MigrationController|Took: 00:00:00.0138640
+2025-04-10 22:53:20.6|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:53:20.8|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:53:20.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:53:20.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:53:20.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:53:21.8|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-10 22:53:21.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:53:21.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:53:21.9|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:53:21.9|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:53:21.9|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:53:21.9|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:53:21.9|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:53:21.9|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:53:36.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:53:36.1|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Dr%20Stone%20S01: 404.NotFound (78 ms)
+2025-04-10 22:55:03.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 22:55:03.6|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 22:55:03.6|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 22:55:03.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:55:03.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:55:03.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:55:03.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:55:03.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0462529s
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0488465s
+2025-04-10 22:55:03.8|Debug|MigrationController|Took: 00:00:00.1656492
+2025-04-10 22:55:03.8|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 22:55:03.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 22:55:03.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0013658s
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 22:55:03.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0016078s
+2025-04-10 22:55:03.8|Debug|MigrationController|Took: 00:00:00.0088878
+2025-04-10 22:55:04.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 22:55:04.2|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 22:55:04.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 22:55:04.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 22:55:04.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 22:55:05.7|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-10 22:55:05.8|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 22:55:05.8|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 22:55:05.8|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 22:55:05.8|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 22:55:05.8|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 22:55:05.9|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 22:55:05.9|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 22:55:05.9|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 22:55:06.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:55:06.7|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Dr%20Stone%20S01: 404.NotFound (63 ms)
+2025-04-10 22:55:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 22:55:57.7|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Solo%20Leveling%20S01: 404.NotFound (15 ms)
+2025-04-10 22:57:57.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 22:58:02.8|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 22:58:31.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 22:58:43.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 22:58:50.8|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:00:22.0|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 23:00:22.0|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 23:00:22.0|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 23:00:22.0|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:00:22.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:00:22.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:00:22.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:00:22.2|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0462624s
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0482894s
+2025-04-10 23:00:22.2|Debug|MigrationController|Took: 00:00:00.1723686
+2025-04-10 23:00:22.2|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:00:22.2|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:00:22.2|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0012123s
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:00:22.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015601s
+2025-04-10 23:00:22.2|Debug|MigrationController|Took: 00:00:00.0087473
+2025-04-10 23:00:22.4|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 23:00:22.6|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 23:00:22.6|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 23:00:22.6|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 23:00:22.7|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 23:00:23.8|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-10 23:00:23.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 23:00:23.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 23:00:23.9|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 23:00:23.9|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 23:00:23.9|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 23:00:23.9|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 23:00:23.9|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 23:00:23.9|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 23:00:24.0|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.2|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.2|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.2|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.2|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.3|Debug|Api|[GET] /api/v1/indexer/categories: 200.OK (20 ms)
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/customFilter: 200.OK (28 ms)
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/tag: 200.OK (28 ms)
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/appprofile: 200.OK (28 ms)
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (30 ms)
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/config/ui: 200.OK (38 ms)
+2025-04-10 23:00:24.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/localization: 200.OK (39 ms)
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/system/status: 200.OK (58 ms)
+2025-04-10 23:00:24.4|Debug|Api|[GET] /api/v1/config/host: 200.OK (65 ms)
+2025-04-10 23:00:24.5|Debug|Api|[GET] /api/v1/indexer: 200.OK (142 ms)
+2025-04-10 23:00:24.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-10 23:00:24.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:24.5|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (2 ms)
+2025-04-10 23:00:24.5|Debug|Api|[GET] /api/v1/health: 200.OK (15 ms)
+2025-04-10 23:00:24.5|Debug|Api|[GET] /api/v1/indexer: 200.OK (16 ms)
+2025-04-10 23:00:24.5|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:24.6|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-10 23:00:25.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:25.0|Debug|Api|[GET] /api/v1/health: 200.OK (3 ms)
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:29.4|Debug|Api|[GET] /api/v1/health: 200.OK (2 ms)
+2025-04-10 23:00:29.4|Debug|Api|[GET] /api/v1/system/status: 200.OK (6 ms)
+2025-04-10 23:00:38.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:38.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:38.2|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (2 ms)
+2025-04-10 23:00:38.2|Debug|Api|[GET] /api/v1/indexer: 200.OK (9 ms)
+2025-04-10 23:00:43.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:43.1|Debug|Api|[GET] /api/v1/downloadclient: 200.OK (7 ms)
+2025-04-10 23:00:47.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:47.0|Debug|Api|[GET] /api/v1/downloadclient: 200.OK (2 ms)
+2025-04-10 23:00:49.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:49.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:49.0|Debug|Api|[GET] /api/v1/config/ui: 200.OK (3 ms)
+2025-04-10 23:00:49.0|Debug|Api|[GET] /api/v1/localization/options: 200.OK (3 ms)
+2025-04-10 23:00:49.6|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:49.6|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:49.7|Debug|Api|[GET] /api/v1/health: 200.OK (1 ms)
+2025-04-10 23:00:49.7|Debug|Api|[GET] /api/v1/system/status: 200.OK (1 ms)
+2025-04-10 23:00:52.6|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:52.7|Debug|Api|[GET] /api/v1/command: 200.OK (30 ms)
+2025-04-10 23:00:53.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:53.9|Debug|Api|[GET] /api/v1/indexerProxy: 200.OK (7 ms)
+2025-04-10 23:00:54.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:54.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:54.7|Debug|Api|[GET] /api/v1/appprofile: 200.OK (1 ms)
+2025-04-10 23:00:54.7|Debug|Api|[GET] /api/v1/applications: 200.OK (13 ms)
+2025-04-10 23:00:55.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:55.6|Debug|Api|[GET] /api/v1/downloadclient: 200.OK (2 ms)
+2025-04-10 23:00:57.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.1|Debug|Api|[GET] /api/v1/notification: 200.OK (9 ms)
+2025-04-10 23:00:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.7|Debug|Api|[GET] /api/v1/tag: 200.OK (2 ms)
+2025-04-10 23:00:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.7|Debug|Api|[GET] /api/v1/indexerProxy: 200.OK (2 ms)
+2025-04-10 23:00:57.7|Debug|Api|[GET] /api/v1/notification: 200.OK (3 ms)
+2025-04-10 23:00:57.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:57.7|Debug|Api|[GET] /api/v1/applications: 200.OK (3 ms)
+2025-04-10 23:00:57.7|Debug|Api|[GET] /api/v1/tag/detail: 200.OK (16 ms)
+2025-04-10 23:00:58.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:00:58.2|Debug|Api|[GET] /api/v1/config/host: 200.OK (3 ms)
+2025-04-10 23:01:40.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:01:40.7|Info|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was challenged.
+2025-04-10 23:01:40.7|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Frieren%20S01: 401.Unauthorized (4 ms)
+2025-04-10 23:01:46.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:01:46.7|Info|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was challenged.
+2025-04-10 23:01:46.7|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Frieren%20S01: 401.Unauthorized (2 ms)
+2025-04-10 23:01:53.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:01:53.3|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Frieren%20S01: 404.NotFound (1 ms)
+2025-04-10 23:01:57.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:01:57.0|Debug|Api|[GET] /api/v1/search/indexers/all/results/torznab?apikey=(removed)&query=Frieren%20S01: 404.NotFound (0 ms)
+2025-04-10 23:03:21.8|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:21.8|Debug|Api|[GET] /api/v1/search/indexers/all/results/newznab?apikey=(removed)&query=Frieren%20S01: 404.NotFound (1 ms)
+2025-04-10 23:03:39.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:03:39.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-10 23:03:40.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.0|Debug|Api|[GET] /api/v1/customFilter: 200.OK (2 ms)
+2025-04-10 23:03:40.0|Debug|Api|[GET] /api/v1/tag: 200.OK (1 ms)
+2025-04-10 23:03:40.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/appprofile: 200.OK (0 ms)
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/config/ui: 200.OK (1 ms)
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/indexer/categories: 200.OK (10 ms)
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/config/host: 200.OK (10 ms)
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/localization: 200.OK (2 ms)
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/system/status: 200.OK (12 ms)
+2025-04-10 23:03:40.1|Debug|Api|[GET] /api/v1/indexer: 200.OK (15 ms)
+2025-04-10 23:03:40.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-10 23:03:40.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.2|Debug|Api|[GET] /api/v1/health: 200.OK (1 ms)
+2025-04-10 23:03:40.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:03:40.2|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:03:40.2|Debug|Api|[GET] /api/v1/indexer: 200.OK (6 ms)
+2025-04-10 23:03:40.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-10 23:04:45.8|Debug|Api|[OPTIONS] /api/v1/search: 204.NoContent (0 ms)
+2025-04-10 23:04:45.8|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:04:45.8|Info|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was challenged.
+2025-04-10 23:04:45.8|Debug|Api|[GET] /api/v1/search: 401.Unauthorized (1 ms)
+2025-04-10 23:04:49.8|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:04:49.8|Info|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was challenged.
+2025-04-10 23:04:49.8|Debug|Api|[GET] /api/v1/search: 401.Unauthorized (1 ms)
+2025-04-10 23:04:59.3|Debug|Api|[OPTIONS] /api/v1/search?query=Frieren: 204.NoContent (0 ms)
+2025-04-10 23:04:59.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was not authenticated.
+2025-04-10 23:04:59.3|Info|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was challenged.
+2025-04-10 23:04:59.3|Debug|Api|[GET] /api/v1/search?query=Frieren: 401.Unauthorized (0 ms)
+2025-04-10 23:05:42.7|Debug|Api|[OPTIONS] /api/v1/search?query=Frieren&apikey=(removed) 204.NoContent (0 ms)
+2025-04-10 23:05:42.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:05:42.8|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si, 0Magnet, 1337x, AnimeTosho, Anime Time, YTS, The Pirate Bay, EZTV, Torlock] for Term: [Frieren], Offset: 0, Limit: 0, Categories: []
+2025-04-10 23:05:43.0|Debug|Cardigann|Adding request for Nyaa.si: https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren
+2025-04-10 23:05:43.0|Debug|Cardigann|Downloading Feed https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren
+2025-04-10 23:05:43.1|Debug|Cardigann|Adding request for 0Magnet: https://13mag.net/search?q=Frieren
+2025-04-10 23:05:43.1|Debug|Cardigann|Downloading Feed https://13mag.net/search?q=Frieren
+2025-04-10 23:05:43.1|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren/time/desc/1/
+2025-04-10 23:05:43.1|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren/time/desc/1/
+2025-04-10 23:05:43.7|Debug|Torznab|Downloading Feed https://feed.animetosho.org/api?t=search&extended=1&q=Frieren&limit=0&offset=0
+2025-04-10 23:05:43.7|Debug|Cardigann|Adding request for Anime Time: https://animetime.cc/search?query=Frieren
+2025-04-10 23:05:43.7|Debug|Cardigann|Downloading Feed https://animetime.cc/search?query=Frieren
+2025-04-10 23:05:43.7|Debug|Cardigann|Adding request for YTS: https://yts.mx/api/v2/list_movies.json?query_term=Frieren&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:05:43.7|Debug|Cardigann|Downloading Feed https://yts.mx/api/v2/list_movies.json?query_term=Frieren&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:05:43.7|Debug|Cardigann|Adding request for The Pirate Bay: https://apibay.org/q.php?q=frieren&cat=
+2025-04-10 23:05:43.7|Debug|Cardigann|Downloading Feed https://apibay.org/q.php?q=frieren&cat=
+2025-04-10 23:05:43.7|Debug|Cardigann|Adding request for EZTV: https://eztvx.to/search/Frieren
+2025-04-10 23:05:43.7|Debug|Cardigann|Downloading Feed https://eztvx.to/search/Frieren
+2025-04-10 23:05:43.7|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/all/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:43.7|Debug|Cardigann|Downloading Feed https://www.torlock.com/all/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:44.4|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren/time/desc/2/
+2025-04-10 23:05:44.4|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren/time/desc/2/
+2025-04-10 23:05:44.4|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/television/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:44.4|Debug|Cardigann|Downloading Feed https://www.torlock.com/television/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:45.4|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren/time/desc/3/
+2025-04-10 23:05:45.4|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren/time/desc/3/
+2025-04-10 23:05:46.0|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/movie/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:46.0|Debug|Cardigann|Downloading Feed https://www.torlock.com/movie/torrents/frieren.html?sort=added&order=desc
+2025-04-10 23:05:47.4|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren/time/desc/4/
+2025-04-10 23:05:47.4|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren/time/desc/4/
+2025-04-10 23:06:22.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:22.7|Debug|Api|[GET] /api/v1/command: 200.OK (3 ms)
+2025-04-10 23:06:22.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:22.7|Debug|Api|[GET] /api/v1/command: 200.OK (2 ms)
+2025-04-10 23:06:40.7|Debug|Api|[OPTIONS] /api/v1/search?query=Frieren%20S01&apikey=(removed) 204.NoContent (0 ms)
+2025-04-10 23:06:40.7|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:40.8|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si, 0Magnet, 1337x, AnimeTosho, Anime Time, YTS, The Pirate Bay, EZTV, Torlock] for Term: [Frieren S01], Offset: 0, Limit: 0, Categories: []
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for Nyaa.si: https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren+S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren+S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for 0Magnet: https://13mag.net/search?q=Frieren+S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://13mag.net/search?q=Frieren+S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren%20S01/time/desc/1/
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren%20S01/time/desc/1/
+2025-04-10 23:06:40.8|Debug|Torznab|Downloading Feed https://feed.animetosho.org/api?t=search&extended=1&q=Frieren+S01&limit=0&offset=0
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for Anime Time: https://animetime.cc/search?query=Frieren%25S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://animetime.cc/search?query=Frieren%25S01
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for YTS: https://yts.mx/api/v2/list_movies.json?query_term=Frieren+S01&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://yts.mx/api/v2/list_movies.json?query_term=Frieren+S01&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for The Pirate Bay: https://apibay.org/q.php?q=frieren.s01%7C%22season.01%22&cat=
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://apibay.org/q.php?q=frieren.s01%7C%22season.01%22&cat=
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for EZTV: https://eztvx.to/search/Frieren
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://eztvx.to/search/Frieren
+2025-04-10 23:06:40.8|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/all/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:40.8|Debug|Cardigann|Downloading Feed https://www.torlock.com/all/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:42.3|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren%20S01/time/desc/2/
+2025-04-10 23:06:42.3|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren%20S01/time/desc/2/
+2025-04-10 23:06:42.9|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/television/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:42.9|Debug|Cardigann|Downloading Feed https://www.torlock.com/television/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:42.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:42.9|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (4 ms)
+2025-04-10 23:06:42.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:42.9|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:06:42.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:42.9|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (2 ms)
+2025-04-10 23:06:42.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:42.9|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:06:42.9|Warn|Cardigann|Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren
+
+[v1.32.2.4987] System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: The request was aborted.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ThrowRequestAborted(Exception innerException)
+   at System.Net.Http.Http2Connection.Http2Stream.CheckResponseBodyState()
+   at System.Net.Http.Http2Connection.Http2Stream.TryEnsureHeaders()
+   at System.Net.Http.Http2Connection.Http2Stream.ReadResponseHeadersAsync(CancellationToken cancellationToken)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Core.Indexers.IndexerHttpClient.ExecuteProxiedAsync(HttpRequest request, ProviderDefinition definition) in ./Prowlarr.Core/Indexers/IndexerHttpClient.cs:line 44
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.<>c.<<FetchIndexerResponse>b__57_0>d.MoveNext() in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 661
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__9`2.<<ExecuteAsync>b__9_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult,TState](Func`3 callback, TState state, CancellationToken cancellationToken)
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchIndexerResponse(IndexerRequest request) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 660
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchPage(IndexerRequest request, IParseIndexerResponse parser) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 606
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchReleases(Func`2 pageableRequestChainSelector, SearchCriteriaBase searchCriteria, Boolean isRecent) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 424
+
+
+2025-04-10 23:06:42.9|Warn|Cardigann|Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren+S01
+
+[v1.32.2.4987] System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: The request was aborted.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ThrowRequestAborted(Exception innerException)
+   at System.Net.Http.Http2Connection.Http2Stream.CheckResponseBodyState()
+   at System.Net.Http.Http2Connection.Http2Stream.TryEnsureHeaders()
+   at System.Net.Http.Http2Connection.Http2Stream.ReadResponseHeadersAsync(CancellationToken cancellationToken)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Core.Indexers.IndexerHttpClient.ExecuteProxiedAsync(HttpRequest request, ProviderDefinition definition) in ./Prowlarr.Core/Indexers/IndexerHttpClient.cs:line 44
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.<>c.<<FetchIndexerResponse>b__57_0>d.MoveNext() in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 661
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__9`2.<<ExecuteAsync>b__9_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult,TState](Func`3 callback, TState state, CancellationToken cancellationToken)
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchIndexerResponse(IndexerRequest request) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 660
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchPage(IndexerRequest request, IParseIndexerResponse parser) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 606
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchReleases(Func`2 pageableRequestChainSelector, SearchCriteriaBase searchCriteria, Boolean isRecent) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 424
+
+
+2025-04-10 23:06:43.2|Debug|ReleaseSearchService|Total of 446 reports were found for Term: [Frieren], Offset: 0, Limit: 0, Categories: [] from 9 indexer(s)
+2025-04-10 23:06:43.2|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/movie/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:43.3|Debug|Cardigann|Downloading Feed https://www.torlock.com/movie/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:06:43.4|Debug|Api|[GET] /api/v1/search?query=Frieren&apikey=(removed) 200.OK (60639 ms)
+2025-04-10 23:06:47.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:47.9|Debug|Api|[GET] /api/v1/health: 200.OK (0 ms)
+2025-04-10 23:06:47.9|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:06:47.9|Debug|Api|[GET] /api/v1/health: 200.OK (0 ms)
+2025-04-10 23:07:43.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:07:43.5|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:07:43.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:07:43.5|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-10 23:07:43.5|Warn|Torznab|Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. https://feed.animetosho.org/api?t=search&extended=1&q=Frieren+S01&limit=0&offset=0
+
+[v1.32.2.4987] System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: The request was aborted.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Connection reset by peer.
+ ---> System.Net.Sockets.SocketException (104): Connection reset by peer
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ThrowRequestAborted(Exception innerException)
+   at System.Net.Http.Http2Connection.Http2Stream.CheckResponseBodyState()
+   at System.Net.Http.Http2Connection.Http2Stream.TryEnsureHeaders()
+   at System.Net.Http.Http2Connection.Http2Stream.ReadResponseHeadersAsync(CancellationToken cancellationToken)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Core.Indexers.IndexerHttpClient.ExecuteProxiedAsync(HttpRequest request, ProviderDefinition definition) in ./Prowlarr.Core/Indexers/IndexerHttpClient.cs:line 44
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.<>c.<<FetchIndexerResponse>b__57_0>d.MoveNext() in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 661
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__9`2.<<ExecuteAsync>b__9_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult,TState](Func`3 callback, TState state, CancellationToken cancellationToken)
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchIndexerResponse(IndexerRequest request) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 660
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchPage(IndexerRequest request, IParseIndexerResponse parser) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 606
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchReleases(Func`2 pageableRequestChainSelector, SearchCriteriaBase searchCriteria, Boolean isRecent) in ./Prowlarr.Core/Indexers/HttpIndexerBase.cs:line 424
+
+
+2025-04-10 23:07:43.6|Debug|ReleaseSearchService|Total of 178 reports were found for Term: [Frieren S01], Offset: 0, Limit: 0, Categories: [] from 9 indexer(s)
+2025-04-10 23:07:43.6|Debug|Api|[GET] /api/v1/search?query=Frieren%20S01&apikey=(removed) 200.OK (62897 ms)
+2025-04-10 23:07:48.5|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:07:48.5|Debug|Api|[GET] /api/v1/health: 200.OK (1 ms)
+2025-04-10 23:07:48.6|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:07:48.6|Debug|Api|[GET] /api/v1/health: 200.OK (1 ms)
+2025-04-10 23:08:07.9|Debug|Api|[OPTIONS] /api/v1/search?query=Frieren%20S01&limit=1&apikey=(removed) 204.NoContent (0 ms)
+2025-04-10 23:08:08.0|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-10 23:08:08.0|Debug|IndexerFactory|Temporarily ignoring indexer AnimeTosho till 4/10/2025 11:08:43PM due to recent failures.
+2025-04-10 23:08:08.0|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si, 0Magnet, 1337x, Anime Time, YTS, The Pirate Bay, EZTV, Torlock] for Term: [Frieren S01], Offset: 0, Limit: 1, Categories: []
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for Nyaa.si: https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren+S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://nyaa.si/?f=0&c=1_0&s=id&o=desc&q=Frieren+S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for 0Magnet: https://13mag.net/search?q=Frieren+S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://13mag.net/search?q=Frieren+S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren%20S01/time/desc/1/
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren%20S01/time/desc/1/
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for Anime Time: https://animetime.cc/search?query=Frieren%25S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://animetime.cc/search?query=Frieren%25S01
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for YTS: https://yts.mx/api/v2/list_movies.json?query_term=Frieren+S01&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://yts.mx/api/v2/list_movies.json?query_term=Frieren+S01&limit=50&sort_by=date_added&order_by=desc
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for The Pirate Bay: https://apibay.org/q.php?q=frieren.s01%7C%22season.01%22&cat=
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://apibay.org/q.php?q=frieren.s01%7C%22season.01%22&cat=
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for EZTV: https://eztvx.to/search/Frieren
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://eztvx.to/search/Frieren
+2025-04-10 23:08:08.0|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/all/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:08.0|Debug|Cardigann|Downloading Feed https://www.torlock.com/all/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:15.5|Debug|Cardigann|Adding request for 1337x: https://x1337x.eu/sort-search/Frieren%20S01/time/desc/2/
+2025-04-10 23:08:15.5|Debug|Cardigann|Downloading Feed https://x1337x.eu/sort-search/Frieren%20S01/time/desc/2/
+2025-04-10 23:08:15.7|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/television/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:15.7|Debug|Cardigann|Downloading Feed https://www.torlock.com/television/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:16.0|Debug|Cardigann|Adding request for Torlock: https://www.torlock.com/movie/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:16.0|Debug|Cardigann|Downloading Feed https://www.torlock.com/movie/torrents/frieren-s01.html?sort=added&order=desc
+2025-04-10 23:08:45.6|Warn|Cardigann|Request for Nyaa.si failed with status GatewayTimeout. Retrying in 2.2844107s.
+2025-04-10 23:09:24.8|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 23:09:24.8|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 23:09:24.8|Debug|ProcessProvider| - [315] Prowlarr
+2025-04-10 23:09:24.8|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:09:24.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:09:24.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:09:24.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:09:24.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:09:24.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0471522s
+2025-04-10 23:09:24.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:09:24.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0491822s
+2025-04-10 23:09:25.0|Debug|MigrationController|Took: 00:00:00.1733043
+2025-04-10 23:09:25.0|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:09:25.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:09:25.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:09:25.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:09:25.0|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:09:25.0|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0013499s
+2025-04-10 23:09:25.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:09:25.0|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0016108s
+2025-04-10 23:09:25.0|Debug|MigrationController|Took: 00:00:00.0145021
+2025-04-10 23:09:25.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 23:09:25.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 23:09:25.3|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 23:09:25.4|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 23:09:25.5|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 23:09:27.6|Debug|HttpClient|Downloading Completed. took 2s
+2025-04-10 23:09:27.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 23:09:27.7|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 23:09:27.8|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 23:09:27.8|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 23:09:27.8|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 23:09:27.8|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 23:09:27.8|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 23:09:27.8|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 23:14:33.1|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 23:14:33.1|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 23:14:33.1|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 23:14:33.2|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:14:33.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:14:33.2|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:14:33.2|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:14:33.3|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0442237s
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0462775s
+2025-04-10 23:14:33.3|Debug|MigrationController|Took: 00:00:00.1681225
+2025-04-10 23:14:33.3|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:14:33.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:14:33.3|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0013925s
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:14:33.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0016544s
+2025-04-10 23:14:33.3|Debug|MigrationController|Took: 00:00:00.0097506
+2025-04-10 23:14:33.6|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 23:14:33.7|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 23:14:33.7|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 23:14:33.7|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 23:14:33.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 23:14:34.5|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-10 23:14:34.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 23:14:34.6|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 23:14:34.7|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 23:14:34.7|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 23:14:34.7|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 23:14:34.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 23:14:34.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 23:14:34.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-10 23:24:15.5|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-10 23:24:15.5|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-10 23:24:15.5|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-10 23:24:15.6|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:24:15.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:24:15.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:24:15.7|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0482289s
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0502216s
+2025-04-10 23:24:15.7|Debug|MigrationController|Took: 00:00:00.1686439
+2025-04-10 23:24:15.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-10 23:24:15.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-10 23:24:15.7|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0013753s
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-10 23:24:15.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0017164s
+2025-04-10 23:24:15.8|Debug|MigrationController|Took: 00:00:00.0097117
+2025-04-10 23:24:16.0|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-10 23:24:16.1|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-10 23:24:16.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-10 23:24:16.1|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-10 23:24:16.2|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-10 23:24:18.4|Debug|HttpClient|Downloading Completed. took 2s
+2025-04-10 23:24:18.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-10 23:24:18.5|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-10 23:24:18.5|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-10 23:24:18.5|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-10 23:24:18.5|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-10 23:24:18.5|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-10 23:24:18.5|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-10 23:24:18.5|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
