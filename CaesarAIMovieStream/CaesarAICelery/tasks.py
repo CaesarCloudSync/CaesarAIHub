@@ -25,7 +25,11 @@ async def async_get_unfinished_episodes(interuptted_episode_tasks,indexers,redis
 @celery_app.task
 def get_unfinished_episodes():
     cr = CaesarAIRedis()
-    indexers = CaesarAIJackett.get_all_torrent_indexers()
+    indexers = CaesarAIJackett.get_current_torrent_indexers()
     interuptted_episode_tasks = cr.get_all_episode_task_ids()
     return asyncio.run(async_get_unfinished_episodes(interuptted_episode_tasks,indexers,cr))
 
+@celery_app.task
+def update_indexers():
+    CaesarAIJackett.extract_all_torrent_indexers()
+    return "Done"

@@ -137,9 +137,10 @@ class CaesarAIJackett:
         async with CaesarCRUDAsync() as cax:
             results = await cax.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
             results_list = await cax.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.episode_list_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season,episode=episode))
+            results_list_season = await cax.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.season_list_condition.format(query=CaesarAIUtils.sanitize_text(query),season=season))
             results_batch = await cax.get_data(self.cardb.MOVISERIESFIELDS,CaesarAIConstants.MOVIESRIES_TABLE,CaesarAIDBConditins.batch_conditon.format(query=CaesarAIUtils.sanitize_text(query)))
-            #print(results)
-            results_new = self.merge_lists(results,results_batch,results_list)
+            #logging.info(results_list)
+            results_new = self.merge_lists(results,results_batch,results_list,results_list_season)
         if len(results_new) == 0:
             raise Exception("No Episodes exist in db when getting. This shouldn't happen here")
         
@@ -208,18 +209,31 @@ class CaesarAIJackett:
     def is_single(self,x:TorrentItem):
         return type(x.episode) != list
     @staticmethod
-    def get_all_torrent_indexers():
+    def get_current_torrent_indexers():
         cr = CaesarAIRedis()
-        if not cr.getkey("indexers"):
-            url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.ALL_INDEXERS_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}"
-            response = requests.get(url)
-            indexers_data = response.json()["Indexers"]
-            indexers = list(set([indexer["ID"] for indexer in indexers_data]))
-            cr.setkey("indexers",json.dumps(indexers))
-            return indexers
-        else:
-            indexers = cr.getkey("indexers")
+        indexers = cr.getkey("indexers")
+        if indexers:
             return json.loads(indexers)
+        else:
+            raise Exception("Indexers do not exist in Redis.")
+    @staticmethod
+    async def get_current_torrent_indexers_async():
+        cr = CaesarAIRedis(async_mode=True)
+        indexers = await cr.async_get_key("indexers")
+        if indexers:
+            return json.loads(indexers)
+        else:
+            raise Exception("Indexers do not exist in Redis.")
+    @staticmethod
+    def extract_all_torrent_indexers():
+        cr = CaesarAIRedis()
+        url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.ALL_INDEXERS_SUFFIX}?apikey={CaesarAIConstants.JACKETT_API_KEY}"
+        response = requests.get(url)
+        indexers_data = response.json()["Indexers"]
+        indexers = list(set([indexer["ID"] for indexer in indexers_data]))
+        logging.info(indexers)
+        cr.setkey("indexers",json.dumps(indexers))
+
 
 
     #@staticmethod

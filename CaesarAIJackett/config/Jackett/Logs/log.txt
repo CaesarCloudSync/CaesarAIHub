@@ -30116,3 +30116,1281 @@ Application started. Press Ctrl+C to shut down.
    at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
    at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
 
+04-08 22:58:45 Info Starting Jackett v0.22.1744
+04-08 22:58:45 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-08 22:58:45 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-08 22:58:45 Info Jackett variant: CoreLinuxAmdx64
+04-08 22:58:45 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-08 22:58:45 Info Running in Docker: Yes (image build: unknown)
+04-08 22:58:45 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-08 22:58:45 Info App config/log directory: /config/Jackett
+04-08 22:58:45 Info Using proxy: Disabled
+04-08 22:58:45 Info Using FlareSolverr: No
+04-08 22:58:45 Info Using HTTP Client: HttpWebClient2
+04-08 22:58:45 Info Loading Native indexers ...
+04-08 22:58:45 Info Loaded 78 Native indexers.
+04-08 22:58:45 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-08 22:58:47 Info Loaded 536 Cardigann indexers.
+04-08 22:58:47 Info Loaded 614 indexers in total
+04-08 22:58:47 Info Adding aggregate indexer ('all' indexer) ...
+04-08 22:58:47 Info Adding filter indexer ('type:public' indexer) ...
+04-08 22:58:47 Info Adding filter indexer ('type:private' indexer) ...
+04-08 22:58:47 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-08 22:58:47 Info Jackett startup finished in 3.027 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-08 22:59:27 Info Torznab search in Nyaa.si for Classroom of the Elite S01 => Found 6 releases [4503ms]
+04-08 22:59:30 Info Torznab search in The Pirate Bay for Classroom of the Elite S01 => Found 0 releases [1470ms]
+04-08 22:59:33 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 22:59:37 Info Torznab search in Anime Time for Classroom of the Elite S01 => Found 25 releases [2532ms]
+04-08 22:59:44 Info Torznab search in EZTV for Classroom of the Elite S01 => Found 57 releases [3273ms]
+04-08 22:59:46 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 22:59:50 Info Torznab search in Anime Tosho for Classroom of the Elite S01 => Found 2 releases [2238ms]
+04-08 23:00:31 Info Torznab search in Nyaa.si for Daredevil S01 => Found 0 releases [4109ms]
+04-08 23:00:34 Info Torznab search in The Pirate Bay for Daredevil S01 => Found 31 releases [1096ms]
+04-08 23:01:08 Info Starting Jackett v0.22.1744
+04-08 23:01:08 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-08 23:01:08 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-08 23:01:08 Info Jackett variant: CoreLinuxAmdx64
+04-08 23:01:08 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-08 23:01:08 Info Running in Docker: Yes (image build: unknown)
+04-08 23:01:08 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-08 23:01:08 Info App config/log directory: /config/Jackett
+04-08 23:01:08 Info Using proxy: Disabled
+04-08 23:01:08 Info Using FlareSolverr: No
+04-08 23:01:08 Info Using HTTP Client: HttpWebClient2
+04-08 23:01:08 Info Loading Native indexers ...
+04-08 23:01:08 Info Loaded 78 Native indexers.
+04-08 23:01:08 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-08 23:01:10 Info Loaded 536 Cardigann indexers.
+04-08 23:01:10 Info Loaded 614 indexers in total
+04-08 23:01:10 Info Adding aggregate indexer ('all' indexer) ...
+04-08 23:01:10 Info Adding filter indexer ('type:public' indexer) ...
+04-08 23:01:10 Info Adding filter indexer ('type:private' indexer) ...
+04-08 23:01:10 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-08 23:01:10 Info Jackett startup finished in 3.000 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-08 23:02:11 Info Torznab search in Nyaa.si for Black Summoner S01 => Found 13 releases [4517ms]
+04-08 23:02:14 Info Torznab search in The Pirate Bay for Black Summoner S01 => Found 0 releases [1620ms]
+04-08 23:02:16 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:02:19 Info Torznab search in Anime Time for Black Summoner S01 => Found 25 releases [2415ms]
+04-08 23:02:23 Info Torznab search in EZTV for Black Summoner S01 => Found 34 releases [1865ms]
+04-08 23:02:24 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:02:28 Info Torznab search in Anime Tosho for Black Summoner S01 => Found 12 releases [2319ms]
+04-08 23:03:54 Info Starting Jackett v0.22.1744
+04-08 23:03:54 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-08 23:03:54 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-08 23:03:54 Info Jackett variant: CoreLinuxAmdx64
+04-08 23:03:54 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-08 23:03:54 Info Running in Docker: Yes (image build: unknown)
+04-08 23:03:54 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-08 23:03:54 Info App config/log directory: /config/Jackett
+04-08 23:03:54 Info Using proxy: Disabled
+04-08 23:03:54 Info Using FlareSolverr: No
+04-08 23:03:54 Info Using HTTP Client: HttpWebClient2
+04-08 23:03:54 Info Loading Native indexers ...
+04-08 23:03:54 Info Loaded 78 Native indexers.
+04-08 23:03:54 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-08 23:03:56 Info Loaded 536 Cardigann indexers.
+04-08 23:03:56 Info Loaded 614 indexers in total
+04-08 23:03:56 Info Adding aggregate indexer ('all' indexer) ...
+04-08 23:03:56 Info Adding filter indexer ('type:public' indexer) ...
+04-08 23:03:56 Info Adding filter indexer ('type:private' indexer) ...
+04-08 23:03:56 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-08 23:03:56 Info Jackett startup finished in 2.934 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-08 23:04:03 Info Torznab search in Nyaa.si for Dr Stone S01 => Found 13 releases [4590ms]
+04-08 23:04:06 Info Torznab search in The Pirate Bay for Dr Stone S01 => Found 1 releases [1622ms]
+04-08 23:04:08 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:04:11 Info Torznab search in Anime Time for Dr Stone S01 => Found 25 releases [2476ms]
+04-08 23:04:17 Info Torznab search in EZTV for Dr Stone S01 => Found 140 releases [4153ms]
+04-08 23:04:20 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:04:25 Info Torznab search in Anime Tosho for Dr Stone S01 => Found 0 releases [4148ms]
+04-08 23:05:01 Info Starting Jackett v0.22.1744
+04-08 23:05:01 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-08 23:05:01 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-08 23:05:01 Info Jackett variant: CoreLinuxAmdx64
+04-08 23:05:01 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-08 23:05:01 Info Running in Docker: Yes (image build: unknown)
+04-08 23:05:01 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-08 23:05:01 Info App config/log directory: /config/Jackett
+04-08 23:05:01 Info Using proxy: Disabled
+04-08 23:05:01 Info Using FlareSolverr: No
+04-08 23:05:01 Info Using HTTP Client: HttpWebClient2
+04-08 23:05:01 Info Loading Native indexers ...
+04-08 23:05:01 Info Loaded 78 Native indexers.
+04-08 23:05:01 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-08 23:05:04 Info Loaded 536 Cardigann indexers.
+04-08 23:05:04 Info Loaded 614 indexers in total
+04-08 23:05:04 Info Adding aggregate indexer ('all' indexer) ...
+04-08 23:05:04 Info Adding filter indexer ('type:public' indexer) ...
+04-08 23:05:04 Info Adding filter indexer ('type:private' indexer) ...
+04-08 23:05:04 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-08 23:05:04 Info Jackett startup finished in 3.014 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-08 23:05:20 Info Torznab search in Nyaa.si for Invincible S01 => Found 75 releases [5119ms]
+04-08 23:05:30 Info Torznab search in The Pirate Bay for Invincible S01 => Found 5 releases [1189ms]
+04-08 23:05:32 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:05:35 Info Torznab search in Anime Time for Invincible S01 => Found 25 releases [2363ms]
+04-08 23:05:41 Info Torznab search in EZTV for Invincible S01 => Found 311 releases [4223ms]
+04-08 23:05:47 Info Torznab search in Nyaa.si for Goblin Slayer S01 => Found 15 releases [3668ms]
+04-08 23:05:50 Info Torznab search in The Pirate Bay for Goblin Slayer S01 => Found 0 releases [804ms]
+04-08 23:05:51 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:05:53 Info Torznab search in Anime Time for Goblin Slayer S01 => Found 25 releases [661ms]
+04-08 23:05:55 Info Torznab search in EZTV for Goblin Slayer S01 => Found 0 releases [943ms]
+04-08 23:05:57 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:06:00 Info Torznab search in Anime Tosho for Goblin Slayer S01 => Found 1 releases [2377ms]
+04-08 23:09:52 Info Torznab search in Nyaa.si for Rent-a-Girlfriend S01 => Found 20 releases [4286ms]
+04-08 23:10:13 Info Torznab search in Nyaa.si for Rent-a-Girlfriend S01 => Found 20 releases (from cache) [0ms]
+04-08 23:10:37 Info Torznab search in Nyaa.si for Rent-a-Girlfriend S01 => Found 20 releases (from cache) [0ms]
+04-08 23:11:58 Info Torznab search in Nyaa.si for Rent-a-Girlfriend S01 => Found 20 releases (from cache) [0ms]
+04-08 23:12:35 Info Torznab search in Nyaa.si for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [4072ms]
+04-08 23:12:35 Info Torznab search in Nyaa.si for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [4800ms]
+04-08 23:12:38 Info Torznab search in The Pirate Bay for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [842ms]
+04-08 23:12:38 Info Torznab search in The Pirate Bay for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [1113ms]
+04-08 23:12:39 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:12:39 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:12:42 Info Torznab search in Anime Time for Re:ZERO -Starting Life in Another World- S01 => Found 25 releases [1894ms]
+04-08 23:12:42 Info Torznab search in Anime Time for Re:ZERO -Starting Life in Another World- S01 => Found 25 releases [2158ms]
+04-08 23:12:46 Info Torznab search in EZTV for Re:ZERO -Starting Life in Another World- S01 => Found 160 releases [2230ms]
+04-08 23:12:47 Info Torznab search in EZTV for Re:ZERO -Starting Life in Another World- S01 => Found 160 releases [3593ms]
+04-08 23:12:58 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:12:59 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:01 Info Torznab search in Anime Tosho for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [2167ms]
+04-08 23:13:02 Info Torznab search in Anime Tosho for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases [2486ms]
+04-08 23:13:25 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases [3782ms]
+04-08 23:13:28 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases [5145ms]
+04-08 23:13:30 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases [780ms]
+04-08 23:13:31 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:31 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:33 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases [645ms]
+04-08 23:13:33 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:33 Info Torznab search in Nyaa.si for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:34 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+04-08 23:13:34 Info Torznab search in The Pirate Bay for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:36 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases [882ms]
+04-08 23:13:36 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:37 Info Torznab search in Anime Time for Re:ZERO -Starting Life in Another World- S01 => Found 25 releases (from cache) [0ms]
+04-08 23:13:37 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases [1509ms]
+04-08 23:13:38 Info Torznab search in EZTV for Re:ZERO -Starting Life in Another World- S01 => Found 160 releases (from cache) [0ms]
+04-08 23:13:38 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:40 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:40 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases [868ms]
+04-08 23:13:41 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:43 Info Torznab search in Nyaa.si for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:44 Info Torznab search in The Pirate Bay for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:46 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:46 Info Torznab search in Anime Time for Re:ZERO -Starting Life in Another World- S01 => Found 25 releases (from cache) [0ms]
+04-08 23:13:48 Info Torznab search in EZTV for Re:ZERO -Starting Life in Another World- S01 => Found 160 releases (from cache) [0ms]
+04-08 23:13:50 Info Torznab search in Nyaa.si for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:50 Info Torznab search in The Pirate Bay for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:13:52 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:53 Info Torznab search in Anime Time for Re:ZERO -Starting Life in Another World- S01 => Found 25 releases (from cache) [0ms]
+04-08 23:13:55 Info Torznab search in EZTV for Re:ZERO -Starting Life in Another World- S01 => Found 160 releases (from cache) [0ms]
+04-08 23:13:58 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:13:58 Info Torznab search in Anime Tosho for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:14:03 Error Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (kickasstorrents-to): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:14:03 Info Torznab search in Anime Tosho for Re:ZERO -Starting Life in Another World- S01 => Found 0 releases (from cache) [0ms]
+04-08 23:14:22 Info Torznab search in Nyaa.si for Classroom of the Elite S01 => Found 6 releases [3170ms]
+04-08 23:14:23 Info Torznab search in Nyaa.si for Classroom of the Elite S01 => Found 6 releases (from cache) [0ms]
+04-08 23:14:23 Info Torznab search in The Pirate Bay for Classroom of the Elite S01 => Found 0 releases [530ms]
+04-08 23:14:24 Info Torznab search in The Pirate Bay for Classroom of the Elite S01 => Found 0 releases (from cache) [0ms]
+04-08 23:14:25 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:14:26 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-08 23:14:27 Info Torznab search in Anime Time for Classroom of the Elite S01 => Found 25 releases [674ms]
+04-08 23:14:27 Info Torznab search in Anime Time for Classroom of the Elite S01 => Found 25 releases [818ms]
+04-08 23:14:29 Info Torznab search in EZTV for Classroom of the Elite S01 => Found 57 releases [1003ms]
+04-08 23:14:30 Info Torznab search in EZTV for Classroom of the Elite S01 => Found 57 releases [968ms]
+04-10 15:31:16 Info Starting Jackett v0.22.1744
+04-10 15:31:16 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 15:31:16 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 15:31:16 Info Jackett variant: CoreLinuxAmdx64
+04-10 15:31:16 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 15:31:16 Info Running in Docker: Yes (image build: unknown)
+04-10 15:31:16 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 15:31:16 Info App config/log directory: /config/Jackett
+04-10 15:31:16 Info Using proxy: Disabled
+04-10 15:31:16 Info Using FlareSolverr: No
+04-10 15:31:16 Info Using HTTP Client: HttpWebClient2
+04-10 15:31:16 Info Loading Native indexers ...
+04-10 15:31:16 Info Loaded 78 Native indexers.
+04-10 15:31:16 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 15:31:19 Info Loaded 536 Cardigann indexers.
+04-10 15:31:19 Info Loaded 614 indexers in total
+04-10 15:31:19 Info Adding aggregate indexer ('all' indexer) ...
+04-10 15:31:19 Info Adding filter indexer ('type:public' indexer) ...
+04-10 15:31:19 Info Adding filter indexer ('type:private' indexer) ...
+04-10 15:31:19 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 15:31:19 Info Jackett startup finished in 3.669 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 21:26:39 Info Starting Jackett v0.22.1744
+04-10 21:26:40 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 21:26:40 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 21:26:40 Info Jackett variant: CoreLinuxAmdx64
+04-10 21:26:40 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 21:26:40 Info Running in Docker: Yes (image build: unknown)
+04-10 21:26:40 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 21:26:40 Info App config/log directory: /config/Jackett
+04-10 21:26:40 Info Using proxy: Disabled
+04-10 21:26:40 Info Using FlareSolverr: No
+04-10 21:26:40 Info Using HTTP Client: HttpWebClient2
+04-10 21:26:40 Info Loading Native indexers ...
+04-10 21:26:40 Info Loaded 78 Native indexers.
+04-10 21:26:40 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 21:26:43 Info Loaded 536 Cardigann indexers.
+04-10 21:26:43 Info Loaded 614 indexers in total
+04-10 21:26:43 Info Adding aggregate indexer ('all' indexer) ...
+04-10 21:26:43 Info Adding filter indexer ('type:public' indexer) ...
+04-10 21:26:43 Info Adding filter indexer ('type:private' indexer) ...
+04-10 21:26:43 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 21:26:43 Info Jackett startup finished in 4.459 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 21:37:20 Info Starting Jackett v0.22.1744
+04-10 21:37:21 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 21:37:21 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 21:37:21 Info Jackett variant: CoreLinuxAmdx64
+04-10 21:37:21 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 21:37:21 Info Running in Docker: Yes (image build: unknown)
+04-10 21:37:21 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 21:37:21 Info App config/log directory: /config/Jackett
+04-10 21:37:21 Info Using proxy: Disabled
+04-10 21:37:21 Info Using FlareSolverr: No
+04-10 21:37:21 Info Using HTTP Client: HttpWebClient2
+04-10 21:37:21 Info Loading Native indexers ...
+04-10 21:37:21 Info Loaded 78 Native indexers.
+04-10 21:37:21 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 21:37:23 Info Loaded 536 Cardigann indexers.
+04-10 21:37:23 Info Loaded 614 indexers in total
+04-10 21:37:23 Info Adding aggregate indexer ('all' indexer) ...
+04-10 21:37:23 Info Adding filter indexer ('type:public' indexer) ...
+04-10 21:37:23 Info Adding filter indexer ('type:private' indexer) ...
+04-10 21:37:23 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 21:37:23 Info Jackett startup finished in 3.146 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 21:40:41 Info Torznab search in Nyaa.si for Apothecary Diaries S01 => Found 75 releases [4929ms]
+04-10 21:40:49 Info Torznab search in The Pirate Bay for Apothecary Diaries S01 => Found 0 releases [1949ms]
+04-10 21:40:53 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-10 21:40:56 Info Torznab search in Anime Time for Apothecary Diaries S01 => Found 25 releases [2657ms]
+04-10 21:41:03 Info Torznab search in EZTV for Apothecary Diaries S01 => Found 136 releases [4015ms]
+04-10 21:41:27 Info Torznab search in kickasstorrents.to for Apothecary Diaries S01 => Found 1 releases [14029ms]
+04-10 21:42:36 Info Starting Jackett v0.22.1744
+04-10 21:42:37 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 21:42:37 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 21:42:37 Info Jackett variant: CoreLinuxAmdx64
+04-10 21:42:37 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 21:42:37 Info Running in Docker: Yes (image build: unknown)
+04-10 21:42:37 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 21:42:37 Info App config/log directory: /config/Jackett
+04-10 21:42:37 Info Using proxy: Disabled
+04-10 21:42:37 Info Using FlareSolverr: No
+04-10 21:42:37 Info Using HTTP Client: HttpWebClient2
+04-10 21:42:37 Info Loading Native indexers ...
+04-10 21:42:37 Info Loaded 78 Native indexers.
+04-10 21:42:37 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 21:42:40 Info Loaded 536 Cardigann indexers.
+04-10 21:42:40 Info Loaded 614 indexers in total
+04-10 21:42:40 Info Adding aggregate indexer ('all' indexer) ...
+04-10 21:42:40 Info Adding filter indexer ('type:public' indexer) ...
+04-10 21:42:40 Info Adding filter indexer ('type:private' indexer) ...
+04-10 21:42:40 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 21:42:40 Info Jackett startup finished in 3.853 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 21:46:05 Info Torznab search in Nyaa.si for Apothecary Diaries S01 => Found 75 releases [5730ms]
+04-10 21:46:05 Info Torznab search in Nyaa.si for Apothecary Diaries S01 => Found 75 releases [5921ms]
+04-10 21:46:14 Info Torznab search in The Pirate Bay for Apothecary Diaries S01 => Found 0 releases [1216ms]
+04-10 21:46:15 Info Torznab search in The Pirate Bay for Apothecary Diaries S01 => Found 0 releases [1461ms]
+04-10 21:46:17 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-10 21:46:17 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-10 21:46:20 Info Torznab search in Anime Time for Apothecary Diaries S01 => Found 25 releases [2329ms]
+04-10 21:46:20 Info Torznab search in Anime Time for Apothecary Diaries S01 => Found 25 releases [2185ms]
+04-10 21:46:25 Info Torznab search in EZTV for Apothecary Diaries S01 => Found 136 releases [3481ms]
+04-10 21:46:26 Info Torznab search in EZTV for Apothecary Diaries S01 => Found 136 releases [3944ms]
+04-10 21:46:47 Info Torznab search in kickasstorrents.to for Apothecary Diaries S01 => Found 1 releases [13716ms]
+04-10 21:46:47 Info Torznab search in kickasstorrents.to for Apothecary Diaries S01 => Found 1 releases [13623ms]
+04-10 21:46:52 Info Torznab search in Anime Tosho for Apothecary Diaries S01 => Found 1 releases [2591ms]
+04-10 21:46:54 Info Torznab search in Anime Tosho for Apothecary Diaries S01 => Found 1 releases [4502ms]
+04-10 21:47:51 Info Starting Jackett v0.22.1744
+04-10 21:47:52 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 21:47:52 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 21:47:52 Info Jackett variant: CoreLinuxAmdx64
+04-10 21:47:52 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 21:47:52 Info Running in Docker: Yes (image build: unknown)
+04-10 21:47:52 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 21:47:52 Info App config/log directory: /config/Jackett
+04-10 21:47:52 Info Using proxy: Disabled
+04-10 21:47:52 Info Using FlareSolverr: No
+04-10 21:47:52 Info Using HTTP Client: HttpWebClient2
+04-10 21:47:52 Info Loading Native indexers ...
+04-10 21:47:52 Info Loaded 78 Native indexers.
+04-10 21:47:52 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 21:47:54 Info Loaded 536 Cardigann indexers.
+04-10 21:47:54 Info Loaded 614 indexers in total
+04-10 21:47:54 Info Adding aggregate indexer ('all' indexer) ...
+04-10 21:47:54 Info Adding filter indexer ('type:public' indexer) ...
+04-10 21:47:54 Info Adding filter indexer ('type:private' indexer) ...
+04-10 21:47:54 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 21:47:54 Info Jackett startup finished in 2.792 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:00:42 Info Starting Jackett v0.22.1744
+04-10 22:00:43 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:00:43 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:00:43 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:00:43 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:00:43 Info Running in Docker: Yes (image build: unknown)
+04-10 22:00:43 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:00:43 Info App config/log directory: /config/Jackett
+04-10 22:00:43 Info Using proxy: Disabled
+04-10 22:00:43 Info Using FlareSolverr: No
+04-10 22:00:43 Info Using HTTP Client: HttpWebClient2
+04-10 22:00:43 Info Loading Native indexers ...
+04-10 22:00:43 Info Loaded 78 Native indexers.
+04-10 22:00:43 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:00:45 Info Loaded 536 Cardigann indexers.
+04-10 22:00:45 Info Loaded 614 indexers in total
+04-10 22:00:45 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:00:45 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:00:45 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:00:45 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:00:46 Info Jackett startup finished in 3.671 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:02:18 Info Starting Jackett v0.22.1744
+04-10 22:02:19 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:02:19 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:02:19 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:02:19 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:02:19 Info Running in Docker: Yes (image build: unknown)
+04-10 22:02:19 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:02:19 Info App config/log directory: /config/Jackett
+04-10 22:02:19 Info Using proxy: Disabled
+04-10 22:02:19 Info Using FlareSolverr: No
+04-10 22:02:19 Info Using HTTP Client: HttpWebClient2
+04-10 22:02:19 Info Loading Native indexers ...
+04-10 22:02:19 Info Loaded 78 Native indexers.
+04-10 22:02:19 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:02:21 Info Loaded 536 Cardigann indexers.
+04-10 22:02:21 Info Loaded 614 indexers in total
+04-10 22:02:21 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:02:21 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:02:21 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:02:21 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:02:22 Info Jackett startup finished in 3.656 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:03:19 Info Starting Jackett v0.22.1744
+04-10 22:03:20 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:03:20 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:03:20 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:03:20 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:03:20 Info Running in Docker: Yes (image build: unknown)
+04-10 22:03:20 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:03:20 Info App config/log directory: /config/Jackett
+04-10 22:03:20 Info Using proxy: Disabled
+04-10 22:03:20 Info Using FlareSolverr: No
+04-10 22:03:20 Info Using HTTP Client: HttpWebClient2
+04-10 22:03:20 Info Loading Native indexers ...
+04-10 22:03:20 Info Loaded 78 Native indexers.
+04-10 22:03:20 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:03:23 Info Loaded 536 Cardigann indexers.
+04-10 22:03:23 Info Loaded 614 indexers in total
+04-10 22:03:23 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:03:23 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:03:23 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:03:23 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:03:23 Info Jackett startup finished in 4.018 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:08:49 Info Starting Jackett v0.22.1744
+04-10 22:08:50 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:08:50 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:08:50 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:08:50 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:08:50 Info Running in Docker: Yes (image build: unknown)
+04-10 22:08:50 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:08:50 Info App config/log directory: /config/Jackett
+04-10 22:08:50 Info Using proxy: Disabled
+04-10 22:08:50 Info Using FlareSolverr: No
+04-10 22:08:50 Info Using HTTP Client: HttpWebClient2
+04-10 22:08:50 Info Loading Native indexers ...
+04-10 22:08:50 Info Loaded 78 Native indexers.
+04-10 22:08:50 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:08:52 Info Loaded 536 Cardigann indexers.
+04-10 22:08:52 Info Loaded 614 indexers in total
+04-10 22:08:52 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:08:52 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:08:52 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:08:52 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:08:53 Info Jackett startup finished in 3.675 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:09:10 Info Starting Jackett v0.22.1744
+04-10 22:09:10 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:09:10 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:09:10 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:09:10 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:09:10 Info Running in Docker: Yes (image build: unknown)
+04-10 22:09:10 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:09:10 Info App config/log directory: /config/Jackett
+04-10 22:09:10 Info Using proxy: Disabled
+04-10 22:09:10 Info Using FlareSolverr: No
+04-10 22:09:10 Info Using HTTP Client: HttpWebClient2
+04-10 22:09:10 Info Loading Native indexers ...
+04-10 22:09:10 Info Loaded 78 Native indexers.
+04-10 22:09:10 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:09:13 Info Loaded 536 Cardigann indexers.
+04-10 22:09:13 Info Loaded 614 indexers in total
+04-10 22:09:13 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:09:13 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:09:13 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:09:13 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:09:13 Info Jackett startup finished in 3.848 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:13:47 Info Starting Jackett v0.22.1744
+04-10 22:13:48 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:13:48 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:13:48 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:13:48 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:13:48 Info Running in Docker: Yes (image build: unknown)
+04-10 22:13:48 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:13:48 Info App config/log directory: /config/Jackett
+04-10 22:13:48 Info Using proxy: Disabled
+04-10 22:13:48 Info Using FlareSolverr: No
+04-10 22:13:48 Info Using HTTP Client: HttpWebClient2
+04-10 22:13:48 Info Loading Native indexers ...
+04-10 22:13:48 Info Loaded 78 Native indexers.
+04-10 22:13:48 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:13:50 Info Loaded 536 Cardigann indexers.
+04-10 22:13:50 Info Loaded 614 indexers in total
+04-10 22:13:50 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:13:50 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:13:50 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:13:50 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:13:50 Info Jackett startup finished in 3.586 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:16:34 Info Starting Jackett v0.22.1744
+04-10 22:16:35 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:16:35 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:16:35 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:16:35 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:16:35 Info Running in Docker: Yes (image build: unknown)
+04-10 22:16:35 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:16:35 Info App config/log directory: /config/Jackett
+04-10 22:16:35 Info Using proxy: Disabled
+04-10 22:16:35 Info Using FlareSolverr: No
+04-10 22:16:35 Info Using HTTP Client: HttpWebClient2
+04-10 22:16:35 Info Loading Native indexers ...
+04-10 22:16:35 Info Loaded 78 Native indexers.
+04-10 22:16:35 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:16:37 Info Loaded 536 Cardigann indexers.
+04-10 22:16:37 Info Loaded 614 indexers in total
+04-10 22:16:37 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:16:37 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:16:37 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:16:37 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:16:37 Info Jackett startup finished in 3.490 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:17:42 Info Starting Jackett v0.22.1744
+04-10 22:17:43 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:17:43 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:17:43 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:17:43 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:17:43 Info Running in Docker: Yes (image build: unknown)
+04-10 22:17:43 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:17:43 Info App config/log directory: /config/Jackett
+04-10 22:17:43 Info Using proxy: Disabled
+04-10 22:17:43 Info Using FlareSolverr: No
+04-10 22:17:43 Info Using HTTP Client: HttpWebClient2
+04-10 22:17:43 Info Loading Native indexers ...
+04-10 22:17:43 Info Loaded 78 Native indexers.
+04-10 22:17:43 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:17:45 Info Loaded 536 Cardigann indexers.
+04-10 22:17:45 Info Loaded 614 indexers in total
+04-10 22:17:45 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:17:45 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:17:45 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:17:45 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:17:45 Info Jackett startup finished in 3.606 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:19:07 Info Torznab search in Nyaa.si for Dr Stone S01 => Found 13 releases [4806ms]
+04-10 22:22:57 Info Starting Jackett v0.22.1744
+04-10 22:22:57 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:22:57 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:22:57 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:22:57 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:22:57 Info Running in Docker: Yes (image build: unknown)
+04-10 22:22:57 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:22:57 Info App config/log directory: /config/Jackett
+04-10 22:22:57 Info Using proxy: Disabled
+04-10 22:22:57 Info Using FlareSolverr: No
+04-10 22:22:57 Info Using HTTP Client: HttpWebClient2
+04-10 22:22:57 Info Loading Native indexers ...
+04-10 22:22:57 Info Loaded 78 Native indexers.
+04-10 22:22:57 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:22:59 Info Loaded 536 Cardigann indexers.
+04-10 22:22:59 Info Loaded 614 indexers in total
+04-10 22:22:59 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:22:59 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:22:59 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:22:59 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:22:59 Info Jackett startup finished in 2.849 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:23:58 Info Torznab search in Nyaa.si for Dr Stone S01 => Found 0 releases [3815ms]
+04-10 22:24:00 Info Torznab search in The Pirate Bay for Dr Stone S01 => Found 1 releases [795ms]
+04-10 22:24:01 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+04-10 22:24:03 Info Torznab search in Anime Time for Dr Stone S01 => Found 25 releases [718ms]
+04-10 22:24:06 Info Torznab search in EZTV for Dr Stone S01 => Found 140 releases [1103ms]
+04-10 22:24:06 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases [13278ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [21ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [18ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 746 releases [13499ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 771 releases [13551ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [13558ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 621 releases [13617ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [70ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [13647ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [13651ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [59ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [59ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [41ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases [13810ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 746 releases [13843ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [13846ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases [13926ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [13948ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (animetosho): The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+ ---> System.Xml.XmlException: The 'hr' start tag on line 5 position 2 does not match the end tag of 'body'. Line 6, position 3.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Parse(String text, LoadOptions options)
+   at Jackett.Common.Indexers.Feeds.BaseNewznabIndexer.ParseFeedForResults(String feedContent) in ./Jackett.Common/Indexers/Feeds/BaseNewznabIndexer.cs:line 33
+   at Jackett.Common.Indexers.Feeds.BaseFeedIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Feeds/BaseFeedIndexer.cs:line 55
+   at Jackett.Common.Indexers.Definitions.Feeds.AnimeTosho.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Feeds/AnimeTosho.cs:line 55
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [14053ms]
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 771 releases [14165ms]
+04-10 22:24:07 Error Jackett.Common.IndexerException: Exception (nyaasi): Collection was modified after the enumerator was instantiated.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (nyaasi): Collection was modified after the enumerator was instantiated.
+ ---> System.InvalidOperationException: Collection was modified after the enumerator was instantiated.
+   at System.Collections.SortedList.SortedListEnumerator.MoveNext()
+   at Jackett.Common.Utils.CookieUtil.RemoveAllCookies(CookieContainer cookieJar) in ./Jackett.Common/Utils/CookieUtil.cs:line 67
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 120
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+04-10 22:24:07 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 696 releases [14216ms]
+04-10 22:24:26 Info Torznab search in kickasstorrents.to for Dr Stone S01 => Found 3 releases [11918ms]
+04-10 22:24:29 Info Torznab search in Anime Tosho for Dr Stone S01 => Found 0 releases [797ms]
+04-10 22:25:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [19ms]
+04-10 22:26:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [38ms]
+04-10 22:27:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [16ms]
+04-10 22:28:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [18ms]
+04-10 22:28:12 Info Starting Jackett v0.22.1744
+04-10 22:28:12 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:28:12 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:28:12 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:28:12 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:28:12 Info Running in Docker: Yes (image build: unknown)
+04-10 22:28:12 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:28:12 Info App config/log directory: /config/Jackett
+04-10 22:28:12 Info Using proxy: Disabled
+04-10 22:28:12 Info Using FlareSolverr: No
+04-10 22:28:12 Info Using HTTP Client: HttpWebClient2
+04-10 22:28:12 Info Loading Native indexers ...
+04-10 22:28:12 Info Loaded 78 Native indexers.
+04-10 22:28:12 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:28:14 Info Loaded 536 Cardigann indexers.
+04-10 22:28:14 Info Loaded 614 indexers in total
+04-10 22:28:14 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:28:14 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:28:14 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:28:14 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:28:14 Info Jackett startup finished in 2.741 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:29:14 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases [13847ms]
+04-10 22:30:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [21ms]
+04-10 22:30:44 Info Starting Jackett v0.22.1744
+04-10 22:30:45 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-10 22:30:45 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-10 22:30:45 Info Jackett variant: CoreLinuxAmdx64
+04-10 22:30:45 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-10 22:30:45 Info Running in Docker: Yes (image build: unknown)
+04-10 22:30:45 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-10 22:30:45 Info App config/log directory: /config/Jackett
+04-10 22:30:45 Info Using proxy: Disabled
+04-10 22:30:45 Info Using FlareSolverr: No
+04-10 22:30:45 Info Using HTTP Client: HttpWebClient2
+04-10 22:30:45 Info Loading Native indexers ...
+04-10 22:30:45 Info Loaded 78 Native indexers.
+04-10 22:30:45 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-10 22:30:47 Info Loaded 536 Cardigann indexers.
+04-10 22:30:47 Info Loaded 614 indexers in total
+04-10 22:30:47 Info Adding aggregate indexer ('all' indexer) ...
+04-10 22:30:47 Info Adding filter indexer ('type:public' indexer) ...
+04-10 22:30:47 Info Adding filter indexer ('type:private' indexer) ...
+04-10 22:30:47 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-10 22:30:48 Info Jackett startup finished in 3.989 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-10 22:31:22 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases [13286ms]
+04-10 22:32:00 Info Manual search in 0Magnet, Anime Time, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, Nyaa.si, The Pirate Bay, YTS => Found 846 releases (from cache) [30ms]

@@ -25,7 +25,7 @@ from datetime import datetime
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler  # runs tasks in the background
 from apscheduler.triggers.cron import CronTrigger  # allows us to specify a recurring time for execution
-
+from CaesarAICelery.schedules import CaesarAISchedules
 import json
 
 import logging
@@ -35,15 +35,13 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 logging.getLogger('apscheduler').setLevel(logging.WARNING) # This hides the apscedhuler events
-def schedule_interrupted_episodes():
-    logging.info(f"Creating interrupted episodes task...")
-    result = get_unfinished_episodes.delay()
-    logging.info(f"Interrupted episodes task created.")
-    return {"task_id":result.id}
+
+
 # Set up the scheduler
 scheduler = BackgroundScheduler()
 trigger = CronTrigger(year="*", month="*", day="*", hour="*", minute="*")  # every minute
-scheduler.add_job(schedule_interrupted_episodes, trigger)
+scheduler.add_job(CaesarAISchedules.schedule_interrupted_episodes, trigger)
+scheduler.add_job(CaesarAISchedules.schedule_update_indexers, trigger)
 scheduler.start()
 
 
@@ -59,7 +57,7 @@ app.add_middleware(
 caesarcrud = CaesarCRUD()
 caesaraird = CaesarAIRealDebrid()
 cartable = CaesarCreateTables()
-indexers = CaesarAIJackett.get_all_torrent_indexers()
+
 cartable.create(caesarcrud)
 
 # Ensure the scheduler shuts down properly on application exit.
@@ -78,7 +76,7 @@ async def healthcheck():
 
 @app.get("/api/v1/get_indexers")
 async def get_indexers():
-    indexers = CaesarAIJackett.get_all_torrent_indexers()
+    indexers = CaesarAIJackett.get_current_torrent_indexers()
     return {"indexers":indexers}
 
 
@@ -88,6 +86,7 @@ async def stream_get_episodews(websocket: WebSocket):
     try:
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
+            indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
             async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers):
                 #print(event)
                 await websocket.send_json(event)
@@ -142,6 +141,7 @@ async def stream_get_episodes(title:str,season:int,episode:int,save:Optional[boo
     try:
 
         if not service or "jackett":
+            indexers = CaesarAIJackett.get_current_torrent_indexers()
             return StreamingResponse(CaesarAIJackett.episodes_streamer(title,season,episode,indexers,save), media_type="text/event-stream")
         else:
             pass
@@ -156,6 +156,7 @@ async def stream_get_single_episodes(title:str,season:int,episode:int,service:Op
     try:
 
         if not service or "jackett":
+            indexers = CaesarAIJackett.get_current_torrent_indexers()
             return StreamingResponse(CaesarAIJackett.single_episode_streamer(title,season,episode,indexers), media_type="text/event-stream")
         else:
             pass
