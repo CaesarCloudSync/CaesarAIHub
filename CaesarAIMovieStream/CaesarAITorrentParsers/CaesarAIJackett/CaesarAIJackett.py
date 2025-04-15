@@ -369,7 +369,7 @@ class CaesarAIJackett:
         redis_episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=title,season=season,episode=episode)
         episodes_exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)
         task_to_save_in_db_exists = await cr.async_hget_episode_task(redis_episode_id)
-        if not episodes_exists_in_db : # and not task_to_save_in_db_exists
+        if not episodes_exists_in_db and not task_to_save_in_db_exists: 
             flattened_all_torrents = list(chain.from_iterable(all_torrents))
             #print(flattened_all_torrents,flush=True)
             await caejackett.save_batch_episodes_async(flattened_all_torrents)
