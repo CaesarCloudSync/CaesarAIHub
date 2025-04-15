@@ -355,7 +355,7 @@ class CaesarAIJackett:
                     torrentinfo = torrentinfo_single + torrentinfo_batched
                 else:
                     raise Exception("Indexing Service does not exist.")
-
+                print(f"helloP {len(torrentinfo)}",flush=True)
                 for index,torrent in enumerate(torrentinfo):
                     data = {"index":index,"total":len(torrentinfo),"episodes":torrent.model_dump()}
                     yield {"event":{"episodes":{"data":data}}}

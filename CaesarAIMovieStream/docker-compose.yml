@@ -11,15 +11,10 @@ services:
     extends:
       file: ../CaesarAIRedis/docker-compose.yml
       service: redis
-  worker:
-    build: .
-    container_name: celery_worker
-    command: celery -A CaesarAICelery.celery_worker.celery_app worker --loglevel=info
+  celery_worker:
     depends_on:
       - redis
-    environment:
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - moviestreaming
   moviestreaming:
     depends_on:
       - jackett
