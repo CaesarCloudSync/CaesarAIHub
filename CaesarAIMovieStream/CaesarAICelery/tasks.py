@@ -18,14 +18,17 @@ async def async_get_unfinished_episodes(interuptted_episode_tasks,indexers,redis
         redis_instance.delete_episode_task(episode_task)# Have this before. It stops the task from repeatedly saving.
         async for event in CaesarAIJackett.stream_get_episodews(title,season,episode,indexers):
             logger.info(str(event))
+    return interuptted_episode_tasks
         
         
 
 
-@celery_app.task
-def get_unfinished_episodes():
+@celery_app.task(bind=True)
+def get_unfinished_episodes(self):
     cr = CaesarAIRedis()
     indexers = CaesarAIJackett.get_current_torrent_indexers()
     interuptted_episode_tasks = cr.get_all_episode_task_ids()
-    return asyncio.run(async_get_unfinished_episodes(interuptted_episode_tasks,indexers,cr))
+    results =  asyncio.run(async_get_unfinished_episodes(interuptted_episode_tasks,indexers,cr))
+    self.update_state(state='COMPLETED', meta={'results': results})
+    return {'results': results}
 
