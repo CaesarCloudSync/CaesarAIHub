@@ -10480,3 +10480,756 @@
 2025-04-15 17:36:17.0086 Info Adding filter indexer ('type:private' indexer) ...
 2025-04-15 17:36:17.0090 Info Adding filter indexer ('type:semi-public' indexer) ...
 2025-04-15 17:36:17.1181 Info Jackett startup finished in 2.806 s
+2025-04-15 18:29:10.6122 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases [2450ms]
+2025-04-15 18:29:17.9065 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases [1415ms]
+2025-04-15 18:30:36.3046 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases [77319ms]
+2025-04-15 18:31:06.1360 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:31:07.1934 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:31:08.4515 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:31:11.6394 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases [2182ms]
+2025-04-15 18:31:33.0409 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [1ms]
+2025-04-15 18:31:34.0299 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:31:35.2528 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:31:36.3397 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases (from cache) [0ms]
+2025-04-15 18:31:40.1790 Info Torznab search in Anime Tosho for Jujutsu Kaisen S01 => Found 6 releases [2067ms]
+2025-04-15 18:31:42.1782 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:31:47.9323 Info Torznab search in Nyaa.si for Jujutsu Kaisen S01 => Found 75 releases [4721ms]
+2025-04-15 18:32:43.7397 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:32:44.5570 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:32:45.4466 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:32:46.2750 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases (from cache) [0ms]
+2025-04-15 18:32:47.6763 Info Torznab search in Anime Tosho for Jujutsu Kaisen S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:32:49.2396 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:32:49.9908 Info Torznab search in Nyaa.si for Jujutsu Kaisen S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 18:34:12.8140 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:34:13.6385 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:34:14.5104 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:34:15.9572 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases (from cache) [0ms]
+2025-04-15 18:34:27.5470 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:34:28.6892 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:34:30.9836 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:34:32.8654 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases (from cache) [0ms]
+2025-04-15 18:34:34.3309 Info Torznab search in Anime Tosho for Jujutsu Kaisen S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:34:36.1662 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:34:36.9874 Info Torznab search in Nyaa.si for Jujutsu Kaisen S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 18:34:57.3197 Info Torznab search in Anime Time for Jujutsu Kaisen S01 => Found 25 releases (from cache) [1ms]
+2025-04-15 18:34:58.1222 Info Torznab search in The Pirate Bay for Jujutsu Kaisen S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:34:58.9988 Info Torznab search in kickasstorrents.to for Jujutsu Kaisen S01 => Found 13 releases (from cache) [0ms]
+2025-04-15 18:34:59.7691 Info Torznab search in EZTV for Jujutsu Kaisen S01 => Found 20 releases (from cache) [0ms]
+2025-04-15 18:36:17.0143 Info Checking for updates... Jackett variant: CoreLinuxAmdx64
+2025-04-15 18:36:17.0143 Info Updates are disabled via --NoUpdates.
+2025-04-15 18:36:50.6395 Error Jackett.Common.IndexerException: Exception (anime-time): Request to https://animetime.cc/search?query=Fate%25Grand%25Order%25Absolute%25Demonic%25Front%25Babylonia%25S01 failed (Error BadGateway) - The tracker seems to be down.
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (anime-time): Request to https://animetime.cc/search?query=Fate%25Grand%25Order%25Absolute%25Demonic%25Front%25Babylonia%25S01 failed (Error BadGateway) - The tracker seems to be down.
+ ---> System.Exception: Request to https://animetime.cc/search?query=Fate%25Grand%25Order%25Absolute%25Demonic%25Front%25Babylonia%25S01 failed (Error BadGateway) - The tracker seems to be down.
+   at Jackett.Common.Indexers.BaseWebIndexer.CheckSiteDown(WebResult response) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 684
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 618
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:37:24.8391 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases [1360ms]
+2025-04-15 18:37:26.9890 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases [1333ms]
+2025-04-15 18:38:21.3077 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases [53553ms]
+2025-04-15 18:38:24.0739 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases [1904ms]
+2025-04-15 18:38:28.4434 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases [2495ms]
+2025-04-15 18:38:30.1363 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:38:34.9779 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases [3994ms]
+2025-04-15 18:39:50.4963 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:39:51.3369 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:39:52.1050 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:39:52.8557 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:39:54.6761 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:39:56.2363 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:39:57.0245 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 18:40:04.4508 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:40:05.3304 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:40:06.1594 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:40:07.0184 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:40:08.6305 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:40:10.1914 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:40:11.0137 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 18:40:18.8578 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:40:19.6547 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:40:20.4213 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:40:21.2148 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:40:22.9557 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:40:24.5201 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:40:26.1062 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 18:44:33.5698 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:44:34.4131 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:44:35.2255 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:44:36.0183 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:44:41.6398 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:44:43.6655 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:44:44.7366 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 18:44:54.8896 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases [2190ms]
+2025-04-15 18:44:57.0694 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases [1375ms]
+2025-04-15 18:45:38.8341 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases [41027ms]
+2025-04-15 18:45:42.7826 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases [3098ms]
+2025-04-15 18:45:46.8465 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases [2131ms]
+2025-04-15 18:45:48.4717 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:45:53.3245 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases [4107ms]
+2025-04-15 18:46:27.9397 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:46:28.8588 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:46:29.6276 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:46:30.4557 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:46:33.1800 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:46:34.8395 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:46:35.6746 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:46:55.9910 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:46:56.8130 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:46:57.6020 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:46:58.4338 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:47:01.5224 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:47:03.1354 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:47:03.9547 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:47:28.4368 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:47:29.3397 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:47:30.1839 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:47:31.0580 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:47:34.1351 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:47:35.7519 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:47:36.5904 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:48:05.6591 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:06.4588 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:48:07.2949 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:48:08.1799 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:10.8965 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:48:12.5303 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:48:13.3298 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:48:27.8561 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:28.7251 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:48:29.5181 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:48:30.3647 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:33.3719 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:48:35.0091 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:48:35.8363 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:48:53.6016 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:54.5571 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:48:55.2475 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:48:56.0984 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:48:59.1447 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:49:00.7044 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:49:01.4192 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:49:22.7485 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:49:23.5945 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:49:24.5359 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S01 => Found 6 releases (from cache) [0ms]
+2025-04-15 18:49:25.2962 Info Torznab search in EZTV for Mushoku Tensei: Jobless Reincarnation S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:49:27.8939 Info Torznab search in Anime Tosho for Mushoku Tensei: Jobless Reincarnation S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:49:29.4719 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:49:30.2583 Info Torznab search in Nyaa.si for Mushoku Tensei: Jobless Reincarnation S01 => Found 39 releases (from cache) [0ms]
+2025-04-15 18:50:26.5759 Info Torznab search in Anime Time for Mushoku Tensei: Jobless Reincarnation S02 => Found 25 releases [2183ms]
+2025-04-15 18:50:28.7730 Info Torznab search in The Pirate Bay for Mushoku Tensei: Jobless Reincarnation S02 => Found 0 releases [1329ms]
+2025-04-15 18:51:12.7797 Info Torznab search in kickasstorrents.to for Mushoku Tensei: Jobless Reincarnation S02 => Found 2 releases [43186ms]
+2025-04-15 18:51:25.0523 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases [918ms]
+2025-04-15 18:51:26.7265 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases [783ms]
+2025-04-15 18:52:20.5221 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases [52928ms]
+2025-04-15 18:53:51.8430 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:53:52.6795 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:53:53.4204 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:53:54.2484 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:53:56.3146 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:53:57.8713 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:53:58.6502 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 18:54:14.4378 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [1ms]
+2025-04-15 18:54:15.3247 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:54:16.0863 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:54:16.8715 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:54:19.7123 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:54:32.2514 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:54:33.1165 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 18:54:33.9483 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 18:54:34.7452 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 18:54:37.2600 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases (from cache) [0ms]
+2025-04-15 18:54:38.9028 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 18:54:39.7327 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases (from cache) [0ms]
+2025-04-15 19:02:38.6044 Info Starting Jackett v0.22.1744
+2025-04-15 19:02:39.4216 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 19:02:39.4321 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 19:02:39.4368 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 19:02:39.4372 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 19:02:39.4372 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 19:02:39.4387 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 19:02:39.4391 Info App config/log directory: /config/Jackett
+2025-04-15 19:02:39.4419 Info Using proxy: Disabled
+2025-04-15 19:02:39.4421 Info Using FlareSolverr: No
+2025-04-15 19:02:39.4442 Info Using HTTP Client: HttpWebClient2
+2025-04-15 19:02:39.4490 Info Loading Native indexers ...
+2025-04-15 19:02:39.5123 Info Loaded 78 Native indexers.
+2025-04-15 19:02:39.5152 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 19:02:42.1511 Info Loaded 536 Cardigann indexers.
+2025-04-15 19:02:42.1511 Info Loaded 614 indexers in total
+2025-04-15 19:02:42.1653 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 19:02:42.1699 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 19:02:42.1705 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 19:02:42.1705 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 19:02:42.2969 Info Jackett startup finished in 4.035 s
+2025-04-15 19:04:22.5747 Info Torznab search in Anime Time for Mob Psycho 100 S01 => Found 25 releases [2761ms]
+2025-04-15 19:04:24.4908 Info Torznab search in The Pirate Bay for Mob Psycho 100 S01 => Found 0 releases [1055ms]
+2025-04-15 19:04:51.0005 Info Torznab search in kickasstorrents.to for Mob Psycho 100 S01 => Found 1 releases [25556ms]
+2025-04-15 19:04:55.2129 Info Torznab search in EZTV for Mob Psycho 100 S01 => Found 25 releases [3373ms]
+2025-04-15 19:05:01.1354 Info Torznab search in Anime Tosho for Mob Psycho 100 S01 => Found 3 releases [2501ms]
+2025-04-15 19:05:02.7290 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:05:07.5967 Info Torznab search in Nyaa.si for Mob Psycho 100 S01 => Found 15 releases [4049ms]
+2025-04-15 19:05:42.5182 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases [9892ms]
+2025-04-15 19:05:44.1409 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases [805ms]
+2025-04-15 19:06:09.8729 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases [24865ms]
+2025-04-15 19:06:27.9000 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [1ms]
+2025-04-15 19:06:28.8204 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:06:29.7103 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:06:33.7919 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases [3212ms]
+2025-04-15 19:06:36.5982 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases [1982ms]
+2025-04-15 19:06:38.5281 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:06:43.9699 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases [4525ms]
+2025-04-15 19:08:19.6837 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [1ms]
+2025-04-15 19:08:20.6080 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:08:46.3740 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [2ms]
+2025-04-15 19:08:47.2556 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:08:48.1881 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:08:48.9823 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:08:49.7946 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:08:51.5571 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:08:52.3805 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:09:36.4033 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:09:37.2521 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:09:38.1275 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:09:38.9298 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:09:39.7693 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:09:41.5017 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:09:42.3076 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:10:12.4863 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:10:13.3206 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:10:14.2156 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:10:15.0421 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:10:15.8282 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [2ms]
+2025-04-15 19:10:26.2018 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:10:27.0430 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:10:27.9121 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:10:28.7093 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:10:29.4860 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:10:31.2429 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:10:32.0947 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:11:00.4393 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:11:01.2763 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:11:02.1302 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:11:02.9606 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:11:03.8024 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [4ms]
+2025-04-15 19:11:05.5003 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:11:06.2586 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:11:39.3308 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:11:40.2231 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:11:41.0826 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:11:41.9240 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:11:42.7208 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:11:44.5617 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:11:45.3616 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:17:47.5704 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:17:48.4759 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:17:49.4231 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:17:50.2704 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:17:51.0975 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:17:52.8676 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:17:53.6586 Info Torznab search in Nyaa.si for Dragon Ball DAIMA S01 => Found 75 releases (from cache) [0ms]
+2025-04-15 19:18:00.3364 Info Torznab search in Anime Time for Dragon Ball DAIMA S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:18:01.1584 Info Torznab search in The Pirate Bay for Dragon Ball DAIMA S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:18:02.0393 Info Torznab search in kickasstorrents.to for Dragon Ball DAIMA S01 => Found 1 releases (from cache) [0ms]
+2025-04-15 19:18:02.7956 Info Torznab search in EZTV for Dragon Ball DAIMA S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:18:03.5665 Info Torznab search in Anime Tosho for Dragon Ball DAIMA S01 => Found 46 releases (from cache) [1ms]
+2025-04-15 19:18:05.4026 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:18:27.0909 Info Torznab search in Anime Time for Tokyo Revengers S01 => Found 25 releases [2131ms]
+2025-04-15 19:18:29.1491 Info Torznab search in The Pirate Bay for Tokyo Revengers S01 => Found 0 releases [909ms]
+2025-04-15 19:18:58.2545 Info Torznab search in kickasstorrents.to for Tokyo Revengers S01 => Found 2 releases [28304ms]
+2025-04-15 19:19:01.8295 Info Torznab search in EZTV for Tokyo Revengers S01 => Found 221 releases [2762ms]
+2025-04-15 19:19:12.1247 Info Torznab search in Anime Tosho for Tokyo Revengers S01 => Found 2 releases [2416ms]
+2025-04-15 19:19:13.7919 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:19:19.0760 Info Torznab search in Nyaa.si for Tokyo Revengers S01 => Found 31 releases [4464ms]
+2025-04-15 19:20:19.5875 Info Torznab search in Anime Time for Shangri-La Frontier S01 => Found 25 releases [1990ms]
+2025-04-15 19:20:21.4794 Info Torznab search in The Pirate Bay for Shangri-La Frontier S01 => Found 0 releases [975ms]
+2025-04-15 19:20:56.9707 Info Torznab search in kickasstorrents.to for Shangri-La Frontier S01 => Found 0 releases [34611ms]
+2025-04-15 19:20:59.8794 Info Torznab search in EZTV for Shangri-La Frontier S01 => Found 0 releases [2121ms]
+2025-04-15 19:21:02.8597 Info Torznab search in Anime Tosho for Shangri-La Frontier S01 => Found 2 releases [2140ms]
+2025-04-15 19:21:04.5244 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:21:15.5168 Info Torznab search in Nyaa.si for Shangri-La Frontier S01 => Found 75 releases [10150ms]
+2025-04-15 19:23:47.1540 Info Torznab search in Anime Time for Shangri-La Frontier S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:23:48.0267 Info Torznab search in The Pirate Bay for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:23:48.7736 Info Torznab search in kickasstorrents.to for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:23:49.5599 Info Torznab search in EZTV for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:23:50.3540 Info Torznab search in Anime Tosho for Shangri-La Frontier S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:23:52.0067 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:23:52.8091 Info Torznab search in Nyaa.si for Shangri-La Frontier S01 => Found 75 releases (from cache) [3ms]
+2025-04-15 19:24:54.9712 Info Torznab search in Anime Time for Shangri-La Frontier S01 => Found 25 releases (from cache) [0ms]
+2025-04-15 19:24:55.8100 Info Torznab search in The Pirate Bay for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:24:56.5446 Info Torznab search in kickasstorrents.to for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:24:57.4457 Info Torznab search in EZTV for Shangri-La Frontier S01 => Found 0 releases (from cache) [0ms]
+2025-04-15 19:24:58.2423 Info Torznab search in Anime Tosho for Shangri-La Frontier S01 => Found 2 releases (from cache) [0ms]
+2025-04-15 19:24:59.8828 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 19:25:00.6877 Info Torznab search in Nyaa.si for Shangri-La Frontier S01 => Found 75 releases (from cache) [0ms]

@@ -88,7 +88,9 @@ class CaesarAIJackett:
         if isinstance(torrent.episode,list):
             return (-1,0)
         return (1, torrent.episode)  # Otherwise, sort by the episode number
-
+    @staticmethod
+    def sort_by_seeders(torrent:TorrentItem):
+        return torrent.seeders
     def get_batch_episodes(self)-> List[TorrentItem]:
         return list(sorted(filter(lambda x:self.is_batch and self.not_torrent_only_magnet(x),self.torrent_items),key=self.sort_torrents))
     @staticmethod
@@ -317,6 +319,7 @@ class CaesarAIJackett:
                 #print("Hello")
                 yield {"event":{"log":"extracting db"}}
                 torrentinfo = await caejackett.get_episodes_db_async(title,season,episode)
+                torrentinfo = sorted(torrentinfo,key=CaesarAIJackett.sort_by_seeders, reverse=True)
                 
 
             else:
@@ -327,6 +330,7 @@ class CaesarAIJackett:
                 torrentinfo_single = caejackett.get_single_episodes()
                 torrentinfo_batch =  caejackett.get_batch_episodes()
                 torrentinfo = torrentinfo_batch + torrentinfo_single
+                torrentinfo = sorted(torrentinfo,key=CaesarAIJackett.sort_by_seeders, reverse=True)
   
                 
                 #print(torrentinfo)
