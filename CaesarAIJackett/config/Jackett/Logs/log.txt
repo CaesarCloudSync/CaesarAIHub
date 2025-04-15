@@ -30116,3 +30116,131 @@ Application started. Press Ctrl+C to shut down.
    at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
    at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
 
+04-15 13:41:14 Info Starting Jackett v0.22.1744
+04-15 13:41:15 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-15 13:41:15 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-15 13:41:15 Info Jackett variant: CoreLinuxAmdx64
+04-15 13:41:15 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-15 13:41:15 Info Running in Docker: Yes (image build: unknown)
+04-15 13:41:15 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-15 13:41:15 Info App config/log directory: /config/Jackett
+04-15 13:41:15 Info Using proxy: Disabled
+04-15 13:41:15 Info Using FlareSolverr: No
+04-15 13:41:15 Info Using HTTP Client: HttpWebClient2
+04-15 13:41:15 Info Loading Native indexers ...
+04-15 13:41:15 Info Loaded 78 Native indexers.
+04-15 13:41:15 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-15 13:41:17 Info Loaded 536 Cardigann indexers.
+04-15 13:41:17 Info Loaded 614 indexers in total
+04-15 13:41:17 Info Adding aggregate indexer ('all' indexer) ...
+04-15 13:41:17 Info Adding filter indexer ('type:public' indexer) ...
+04-15 13:41:17 Info Adding filter indexer ('type:private' indexer) ...
+04-15 13:41:17 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-15 13:41:17 Info Jackett startup finished in 3.953 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-15 17:18:32 Info Starting Jackett v0.22.1744
+04-15 17:18:33 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-15 17:18:33 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-15 17:18:33 Info Jackett variant: CoreLinuxAmdx64
+04-15 17:18:33 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-15 17:18:33 Info Running in Docker: Yes (image build: unknown)
+04-15 17:18:33 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-15 17:18:33 Info App config/log directory: /config/Jackett
+04-15 17:18:33 Info Using proxy: Disabled
+04-15 17:18:33 Info Using FlareSolverr: No
+04-15 17:18:33 Info Using HTTP Client: HttpWebClient2
+04-15 17:18:33 Info Loading Native indexers ...
+04-15 17:18:33 Info Loaded 78 Native indexers.
+04-15 17:18:33 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-15 17:18:36 Info Loaded 536 Cardigann indexers.
+04-15 17:18:36 Info Loaded 614 indexers in total
+04-15 17:18:36 Info Adding aggregate indexer ('all' indexer) ...
+04-15 17:18:36 Info Adding filter indexer ('type:public' indexer) ...
+04-15 17:18:36 Info Adding filter indexer ('type:private' indexer) ...
+04-15 17:18:36 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-15 17:18:36 Info Jackett startup finished in 4.254 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-15 17:28:55 Info Torznab search in Anime Time for Tokyo Revengers S01 => Found 25 releases [2404ms]
+04-15 17:28:58 Info Torznab search in The Pirate Bay for Tokyo Revengers S01 => Found 0 releases [1517ms]
+04-15 17:29:41 Info Torznab search in kickasstorrents.to for Tokyo Revengers S01 => Found 2 releases [42285ms]
+04-15 17:32:01 Info Starting Jackett v0.22.1744
+04-15 17:32:02 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-15 17:32:02 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-15 17:32:02 Info Jackett variant: CoreLinuxAmdx64
+04-15 17:32:02 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-15 17:32:02 Info Running in Docker: Yes (image build: unknown)
+04-15 17:32:02 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-15 17:32:02 Info App config/log directory: /config/Jackett
+04-15 17:32:02 Info Using proxy: Disabled
+04-15 17:32:02 Info Using FlareSolverr: No
+04-15 17:32:02 Info Using HTTP Client: HttpWebClient2
+04-15 17:32:02 Info Loading Native indexers ...
+04-15 17:32:02 Info Loaded 78 Native indexers.
+04-15 17:32:02 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-15 17:32:04 Info Loaded 536 Cardigann indexers.
+04-15 17:32:04 Info Loaded 614 indexers in total
+04-15 17:32:04 Info Adding aggregate indexer ('all' indexer) ...
+04-15 17:32:04 Info Adding filter indexer ('type:public' indexer) ...
+04-15 17:32:04 Info Adding filter indexer ('type:private' indexer) ...
+04-15 17:32:04 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-15 17:32:04 Info Jackett startup finished in 3.101 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-15 17:33:21 Info Starting Jackett v0.22.1744
+04-15 17:33:21 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-15 17:33:21 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-15 17:33:21 Info Jackett variant: CoreLinuxAmdx64
+04-15 17:33:21 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-15 17:33:21 Info Running in Docker: Yes (image build: unknown)
+04-15 17:33:21 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-15 17:33:21 Info App config/log directory: /config/Jackett
+04-15 17:33:21 Info Using proxy: Disabled
+04-15 17:33:21 Info Using FlareSolverr: No
+04-15 17:33:21 Info Using HTTP Client: HttpWebClient2
+04-15 17:33:21 Info Loading Native indexers ...
+04-15 17:33:21 Info Loaded 78 Native indexers.
+04-15 17:33:21 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-15 17:33:23 Info Loaded 536 Cardigann indexers.
+04-15 17:33:23 Info Loaded 614 indexers in total
+04-15 17:33:23 Info Adding aggregate indexer ('all' indexer) ...
+04-15 17:33:23 Info Adding filter indexer ('type:public' indexer) ...
+04-15 17:33:23 Info Adding filter indexer ('type:private' indexer) ...
+04-15 17:33:23 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-15 17:33:23 Info Jackett startup finished in 2.869 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.
+04-15 17:36:14 Info Starting Jackett v0.22.1744
+04-15 17:36:14 Info Environment version: 8.0.14 (/opt/Jackett/)
+04-15 17:36:14 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+04-15 17:36:14 Info Jackett variant: CoreLinuxAmdx64
+04-15 17:36:14 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+04-15 17:36:14 Info Running in Docker: Yes (image build: unknown)
+04-15 17:36:14 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+04-15 17:36:14 Info App config/log directory: /config/Jackett
+04-15 17:36:14 Info Using proxy: Disabled
+04-15 17:36:14 Info Using FlareSolverr: No
+04-15 17:36:14 Info Using HTTP Client: HttpWebClient2
+04-15 17:36:14 Info Loading Native indexers ...
+04-15 17:36:14 Info Loaded 78 Native indexers.
+04-15 17:36:14 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+04-15 17:36:16 Info Loaded 536 Cardigann indexers.
+04-15 17:36:16 Info Loaded 614 indexers in total
+04-15 17:36:17 Info Adding aggregate indexer ('all' indexer) ...
+04-15 17:36:17 Info Adding filter indexer ('type:public' indexer) ...
+04-15 17:36:17 Info Adding filter indexer ('type:private' indexer) ...
+04-15 17:36:17 Info Adding filter indexer ('type:semi-public' indexer) ...
+04-15 17:36:17 Info Jackett startup finished in 2.806 s
+Hosting environment: Production
+Content root path: /opt/Jackett/Content
+Now listening on: http://[::]:9117
+Application started. Press Ctrl+C to shut down.

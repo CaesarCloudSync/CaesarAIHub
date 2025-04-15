@@ -9,12 +9,18 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "PHPSESSID=5k3gjv4fegilops4da43gukk07"
+    "value": null
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
+    "value": null
+  },
+  {
+    "id": "user-agent",
+    "type": "inputstring",
+    "name": "User-Agent",
     "value": null
   },
   {
