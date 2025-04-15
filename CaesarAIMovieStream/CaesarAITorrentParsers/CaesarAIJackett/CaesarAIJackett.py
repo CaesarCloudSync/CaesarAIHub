@@ -311,11 +311,13 @@ class CaesarAIJackett:
         cr = CaesarAIRedis(async_mode=True)
         caejackett = CaesarAIJackett(db=True,asynchronous=True)
         yield {"event":{"open":{"data":"open"}}}
-        for indexer in indexers:            
-            if await caejackett.check_batch_episodes_db_async(title,season,episode):
+        for indexer in indexers:   
+            exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)         
+            if exists_in_db:
                 #print("Hello")
                 yield {"event":{"log":"extracting db"}}
                 torrentinfo = await caejackett.get_episodes_db_async(title,season,episode)
+                
 
             else:
                 yield {"event":{"log":"extracting jackett"}}
@@ -333,7 +335,8 @@ class CaesarAIJackett:
             for index,torrent in enumerate(torrentinfo):
                 data = {"index":index,"total":len(torrentinfo),"episodes":torrent.model_dump()}
                 yield {"event":{"episodes":{"data":data}}}
-                
+            if exists_in_db:
+                break
         redis_episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=title,season=season,episode=episode)
         episodes_exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)
         task_to_save_in_db_exists = await cr.async_hget_episode_task(redis_episode_id)
