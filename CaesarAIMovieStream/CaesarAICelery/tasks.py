@@ -28,7 +28,7 @@ async def async_get_unfinished_episodes(self,interuptted_episode_tasks,indexers,
 def get_unfinished_episodes(self):
     cr = CaesarAIRedis()
     indexers = CaesarAIJackett.get_current_torrent_indexers()
-    interuptted_episode_tasks = ["Solo Leveling_1_1"]#cr.get_all_episode_task_ids()
+    interuptted_episode_tasks = cr.get_all_episode_task_ids()
     results =  asyncio.run(async_get_unfinished_episodes(self,interuptted_episode_tasks,indexers,cr))
     self.update_state(state='COMPLETED', meta={'results': results})
     return {'results': results}

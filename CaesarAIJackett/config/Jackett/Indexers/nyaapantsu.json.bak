@@ -9,7 +9,7 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "csrf_token=NcsaJo+woU66F9hj+XRI4n9rYBcTOLX77EZm1v27APE=; EU_Cookie=true"
+    "value": null
   },
   {
     "id": "lasterror",

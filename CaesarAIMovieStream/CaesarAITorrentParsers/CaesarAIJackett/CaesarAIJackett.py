@@ -229,8 +229,9 @@ class CaesarAIJackett:
         response = requests.get(url)
         indexers_data = response.json()["Indexers"]
         indexers = list(set([indexer["ID"] for indexer in indexers_data]))
-        logging.info(indexers)
-        cr.setkey("indexers",json.dumps(indexers))
+        sorted_indexers = sorted(indexers, key=lambda x: (x not in [CaesarAIConstants.Nyaasi, CaesarAIConstants.EZTV], x))
+        logging.info(sorted_indexers)
+        cr.setkey("indexers",json.dumps(sorted_indexers))
 
 
 
@@ -339,6 +340,7 @@ class CaesarAIJackett:
                 if service == "jackett":
                     yield {"event":{"log":"extracting jackett"}}
                     url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
+                    print(url)
                     caejackett = CaesarAIJackett(url)
                     torrentinfo = caejackett.get_torrent_info(title)
                     torrentinfo_single = caejackett.get_single_episodes()
@@ -355,7 +357,6 @@ class CaesarAIJackett:
                     torrentinfo = torrentinfo_single + torrentinfo_batched
                 else:
                     raise Exception("Indexing Service does not exist.")
-                print(f"helloP {len(torrentinfo)}",flush=True)
                 for index,torrent in enumerate(torrentinfo):
                     data = {"index":index,"total":len(torrentinfo),"episodes":torrent.model_dump()}
                     yield {"event":{"episodes":{"data":data}}}
@@ -377,7 +378,7 @@ class CaesarAIJackett:
         yield {"event":{"close":{"data":"close"}}}
     @staticmethod
     def sort_indexers(data):
-        priority = {"Nyaa.si": 0, "EZTV": 1}  # Lower numbers = higher priority
+        priority = {"nyaasi": 0, "eztv": 1}  # Lower numbers = higher priority
         indexers = sorted(data, key=lambda x: (priority.get(x, 2), x))
         return indexers
 

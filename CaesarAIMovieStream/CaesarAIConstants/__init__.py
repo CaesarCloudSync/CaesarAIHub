@@ -16,3 +16,5 @@ class CaesarAIConstants:
     TEXT_SANITIZE_REGEX=r'[^a-zA-Z0-9\s]'
     REDIS_HASH_NAME="episode-task"
     EPISODE_REDIS_ID="{query}_{season}_{episode}"
+    Nyaasi="nyaasi"
+    EZTV="eztv"

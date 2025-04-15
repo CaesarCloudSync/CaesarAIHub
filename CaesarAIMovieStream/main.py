@@ -25,6 +25,12 @@ from datetime import datetime
 import json
 from celery.result import AsyncResult
 from CaesarAICelery.celery_worker import celery_app
+from contextlib import asynccontextmanager
+from apscheduler.schedulers.background import BackgroundScheduler  # runs tasks in the background
+from apscheduler.triggers.cron import CronTrigger  # allows us to specify a recurring time for execution
+from CaesarAICelery.schedules import CaesarAISchedules
+import json
+
 import logging
 
 logging.basicConfig(
@@ -32,6 +38,13 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 logging.getLogger('apscheduler').setLevel(logging.WARNING) # This hides the apscedhuler events
+
+
+# Set up the scheduler
+scheduler = BackgroundScheduler()
+trigger = CronTrigger(year="*", month="*", day="*", hour="*", minute="*")  # every minute
+scheduler.add_job(CaesarAISchedules.update_all_torrent_indexers, trigger)
+scheduler.start()
 
 
 app = FastAPI()
@@ -48,6 +61,12 @@ caesaraird = CaesarAIRealDebrid()
 cartable = CaesarCreateTables()
 
 cartable.create(caesarcrud)
+
+# Ensure the scheduler shuts down properly on application exit.
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    yield
+    scheduler.shutdown()
 
 
 @app.get('/')# GET # allow all origins all methods.
@@ -89,7 +108,6 @@ async def stream_get_episodews(websocket: WebSocket):
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
             indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
-            indexers = CaesarAIJackett.sort_indexers(indexers)
             async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers):
                 #print(event)
                 await websocket.send_json(event)
