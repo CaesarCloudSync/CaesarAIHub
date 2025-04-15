@@ -250,6 +250,12 @@ async def get_streaming_links(_id:str):
         return {"streams":await caesaraird.get_streaming_links(_id)}
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
+@app.get('/api/v1/get_streaming_linksws')# GET # allow all origins all methods.,response_model=StreamingLinkResponse)
+async def get_streaming_linkswss(_id:str):
+    try:
+        return {"streams":await caesaraird.get_streaming_links(_id)}
+    except Exception as ex:
+        return {"error":f"{type(ex)},{ex}"}
 @app.get('/api/v1/get_container_links')# GET # allow all origins all methods.,response_model=StreamingLinkResponse)
 async def get_container_links(_id:str):
     try:

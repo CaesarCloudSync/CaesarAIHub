@@ -8,6 +8,7 @@ from CaesarAIRealDebrid.models.ContainerStreamItem import ContainerStreamItem
 from CaesarAIRealDebrid.models.StreamItem import StreamItem
 from CaesarAIRealDebrid.responses.StatusAndProgressResponse import StatusAndProgressResponse
 from CaesarAIRealDebrid.responses.StreamRealDebridResponse import StreamRealDebridResponse
+from CaesarAIRealDebrid.models.StreamItem import StreamItem
 class CaesarAIRealDebrid:
     def __init__(self) -> None:
         self.url="https://api.real-debrid.com/rest/1.0/"
@@ -39,12 +40,12 @@ class CaesarAIRealDebrid:
         return response.json()
     
 
-    async def get_streaming_info(self,containeritem:ContainerStreamItem) -> StreamRealDebridResponse:
-        async with httpx.AsyncClient() as client:
+    async def get_streaming_info(self,containeritem:ContainerStreamItem) -> StreamItem:
+        async with httpx.AsyncClient(timeout=None) as client:
             response = await client.get(f"{self.url}/streaming/mediaInfos/{containeritem.id}", headers=self.headers)
             if response.status_code == 200:
-                #print(response.json())
-                return response.json() # StreamRealDebridResponse.model_validate()
+                print(response.json())
+                return StreamItem.model_validate(response.json())# StreamRealDebridResponse.model_validate()
                 
             else:
                 return response.status_code
@@ -60,7 +61,7 @@ class CaesarAIRealDebrid:
         headers = dict()
         headers["Authorization"] = self.headers["Authorization"]
         headers["Content-Type"] = "application/x-www-form-urlencoded"
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=None) as client:
             response = await client.post(f"{self.url}/unrestrict/link", headers=headers, data={"link":link})
             if response.status_code == 200:
                 return ContainerStreamItem.model_validate(response.json())
