@@ -15,10 +15,11 @@ async def async_get_unfinished_episodes(self,interuptted_episode_tasks,indexers,
         title, season, episode = episode_task.split('_')
         
         logger.info(f"Extracting: {title},{season},{episode}") 
-        redis_instance.delete_episode_task(episode_task)# Have this before. It stops the task from repeatedly saving.
-        async for event in CaesarAIJackett.stream_get_episodews(title,season,episode,indexers):
+    
+        async for event in CaesarAIJackett.stream_get_episodews(title,season,episode,indexers,background=True):
             logger.info(str(event))
             self.update_state(state='PROGRESS', meta={'results':event})
+        redis_instance.delete_episode_task(episode_task)# Have this before. It stops the task from repeatedly saving.
     return interuptted_episode_tasks
         
         
