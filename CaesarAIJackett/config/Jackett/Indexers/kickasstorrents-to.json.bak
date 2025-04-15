@@ -18,12 +18,6 @@
     "value": null
   },
   {
-    "id": "user-agent",
-    "type": "inputstring",
-    "name": "User-Agent",
-    "value": null
-  },
-  {
     "id": "sortrequestedfromsite",
     "type": "inputselect",
     "name": "Sort requested from site",

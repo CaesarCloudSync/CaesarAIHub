@@ -344,6 +344,7 @@ class CaesarAIJackett:
                     torrentinfo_single = caejackett.get_single_episodes()
                     torrentinfo_batch =  caejackett.get_batch_episodes()
                     torrentinfo = torrentinfo_batch + torrentinfo_single
+                    torrentinfo = list(filter(lambda x:(x.episode == episode and x.season == season) or (isinstance(x.episode,list)) or (isinstance(x.season,list)) or (x.episode == "BATCH") or (x.season == "BATCH"),torrentinfo))
                 elif service == "prowlarr":
                     url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
                     caeprowlarr = CaesarAIProwlarr(url)

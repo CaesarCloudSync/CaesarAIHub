@@ -9,15 +9,8 @@ type: semi-private
 encoding: windows-1251
 followredirect: true
 links:
-<<<<<<< HEAD
-  - https://apr14.rudub.vip/
-legacylinks:
-  - http://mar30.rudub.vip/
-  - https://mar30.rudub.vip/
-=======
   - https://apr15.rudub.vip/
 legacylinks:
->>>>>>> websockets
   - http://mar31.rudub.vip/
   - https://mar31.rudub.vip/
   - http://apr01.rudub.vip/
@@ -47,11 +40,8 @@ legacylinks:
   - http://apr13.rudub.vip/
   - https://apr13.rudub.vip/
   - http://apr14.rudub.vip/
-<<<<<<< HEAD
-=======
   - https://apr14.rudub.vip/
   - http://apr15.rudub.vip/
->>>>>>> websockets
 
 caps:
   categorymappings:

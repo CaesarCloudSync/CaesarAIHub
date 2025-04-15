@@ -9,11 +9,7 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-<<<<<<< HEAD
-    "value": "PHPSESSID=om3phrlhoh4c9h90vq6gfedkg7"
-=======
-    "value": "PHPSESSID=5k3gjv4fegilops4da43gukk07"
->>>>>>> websockets
+    "value": ""
   },
   {
     "id": "lasterror",
