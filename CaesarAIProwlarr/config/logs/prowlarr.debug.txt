@@ -6346,3 +6346,220 @@
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:10:15.5|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-15 20:10:15.5|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-15 20:10:15.5|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-15 20:10:15.6|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:10:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:10:15.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:10:15.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:10:15.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.1100842s
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.1120768s
+2025-04-15 20:10:16.1|Debug|MigrationController|Took: 00:00:00.4548404
+2025-04-15 20:10:16.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:10:16.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:10:16.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0067718s
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0084576s
+2025-04-15 20:10:16.2|Debug|MigrationController|Took: 00:00:00.0585791
+2025-04-15 20:10:17.0|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:10:17.1|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-15 20:10:17.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:10:17.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-15 20:10:17.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:10:17.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-15 20:10:18.0|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-15 20:10:18.0|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-15 20:10:18.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-15 20:10:18.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-15 20:10:18.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:12:16.3|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-15 20:12:16.3|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-15 20:12:16.3|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-15 20:12:16.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:12:16.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:12:16.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0473946s
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0498s
+2025-04-15 20:12:16.5|Debug|MigrationController|Took: 00:00:00.1684713
+2025-04-15 20:12:16.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:12:16.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:12:16.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0011882s
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014458s
+2025-04-15 20:12:16.5|Debug|MigrationController|Took: 00:00:00.0087566
+2025-04-15 20:12:16.7|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:12:16.8|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-15 20:12:16.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:12:16.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-15 20:12:17.0|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:12:17.5|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-15 20:12:17.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-15 20:12:17.6|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-15 20:12:17.7|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-15 20:12:17.7|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-15 20:12:17.7|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:15:53.3|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-15 20:15:53.3|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-15 20:15:53.3|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-15 20:15:53.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:15:53.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:15:53.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:15:53.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:15:53.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0467968s
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0490628s
+2025-04-15 20:15:53.5|Debug|MigrationController|Took: 00:00:00.1739654
+2025-04-15 20:15:53.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:15:53.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:15:53.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0011623s
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014075s
+2025-04-15 20:15:53.5|Debug|MigrationController|Took: 00:00:00.0087384
+2025-04-15 20:15:53.7|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:15:53.8|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-15 20:15:53.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:15:53.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-15 20:15:53.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:15:54.4|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-15 20:15:54.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-15 20:15:54.5|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-15 20:15:54.6|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-15 20:15:54.6|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-15 20:15:54.6|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:17:19.8|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:19.9|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/indexer/categories: 200.OK (8 ms)
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/appprofile: 200.OK (16 ms)
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/config/ui: 200.OK (5 ms)
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (24 ms)
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/tag: 200.OK (27 ms)
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/customFilter: 200.OK (28 ms)
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/localization: 200.OK (3 ms)
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/system/status: 200.OK (34 ms)
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/config/host: 200.OK (41 ms)
+2025-04-15 20:17:20.1|Debug|Api|[GET] /api/v1/indexer: 200.OK (83 ms)
+2025-04-15 20:17:20.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-15 20:17:20.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.2|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: API was successfully authenticated.
+2025-04-15 20:17:20.2|Debug|Api|[GET] /api/v1/indexerStatus: 200.OK (1 ms)
+2025-04-15 20:17:20.2|Debug|Api|[GET] /api/v1/health: 200.OK (9 ms)
+2025-04-15 20:17:20.2|Debug|Api|[GET] /api/v1/indexer: 200.OK (8 ms)
+2025-04-15 20:17:20.2|Debug|Prowlarr.Http.Authentication.NoAuthenticationHandler|AuthenticationScheme: External was successfully authenticated.
+2025-04-15 20:17:20.3|Debug|Prowlarr.Http.Authentication.ApiKeyAuthenticationHandler|AuthenticationScheme: SignalR was successfully authenticated.
+2025-04-15 20:23:15.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-15 20:23:15.6|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-15 20:23:15.6|Debug|ProcessProvider| - [316] Prowlarr
+2025-04-15 20:23:15.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:23:15.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:23:15.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0451698s
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0473959s
+2025-04-15 20:23:15.9|Debug|MigrationController|Took: 00:00:00.1728478
+2025-04-15 20:23:15.9|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:23:15.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:23:15.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014624s
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0017906s
+2025-04-15 20:23:15.9|Debug|MigrationController|Took: 00:00:00.0124463
+2025-04-15 20:23:16.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:23:16.2|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-15 20:23:16.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:23:16.3|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-15 20:23:16.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:23:16.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-15 20:23:17.0|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-15 20:23:17.0|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-15 20:23:17.1|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-15 20:23:17.1|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-15 20:23:17.1|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:24:04.7|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-15 20:24:04.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-15 20:24:04.7|Debug|ProcessProvider| - [317] Prowlarr
+2025-04-15 20:24:04.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:24:04.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:24:04.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:24:04.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:24:04.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0468685s
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0490174s
+2025-04-15 20:24:04.9|Debug|MigrationController|Took: 00:00:00.1682514
+2025-04-15 20:24:04.9|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:24:04.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:24:04.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015357s
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0019111s
+2025-04-15 20:24:04.9|Debug|MigrationController|Took: 00:00:00.0101713
+2025-04-15 20:24:05.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:24:05.2|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-15 20:24:05.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:24:05.3|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-15 20:24:05.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:24:05.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-15 20:24:05.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-15 20:24:05.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-15 20:24:06.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-15 20:24:06.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-15 20:24:06.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin

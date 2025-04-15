@@ -41,7 +41,6 @@ logging.getLogger('apscheduler').setLevel(logging.WARNING) # This hides the apsc
 scheduler = BackgroundScheduler()
 trigger = CronTrigger(year="*", month="*", day="*", hour="*", minute="*")  # every minute
 scheduler.add_job(CaesarAISchedules.schedule_interrupted_episodes, trigger)
-scheduler.add_job(CaesarAISchedules.schedule_update_indexers, trigger)
 scheduler.start()
 
 

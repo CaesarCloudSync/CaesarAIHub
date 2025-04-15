@@ -344,7 +344,7 @@ class CaesarAIJackett:
                     torrentinfo_single = caejackett.get_single_episodes()
                     torrentinfo_batch =  caejackett.get_batch_episodes()
                     torrentinfo = torrentinfo_batch + torrentinfo_single
-                    torrentinfo = list(filter(lambda x:(x.episode == episode and x.season == season) or (isinstance(x.episode,list)) or (isinstance(x.season,list)) or (x.episode == "BATCH") or (x.season == "BATCH"),torrentinfo))
+                    #torrentinfo = list(filter(lambda x:(x.episode == episode and x.season == season) or (isinstance(x.episode,list)) or (isinstance(x.season,list)) or (x.episode == "BATCH") or (x.season == "BATCH"),torrentinfo))
                 elif service == "prowlarr":
                     url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title} {CaesarAIProwlarr.format_season(season)}"
                     caeprowlarr = CaesarAIProwlarr(url)
@@ -369,7 +369,7 @@ class CaesarAIJackett:
         redis_episode_id = CaesarAIConstants.EPISODE_REDIS_ID.format(query=title,season=season,episode=episode)
         episodes_exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)
         task_to_save_in_db_exists = await cr.async_hget_episode_task(redis_episode_id)
-        if not episodes_exists_in_db and not task_to_save_in_db_exists:
+        if not episodes_exists_in_db : # and not task_to_save_in_db_exists
             flattened_all_torrents = list(chain.from_iterable(all_torrents))
             #print(flattened_all_torrents,flush=True)
             await caejackett.save_batch_episodes_async(flattened_all_torrents)

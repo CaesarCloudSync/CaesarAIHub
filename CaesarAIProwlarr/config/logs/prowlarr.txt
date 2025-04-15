@@ -1492,3 +1492,133 @@
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-04-15 19:39:58.5|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:10:14.4|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.32.2.4987
+2025-04-15 20:10:14.5|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:10:14.6|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:10:15.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:10:15.6|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:10:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:10:15.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:10:15.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:10:15.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.1100842s
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:10:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.1120768s
+2025-04-15 20:10:16.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:10:16.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:10:16.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0067718s
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:10:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0084576s
+2025-04-15 20:10:17.0|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:10:17.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:10:17.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:10:18.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:12:15.8|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.32.2.4987
+2025-04-15 20:12:15.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:12:15.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:12:16.2|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:12:16.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:12:16.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:12:16.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0473946s
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:12:16.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0498s
+2025-04-15 20:12:16.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:12:16.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:12:16.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0011882s
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:12:16.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014458s
+2025-04-15 20:12:16.7|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:12:16.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:12:17.0|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:12:17.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:15:52.8|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.32.2.4987
+2025-04-15 20:15:52.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:15:52.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:15:53.2|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:15:53.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:15:53.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:15:53.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:15:53.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:15:53.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0467968s
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0490628s
+2025-04-15 20:15:53.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:15:53.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:15:53.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0011623s
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:15:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014075s
+2025-04-15 20:15:53.7|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:15:53.8|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:15:53.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:15:54.6|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:23:15.2|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.32.2.4987
+2025-04-15 20:23:15.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:23:15.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:23:15.5|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:23:15.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:23:15.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:23:15.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0451698s
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:23:15.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0473959s
+2025-04-15 20:23:15.9|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:23:15.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:23:15.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014624s
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:23:15.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0017906s
+2025-04-15 20:23:16.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:23:16.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:23:16.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:23:17.1|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-15 20:24:04.2|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.32.2.4987
+2025-04-15 20:24:04.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:24:04.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:24:04.6|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-15 20:24:04.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:24:04.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:24:04.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:24:04.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:24:04.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0468685s
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0490174s
+2025-04-15 20:24:04.9|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-15 20:24:04.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-15 20:24:04.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015357s
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-15 20:24:04.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0019111s
+2025-04-15 20:24:05.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-15 20:24:05.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-15 20:24:05.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-15 20:24:06.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin

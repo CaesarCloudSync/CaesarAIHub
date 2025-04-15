@@ -29,7 +29,3 @@ def get_unfinished_episodes():
     interuptted_episode_tasks = cr.get_all_episode_task_ids()
     return asyncio.run(async_get_unfinished_episodes(interuptted_episode_tasks,indexers,cr))
 
-@celery_app.task
-def update_indexers():
-    CaesarAIJackett.extract_all_torrent_indexers()
-    return "Done"

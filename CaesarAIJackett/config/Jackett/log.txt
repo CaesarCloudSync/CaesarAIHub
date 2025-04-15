@@ -13569,3 +13569,537 @@ Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. P
 2025-04-15 19:48:16.9056 Info Torznab search in The Pirate Bay for Tokyo Revengers S01 => Found 0 releases (from cache) [0ms]
 2025-04-15 19:52:29.6459 Info Torznab search in Anime Tosho for Tokyo Revengers => Found 75 releases [2397ms]
 2025-04-15 19:52:35.0338 Info Torznab search in EZTV for Tokyo Revengers => Found 221 releases [4098ms]
+2025-04-15 20:10:12.1573 Info Starting Jackett v0.22.1744
+2025-04-15 20:10:12.7486 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 20:10:12.7861 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 20:10:12.7975 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 20:10:12.8006 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 20:10:12.8011 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 20:10:12.8070 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 20:10:12.8070 Info App config/log directory: /config/Jackett
+2025-04-15 20:10:12.8198 Info Using proxy: Disabled
+2025-04-15 20:10:12.8198 Info Using FlareSolverr: No
+2025-04-15 20:10:12.8263 Info Using HTTP Client: HttpWebClient2
+2025-04-15 20:10:12.8441 Info Loading Native indexers ...
+2025-04-15 20:10:13.0548 Info Loaded 78 Native indexers.
+2025-04-15 20:10:13.0666 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 20:10:15.8001 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:10:15.8040 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:10:15.8332 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:10:15.8514 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:10:16.8423 Info Loaded 536 Cardigann indexers.
+2025-04-15 20:10:16.8423 Info Loaded 614 indexers in total
+2025-04-15 20:10:16.8531 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:10:16.8552 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:10:16.8574 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:10:16.8593 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:10:16.8625 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 20:10:16.8663 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 20:10:16.8663 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 20:10:16.8663 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 20:10:17.0269 Info Jackett startup finished in 5.056 s
+2025-04-15 20:10:26.1670 Info Torznab search in Anime Tosho for Solo Leveling S01 => Found 7 releases [2390ms]
+2025-04-15 20:10:30.6000 Info Torznab search in EZTV for Solo Leveling S01 => Found 95 releases [3533ms]
+2025-04-15 20:10:59.8292 Info Torznab search in kickasstorrents.to for Solo Leveling S01 => Found 4 releases [26104ms]
+2025-04-15 20:11:01.7355 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 20:11:04.3448 Info Torznab search in The Pirate Bay for Solo Leveling S01 => Found 0 releases [1084ms]
+2025-04-15 20:12:11.8082 Info Starting Jackett v0.22.1744
+2025-04-15 20:12:12.2191 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 20:12:12.2242 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 20:12:12.2264 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 20:12:12.2264 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 20:12:12.2264 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 20:12:12.2273 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 20:12:12.2273 Info App config/log directory: /config/Jackett
+2025-04-15 20:12:12.2288 Info Using proxy: Disabled
+2025-04-15 20:12:12.2288 Info Using FlareSolverr: No
+2025-04-15 20:12:12.2300 Info Using HTTP Client: HttpWebClient2
+2025-04-15 20:12:12.2327 Info Loading Native indexers ...
+2025-04-15 20:12:12.2645 Info Loaded 78 Native indexers.
+2025-04-15 20:12:12.2660 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 20:12:13.7911 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:12:13.7949 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:12:13.8393 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:12:13.8420 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:12:14.2142 Info Loaded 536 Cardigann indexers.
+2025-04-15 20:12:14.2142 Info Loaded 614 indexers in total
+2025-04-15 20:12:14.2201 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:12:14.2225 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:12:14.2250 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:12:14.2274 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:12:14.2311 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 20:12:14.2352 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 20:12:14.2352 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 20:12:14.2352 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 20:12:14.3550 Info Jackett startup finished in 2.754 s
+2025-04-15 20:12:42.8106 Info Torznab search in Anime Tosho for Solo Leveling S01 => Found 7 releases [2197ms]
+2025-04-15 20:12:47.3672 Info Torznab search in EZTV for Solo Leveling S01 => Found 95 releases [3616ms]
+2025-04-15 20:13:21.7385 Info Torznab search in kickasstorrents.to for Solo Leveling S01 => Found 4 releases [30863ms]
+2025-04-15 20:14:02.7984 Info Torznab search in Anime Tosho for Solo Leveling S01 => Found 7 releases (from cache) [0ms]
+2025-04-15 20:14:03.5558 Info Torznab search in EZTV for Solo Leveling S01 => Found 95 releases (from cache) [0ms]
+2025-04-15 20:14:05.7981 Info Torznab search in kickasstorrents.to for Solo Leveling S01 => Found 4 releases (from cache) [0ms]
+2025-04-15 20:14:07.6395 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 20:14:10.2103 Info Torznab search in The Pirate Bay for Solo Leveling S01 => Found 0 releases [1075ms]
+2025-04-15 20:15:48.6968 Info Starting Jackett v0.22.1744
+2025-04-15 20:15:49.0835 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 20:15:49.0884 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 20:15:49.0904 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 20:15:49.0904 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 20:15:49.0904 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 20:15:49.0913 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 20:15:49.0913 Info App config/log directory: /config/Jackett
+2025-04-15 20:15:49.0927 Info Using proxy: Disabled
+2025-04-15 20:15:49.0927 Info Using FlareSolverr: No
+2025-04-15 20:15:49.0939 Info Using HTTP Client: HttpWebClient2
+2025-04-15 20:15:49.0961 Info Loading Native indexers ...
+2025-04-15 20:15:49.1268 Info Loaded 78 Native indexers.
+2025-04-15 20:15:49.1284 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 20:15:50.7345 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:15:50.7385 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:15:50.8116 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:15:50.8151 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:15:51.2553 Info Loaded 536 Cardigann indexers.
+2025-04-15 20:15:51.2553 Info Loaded 614 indexers in total
+2025-04-15 20:15:51.2604 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:15:51.2626 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:15:51.2649 Error Failed loading configuration for Nyaa.si, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-04-15 20:15:51.2673 Error Failed loading backup configuration for Nyaa.si, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-04-15 20:15:51.2705 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 20:15:51.2746 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 20:15:51.2746 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 20:15:51.2751 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 20:15:51.3885 Info Jackett startup finished in 2.867 s
+2025-04-15 20:16:05.3967 Info Torznab search in Anime Tosho for Solo Leveling S01 => Found 7 releases [2410ms]
+2025-04-15 20:16:11.4036 Info Torznab search in EZTV for Solo Leveling S01 => Found 95 releases [3995ms]
+2025-04-15 20:16:58.6863 Info Torznab search in kickasstorrents.to for Solo Leveling S01 => Found 4 releases [41317ms]
+2025-04-15 20:18:49.5232 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Results(ApiSearch requestt) in ./Jackett.Server/Controllers/ResultsController.cs:line 256
+
+2025-04-15 20:18:49.5367 Info Manual search in 0Magnet, Anime Tosho, EZTV, kickasstorrents.to, LimeTorrents, The Pirate Bay, YTS for Solo Leveling S01 => Found 106 releases [23938ms]
+2025-04-15 20:19:36.4696 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 0.9532938s.
+2025-04-15 20:19:37.7223 Warn Request to Anidex failed with exception 'Challenge detected but FlareSolverr is not configured'. Retrying in 2.635706s.
+2025-04-15 20:19:41.0007 Error FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.BaseWebIndexer.<>c__DisplayClass12_0.<<RequestWithCookiesAndRetryAsync>b__0>d.MoveNext() in ./Jackett.Common/Indexers/BaseIndexer.cs:line 594
+--- End of stack trace from previous location ---
+   at Polly.ResiliencePipeline.<>c__10`1.<<ExecuteAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.GetResultOrRethrow()
+   at Polly.ResiliencePipeline.ExecuteAsync[TResult](Func`2 callback, CancellationToken cancellationToken)
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAndRetryAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 593
+   at Jackett.Common.Indexers.Definitions.Anidex.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 201
+   at Jackett.Common.Indexers.Definitions.Anidex.ApplyConfiguration(JToken configJson) in ./Jackett.Common/Indexers/Definitions/Anidex.cs:line 158
+   at Jackett.Server.Controllers.IndexerApiController.UpdateConfig(ConfigItem[] config) in ./Jackett.Server/Controllers/IndexerApiController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jackett.Server.Middleware.CustomExceptionHandler.Invoke(HttpContext httpContext) in ./Jackett.Server/Middleware/CustomExceptionHandler.cs:line 26
+
+2025-04-15 20:20:27.8175 Info Torznab search in Anime Time for Solo Leveling S01 => Found 25 releases [2034ms]
+2025-04-15 20:20:28.6640 Info Torznab search in Anime Tosho for Solo Leveling S01 => Found 7 releases (from cache) [0ms]
+2025-04-15 20:20:29.4568 Info Torznab search in EZTV for Solo Leveling S01 => Found 95 releases (from cache) [0ms]
+2025-04-15 20:20:35.3814 Info Torznab search in kickasstorrents.to for Solo Leveling S01 => Found 4 releases (from cache) [0ms]
+2025-04-15 20:20:37.0402 Error Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+
+[v0.22.1744.0] Jackett.Common.IndexerException: Exception (limetorrents): Challenge detected but FlareSolverr is not configured
+ ---> FlareSolverrSharp.Exceptions.FlareSolverrException: Challenge detected but FlareSolverr is not configured
+   at FlareSolverrSharp.ClearanceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Jackett.Common.Utils.Clients.HttpWebClient2.Run(WebRequest webRequest) in ./Jackett.Common/Utils/Clients/HttpWebClient2.cs:line 180
+   at Jackett.Common.Utils.Clients.WebClient.GetResultAsync(WebRequest request) in ./Jackett.Common/Utils/Clients/WebClient.cs:line 188
+   at Jackett.Common.Indexers.BaseWebIndexer.RequestWithCookiesAsync(String url, String cookieOverride, RequestType method, String referer, IEnumerable`1 data, Dictionary`2 headers, String rawbody, Nullable`1 emulateBrowser) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 617
+   at Jackett.Common.Indexers.Definitions.CardigannIndexer.PerformQuery(TorznabQuery query) in ./Jackett.Common/Indexers/Definitions/CardigannIndexer.cs:line 1563
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 378
+   --- End of inner exception stack trace ---
+   at Jackett.Common.Indexers.BaseIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 403
+   at Jackett.Common.Indexers.BaseWebIndexer.ResultsForQuery(TorznabQuery query, Boolean isMetaIndexer) in ./Jackett.Common/Indexers/BaseIndexer.cs:line 816
+   at Jackett.Server.Controllers.ResultsController.Torznab(TorznabRequest request) in ./Jackett.Server/Controllers/ResultsController.cs:line 437
+
+2025-04-15 20:20:42.5955 Info Torznab search in Nyaa.si for Solo Leveling S01 => Found 75 releases [4749ms]
+2025-04-15 20:20:50.1009 Info Torznab search in The Pirate Bay for Solo Leveling S01 => Found 0 releases [791ms]
+2025-04-15 20:23:10.5679 Info Starting Jackett v0.22.1744
+2025-04-15 20:23:11.0362 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 20:23:11.0429 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 20:23:11.0463 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 20:23:11.0463 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 20:23:11.0463 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 20:23:11.0477 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 20:23:11.0477 Info App config/log directory: /config/Jackett
+2025-04-15 20:23:11.0498 Info Using proxy: Disabled
+2025-04-15 20:23:11.0500 Info Using FlareSolverr: No
+2025-04-15 20:23:11.0513 Info Using HTTP Client: HttpWebClient2
+2025-04-15 20:23:11.0538 Info Loading Native indexers ...
+2025-04-15 20:23:11.0864 Info Loaded 78 Native indexers.
+2025-04-15 20:23:11.0880 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 20:23:13.2679 Info Loaded 536 Cardigann indexers.
+2025-04-15 20:23:13.2682 Info Loaded 614 indexers in total
+2025-04-15 20:23:13.2751 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 20:23:13.2788 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 20:23:13.2792 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 20:23:13.2792 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 20:23:13.4074 Info Jackett startup finished in 3.095 s
+2025-04-15 20:24:00.3385 Info Starting Jackett v0.22.1744
+2025-04-15 20:24:00.7515 Info Environment version: 8.0.14 (/opt/Jackett/)
+2025-04-15 20:24:00.7566 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-04-15 20:24:00.7586 Info Jackett variant: CoreLinuxAmdx64
+2025-04-15 20:24:00.7586 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-04-15 20:24:00.7590 Info Running in Docker: Yes (image build: unknown)
+2025-04-15 20:24:00.7590 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-04-15 20:24:00.7590 Info App config/log directory: /config/Jackett
+2025-04-15 20:24:00.7610 Info Using proxy: Disabled
+2025-04-15 20:24:00.7610 Info Using FlareSolverr: No
+2025-04-15 20:24:00.7621 Info Using HTTP Client: HttpWebClient2
+2025-04-15 20:24:00.7645 Info Loading Native indexers ...
+2025-04-15 20:24:00.7964 Info Loaded 78 Native indexers.
+2025-04-15 20:24:00.7979 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-04-15 20:24:02.9477 Info Loaded 536 Cardigann indexers.
+2025-04-15 20:24:02.9477 Info Loaded 614 indexers in total
+2025-04-15 20:24:02.9549 Info Adding aggregate indexer ('all' indexer) ...
+2025-04-15 20:24:02.9585 Info Adding filter indexer ('type:public' indexer) ...
+2025-04-15 20:24:02.9585 Info Adding filter indexer ('type:private' indexer) ...
+2025-04-15 20:24:02.9590 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-04-15 20:24:03.0721 Info Jackett startup finished in 2.941 s
