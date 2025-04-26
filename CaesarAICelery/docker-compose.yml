@@ -1,0 +1,12 @@
+services:
+  celery_worker:
+    build: ../CaesarAIMovieStream
+    container_name: celery_worker
+    command: celery -A CaesarAICelery.celery_worker.celery_app worker --loglevel=info
+    env_file:
+      - ../CaesarAIMovieStream/.env
+    #depends_on:
+      #- redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0

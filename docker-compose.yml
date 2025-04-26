@@ -23,6 +23,10 @@ services:
     extends:
       file: ./CaesarAIPostgreSQL/docker-compose.yml
       service: postgres
+  celery_worker:
+    extends:
+      file: ./CaesarAICelery/docker-compose.yml
+      service: celery_worker
   prowlarr:
     extends:
       file: ./CaesarAIProwlarr/docker-compose.yml
@@ -35,6 +39,10 @@ services:
     extends:
       file: ./CaesarAIMovieStream/docker-compose.yml
       service: moviestreaming
+  #gamestreaming:
+  #  extends:
+  #    file: ./CaesarAIGameStream/docker-compose.yml
+  #    service: gamestreaming
 
 volumes:
   redis-data:  

@@ -3,23 +3,25 @@ from io import BytesIO
 from typing import List,Union
 import xml.etree.ElementTree as ET
 from CaesarAITorrentParsers.models.TorrentItem import TorrentItem
-
+import logging
 class CaesarAIProwlarr:
     def __init__(self,url) -> None:
         # Extract relevant data
         response = requests.get(url)
-        self.items:List[dict] = response.json()
+        print(response.content,flush=True)
+        self.items:List[dict] = [{}] #response.json()
         self.torrent_items:List[TorrentItem]= []
     @staticmethod
     def format_season_episode(season:Union[str,int], episode:Union[str,int]) -> str:
         return f"S{int(season):02d}E{int(episode):02d}"
     def format_season(season:Union[str,int]) -> str:
         return f"S{int(season):02d}"
-    def get_torrent_info(self,verbose=0) -> List[TorrentItem]:
+    def get_torrent_info(self,query,verbose=0) -> List[TorrentItem]:
         for item in self.items:
             magnet_link = item.get("guid") if "magnet:?xt=urn:btih:" in item.get("guid") else None
             torrent_link = item.get("downloadUrl") if item.get("downloadUrl") else None
             torrent = TorrentItem(
+                query=query,
                 title=item.get("title"),
                 guid=item.get("guid"),
                 pub_date=item.get("publishDate"),
@@ -29,7 +31,8 @@ class CaesarAIProwlarr:
                 categories=[category["id"] for category in item.get("categories")],
                 seeders=item.get("seeders"),
                 peers=item.get("peers"),
-                indexer=item.get("indexer")
+                indexer=item.get("indexer"),
+                service="prowlarr"
             )
             self.torrent_items.append(torrent)
         return self.torrent_items

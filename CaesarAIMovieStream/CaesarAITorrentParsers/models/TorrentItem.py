@@ -16,6 +16,7 @@ class TorrentItem(BaseModel):
     seeders: int
     peers: Optional[int] = None
     indexer:Optional[str] = None
+    service:str
     @field_validator("query")
     @classmethod
     def sanitize_query(cls, value):

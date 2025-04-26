@@ -11,6 +11,10 @@ services:
     extends:
       file: ../CaesarAIRedis/docker-compose.yml
       service: redis
+  celery_worker:
+    depends_on:
+      - redis
+      - moviestreaming
   moviestreaming:
     depends_on:
       - jackett
