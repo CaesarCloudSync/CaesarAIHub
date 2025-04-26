@@ -7,6 +7,7 @@ from CaesarAITorrentParsers.CaesarAIJackett import CaesarAIJackett
 from CaesarAIConstants import CaesarAIConstants
 from CaesarAITorrentParsers.CaesarAIJackett.responsemodels.EpisodesResponse import EpisodesResponse
 from CaesarAITorrentParsers.CaesarAIJackett.requestmodels.EpisodesRequest import EpisodesRequest
+from CaesarAITorrentParsers.CaesarAIJackett.requestmodels.MoviesRequest import MoviesRequest
 from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
 from CaesarAIRealDebrid.requestmodels.StreamingLinkRequest import StreamingLinkRequest
 from CaesarAIRealDebrid import CaesarAIRealDebrid
@@ -29,6 +30,7 @@ from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler  # runs tasks in the background
 from apscheduler.triggers.cron import CronTrigger  # allows us to specify a recurring time for execution
 from CaesarAICelery.schedules import CaesarAISchedules
+
 import json
 
 import logging
@@ -123,6 +125,18 @@ async def stream_get_episodews(websocket: WebSocket):
             logging.info(episode_id)
             await cr.async_set_episode_task(episode_id,"pending")
             await start_get_unfinished_episodes()
+@app.websocket("/api/v1/stream_get_moviesws")
+async def stream_get_moviesws(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            data = MoviesRequest.model_validate(await websocket.receive_json())
+            indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
+            async for event in CaesarAIJackett.stream_get_moviesws(data.title,indexers):
+                #print(event)
+                await websocket.send_json(event)
+    except (WebSocketDisconnect,ConnectionClosedOK,ConnectionClosedError) as cex:
+        pass
 
 
 
