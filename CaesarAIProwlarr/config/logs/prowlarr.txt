@@ -2620,3 +2620,66 @@
 2025-04-17 09:11:39.5|Info|Database|Vacuuming Main database
 2025-04-17 09:11:39.5|Info|Database|Main database compressed
 2025-04-17 09:11:39.5|Info|HistoryService|Removing items older than 30 days from history
+2025-04-26 16:41:43.3|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.34.1.5021
+2025-04-26 16:41:44.0|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-26 16:41:44.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-26 16:41:46.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-04-26 16:41:48.0|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-26 16:41:48.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-26 16:41:48.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-26 16:41:48.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-26 16:41:49.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2706123s
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2796453s
+2025-04-26 16:41:49.3|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-26 16:41:49.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-26 16:41:49.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0133196s
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0150549s
+2025-04-26 16:41:51.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-26 16:41:52.5|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-26 16:41:53.7|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-26 16:42:22.9|Info|HistoryService|Removing items older than 30 days from history
+2025-04-26 16:42:23.0|Info|HousekeepingService|Running housecleaning tasks
+2025-04-26 16:42:23.2|Info|BackupService|Starting Backup
+2025-04-26 16:42:23.8|Info|Database|Vacuuming Log database
+2025-04-26 16:42:25.3|Info|Database|Log database compressed
+2025-04-26 16:42:25.4|Info|Database|Vacuuming Main database
+2025-04-26 16:42:25.5|Info|Database|Main database compressed
+2025-04-27 16:42:32.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-27 16:42:32.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-27 16:42:32.6|Info|Database|Vacuuming Log database
+2025-04-27 16:42:32.7|Info|Database|Log database compressed
+2025-04-27 16:42:32.7|Info|Database|Vacuuming Main database
+2025-04-27 16:42:32.8|Info|Database|Main database compressed
+2025-04-28 16:42:41.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-28 16:42:41.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-28 16:42:41.6|Info|Database|Vacuuming Log database
+2025-04-28 16:42:41.7|Info|Database|Log database compressed
+2025-04-28 16:42:41.7|Info|Database|Vacuuming Main database
+2025-04-28 16:42:41.7|Info|Database|Main database compressed
+2025-04-29 16:42:49.8|Info|HistoryService|Removing items older than 30 days from history
+2025-04-29 16:42:49.8|Info|HousekeepingService|Running housecleaning tasks
+2025-04-29 16:42:50.0|Info|Database|Vacuuming Log database
+2025-04-29 16:42:50.0|Info|Database|Log database compressed
+2025-04-29 16:42:50.0|Info|Database|Vacuuming Main database
+2025-04-29 16:42:50.0|Info|Database|Main database compressed
+2025-04-30 16:42:59.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-30 16:42:59.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-30 16:42:59.6|Info|Database|Vacuuming Log database
+2025-04-30 16:42:59.6|Info|Database|Log database compressed
+2025-04-30 16:42:59.6|Info|Database|Vacuuming Main database
+2025-04-30 16:42:59.7|Info|Database|Main database compressed
+2025-05-01 16:43:09.4|Info|HistoryService|Removing items older than 30 days from history
+2025-05-01 16:43:09.4|Info|HousekeepingService|Running housecleaning tasks
+2025-05-01 16:43:09.6|Info|Database|Vacuuming Log database
+2025-05-01 16:43:09.6|Info|Database|Log database compressed
+2025-05-01 16:43:09.6|Info|Database|Vacuuming Main database
+2025-05-01 16:43:09.6|Info|Database|Main database compressed

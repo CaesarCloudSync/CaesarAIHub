@@ -7901,3 +7901,339 @@
 2025-04-17 09:11:39.7|Debug|InstallUpdateService|No update available
 2025-04-17 09:11:41.8|Debug|HttpClient|Downloading Completed. took 2s
 2025-04-17 09:11:41.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-26 16:41:47.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-26 16:41:47.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-26 16:41:47.7|Debug|ProcessProvider| - [307] Prowlarr
+2025-04-26 16:41:48.0|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-26 16:41:48.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-26 16:41:48.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-26 16:41:48.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-26 16:41:49.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2706123s
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-26 16:41:49.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2796453s
+2025-04-26 16:41:49.3|Debug|MigrationController|Took: 00:00:01.3430431
+2025-04-26 16:41:49.3|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-26 16:41:49.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-26 16:41:49.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0133196s
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-26 16:41:49.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0150549s
+2025-04-26 16:41:49.4|Debug|MigrationController|Took: 00:00:00.0726372
+2025-04-26 16:41:51.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-26 16:41:52.5|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-26 16:41:52.5|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-26 16:41:52.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-26 16:41:53.7|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-26 16:41:55.9|Debug|HttpClient|Downloading Completed. took 3s
+2025-04-26 16:41:57.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-26 16:41:57.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-26 16:41:58.7|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-26 16:41:58.7|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-26 16:41:58.7|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-26 16:41:58.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-26 16:42:22.9|Info|HistoryService|Removing items older than 30 days from history
+2025-04-26 16:42:22.9|Debug|InstallUpdateService|Checking for updates
+2025-04-26 16:42:22.9|Debug|HistoryService|History has been cleaned up.
+2025-04-26 16:42:23.0|Info|HousekeepingService|Running housecleaning tasks
+2025-04-26 16:42:23.0|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-26 16:42:23.0|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-26 16:42:23.0|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-26 16:42:23.1|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-26 16:42:23.1|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-26 16:42:23.1|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-26 16:42:23.1|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-26 16:42:23.1|Debug|InstallUpdateService|No update available
+2025-04-26 16:42:23.2|Info|BackupService|Starting Backup
+2025-04-26 16:42:23.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-26 16:42:23.3|Debug|BackupService|Cleaning up backup files older than 28 days
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-26 16:42:23.3|Debug|BackupService|Finished cleaning up old backup files
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-26 16:42:23.3|Debug|BackupService|Backing up config.xml
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-26 16:42:23.3|Debug|DiskTransferService|Copy [/config/config.xml] > [/tmp/prowlarr_backup/config.xml]
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-26 16:42:23.3|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-26 16:42:23.5|Debug|BackupService|Backing up database
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-26 16:42:23.5|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-26 16:42:23.8|Info|Database|Vacuuming Log database
+2025-04-26 16:42:23.8|Debug|BackupService|Creating backup zip
+2025-04-26 16:42:23.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-26 16:42:25.2|Debug|ArchiveService|Creating archive /config/Backups/scheduled/prowlarr_backup_v1.34.1.5021_2025.04.26_16.42.23.zip
+2025-04-26 16:42:25.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-26 16:42:25.3|Info|Database|Log database compressed
+2025-04-26 16:42:25.3|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-26 16:42:25.3|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-26 16:42:25.4|Info|Database|Vacuuming Main database
+2025-04-26 16:42:25.5|Info|Database|Main database compressed
+2025-04-26 16:42:25.6|Debug|BackupService|Backup zip created
+2025-04-26 22:42:25.7|Debug|InstallUpdateService|Checking for updates
+2025-04-26 22:42:26.4|Debug|InstallUpdateService|No update available
+2025-04-27 04:42:27.9|Debug|InstallUpdateService|Checking for updates
+2025-04-27 04:42:28.6|Debug|InstallUpdateService|No update available
+2025-04-27 10:42:29.8|Debug|InstallUpdateService|Checking for updates
+2025-04-27 10:42:30.4|Debug|InstallUpdateService|No update available
+2025-04-27 16:42:32.4|Debug|InstallUpdateService|Checking for updates
+2025-04-27 16:42:32.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-27 16:42:32.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-27 16:42:32.5|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-27 16:42:32.5|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-27 16:42:32.5|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-27 16:42:32.6|Debug|HistoryService|History has been cleaned up.
+2025-04-27 16:42:32.6|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-27 16:42:32.6|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-27 16:42:32.6|Info|Database|Vacuuming Log database
+2025-04-27 16:42:32.7|Info|Database|Log database compressed
+2025-04-27 16:42:32.7|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-27 16:42:32.7|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-27 16:42:32.7|Info|Database|Vacuuming Main database
+2025-04-27 16:42:32.8|Info|Database|Main database compressed
+2025-04-27 16:42:34.1|Debug|InstallUpdateService|No update available
+2025-04-27 16:42:34.2|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-27 16:42:35.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-27 22:42:34.9|Debug|InstallUpdateService|Checking for updates
+2025-04-27 22:42:35.5|Debug|InstallUpdateService|No update available
+2025-04-28 04:42:37.2|Debug|InstallUpdateService|Checking for updates
+2025-04-28 04:42:37.9|Debug|InstallUpdateService|No update available
+2025-04-28 10:42:39.2|Debug|InstallUpdateService|Checking for updates
+2025-04-28 10:42:39.8|Debug|InstallUpdateService|No update available
+2025-04-28 16:42:41.4|Debug|InstallUpdateService|Checking for updates
+2025-04-28 16:42:41.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-28 16:42:41.4|Debug|HistoryService|History has been cleaned up.
+2025-04-28 16:42:41.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-28 16:42:41.5|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-28 16:42:41.5|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-28 16:42:41.5|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-28 16:42:41.6|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-28 16:42:41.6|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-28 16:42:41.6|Info|Database|Vacuuming Log database
+2025-04-28 16:42:41.7|Info|Database|Log database compressed
+2025-04-28 16:42:41.7|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-28 16:42:41.7|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-28 16:42:41.7|Info|Database|Vacuuming Main database
+2025-04-28 16:42:41.7|Info|Database|Main database compressed
+2025-04-28 16:42:42.2|Debug|InstallUpdateService|No update available
+2025-04-28 16:42:42.8|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-28 16:42:43.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-28 22:42:43.7|Debug|InstallUpdateService|Checking for updates
+2025-04-28 22:42:44.3|Debug|InstallUpdateService|No update available
+2025-04-29 04:42:45.6|Debug|InstallUpdateService|Checking for updates
+2025-04-29 04:42:46.1|Debug|InstallUpdateService|No update available
+2025-04-29 10:42:47.7|Debug|InstallUpdateService|Checking for updates
+2025-04-29 10:42:48.3|Debug|InstallUpdateService|No update available
+2025-04-29 16:42:49.7|Debug|InstallUpdateService|Checking for updates
+2025-04-29 16:42:49.8|Info|HistoryService|Removing items older than 30 days from history
+2025-04-29 16:42:49.8|Debug|HistoryService|History has been cleaned up.
+2025-04-29 16:42:49.8|Info|HousekeepingService|Running housecleaning tasks
+2025-04-29 16:42:49.8|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-29 16:42:49.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-29 16:42:49.9|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-29 16:42:50.0|Info|Database|Vacuuming Log database
+2025-04-29 16:42:50.0|Info|Database|Log database compressed
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-29 16:42:50.0|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-29 16:42:50.0|Info|Database|Vacuuming Main database
+2025-04-29 16:42:50.0|Info|Database|Main database compressed
+2025-04-29 16:42:51.1|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-29 16:42:51.1|Debug|InstallUpdateService|No update available
+2025-04-29 16:42:52.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-29 22:42:52.1|Debug|InstallUpdateService|Checking for updates
+2025-04-29 22:42:52.8|Debug|InstallUpdateService|No update available
+2025-04-30 04:42:54.5|Debug|InstallUpdateService|Checking for updates
+2025-04-30 04:42:55.1|Debug|InstallUpdateService|No update available
+2025-04-30 10:42:56.6|Debug|InstallUpdateService|Checking for updates
+2025-04-30 10:42:57.3|Debug|InstallUpdateService|No update available
+2025-04-30 16:42:59.4|Debug|InstallUpdateService|Checking for updates
+2025-04-30 16:42:59.4|Info|HistoryService|Removing items older than 30 days from history
+2025-04-30 16:42:59.4|Debug|HistoryService|History has been cleaned up.
+2025-04-30 16:42:59.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-30 16:42:59.5|Info|HousekeepingService|Running housecleaning tasks
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-30 16:42:59.5|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-30 16:42:59.6|Info|Database|Vacuuming Log database
+2025-04-30 16:42:59.6|Info|Database|Log database compressed
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-30 16:42:59.6|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-30 16:42:59.6|Info|Database|Vacuuming Main database
+2025-04-30 16:42:59.7|Info|Database|Main database compressed
+2025-04-30 16:43:00.4|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-04-30 16:43:01.1|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-30 16:43:01.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-30 22:43:02.0|Debug|InstallUpdateService|Checking for updates
+2025-04-30 22:43:02.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-01 04:43:04.8|Debug|InstallUpdateService|Checking for updates
+2025-05-01 04:43:05.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-01 10:43:06.8|Debug|InstallUpdateService|Checking for updates
+2025-05-01 10:43:07.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-01 16:43:09.4|Debug|InstallUpdateService|Checking for updates
+2025-05-01 16:43:09.4|Info|HistoryService|Removing items older than 30 days from history
+2025-05-01 16:43:09.4|Info|HousekeepingService|Running housecleaning tasks
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-01 16:43:09.5|Debug|HistoryService|History has been cleaned up.
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-01 16:43:09.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-01 16:43:09.5|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-01 16:43:09.6|Info|Database|Vacuuming Log database
+2025-05-01 16:43:09.6|Info|Database|Log database compressed
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-05-01 16:43:09.6|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-01 16:43:09.6|Info|Database|Vacuuming Main database
+2025-05-01 16:43:09.6|Info|Database|Main database compressed
+2025-05-01 16:43:10.9|Debug|HttpClient|Downloading Completed. took 1s
+2025-05-01 16:43:10.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-01 16:43:12.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-01 22:43:11.3|Debug|InstallUpdateService|Checking for updates
+2025-05-01 22:43:12.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-02 04:43:13.2|Debug|InstallUpdateService|Checking for updates
+2025-05-02 04:43:13.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
