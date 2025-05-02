@@ -42,7 +42,7 @@ logging.getLogger('apscheduler').setLevel(logging.WARNING) # This hides the apsc
 
 # Set up the scheduler
 scheduler = BackgroundScheduler()
-trigger = CronTrigger(year="*", month="*", day="*", hour="*", minute="*")  # every minute
+trigger = CronTrigger(hour=0, minute=0) # 00:00 dayZZ # every minute
 scheduler.add_job(CaesarAISchedules.update_all_torrent_indexers, trigger)
 scheduler.start()
 
