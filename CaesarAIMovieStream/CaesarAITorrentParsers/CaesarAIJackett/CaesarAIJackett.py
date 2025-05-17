@@ -16,6 +16,7 @@ from CaesarAIUtils import CaesarAIUtils
 from CaesarSQLDB.caesarcrud import CaesarCRUDAsync
 from CaesarAITorrentParsers.CaesarAIProwlarr import CaesarAIProwlarr
 from itertools import chain
+from CaesarAITorrentParsers.CaesarAIMediaIndexers import CaesarAIMediaIndexers
 class CaesarAIJackett:
     def __init__(self,url=None,db=False,asynchronous=False) -> None:
         # Extract relevant data
@@ -398,6 +399,34 @@ class CaesarAIJackett:
                 raise Exception("Indexing Service does not exist.")
             for index,torrent in enumerate(torrentinfo):
                 data = {"index":index,"total":len(torrentinfo),"movies":torrent.model_dump()}
+                yield {"event":{"movies":{"data":data}}}
+    
+                #print(torrentinfo)
+ 
+                all_torrents.append(torrentinfo)
+        yield {"event":{"close":{"data":"close"}}}
+    @staticmethod
+    async def stream_get_gamews(title:str,indexers:List[str],service:str="jackett"):
+        all_torrents = []
+        cr = CaesarAIRedis(async_mode=True)
+        caejackett = CaesarAIJackett(db=True,asynchronous=True)
+        yield {"event":{"open":{"data":"open"}}}
+        for indexer in indexers:   
+            if service == "jackett":
+                yield {"event":{"log":"extracting jackett"}}
+                url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.GAME_ENDPOINT}&q={title}&cat={CaesarAIMediaIndexers.GAME_CATEGORIES_PC_RANGE + ','+CaesarAIMediaIndexers.GAME_CATEGORIES_CONSOLE_RANGE}"
+                caejackett = CaesarAIJackett(url)
+                torrentinfo = caejackett.get_torrent_info(title)
+                torrentinfo = sorted(torrentinfo,key=CaesarAIJackett.sort_by_seeders, reverse=True)
+
+            elif service == "prowlarr":
+                url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title}"
+                caeprowlarr = CaesarAIProwlarr(url)
+                torrentinfo = caeprowlarr.get_torrent_info(title)
+            else:
+                raise Exception("Indexing Service does not exist.")
+            for index,torrent in enumerate(torrentinfo):
+                data = {"index":index,"total":len(torrentinfo),"games":torrent.model_dump()}
                 yield {"event":{"movies":{"data":data}}}
     
                 #print(torrentinfo)

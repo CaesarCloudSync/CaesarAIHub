@@ -1,21 +1,24 @@
 import asyncio
-import aiohttp
+import websockets
 import json
 
-STREAM_URL = "http://127.0.0.1:8082/api/v1/stream_get_single_episodes?title=Solo Leveling&season=1&episode=1"  # Change if hosted elsewhere
+async def send_message():
+    uri = "ws://localhost:8082/api/v1/stream_get_gamews"  # Replace with your WebSocket server URI
+    async with websockets.connect(uri) as websocket:
+        message = {"title": "Shadow of war"}
+        await websocket.send(json.dumps(message))
+        print(f"Sent: {message}")
+        while True:
+            try:
+                # Wait for a response from the server
+                response = await websocket.recv()
+                print(response)
+                with open("response.json", "a+") as f:
+                    f.write(response)
+                print(f"Received: {response}")
+            except websockets.ConnectionClosed:
+                print("Connection closed")
+                break
 
-async def fetch_stream():
-    async with aiohttp.ClientSession() as session:
-        async with session.get(STREAM_URL) as response:
-            buffer = ""
-            async for chunk in response.content.iter_any():
-                buffer += chunk.decode("utf-8")
-                try:
-                    data = json.loads(buffer)  # Try parsing JSON
-                    print("Received:", data)
-                    buffer = ""  # Reset buffer after successful parse
-                except json.JSONDecodeError:
-                    continue  # Wait for more data if JSON is incomplete
-
-if __name__ == "__main__":
-    asyncio.run(fetch_stream())
+# Run the client
+asyncio.run(send_message())
