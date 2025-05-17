@@ -11,6 +11,7 @@ class CaesarAIConstants:
     PROWLARR_API_KEY=os.environ.get("PROWLARR_API_KEY")
     ENDPOINT="tvsearch"
     MOVIE_ENDPOINT="movie"
+    GAME_ENDPOINT="search"
     REALDEBRID_API_KEY= os.environ.get("REALDEBRID_API_KEY")
     ANIME_JACKETT_CATEGORY=5070
     MOVIESRIES_TABLE="moviesseries"

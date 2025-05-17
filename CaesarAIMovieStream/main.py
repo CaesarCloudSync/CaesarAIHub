@@ -30,7 +30,7 @@ from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler  # runs tasks in the background
 from apscheduler.triggers.cron import CronTrigger  # allows us to specify a recurring time for execution
 from CaesarAICelery.schedules import CaesarAISchedules
-
+from CaesarAITorrentParsers.CaesarAIMediaIndexers import CaesarAIMediaIndexers
 import json
 
 import logging
@@ -132,7 +132,21 @@ async def stream_get_moviesws(websocket: WebSocket):
         while True:
             data = MoviesRequest.model_validate(await websocket.receive_json())
             indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
+            indexers = CaesarAIMediaIndexers.sort_indexer_for_movie(indexers)
             async for event in CaesarAIJackett.stream_get_moviesws(data.title,indexers):
+                #print(event)
+                await websocket.send_json(event)
+    except (WebSocketDisconnect,ConnectionClosedOK,ConnectionClosedError) as cex:
+        pass
+@app.websocket("/api/v1/stream_get_gamews")
+async def stream_get_gamews(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            data = MoviesRequest.model_validate(await websocket.receive_json())
+            indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
+            indexers = CaesarAIMediaIndexers.sort_indexer_for_game(indexers)
+            async for event in CaesarAIJackett.stream_get_gamews(data.title,indexers):
                 #print(event)
                 await websocket.send_json(event)
     except (WebSocketDisconnect,ConnectionClosedOK,ConnectionClosedError) as cex:
