@@ -7,6 +7,7 @@ if __name__ == "__main__":
     cgm = CaesarAIGames()
     cgm.client_id = os.environ.get("IGDB_CLIENT_ID")
     cgm.client_secret = os.environ.get("IGDB_CLIENT_SECRET")
+
     cgm.get_igdb_token()
-  
-    print(cgm.search_game("Call Of Duty").games)
+    print(cgm.search_game("Halo"))
+    print(cgm.get_popular_games())
