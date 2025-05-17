@@ -27,7 +27,7 @@ async def index():
 @app.get('/healthcheck')# GET # allow all origins all methods.
 async def healthcheck():
     return {"status":"OK"}
-@app.get('/api/v1/getaudio')# GET # allow all origins all methods.
+@app.get('/getaudio')# GET # allow all origins all methods.
 async def getaudio(url: str = Query(...)):
     try:
         response_string = subprocess.getoutput('yt-dlp -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url {}'.format(url))
