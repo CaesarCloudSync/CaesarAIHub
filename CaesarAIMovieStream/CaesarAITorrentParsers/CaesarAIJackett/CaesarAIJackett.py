@@ -377,6 +377,34 @@ class CaesarAIJackett:
             yield {"event":{"log":"saving"}}
         yield {"event":{"close":{"data":"close"}}}
     @staticmethod
+    async def stream_get_moviesws(title:str,indexers:List[str],service:str="jackett"):
+        all_torrents = []
+        cr = CaesarAIRedis(async_mode=True)
+        caejackett = CaesarAIJackett(db=True,asynchronous=True)
+        yield {"event":{"open":{"data":"open"}}}
+        for indexer in indexers:   
+            if service == "jackett":
+                yield {"event":{"log":"extracting jackett"}}
+                url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.MOVIE_ENDPOINT}&q={title}"
+                caejackett = CaesarAIJackett(url)
+                torrentinfo = caejackett.get_torrent_info(title)
+                torrentinfo = sorted(torrentinfo,key=CaesarAIJackett.sort_by_seeders, reverse=True)
+
+            elif service == "prowlarr":
+                url = f"{CaesarAIConstants.BASE_PROWLER_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX}?apikey={CaesarAIConstants.PROWLARR_API_KEY}&query={title}"
+                caeprowlarr = CaesarAIProwlarr(url)
+                torrentinfo = caeprowlarr.get_torrent_info(title)
+            else:
+                raise Exception("Indexing Service does not exist.")
+            for index,torrent in enumerate(torrentinfo):
+                data = {"index":index,"total":len(torrentinfo),"movies":torrent.model_dump()}
+                yield {"event":{"movies":{"data":data}}}
+    
+                #print(torrentinfo)
+ 
+                all_torrents.append(torrentinfo)
+        yield {"event":{"close":{"data":"close"}}}
+    @staticmethod
     def sort_indexers(data):
         priority = {"nyaasi": 0, "eztv": 1}  # Lower numbers = higher priority
         indexers = sorted(data, key=lambda x: (priority.get(x, 2), x))

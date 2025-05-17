@@ -39,6 +39,26 @@ class CaesarAIUnittest(unittest.TestCase):
 
 
         asyncio.run(hello())
+    def test_get_moviesws(self):
+        import asyncio
+        from websockets.asyncio.client import connect
+
+
+        async def hello():
+            datares = []
+            async with connect("ws://localhost:8082/api/v1/stream_get_moviesws") as websocket:
+                await websocket.send(json.dumps({"title":"Novocaine"}))
+                while True:
+                    data = json.loads(await websocket.recv())
+                    if "close" in data["event"]:
+                        with open("apothecary.json","w+") as f:
+                            json.dump(datares,f)
+                    datares.append(data)
+                        
+                    print(data)
+
+
+        asyncio.run(hello())
         
     def test_get_indexer_names(self):
         pass
