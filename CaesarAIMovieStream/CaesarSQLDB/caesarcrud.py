@@ -13,7 +13,7 @@ class CaesarCRUD:
             try:
                 result = self.caesarsql.run_command(f"CREATE TABLE IF NOT EXISTS {table} ({primary_key} serial PRIMARY KEY,{fieldstr});",self.caesarsql.fetch)
             except ProgrammingError as pex:
-                if "didn't produce a result" in str(pex):
+                if "the last operation didn't produce records" in str(pex):
                     return {"message":f"{table} table was created."}
                 else:
                     raise ProgrammingError(pex)
@@ -24,7 +24,7 @@ class CaesarCRUD:
             try:
                 result = self.caesarsql.run_command(f"CREATE TABLE IF NOT EXISTS {table} ({primary_key} serial PRIMARY KEY,{fieldstr});",self.caesarsql.fetch)
             except ProgrammingError as pex:
-                if "didn't produce a result" in str(pex):
+                if "the last operation didn't produce records" in str(pex):
                     return {"message":f"{table} table was created."}
                 else:
                     raise ProgrammingError(pex)
@@ -202,7 +202,7 @@ class CaesarCRUDAsync:
                 async with CaesarSQLAsync() as caesarsqlcm:
                     result = caesarsqlcm.run_command(f"CREATE TABLE IF NOT EXISTS {table} ({primary_key} serial PRIMARY KEY,{fieldstr});",caesarsqlcm.fetch)
             except ProgrammingError as pex:
-                if "didn't produce a result" in str(pex):
+                if "the last operation didn't produce records" in str(pex):
                     return {"message":f"{table} table was created."}
                 else:
                     raise ProgrammingError(pex)
@@ -214,7 +214,7 @@ class CaesarCRUDAsync:
                 async with CaesarSQLAsync() as caesarsqlcm:
                     result = caesarsqlcm.run_command(f"CREATE TABLE IF NOT EXISTS {table} ({primary_key} serial PRIMARY KEY,{fieldstr});",caesarsqlcm.fetch)
             except ProgrammingError as pex:
-                if "didn't produce a result" in str(pex):
+                if "the last operation didn't produce records" in str(pex):
                     return {"message":f"{table} table was created."}
                 else:
                     raise ProgrammingError(pex)
