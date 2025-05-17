@@ -7901,6 +7901,7 @@
 2025-04-17 09:11:39.7|Debug|InstallUpdateService|No update available
 2025-04-17 09:11:41.8|Debug|HttpClient|Downloading Completed. took 2s
 2025-04-17 09:11:41.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+<<<<<<< HEAD
 2025-04-26 16:41:47.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
 2025-04-26 16:41:47.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
 2025-04-26 16:41:47.7|Debug|ProcessProvider| - [307] Prowlarr
@@ -8237,3 +8238,1412 @@
 2025-05-01 22:43:12.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
 2025-05-02 04:43:13.2|Debug|InstallUpdateService|Checking for updates
 2025-05-02 04:43:13.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+=======
+2025-04-17 11:16:55.4|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-17 11:16:55.4|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-17 11:16:55.4|Debug|ProcessProvider| - [305] Prowlarr
+2025-04-17 11:16:55.4|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-17 11:16:55.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-17 11:16:55.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-17 11:16:55.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-17 11:16:55.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0642264s
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0669888s
+2025-04-17 11:16:55.6|Debug|MigrationController|Took: 00:00:00.2250718
+2025-04-17 11:16:55.6|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-17 11:16:55.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-17 11:16:55.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.002134s
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-17 11:16:55.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0025674s
+2025-04-17 11:16:55.6|Debug|MigrationController|Took: 00:00:00.0133700
+2025-04-17 11:16:55.9|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-17 11:16:56.0|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-17 11:16:56.0|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-17 11:16:56.1|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-17 11:16:56.5|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-17 11:16:59.2|Debug|HttpClient|Downloading Completed. took 3s
+2025-04-17 11:16:59.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-17 11:16:59.3|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-17 11:16:59.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-17 11:16:59.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-17 11:16:59.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-17 11:16:59.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-17 11:16:59.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-17 11:16:59.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-17 11:33:01.2|Warn|IndexerDefinitionUpdateService|Error while getting indexer definitions, fallback to reading from disk.
+
+[v1.33.3.5008] System.Net.Http.HttpRequestException: Resource temporarily unavailable (indexers.prowlarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 355
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 341
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 393
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.IndexerVersions.IndexerDefinitionUpdateService.All() in ./Prowlarr.Core/IndexerVersions/IndexerDefinitionUpdateService.cs:line 95
+
+
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilolicon.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/concertos.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lastfiles.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crnaberza.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/locadora.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bjshare.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/houseofdevil.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/discfan.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/f1carreras-api.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/joyhd.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pignetwork.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/opensharing.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/capybarabr.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/videoteka.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ebookbay.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dasunerwartete.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shadowflow.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentccf.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/riperam.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hqmusic.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/selezen.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newheaven.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kufirc.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabtorrents.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fsm.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bluebird.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oldgreektracker.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdforever.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dreamingtree.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/noname-club.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentproject2.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exitorrent-org.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitgamer.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdtorrentsit.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/portugas-api.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vsttorrents.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/borgzelle.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dark-shadow.yml
+2025-04-17 11:33:01.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pterclub.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cspt.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tormac.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornolab.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/indietorrents.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hd-club.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/satclubbing.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pctorrent.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/file-tracker.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uploadcx.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent-turk.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xthor-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxclub.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptcafe.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hellashut-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/isohunt2.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thegeeks.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/spiritofrevolution.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/scenerush.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentcore.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sktorrent-org.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/totheglory2fa.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/afun.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/concen.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polskie-torrenty.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xthor-scraping.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/itorrent.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/drugari.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentsome.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hawke-uno.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinematik.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rain.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdkylin.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/racing4everyone-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/3dtorrents.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gimmepeers.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/irishtv.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitbazis.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdatmos.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dmhy.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitded.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/femdomcult.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thenewfun.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentqq.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/peersfm.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/danishbytes-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exkinoray.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gaytorrentru.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/seedpool-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uindex.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ildragonero.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/qingwa.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/1ptbar.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bootytape.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/superbits.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/turkseed-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rgfootball.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptgtk.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yuscene-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/megamixtracker.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/comicat.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animelovers-api.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitpalace.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/moviesdvdr.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdturk.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdownloads.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdspace.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/abtorrents.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kelu.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/enthralled2fa.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hudbt.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trancetraffic.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cpabien.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/redleaves.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptfans.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zamundanet.yml
+2025-04-17 11:33:01.4|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xider-torrent.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vsthouse.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/puntotorrent.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xtremebytes.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mma-torrents.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/korsar.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/therarbg.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gay-torrents.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aussierules.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sukebeinyaasi.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/punkshorror.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/learnflakes.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/u2.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxtor.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/libranet.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tribalmixes.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/glodls.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/milkie.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitmagnet.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mikan.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitru.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mojblink.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptsbao.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/explosiv-world.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptfiles.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uniondht.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/digitalcore.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/u3c3.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/estone.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptitzmx.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/backups.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thevault.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theshow.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yggcookie.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mactorrentsdownload.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gtorrentpro.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/makingoff.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oshenpt.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/themixingbowl.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/madsrevolution.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/onlyencodes-api.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fearnopeer.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ostwiki.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/freefarm.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btnext.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thefallingangels.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/jpopsuki.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nortorrent.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trackermk.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/finelite.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wintersakura.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/boxingtorrents.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ex-torrenty.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tocashare.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shareisland-api.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theleachzone-api.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trellas.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btsow.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hebits.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sugoimusic.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/funkytorrents.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/chilebt-api.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/myspleen.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crazyspirits.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/immortuos.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zktorrent.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/x-ite.me.yml
+2025-04-17 11:33:01.5|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aidoruonline.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xwtclassics.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pwtorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xtorrenty.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mypornclub.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cpasbienclone.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nirvana.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/asiandvdclub.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carpt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/generationfree-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/beload.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/happyfappy2fa.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lesbians4u.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/miobt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oxtorrent-vip.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/unlimitz.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kufei.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/springsunday.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentz2nz.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tapochek.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/masters-tb.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ggpt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdownload.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/limetorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pixelcove2fa.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/divteam.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rudub.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/infinity-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thecrazyones.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anime-timel.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nicept.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btschool.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rousi.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extratorrent-st.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/booktracker.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/krazyzone.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdbao.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nipponsei.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pixelcove.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/jme-reunit3d-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aither-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exttorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theplace.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tornado.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zetorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anthelion-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arenabg.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/docspedia.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/datascene-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilcorsaronero.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentbd.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pussytorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crackingpatching.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdolimpo-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/utopia.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/empornium2fa.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trezzor.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/railgunpt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wdt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mircrew.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/acgrip.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/elitetorrent-wf.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rintornet.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdarea.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/devil-torrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shanaproject.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentseeds-api.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ehentai.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newstudiol.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/finvip.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theparadiese.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/52pt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/world-of-tomorrow.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tvchaosuk.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/romanianmetaltorrents.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/genesismovement.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/diablotorrent.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentlt.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitturk.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/speedmasterhd.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pier720.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yoinked.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdtime.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/showrss.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/insanetracker.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thepiratedship.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newstudio.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sexypics.yml
+2025-04-17 11:33:01.6|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newretro.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/metalguru.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rockbox.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdonly-api.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/byrbt.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lastdigitalunderground.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trupornolabs.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wihd.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/abnormal.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kickasstorrents-ws.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/happyfappy.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenttip.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yourbittorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mixtapetorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamctgame.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wukong.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptvicomo.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentleech-pl.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/putao.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/solidtorrents.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gigatorrents.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/emuwarez.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mvgroupmain.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/whiteangel.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/racingforme.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tokyotosho.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentoyunindir.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nusantarare.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/postman.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/majomparade.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sfp.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btetree.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ourbits.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentssg.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bithumen.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/linuxtracker.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oldtoonsworld.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentsir.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/52bt.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zomb.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/azusa.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extremebits.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mazepa.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdfun.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ianon.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ceskeforum.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trezzorcookie.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/haitang.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pthome.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/agsvpt.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitporn.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thekitchen.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdt-lafenice.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/audiences.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btdirectory.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ncore.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornotorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/seedfile.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/1337x.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fanoin.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/peeratiko.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/itatorrents.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdvideo.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentkitty.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/damagnet.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/4thd.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btarg.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zelkaorg.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/deildu.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/losslessclub.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bithorlo.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdgalaktik.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theoccult.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilcorsaroblu.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/3changtrai.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/frozenlayer.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/marinetracker.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinorun.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/noname-clubl.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fuzer.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mousebits.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/samaritano.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/girotorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdhome.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tlfbits.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lst.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dimeadozen.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdsky.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rareshare2.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vstorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenting.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/snowpt.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ultrahd.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/megapeer.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentfunk.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/asiancinema.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zappateers.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nyaapantsu.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rotorrent.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinozal.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hddolby.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdzero.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rastastugan-api.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thepiratebay.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamhd.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lepornoinfo.yml
+2025-04-17 11:33:01.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/monikadesign-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tasmanit.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/huntorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ztracker.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/haidan.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bibliotik.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/keepfriends.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenthr.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hhd-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kamept.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fluxzone.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/reelflix-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/coastalcrew.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cdfile.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/eniahd.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/metaltracker.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/audionews.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/turktorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/badasstorrents.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polishtorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ntelogo.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mdan.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bestcore.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pandahd.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rapidzona.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hhanclub.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentby.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zmpt.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nordicquality.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdfans.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anilibria.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bigfangroup.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uhdbits.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sktorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/futuretorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tjupt.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxadulttorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdcztorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabp2p.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/empornium.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/idope.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/panda.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdu.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornbay.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anime-time.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rainbowtracker.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenttrader.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animelayer.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/magnetcat.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/electro-torrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenteros-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/letseed.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ebooks-shares.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sharewood-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamos.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/karagarga.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nyaasi.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rustorka.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/homeporntorrents.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent-pirat.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinozal-magnet.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theoldschool-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/esharenet.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/piratesparadise.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bangumi-moe.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/0daykiev.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dxp.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/opencd.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/learnbits.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tekno3d.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/amigosshare.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/desitorrents-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/blutopia-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ubits.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/upscalevault.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kickasstorrents-to.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/enthralled.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animeworld-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rutor.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/internetarchive.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anisource.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/totheglory.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentleech.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/le-cinephile.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rutracker-ru.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/plugintorrent.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent9.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/infire.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/libronube.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sportscraze.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/traht.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/acrossthetasman.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fappaizuri.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sportscult.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/chdbits.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bluraytracker.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pttime.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/soulvoice.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdroute.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/swarmazon-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carphunter.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/Bittorrentfiles.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yts.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hd-unit3d-api.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/matrix.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdd.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/helltorrents.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/blueroms.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabafenice.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sewerpt.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mvgroupforum.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xwtorrents.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/best-torrents.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/linkomanija.yml
+2025-04-17 11:33:01.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/siambit.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cyanbug.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/onejav.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitsearch.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/r3vwtf.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cathoderaytube.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentmasters.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/proaudiotorrents.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hellashut.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aftershock.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/proporno.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/leech24.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/byrutor.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/icc2022.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/darkpeers.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/musebootlegs.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/laidbackmanor.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rockethd.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/party-tracker.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lat-team-api.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tmghub.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sosulki.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crt2fa.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/redstartorrent.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gay-torrentsorg.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/okpt.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oxtorrent-co.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gamestorrents.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animetorrentsro.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/privatesilverscreen-api.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bwtorrents.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carpathians.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mnv.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lemonhd.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinemageddon.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torlock.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crabpt.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/catorrent.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/unionfansub.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/p2pbg.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/0magnet.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extremlymtorrents.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mesevilag.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polishtracker-api.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/malayabits-api.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornrips.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rintor.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptchina.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nethd.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/brasiltracker.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lesaloon.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdc.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yggtorrent.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdclone.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theempire.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/eztv.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vault-network.yml
+2025-04-17 11:33:01.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinemamovies.yml
+2025-04-17 12:53:03.2|Info|Microsoft.Hosting.Lifetime|Application is shutting down...
+2025-04-17 12:53:03.7|Info|ConsoleApp|Exiting main.
+2025-04-18 10:05:04.3|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-18 10:05:04.3|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-18 10:05:04.3|Debug|ProcessProvider| - [302] Prowlarr
+2025-04-18 10:05:04.4|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:05:04.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:05:04.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:05:04.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:05:04.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:05:04.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.047698s
+2025-04-18 10:05:04.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:05:04.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0497924s
+2025-04-18 10:05:04.5|Debug|MigrationController|Took: 00:00:00.1724191
+2025-04-18 10:05:04.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:05:04.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:05:04.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:05:04.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:05:04.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:05:04.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0023962s
+2025-04-18 10:05:04.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:05:04.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0026596s
+2025-04-18 10:05:04.6|Debug|MigrationController|Took: 00:00:00.0096314
+2025-04-18 10:05:04.8|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-18 10:05:04.9|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-18 10:05:04.9|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-18 10:05:04.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:05:05.6|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-18 10:05:06.1|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-18 10:05:06.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:05:06.2|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-18 10:05:06.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-18 10:05:06.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-18 10:05:06.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-18 10:05:06.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-18 10:05:06.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-18 10:05:06.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-18 10:05:35.0|Info|HousekeepingService|Running housecleaning tasks
+2025-04-18 10:05:35.0|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-04-18 10:05:35.0|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-04-18 10:05:35.0|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-04-18 10:05:35.1|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:05:35.1|Debug|InstallUpdateService|Checking for updates
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-04-18 10:05:35.1|Info|HistoryService|Removing items older than 30 days from history
+2025-04-18 10:05:35.1|Debug|HistoryService|History has been cleaned up.
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-04-18 10:05:35.1|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-04-18 10:05:35.2|Info|Database|Vacuuming Log database
+2025-04-18 10:05:35.2|Info|Database|Log database compressed
+2025-04-18 10:05:35.2|Debug|HousekeepingService|Completed TrimLogDatabase
+2025-04-18 10:05:35.2|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-04-18 10:05:35.2|Info|Database|Vacuuming Main database
+2025-04-18 10:05:35.2|Info|Database|Main database compressed
+2025-04-18 10:05:35.2|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-18 10:05:35.2|Debug|InstallUpdateService|No update available
+2025-04-18 10:05:35.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:16:34.4|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-18 10:16:34.4|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-18 10:16:34.4|Debug|ProcessProvider| - [306] Prowlarr
+2025-04-18 10:16:34.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:16:34.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:16:34.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:16:34.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:16:34.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:16:34.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0525859s
+2025-04-18 10:16:34.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:16:34.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0547175s
+2025-04-18 10:16:34.7|Debug|MigrationController|Took: 00:00:00.1836190
+2025-04-18 10:16:34.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:16:34.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:16:34.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:16:34.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:16:34.7|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:16:34.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015088s
+2025-04-18 10:16:34.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:16:34.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0019735s
+2025-04-18 10:16:34.7|Debug|MigrationController|Took: 00:00:00.0100734
+2025-04-18 10:16:34.9|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-18 10:16:35.0|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-18 10:16:35.0|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-18 10:16:35.1|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:16:35.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-18 10:16:36.2|Debug|HttpClient|Downloading Completed. took 1s
+2025-04-18 10:16:36.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:16:36.3|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-18 10:16:36.4|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-18 10:16:36.4|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-18 10:16:36.4|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-18 10:16:36.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-18 10:16:36.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-18 10:16:36.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-18 10:18:44.9|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-18 10:18:44.9|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-18 10:18:44.9|Debug|ProcessProvider| - [303] Prowlarr
+2025-04-18 10:18:45.0|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:18:45.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:18:45.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:18:45.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:18:45.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:18:45.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0482726s
+2025-04-18 10:18:45.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:18:45.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.050404s
+2025-04-18 10:18:45.2|Debug|MigrationController|Took: 00:00:00.1835429
+2025-04-18 10:18:45.2|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:18:45.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:18:45.2|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:18:45.2|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:18:45.2|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:18:45.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0012038s
+2025-04-18 10:18:45.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:18:45.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0014853s
+2025-04-18 10:18:45.2|Debug|MigrationController|Took: 00:00:00.0087640
+2025-04-18 10:18:45.4|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-18 10:18:45.5|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-18 10:18:45.5|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-18 10:18:45.6|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:18:45.8|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-18 10:18:46.2|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-18 10:18:46.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:18:46.3|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-18 10:18:46.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-18 10:18:46.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-18 10:18:46.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-18 10:18:46.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-18 10:18:46.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-18 10:18:46.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-18 10:43:41.7|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-18 10:43:41.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-18 10:43:41.7|Debug|ProcessProvider| - [306] Prowlarr
+2025-04-18 10:43:41.8|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:43:41.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:43:41.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:43:41.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0473257s
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0497593s
+2025-04-18 10:43:41.9|Debug|MigrationController|Took: 00:00:00.1845451
+2025-04-18 10:43:41.9|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:43:41.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:43:41.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.001302s
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:43:41.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.001631s
+2025-04-18 10:43:42.0|Debug|MigrationController|Took: 00:00:00.0143098
+2025-04-18 10:43:42.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-18 10:43:42.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-18 10:43:42.3|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-18 10:43:42.4|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:43:42.6|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-18 10:43:43.2|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-18 10:43:43.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:43:43.2|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-18 10:43:43.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-18 10:43:43.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-18 10:43:43.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-18 10:43:43.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-18 10:43:43.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-18 10:43:43.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-18 10:47:23.9|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-04-18 10:47:23.9|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-04-18 10:47:23.9|Debug|ProcessProvider| - [307] Prowlarr
+2025-04-18 10:47:23.9|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:47:24.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:47:24.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:47:24.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:47:24.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0486742s
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0506659s
+2025-04-18 10:47:24.1|Debug|MigrationController|Took: 00:00:00.1789050
+2025-04-18 10:47:24.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-04-18 10:47:24.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-04-18 10:47:24.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0012751s
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-04-18 10:47:24.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0015562s
+2025-04-18 10:47:24.1|Debug|MigrationController|Took: 00:00:00.0093507
+2025-04-18 10:47:24.3|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-04-18 10:47:24.5|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-04-18 10:47:24.5|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-04-18 10:47:24.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-04-18 10:47:25.0|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-04-18 10:47:25.5|Debug|HttpClient|Downloading Completed. took 0s
+2025-04-18 10:47:25.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-04-18 10:47:25.6|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-04-18 10:47:25.6|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-04-18 10:47:25.6|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-04-18 10:47:25.6|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-04-18 10:47:25.6|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-04-18 10:47:25.6|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-04-18 10:47:25.6|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-04-18 11:02:29.6|Warn|IndexerDefinitionUpdateService|Error while getting indexer definitions, fallback to reading from disk.
+
+[v1.33.3.5008] System.Net.Http.HttpRequestException: Resource temporarily unavailable (indexers.prowlarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 355
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 341
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 393
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.IndexerVersions.IndexerDefinitionUpdateService.All() in ./Prowlarr.Core/IndexerVersions/IndexerDefinitionUpdateService.cs:line 95
+
+
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilolicon.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/concertos.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lastfiles.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crnaberza.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/locadora.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bjshare.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/houseofdevil.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/discfan.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/f1carreras-api.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/joyhd.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pignetwork.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/opensharing.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/capybarabr.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/videoteka.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ebookbay.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dasunerwartete.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shadowflow.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentccf.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/riperam.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hqmusic.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/selezen.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newheaven.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kufirc.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabtorrents.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fsm.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bluebird.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oldgreektracker.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdforever.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dreamingtree.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/noname-club.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentproject2.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exitorrent-org.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitgamer.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdtorrentsit.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/portugas-api.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vsttorrents.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/borgzelle.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dark-shadow.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pterclub.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cspt.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tormac.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornolab.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/indietorrents.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hd-club.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/satclubbing.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pctorrent.yml
+2025-04-18 11:02:29.7|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/file-tracker.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uploadcx.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent-turk.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xthor-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxclub.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptcafe.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hellashut-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/isohunt2.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thegeeks.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/spiritofrevolution.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/scenerush.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentcore.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sktorrent-org.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/totheglory2fa.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/afun.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/concen.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polskie-torrenty.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xthor-scraping.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/itorrent.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/drugari.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentsome.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hawke-uno.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinematik.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rain.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdkylin.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/racing4everyone-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/3dtorrents.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gimmepeers.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/irishtv.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitbazis.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdatmos.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dmhy.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitded.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/femdomcult.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thenewfun.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentqq.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/peersfm.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/danishbytes-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exkinoray.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gaytorrentru.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/seedpool-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uindex.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ildragonero.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/qingwa.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/1ptbar.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bootytape.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/superbits.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/turkseed-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rgfootball.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptgtk.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yuscene-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/megamixtracker.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/comicat.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animelovers-api.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitpalace.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/moviesdvdr.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdturk.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdownloads.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdspace.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/abtorrents.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kelu.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/enthralled2fa.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hudbt.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trancetraffic.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cpabien.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/redleaves.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptfans.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zamundanet.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xider-torrent.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vsthouse.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/puntotorrent.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xtremebytes.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mma-torrents.yml
+2025-04-18 11:02:29.8|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/korsar.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/therarbg.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gay-torrents.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aussierules.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sukebeinyaasi.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/punkshorror.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/learnflakes.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/u2.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxtor.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/libranet.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tribalmixes.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/glodls.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/milkie.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitmagnet.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mikan.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitru.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mojblink.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptsbao.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/explosiv-world.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptfiles.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uniondht.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/digitalcore.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/u3c3.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/estone.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptitzmx.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/backups.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thevault.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theshow.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yggcookie.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mactorrentsdownload.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gtorrentpro.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/makingoff.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oshenpt.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/themixingbowl.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/madsrevolution.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/onlyencodes-api.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fearnopeer.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ostwiki.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/freefarm.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btnext.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thefallingangels.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/jpopsuki.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nortorrent.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trackermk.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/finelite.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wintersakura.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/boxingtorrents.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ex-torrenty.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tocashare.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shareisland-api.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theleachzone-api.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trellas.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btsow.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hebits.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sugoimusic.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/funkytorrents.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/chilebt-api.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/myspleen.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crazyspirits.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/immortuos.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zktorrent.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/x-ite.me.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aidoruonline.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xwtclassics.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pwtorrents.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xtorrenty.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mypornclub.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cpasbienclone.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nirvana.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/asiandvdclub.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carpt.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/generationfree-api.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/beload.yml
+2025-04-18 11:02:29.9|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/happyfappy2fa.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lesbians4u.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/miobt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oxtorrent-vip.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/unlimitz.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kufei.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/springsunday.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentz2nz.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tapochek.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/masters-tb.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ggpt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdownload.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/limetorrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pixelcove2fa.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/divteam.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rudub.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/infinity-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thecrazyones.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anime-timel.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nicept.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btschool.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rousi.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extratorrent-st.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/booktracker.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/krazyzone.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdbao.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nipponsei.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pixelcove.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/jme-reunit3d-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aither-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/exttorrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theplace.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tornado.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zetorrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anthelion-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arenabg.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/docspedia.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/datascene-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilcorsaronero.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentbd.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pussytorrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crackingpatching.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdolimpo-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/utopia.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/empornium2fa.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trezzor.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/railgunpt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wdt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mircrew.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/acgrip.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/elitetorrent-wf.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rintornet.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdarea.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/devil-torrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/shanaproject.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentseeds-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ehentai.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newstudiol.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/finvip.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theparadiese.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/52pt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/world-of-tomorrow.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tvchaosuk.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/romanianmetaltorrents.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/genesismovement.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/diablotorrent.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentlt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitturk.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/speedmasterhd.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pier720.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yoinked.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdtime.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/showrss.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/insanetracker.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thepiratedship.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newstudio.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sexypics.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/newretro.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/metalguru.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rockbox.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdonly-api.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/byrbt.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lastdigitalunderground.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trupornolabs.yml
+2025-04-18 11:02:30.0|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wihd.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/abnormal.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kickasstorrents-ws.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/happyfappy.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenttip.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yourbittorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mixtapetorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamctgame.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/wukong.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptvicomo.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentleech-pl.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/putao.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/solidtorrents.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gigatorrents.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/emuwarez.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mvgroupmain.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/whiteangel.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/racingforme.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tokyotosho.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentoyunindir.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nusantarare.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/postman.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/majomparade.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sfp.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btetree.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ourbits.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentssg.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bithumen.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/linuxtracker.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oldtoonsworld.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentsir.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/52bt.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zomb.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/azusa.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extremebits.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mazepa.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdfun.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ianon.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ceskeforum.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/trezzorcookie.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/haitang.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pthome.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/agsvpt.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitporn.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thekitchen.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdt-lafenice.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/audiences.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btdirectory.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ncore.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornotorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/seedfile.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/1337x.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fanoin.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/peeratiko.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/itatorrents.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdvideo.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentkitty.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/damagnet.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/4thd.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/btarg.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zelkaorg.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/deildu.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/losslessclub.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bithorlo.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdgalaktik.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theoccult.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ilcorsaroblu.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/3changtrai.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/frozenlayer.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/marinetracker.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinorun.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/noname-clubl.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fuzer.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mousebits.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/samaritano.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/girotorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdhome.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tlfbits.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lst.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dimeadozen.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdsky.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rareshare2.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vstorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenting.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/snowpt.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ultrahd.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/megapeer.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentfunk.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/asiancinema.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zappateers.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nyaapantsu.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rotorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinozal.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hddolby.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdzero.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rastastugan-api.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/thepiratebay.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamhd.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lepornoinfo.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/monikadesign-api.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tasmanit.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/huntorrent.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ztracker.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/haidan.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bibliotik.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/keepfriends.yml
+2025-04-18 11:02:30.1|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenthr.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hhd-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kamept.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fluxzone.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/reelflix-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/coastalcrew.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cdfile.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/eniahd.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/metaltracker.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/audionews.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/turktorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/badasstorrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polishtorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ntelogo.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mdan.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bestcore.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pandahd.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rapidzona.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hhanclub.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentby.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/zmpt.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nordicquality.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdfans.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anilibria.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bigfangroup.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/uhdbits.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sktorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/futuretorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tjupt.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xxxadulttorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdcztorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabp2p.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/empornium.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/idope.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/panda.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdu.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornbay.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anime-time.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rainbowtracker.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenttrader.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animelayer.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/magnetcat.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/electro-torrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrenteros-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/letseed.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ebooks-shares.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sharewood-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/teamos.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/karagarga.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nyaasi.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rustorka.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/homeporntorrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent-pirat.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kinozal-magnet.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theoldschool-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/esharenet.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/piratesparadise.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bangumi-moe.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/0daykiev.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/dxp.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/opencd.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/learnbits.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tekno3d.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/amigosshare.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/desitorrents-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/blutopia-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ubits.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/upscalevault.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/kickasstorrents-to.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/enthralled.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animeworld-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rutor.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/internetarchive.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/anisource.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/totheglory.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentleech.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/le-cinephile.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rutracker-ru.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/plugintorrent.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrent9.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/infire.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/libronube.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sportscraze.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/traht.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/acrossthetasman.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/fappaizuri.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sportscult.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/chdbits.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bluraytracker.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pttime.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/soulvoice.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdroute.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/swarmazon-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carphunter.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/Bittorrentfiles.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yts.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hd-unit3d-api.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/matrix.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentdd.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/helltorrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/blueroms.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/arabafenice.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sewerpt.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mvgroupforum.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/xwtorrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/best-torrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/linkomanija.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/siambit.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cyanbug.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/onejav.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bitsearch.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/r3vwtf.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cathoderaytube.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torrentmasters.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/proaudiotorrents.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hellashut.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/aftershock.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/proporno.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/leech24.yml
+2025-04-18 11:02:30.2|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/byrutor.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/icc2022.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/darkpeers.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/musebootlegs.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/laidbackmanor.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rockethd.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/party-tracker.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lat-team-api.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/tmghub.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/sosulki.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crt2fa.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/redstartorrent.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gay-torrentsorg.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/okpt.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/oxtorrent-co.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/gamestorrents.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/animetorrentsro.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/privatesilverscreen-api.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/bwtorrents.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/carpathians.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mnv.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lemonhd.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinemageddon.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/torlock.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/crabpt.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/catorrent.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/unionfansub.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/p2pbg.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/0magnet.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/extremlymtorrents.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/mesevilag.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/polishtracker-api.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/malayabits-api.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/pornrips.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/rintor.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/ptchina.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/nethd.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/brasiltracker.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/lesaloon.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdc.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/yggtorrent.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/hdclone.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/theempire.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/eztv.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/vault-network.yml
+2025-04-18 11:02:30.3|Debug|IndexerDefinitionUpdateService|Loading definition /config/Definitions/cinemamovies.yml
+2025-04-18 11:02:32.9|Info|Microsoft.Hosting.Lifetime|Application is shutting down...
+2025-04-18 11:02:33.0|Info|ConsoleApp|Exiting main.
+>>>>>>> 4ac61132bf7fdd8b464ef663ce167731b34b7157

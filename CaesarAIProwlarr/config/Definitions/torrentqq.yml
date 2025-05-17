@@ -7,9 +7,18 @@ type: public
 encoding: UTF-8
 followredirect: true
 links:
+<<<<<<< HEAD
   - https://torrentqq366.com/
   - https://torrentegg57.com/
 legacylinks:
+=======
+  - https://torrentqq364.com/
+  - https://torrentegg56.com/
+legacylinks:
+  - https://torrentqq349.com/
+  - https://torrentegg42.com/
+  - https://torrentqq350.com/
+>>>>>>> 4ac61132bf7fdd8b464ef663ce167731b34b7157
   - https://torrentegg43.com/
   - https://torrentqq351.com/
   - https://torrentqq352.com/
@@ -36,9 +45,12 @@ legacylinks:
   - https://torrentegg54.com/
   - https://torrentqq363.com/
   - https://torrentegg55.com/
+<<<<<<< HEAD
   - https://torrentqq364.com/
   - https://torrentegg56.com/
   - https://torrentqq365.com/
+=======
+>>>>>>> 4ac61132bf7fdd8b464ef663ce167731b34b7157
 
 caps:
   categorymappings:

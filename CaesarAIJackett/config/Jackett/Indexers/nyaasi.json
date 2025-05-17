@@ -9,7 +9,11 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
+<<<<<<< HEAD
     "value": "__ddg8_=LK4qW7slFaxNt0Ei; __ddg10_=1746177425; __ddg9_=37.19.205.193; __ddg1_=spCVXUYLDnisxxcttvzM"
+=======
+    "value": "__ddg8_=MhHZOj0RxzgfPikd; __ddg10_=1745408524; __ddg9_=37.19.205.193; __ddg1_=spCVXUYLDnisxxcttvzM"
+>>>>>>> 4ac61132bf7fdd8b464ef663ce167731b34b7157
   },
   {
     "id": "lasterror",
