@@ -35,10 +35,6 @@ services:
     extends:
       file: ./CaesarAIMusicStreamYT/docker-compose.yml
       service: musicstreaming
-  musicsearch:
-    extends:
-      file: ./CaesarAIYoutube/docker-compose.yml
-      service: musicsearch
   moviestreaming:
     extends:
       file: ./CaesarAIMovieStream/docker-compose.yml
