@@ -1,1 +1,3 @@
 from .CaesarAIGames import CaesarAIGames
+from .models.CaesarAIGameRequests import CaesarAIGameRequests
+from .models.CaesarAIGameResponse import CaesarAISearchResponse
