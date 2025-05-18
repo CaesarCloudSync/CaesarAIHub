@@ -40,10 +40,10 @@ services:
       file: ./CaesarAIMovieStream/docker-compose.yml
       service: moviestreaming
 
-  #gamestreaming:
-  #  extends:
-  #    file: ./CaesarAIGameStream/docker-compose.yml
-  #    service: gamestreaming
+  gamestreaming:
+    extends:
+      file: ./CaesarAIGameStream/docker-compose.yml
+      service: gamestreaming
 
 volumes:
   redis-data:  
