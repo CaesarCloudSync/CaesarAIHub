@@ -13079,3 +13079,24 @@
 2025-05-17 14:41:06.4437 Error All categories provided are unsupported in SubsPlease: 4000,4010,4020,4030,4040,4050,4060,4070,1000,1010,1020,1030,1040,1050,1060,1070,1080,1090,1110,1120,1130,1140,1180
 2025-05-17 14:41:06.4444 Info Torznab search in SubsPlease for Shadow of war => Found 0 releases [0ms]
 2025-05-17 14:41:06.8386 Warn Some of the categories provided are unsupported in The Pirate Bay: 4010,4020,1010,1020,1050,1060,1070,1080,1110,1120,1130,1140
+2025-05-18 09:54:46.1721 Info Starting Jackett v0.22.1913
+2025-05-18 09:54:46.6515 Info Environment version: 8.0.16 (/opt/Jackett/)
+2025-05-18 09:54:46.6565 Info OS version: Unix 6.11.0.21 (64bit OS) (64bit process)
+2025-05-18 09:54:46.6584 Info Jackett variant: CoreLinuxAmdx64
+2025-05-18 09:54:46.6584 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-05-18 09:54:46.6584 Info Running in Docker: Yes (image build: unknown)
+2025-05-18 09:54:46.6595 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-05-18 09:54:46.6595 Info App config/log directory: /config/Jackett
+2025-05-18 09:54:46.6610 Info Using proxy: Disabled
+2025-05-18 09:54:46.6611 Info Using FlareSolverr: No
+2025-05-18 09:54:46.6622 Info Using HTTP Client: HttpWebClient2
+2025-05-18 09:54:46.6644 Info Loading Native indexers ...
+2025-05-18 09:54:46.6988 Info Loaded 76 Native indexers.
+2025-05-18 09:54:46.7016 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-05-18 09:54:48.9587 Info Loaded 528 Cardigann indexers.
+2025-05-18 09:54:48.9587 Info Loaded 604 indexers in total
+2025-05-18 09:54:48.9658 Info Adding aggregate indexer ('all' indexer) ...
+2025-05-18 09:54:48.9696 Info Adding filter indexer ('type:public' indexer) ...
+2025-05-18 09:54:48.9696 Info Adding filter indexer ('type:private' indexer) ...
+2025-05-18 09:54:48.9701 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-05-18 09:54:49.0960 Info Jackett startup finished in 3.216 s
