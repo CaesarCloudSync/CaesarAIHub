@@ -59,15 +59,15 @@ class CaesarAIGameRequests(BaseModel):
                 limit {limit};
                 offset {offset};
                 sort rating desc;
+                sort total_rating_count desc;
                 where genres.id = "{genre}";
-                where total_rating_count > 500;
-            '''.strip()
+            '''.strip() # where total_rating_count > 500;
         else:
             return f'''
                 fields {cls.field};
                 limit {limit};
                 offset {offset};
                 sort rating desc;
-                where total_rating_count > 500;
-            '''.strip()
+                sort total_rating_count desc;
+            '''.strip() # where total_rating_count > 500;
         return 

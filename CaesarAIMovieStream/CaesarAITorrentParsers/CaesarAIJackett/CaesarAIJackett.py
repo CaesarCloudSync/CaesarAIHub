@@ -427,7 +427,7 @@ class CaesarAIJackett:
                 raise Exception("Indexing Service does not exist.")
             for index,torrent in enumerate(torrentinfo):
                 data = {"index":index,"total":len(torrentinfo),"games":torrent.model_dump()}
-                yield {"event":{"movies":{"data":data}}}
+                yield {"event":{"games":{"data":data}}}
     
                 #print(torrentinfo)
  
