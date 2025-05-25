@@ -1,0 +1,9 @@
+services:
+  musicstreamrecommendation:
+    container_name: caesaraimusicstreamrecommendation
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8084:8084"
+    volumes:
+      - .:/app   
