@@ -3802,3 +3802,29 @@ database disk image is malformed
 2025-05-25 12:19:58.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-05-25 12:19:58.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-05-25 12:19:58.5|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-05-25 12:28:06.7|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.35.1.5034
+2025-05-25 12:28:07.6|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-05-25 12:28:07.8|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-05-25 12:28:12.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-05-25 12:28:14.2|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 12:28:14.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 12:28:15.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 12:28:15.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 12:28:15.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 12:28:15.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.523892s
+2025-05-25 12:28:15.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 12:28:15.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.537505s
+2025-05-25 12:28:16.0|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 12:28:16.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 12:28:16.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 12:28:16.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 12:28:16.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 12:28:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0088204s
+2025-05-25 12:28:16.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 12:28:16.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0122824s
+2025-05-25 12:28:18.0|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-05-25 12:28:18.9|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-05-25 12:28:19.9|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-05-25 12:28:23.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-05-25 12:28:23.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-05-25 12:28:23.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
