@@ -46,7 +46,7 @@ async def setup_browser(file: UploadFile = File(...)):
         content = await file.read()
         text_content = content.decode('utf-8')  # Decode bytes to string
         CaesarAIMusicStreamRecommendation.setup_browser(text_content)
-        return {"status":"succes"}
+        return {"status":"success"}
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": f"Failed to read file: {str(e)}"})
     finally:
