@@ -7,7 +7,7 @@ from typing import Dict,List,Any,Union
 from fastapi.responses import StreamingResponse
 from fastapi import WebSocket,WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from models import MusicRecommendations
+from models import MusicRecommendations,SetupBrowser
 from CaesarAIMusicStreamRecommendation import CaesarAIMusicStreamRecommendation
 app = FastAPI()
 app.add_middleware(
@@ -35,9 +35,9 @@ async def get_recommendation(song_query:str,playlist_name:str="",max_songs:int=1
         return recommendations
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
-@app.get("/api/v1/setup_browser_oauth",description="This browser header normally lasts for 2 years but if it expires follow. https://ytmusicapi.readthedocs.io/en/stable/setup/browser.html#copy-authentication-headers. Get the raw header from the music.youtube.com page then put it into headers raw and it will all sort itself out. No more configuration.")
-async def setup_browser(headers_raw:str):
-    CaesarAIMusicStreamRecommendation.setup_browser(headers_raw)
+@app.post("/api/v1/setup_browser_oauth",description="This browser header normally lasts for 2 years but if it expires follow. https://ytmusicapi.readthedocs.io/en/stable/setup/browser.html#copy-authentication-headers. Get the raw header from the music.youtube.com page then put it into headers raw and it will all sort itself out. No more configuration.")
+async def setup_browser(setup_browser:SetupBrowser):
+    CaesarAIMusicStreamRecommendation.setup_browser(setup_browser.headers_raw)
     return True
 
 if __name__ == "__main__":

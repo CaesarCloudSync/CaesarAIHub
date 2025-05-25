@@ -1,2 +1,3 @@
 from .MusicRecommendation import MusicRecommendation
 from .MusicRecommendation import MusicRecommendations
+from .SetupBrowser import SetupBrowser
