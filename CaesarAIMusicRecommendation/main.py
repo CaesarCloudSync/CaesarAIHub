@@ -2,9 +2,9 @@ import re
 
 import uvicorn
 import subprocess
-from fastapi import FastAPI,Query
+from fastapi import FastAPI,Query, File, UploadFile
 from typing import Dict,List,Any,Union
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse,JSONResponse
 from fastapi import WebSocket,WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from models import MusicRecommendations,SetupBrowser
@@ -36,9 +36,25 @@ async def get_recommendation(song_query:str,playlist_name:str="",max_songs:int=1
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 @app.post("/api/v1/setup_browser_oauth",description="This browser header normally lasts for 2 years but if it expires follow. https://ytmusicapi.readthedocs.io/en/stable/setup/browser.html#copy-authentication-headers. Get the raw header from the music.youtube.com page then put it into headers raw and it will all sort itself out. No more configuration.")
-async def setup_browser(setup_browser:SetupBrowser):
-    CaesarAIMusicStreamRecommendation.setup_browser(setup_browser.headers_raw)
-    return True
+async def setup_browser(file: UploadFile = File(...)):
+    try:
+        # Check if the file is a text file (optional)
+        if not file.filename.endswith(('.txt', '.log')):
+            return JSONResponse(status_code=400, content={"error": "Please upload a text file"})
+        
+        # Read the file contents
+        content = await file.read()
+        text_content = content.decode('utf-8')  # Decode bytes to string
+        CaesarAIMusicStreamRecommendation.setup_browser(text_content)
+        s
+        return {"status":"succes"}
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": f"Failed to read file: {str(e)}"})
+    finally:
+        await file.close()  # Ensure the file is closed
+
+
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app",port=8080,log_level="info")
