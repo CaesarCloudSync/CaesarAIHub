@@ -30,23 +30,23 @@ async def healthcheck():
 @app.get('/getaudio')# GET # allow all origins all methods.
 async def getaudio(url: str = Query(...)):
     try:
-        response_string = subprocess.getoutput('yt-dlp -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url {}'.format(url))
+        response_string = subprocess.getoutput('yt-dlp -U -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url {}'.format(url))
         response_info = response_string.split("\n")
-        streaming_link = next((s for s in response_info if "https://rr" in s), None)
+        streaming_link = next((s for s in response_info if "https://rr" in s or ".m3u8" in s), None)
         print(response_string)
-        title = next((s for s in response_info if "title:" in s), None) 
-        if not title or not streaming_link:
-            return {"error":f"streaming_link:{streaming_link},title:{title}"}
+        #title = next((s for s in response_info if "title:" in s), None) 
+        if not streaming_link:
+            return {"error":f"streaming_link:{streaming_link}"}
         else:
-            title = re.sub(r"[/\\?%*:|\"<>\x7F\x00-\x1F]", "-",title.replace("title:","").replace("NA - ",""))
-            return {"streaming_url":streaming_link,"title":title}
+            #title = re.sub(r"[/\\?%*:|\"<>\x7F\x00-\x1F]", "-",title.replace("title:","").replace("NA - ",""))
+            return {"streaming_url":streaming_link}#,"title":title}
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
 
 @app.get('/api/v2/getaudio')# GET # allow all origins all methods.
 async def getaudiov2(query: str):
     try:
-        response_string = subprocess.getoutput('yt-dlp ytsearch:"{}" -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url'.format(query))
+        response_string = subprocess.getoutput('yt-dlp ytsearch:"{}" -U -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url'.format(query))
         response_info = response_string.split("\n")
         streaming_link = next((s for s in response_info if "https://rr" in s), None)
         print(response_string)

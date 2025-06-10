@@ -792,3 +792,1787 @@ database disk image is malformed
 2025-05-25 19:26:06.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-05-25 19:26:06.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-05-25 19:26:06.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-05-25 19:36:27.5|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-05-25 19:36:27.5|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-05-25 19:36:27.5|Debug|ProcessProvider| - [309] Prowlarr
+2025-05-25 19:36:27.8|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:36:28.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:36:28.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:36:28.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:36:28.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:36:28.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2942081s
+2025-05-25 19:36:28.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:36:28.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3059623s
+2025-05-25 19:36:29.1|Debug|MigrationController|Took: 00:00:01.3174548
+2025-05-25 19:36:29.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:36:29.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:36:29.2|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:36:29.2|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:36:29.2|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:36:29.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0092906s
+2025-05-25 19:36:29.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:36:29.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0112831s
+2025-05-25 19:36:29.2|Debug|MigrationController|Took: 00:00:00.0853214
+2025-05-25 19:36:31.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-05-25 19:36:32.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-05-25 19:36:32.3|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-05-25 19:36:32.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-25 19:36:33.7|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-05-25 19:36:36.6|Debug|HttpClient|Downloading Completed. took 3s
+2025-05-25 19:36:38.0|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-25 19:36:38.0|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-05-25 19:36:38.9|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-05-25 19:36:38.9|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-05-25 19:36:38.9|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-05-25 19:36:38.9|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-05-25 19:36:38.9|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-05-25 19:36:38.9|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-05-25 19:43:50.3|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-05-25 19:43:50.4|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-05-25 19:43:50.4|Debug|ProcessProvider| - [306] Prowlarr
+2025-05-25 19:43:50.7|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:43:51.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:43:51.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:43:51.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:43:51.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:43:51.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3555516s
+2025-05-25 19:43:51.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:43:51.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3754601s
+2025-05-25 19:43:52.1|Debug|MigrationController|Took: 00:00:01.3677032
+2025-05-25 19:43:52.1|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:43:52.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:43:52.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:43:52.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:43:52.2|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:43:52.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0759901s
+2025-05-25 19:43:52.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:43:52.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0788225s
+2025-05-25 19:43:52.3|Debug|MigrationController|Took: 00:00:00.1693073
+2025-05-25 19:43:54.0|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-05-25 19:43:54.8|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-05-25 19:43:54.9|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-05-25 19:43:55.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-25 19:43:56.1|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-05-25 19:43:59.5|Debug|HttpClient|Downloading Completed. took 4s
+2025-05-25 19:44:01.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-25 19:44:01.4|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-05-25 19:44:02.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-05-25 19:44:02.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-05-25 19:44:02.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-05-25 19:44:02.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-05-25 19:44:02.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-05-25 19:44:02.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-05-25 19:47:12.1|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-05-25 19:47:12.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-05-25 19:47:12.2|Debug|ProcessProvider| - [307] Prowlarr
+2025-05-25 19:47:12.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:47:13.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:47:13.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:47:13.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:47:13.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:47:13.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2849153s
+2025-05-25 19:47:13.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:47:13.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2956678s
+2025-05-25 19:47:13.8|Debug|MigrationController|Took: 00:00:01.3107831
+2025-05-25 19:47:13.8|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-05-25 19:47:13.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-05-25 19:47:13.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-05-25 19:47:13.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-05-25 19:47:13.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-05-25 19:47:13.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0070598s
+2025-05-25 19:47:13.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-05-25 19:47:13.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0088596s
+2025-05-25 19:47:13.9|Debug|MigrationController|Took: 00:00:00.0747963
+2025-05-25 19:47:15.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-05-25 19:47:16.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-05-25 19:47:16.4|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-05-25 19:47:16.7|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-25 19:47:17.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-05-25 19:47:20.0|Debug|HttpClient|Downloading Completed. took 3s
+2025-05-25 19:47:21.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-25 19:47:21.5|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-05-25 19:47:22.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-05-25 19:47:22.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-05-25 19:47:22.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-05-25 19:47:22.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-05-25 19:47:22.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-05-25 19:47:22.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-05-25 20:46:47.1|Debug|InstallUpdateService|Checking for updates
+2025-05-25 20:46:47.7|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-26 02:46:49.0|Debug|InstallUpdateService|Checking for updates
+2025-05-26 02:46:49.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-26 08:46:51.0|Debug|InstallUpdateService|Checking for updates
+2025-05-26 08:46:51.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-26 13:14:22.2|Info|HistoryService|Removing items older than 30 days from history
+2025-05-26 13:14:22.3|Debug|HistoryService|History has been cleaned up.
+2025-05-26 13:14:52.3|Info|HousekeepingService|Running housecleaning tasks
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-26 13:14:52.3|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-26 13:14:52.3|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-26 13:14:52.4|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-26 13:14:52.4|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-26 13:14:52.6|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-26 13:14:52.6|Info|Database|Vacuuming Main database
+2025-05-26 13:14:52.7|Info|Database|Main database compressed
+2025-05-26 13:14:53.5|Debug|HttpClient|Downloading Completed. took 1s
+2025-05-26 13:14:54.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-26 14:46:52.8|Debug|InstallUpdateService|Checking for updates
+2025-05-26 14:46:53.4|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-26 20:46:54.5|Debug|InstallUpdateService|Checking for updates
+2025-05-26 20:46:55.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-27 02:46:55.9|Debug|InstallUpdateService|Checking for updates
+2025-05-27 02:47:00.9|Error|CommandExecutor|Error occurred while executing task ApplicationUpdateCheck
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 393
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.Update.UpdatePackageProvider.GetLatestUpdate(String branch, Version currentVersion) in ./Prowlarr.Core/Update/UpdatePackageProvider.cs:line 59
+   at NzbDrone.Core.Update.CheckUpdateService.AvailableUpdate() in ./Prowlarr.Core/Update/UpdateCheckService.cs:line 25
+   at NzbDrone.Core.Update.InstallUpdateService.GetUpdatePackage(CommandTrigger updateTrigger, Boolean installMajorUpdate) in ./Prowlarr.Core/Update/InstallUpdateService.cs:line 238
+   at NzbDrone.Core.Update.InstallUpdateService.Execute(ApplicationUpdateCheckCommand message) in ./Prowlarr.Core/Update/InstallUpdateService.cs:line 281
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommand[TCommand](TCommand command, CommandModel commandModel) in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 117
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommands() in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 44
+
+
+2025-05-27 02:51:00.9|Error|ServerSideNotificationService|Failed to retrieve notifications
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 137
+   at NzbDrone.Core.HealthCheck.ServerSideNotificationService.RetrieveServerChecks() in ./Prowlarr.Core/HealthCheck/ServerSideNotificationService.cs:line 61
+
+
+2025-05-27 02:51:06.4|Warn|SystemTimeCheck|Unable to verify system time
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 137
+   at NzbDrone.Core.HealthCheck.Checks.SystemTimeCheck.Check() in ./Prowlarr.Core/HealthCheck/Checks/SystemTimeCheck.cs:line 38
+
+
+2025-05-27 02:51:11.7|Error|CommandExecutor|Error occurred while executing task CheckHealth
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 396
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.Update.UpdatePackageProvider.GetLatestUpdate(String branch, Version currentVersion) in ./Prowlarr.Core/Update/UpdatePackageProvider.cs:line 59
+   at NzbDrone.Core.Update.CheckUpdateService.AvailableUpdate() in ./Prowlarr.Core/Update/UpdateCheckService.cs:line 25
+   at NzbDrone.Core.HealthCheck.Checks.UpdateCheck.Check() in ./Prowlarr.Core/HealthCheck/Checks/UpdateCheck.cs:line 91
+   at NzbDrone.Core.HealthCheck.HealthCheckService.<ProcessHealthChecks>b__15_0(IProvideHealthCheck c) in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 97
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at NzbDrone.Core.HealthCheck.HealthCheckService.ProcessHealthChecks() in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 85
+   at NzbDrone.Core.HealthCheck.HealthCheckService.Execute(CheckHealthCommand message) in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 149
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommand[TCommand](TCommand command, CommandModel commandModel) in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 117
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommands() in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 44
+
+
+2025-05-27 08:47:27.5|Debug|InstallUpdateService|Checking for updates
+2025-05-27 08:47:32.5|Error|CommandExecutor|Error occurred while executing task ApplicationUpdateCheck
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 396
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.Update.UpdatePackageProvider.GetLatestUpdate(String branch, Version currentVersion) in ./Prowlarr.Core/Update/UpdatePackageProvider.cs:line 59
+   at NzbDrone.Core.Update.CheckUpdateService.AvailableUpdate() in ./Prowlarr.Core/Update/UpdateCheckService.cs:line 25
+   at NzbDrone.Core.Update.InstallUpdateService.GetUpdatePackage(CommandTrigger updateTrigger, Boolean installMajorUpdate) in ./Prowlarr.Core/Update/InstallUpdateService.cs:line 238
+   at NzbDrone.Core.Update.InstallUpdateService.Execute(ApplicationUpdateCheckCommand message) in ./Prowlarr.Core/Update/InstallUpdateService.cs:line 281
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommand[TCommand](TCommand command, CommandModel commandModel) in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 117
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommands() in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 44
+
+
+2025-05-27 08:51:32.5|Error|ServerSideNotificationService|Failed to retrieve notifications
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 137
+   at NzbDrone.Core.HealthCheck.ServerSideNotificationService.RetrieveServerChecks() in ./Prowlarr.Core/HealthCheck/ServerSideNotificationService.cs:line 61
+
+
+2025-05-27 08:51:38.0|Warn|SystemTimeCheck|Unable to verify system time
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 137
+   at NzbDrone.Core.HealthCheck.Checks.SystemTimeCheck.Check() in ./Prowlarr.Core/HealthCheck/Checks/SystemTimeCheck.cs:line 38
+
+
+2025-05-27 08:51:43.3|Error|CommandExecutor|Error occurred while executing task CheckHealth
+
+[v1.35.1.5034] System.Net.Http.HttpRequestException: Resource temporarily unavailable (prowlarr.servarr.com:443)
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 366
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 342
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp2ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in ./Prowlarr.Common/Http/Dispatchers/ManagedHttpDispatcher.cs:line 120
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in ./Prowlarr.Common/Http/HttpClient.cs:line 171
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.GetAsync[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 396
+   at NzbDrone.Common.Http.HttpClient.Get[T](HttpRequest request) in ./Prowlarr.Common/Http/HttpClient.cs:line 401
+   at NzbDrone.Core.Update.UpdatePackageProvider.GetLatestUpdate(String branch, Version currentVersion) in ./Prowlarr.Core/Update/UpdatePackageProvider.cs:line 59
+   at NzbDrone.Core.Update.CheckUpdateService.AvailableUpdate() in ./Prowlarr.Core/Update/UpdateCheckService.cs:line 25
+   at NzbDrone.Core.HealthCheck.Checks.UpdateCheck.Check() in ./Prowlarr.Core/HealthCheck/Checks/UpdateCheck.cs:line 91
+   at NzbDrone.Core.HealthCheck.HealthCheckService.<ProcessHealthChecks>b__15_0(IProvideHealthCheck c) in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 97
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at NzbDrone.Core.HealthCheck.HealthCheckService.ProcessHealthChecks() in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 85
+   at NzbDrone.Core.HealthCheck.HealthCheckService.Execute(CheckHealthCommand message) in ./Prowlarr.Core/HealthCheck/HealthCheckService.cs:line 149
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommand[TCommand](TCommand command, CommandModel commandModel) in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 117
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at NzbDrone.Core.Messaging.Commands.CommandExecutor.ExecuteCommands() in ./Prowlarr.Core/Messaging/Commands/CommandExecutor.cs:line 44
+
+
+2025-05-27 13:14:28.6|Info|HistoryService|Removing items older than 30 days from history
+2025-05-27 13:14:28.6|Debug|HistoryService|History has been cleaned up.
+2025-05-27 13:14:58.6|Info|HousekeepingService|Running housecleaning tasks
+2025-05-27 13:14:58.6|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-27 13:14:58.7|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-27 13:14:58.7|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-27 13:14:58.7|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-27 13:14:58.8|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-27 13:14:58.8|Info|Database|Vacuuming Main database
+2025-05-27 13:14:58.8|Info|Database|Main database compressed
+2025-05-27 13:14:59.7|Debug|HttpClient|Downloading Completed. took 0s
+2025-05-27 13:15:00.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-27 14:47:59.2|Debug|InstallUpdateService|Checking for updates
+2025-05-27 14:47:59.8|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-27 20:48:01.1|Debug|InstallUpdateService|Checking for updates
+2025-05-27 20:48:01.8|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-28 02:48:02.9|Debug|InstallUpdateService|Checking for updates
+2025-05-28 02:48:03.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-28 08:48:04.4|Debug|InstallUpdateService|Checking for updates
+2025-05-28 08:48:05.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-28 13:14:36.0|Info|HistoryService|Removing items older than 30 days from history
+2025-05-28 13:14:36.0|Debug|HistoryService|History has been cleaned up.
+2025-05-28 13:15:06.0|Info|HousekeepingService|Running housecleaning tasks
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-28 13:15:06.0|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-28 13:15:06.0|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-28 13:15:06.1|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-28 13:15:06.1|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-28 13:15:06.1|Info|Database|Vacuuming Main database
+2025-05-28 13:15:06.2|Info|Database|Main database compressed
+2025-05-28 13:15:06.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-05-28 13:15:07.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-28 14:48:06.5|Debug|InstallUpdateService|Checking for updates
+2025-05-28 14:48:07.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-28 20:48:08.3|Debug|InstallUpdateService|Checking for updates
+2025-05-28 20:48:09.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-29 02:48:10.2|Debug|InstallUpdateService|Checking for updates
+2025-05-29 02:48:10.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-29 08:48:11.9|Debug|InstallUpdateService|Checking for updates
+2025-05-29 08:48:12.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-29 13:14:43.3|Info|HistoryService|Removing items older than 30 days from history
+2025-05-29 13:14:43.3|Debug|HistoryService|History has been cleaned up.
+2025-05-29 13:15:13.3|Info|HousekeepingService|Running housecleaning tasks
+2025-05-29 13:15:13.3|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-29 13:15:13.3|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-29 13:15:13.3|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-29 13:15:13.3|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-29 13:15:13.4|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-29 13:15:13.4|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-29 13:15:13.5|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-29 13:15:13.5|Info|Database|Vacuuming Main database
+2025-05-29 13:15:13.6|Info|Database|Main database compressed
+2025-05-29 13:15:14.3|Debug|HttpClient|Downloading Completed. took 0s
+2025-05-29 13:15:14.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-29 14:48:13.8|Debug|InstallUpdateService|Checking for updates
+2025-05-29 14:48:14.4|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-29 20:48:15.8|Debug|InstallUpdateService|Checking for updates
+2025-05-29 20:48:16.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-30 02:48:17.5|Debug|InstallUpdateService|Checking for updates
+2025-05-30 02:48:18.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-30 08:48:18.7|Debug|InstallUpdateService|Checking for updates
+2025-05-30 08:48:19.3|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-30 13:14:49.9|Info|HistoryService|Removing items older than 30 days from history
+2025-05-30 13:14:49.9|Debug|HistoryService|History has been cleaned up.
+2025-05-30 13:15:19.9|Info|HousekeepingService|Running housecleaning tasks
+2025-05-30 13:15:19.9|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-30 13:15:19.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-30 13:15:19.9|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-30 13:15:19.9|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-30 13:15:20.0|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-30 13:15:20.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-30 13:15:20.1|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-30 13:15:20.1|Info|Database|Vacuuming Main database
+2025-05-30 13:15:20.1|Info|Database|Main database compressed
+2025-05-30 13:15:20.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-05-30 13:15:21.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-30 14:48:20.3|Debug|InstallUpdateService|Checking for updates
+2025-05-30 14:48:20.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-30 20:48:22.5|Debug|InstallUpdateService|Checking for updates
+2025-05-30 20:48:23.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-31 02:48:24.5|Debug|InstallUpdateService|Checking for updates
+2025-05-31 02:48:25.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-31 08:48:26.4|Debug|InstallUpdateService|Checking for updates
+2025-05-31 08:48:27.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-31 13:12:57.4|Info|BackupService|Starting Backup
+2025-05-31 13:12:57.4|Debug|BackupService|Cleaning up backup files older than 28 days
+2025-05-31 13:12:57.5|Debug|BackupService|Finished cleaning up old backup files
+2025-05-31 13:12:57.5|Debug|BackupService|Backing up config.xml
+2025-05-31 13:12:57.5|Debug|DiskTransferService|Copy [/config/config.xml] > [/tmp/prowlarr_backup/config.xml]
+2025-05-31 13:12:57.6|Debug|BackupService|Backing up database
+2025-05-31 13:12:57.7|Debug|BackupService|Creating backup zip
+2025-05-31 13:12:57.7|Debug|ArchiveService|Creating archive /config/Backups/scheduled/prowlarr_backup_v1.35.1.5034_2025.05.31_13.12.57.zip
+2025-05-31 13:12:57.9|Debug|BackupService|Backup zip created
+2025-05-31 13:14:57.4|Info|HistoryService|Removing items older than 30 days from history
+2025-05-31 13:14:57.4|Debug|HistoryService|History has been cleaned up.
+2025-05-31 13:15:27.4|Info|HousekeepingService|Running housecleaning tasks
+2025-05-31 13:15:27.4|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-05-31 13:15:27.4|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-05-31 13:15:27.4|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-05-31 13:15:27.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-05-31 13:15:27.5|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-05-31 13:15:27.5|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-05-31 13:15:27.6|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-05-31 13:15:27.6|Info|Database|Vacuuming Main database
+2025-05-31 13:15:27.6|Info|Database|Main database compressed
+2025-05-31 13:15:28.4|Debug|HttpClient|Downloading Completed. took 0s
+2025-05-31 13:15:29.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-05-31 14:48:27.9|Debug|InstallUpdateService|Checking for updates
+2025-05-31 14:48:28.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-05-31 20:48:29.6|Debug|InstallUpdateService|Checking for updates
+2025-05-31 20:48:30.3|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-01 02:48:31.5|Debug|InstallUpdateService|Checking for updates
+2025-06-01 02:48:32.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-01 08:48:33.4|Debug|InstallUpdateService|Checking for updates
+2025-06-01 08:48:34.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-01 13:15:04.5|Info|HistoryService|Removing items older than 30 days from history
+2025-06-01 13:15:04.5|Debug|HistoryService|History has been cleaned up.
+2025-06-01 13:15:34.5|Info|HousekeepingService|Running housecleaning tasks
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-01 13:15:34.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-01 13:15:34.5|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-01 13:15:34.6|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-01 13:15:34.6|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-01 13:15:34.6|Info|Database|Vacuuming Main database
+2025-06-01 13:15:34.7|Info|Database|Main database compressed
+2025-06-01 13:15:35.4|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-01 13:15:36.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-01 14:48:35.0|Debug|InstallUpdateService|Checking for updates
+2025-06-01 14:48:35.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-01 20:48:36.7|Debug|InstallUpdateService|Checking for updates
+2025-06-01 20:48:37.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-02 02:48:38.5|Debug|InstallUpdateService|Checking for updates
+2025-06-02 02:48:39.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-02 08:48:39.9|Debug|InstallUpdateService|Checking for updates
+2025-06-02 08:48:40.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-02 13:15:11.0|Info|HistoryService|Removing items older than 30 days from history
+2025-06-02 13:15:11.0|Debug|HistoryService|History has been cleaned up.
+2025-06-02 13:15:41.0|Info|HousekeepingService|Running housecleaning tasks
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-02 13:15:41.0|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-02 13:15:41.0|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-02 13:15:41.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-02 13:15:41.1|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-02 13:15:41.1|Info|Database|Vacuuming Main database
+2025-06-02 13:15:41.2|Info|Database|Main database compressed
+2025-06-02 13:15:41.9|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-02 13:15:42.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-02 14:48:41.3|Debug|InstallUpdateService|Checking for updates
+2025-06-02 14:48:41.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-02 20:48:43.0|Debug|InstallUpdateService|Checking for updates
+2025-06-02 20:48:43.8|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-03 02:48:45.0|Debug|InstallUpdateService|Checking for updates
+2025-06-03 02:48:45.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-03 08:48:46.6|Debug|InstallUpdateService|Checking for updates
+2025-06-03 08:48:47.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-03 13:15:17.9|Info|HistoryService|Removing items older than 30 days from history
+2025-06-03 13:15:17.9|Debug|HistoryService|History has been cleaned up.
+2025-06-03 13:15:47.9|Info|HousekeepingService|Running housecleaning tasks
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-03 13:15:47.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-03 13:15:47.9|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-03 13:15:48.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-03 13:15:48.0|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-03 13:15:48.0|Info|Database|Vacuuming Main database
+2025-06-03 13:15:48.1|Info|Database|Main database compressed
+2025-06-03 13:15:48.8|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-03 13:15:49.1|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-03 14:48:48.3|Debug|InstallUpdateService|Checking for updates
+2025-06-03 14:48:49.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-03 20:48:50.1|Debug|InstallUpdateService|Checking for updates
+2025-06-03 20:48:50.9|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-04 02:48:52.0|Debug|InstallUpdateService|Checking for updates
+2025-06-04 02:48:52.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-04 08:48:53.7|Debug|InstallUpdateService|Checking for updates
+2025-06-04 08:48:54.4|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-04 13:15:24.8|Info|HistoryService|Removing items older than 30 days from history
+2025-06-04 13:15:24.8|Debug|HistoryService|History has been cleaned up.
+2025-06-04 13:15:54.8|Info|HousekeepingService|Running housecleaning tasks
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-04 13:15:54.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-04 13:15:54.8|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-04 13:15:54.9|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-04 13:15:54.9|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-04 13:15:54.9|Info|Database|Vacuuming Main database
+2025-06-04 13:15:55.0|Info|Database|Main database compressed
+2025-06-04 13:15:55.7|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-04 13:15:56.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-04 14:48:55.3|Debug|InstallUpdateService|Checking for updates
+2025-06-04 14:48:56.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-04 20:48:57.0|Debug|InstallUpdateService|Checking for updates
+2025-06-04 20:48:57.8|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-05 02:48:58.4|Debug|InstallUpdateService|Checking for updates
+2025-06-05 02:48:59.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-05 08:49:00.4|Debug|InstallUpdateService|Checking for updates
+2025-06-05 08:49:01.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-05 13:15:31.7|Info|HistoryService|Removing items older than 30 days from history
+2025-06-05 13:15:31.7|Debug|HistoryService|History has been cleaned up.
+2025-06-05 13:16:01.7|Info|HousekeepingService|Running housecleaning tasks
+2025-06-05 13:16:01.7|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-05 13:16:01.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-05 13:16:01.8|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-05 13:16:01.8|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-05 13:16:01.9|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-05 13:16:01.9|Info|Database|Vacuuming Main database
+2025-06-05 13:16:01.9|Info|Database|Main database compressed
+2025-06-05 13:16:02.7|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-05 13:16:03.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-05 14:49:02.1|Debug|InstallUpdateService|Checking for updates
+2025-06-05 14:49:03.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-05 20:49:03.8|Debug|InstallUpdateService|Checking for updates
+2025-06-05 20:49:04.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-06 02:49:05.5|Debug|InstallUpdateService|Checking for updates
+2025-06-06 02:49:06.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-06 08:49:07.4|Debug|InstallUpdateService|Checking for updates
+2025-06-06 08:49:08.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-06 13:15:38.7|Info|HistoryService|Removing items older than 30 days from history
+2025-06-06 13:15:38.7|Debug|HistoryService|History has been cleaned up.
+2025-06-06 13:16:08.7|Info|HousekeepingService|Running housecleaning tasks
+2025-06-06 13:16:08.7|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-06 13:16:08.7|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-06 13:16:08.7|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-06 13:16:08.7|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-06 13:16:08.8|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-06 13:16:08.8|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-06 13:16:08.9|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-06 13:16:08.9|Info|Database|Vacuuming Main database
+2025-06-06 13:16:08.9|Info|Database|Main database compressed
+2025-06-06 13:16:09.7|Debug|HttpClient|Downloading Completed. took 1s
+2025-06-06 13:16:10.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-06 14:49:09.1|Debug|InstallUpdateService|Checking for updates
+2025-06-06 14:49:09.7|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-06 20:49:10.9|Debug|InstallUpdateService|Checking for updates
+2025-06-06 20:49:11.6|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-07 02:49:12.8|Debug|InstallUpdateService|Checking for updates
+2025-06-07 02:49:13.4|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-07 08:49:14.5|Debug|InstallUpdateService|Checking for updates
+2025-06-07 08:49:15.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-07 13:13:15.8|Info|BackupService|Starting Backup
+2025-06-07 13:13:15.8|Debug|BackupService|Cleaning up backup files older than 28 days
+2025-06-07 13:13:15.8|Debug|BackupService|Finished cleaning up old backup files
+2025-06-07 13:13:15.8|Debug|BackupService|Backing up config.xml
+2025-06-07 13:13:15.8|Debug|DiskTransferService|Copy [/config/config.xml] > [/tmp/prowlarr_backup/config.xml]
+2025-06-07 13:13:15.8|Debug|BackupService|Backing up database
+2025-06-07 13:13:15.9|Debug|BackupService|Creating backup zip
+2025-06-07 13:13:15.9|Debug|ArchiveService|Creating archive /config/Backups/scheduled/prowlarr_backup_v1.35.1.5034_2025.06.07_13.13.15.zip
+2025-06-07 13:13:16.0|Debug|BackupService|Backup zip created
+2025-06-07 13:15:45.8|Info|HistoryService|Removing items older than 30 days from history
+2025-06-07 13:15:45.8|Debug|HistoryService|History has been cleaned up.
+2025-06-07 13:16:15.9|Info|HousekeepingService|Running housecleaning tasks
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-07 13:16:15.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-07 13:16:15.9|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-07 13:16:16.0|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-07 13:16:16.0|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-07 13:16:16.0|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-07 13:16:16.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-07 13:16:16.0|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-07 13:16:16.0|Info|Database|Vacuuming Main database
+2025-06-07 13:16:16.0|Info|Database|Main database compressed
+2025-06-07 13:16:16.8|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-07 13:16:17.7|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 14:49:16.5|Debug|InstallUpdateService|Checking for updates
+2025-06-07 14:49:17.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-07 20:49:18.2|Debug|InstallUpdateService|Checking for updates
+2025-06-07 20:49:19.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-07 21:57:01.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 21:57:01.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 21:57:01.7|Debug|ProcessProvider| - [313] Prowlarr
+2025-06-07 21:57:01.9|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 21:57:02.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 21:57:02.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 21:57:02.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 21:57:03.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 21:57:03.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3098877s
+2025-06-07 21:57:03.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 21:57:03.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3205357s
+2025-06-07 21:57:03.4|Debug|MigrationController|Took: 00:00:01.5172327
+2025-06-07 21:57:03.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 21:57:03.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 21:57:03.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 21:57:03.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 21:57:03.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 21:57:03.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0126513s
+2025-06-07 21:57:03.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 21:57:03.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0149844s
+2025-06-07 21:57:03.5|Debug|MigrationController|Took: 00:00:00.0878661
+2025-06-07 21:57:04.9|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 21:57:05.6|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 21:57:05.6|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 21:57:05.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 21:57:06.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 21:57:07.1|Debug|HttpClient|Downloading Completed. took 1s
+2025-06-07 21:57:09.0|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 21:57:09.0|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 21:57:09.4|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 21:57:09.4|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 21:57:09.4|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 21:57:09.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 21:57:09.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 21:57:09.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 22:19:44.2|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 22:19:44.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 22:19:44.2|Debug|ProcessProvider| - [311] Prowlarr
+2025-06-07 22:19:44.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:19:45.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:19:45.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:19:45.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:19:45.7|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:19:45.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.4159989s
+2025-06-07 22:19:45.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:19:45.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.4473072s
+2025-06-07 22:19:46.4|Debug|MigrationController|Took: 00:00:01.8753640
+2025-06-07 22:19:46.4|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:19:46.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:19:46.5|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:19:46.5|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:19:46.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:19:46.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0169727s
+2025-06-07 22:19:46.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:19:46.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0198277s
+2025-06-07 22:19:46.5|Debug|MigrationController|Took: 00:00:00.1197612
+2025-06-07 22:19:48.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 22:19:49.0|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 22:19:49.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 22:19:50.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 22:19:51.1|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 22:19:52.8|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 22:19:55.0|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 22:19:55.0|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 22:19:55.9|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 22:19:55.9|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 22:19:55.9|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 22:19:55.9|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 22:19:55.9|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 22:19:55.9|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 22:23:37.1|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 22:23:37.2|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 22:23:37.2|Debug|ProcessProvider| - [304] Prowlarr
+2025-06-07 22:23:37.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:23:38.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:23:38.2|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:23:38.2|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:23:38.5|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:23:38.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3095491s
+2025-06-07 22:23:38.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:23:38.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.323925s
+2025-06-07 22:23:38.8|Debug|MigrationController|Took: 00:00:01.3143522
+2025-06-07 22:23:38.8|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:23:38.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:23:38.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:23:38.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:23:38.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:23:38.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0084063s
+2025-06-07 22:23:38.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:23:38.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0102707s
+2025-06-07 22:23:38.9|Debug|MigrationController|Took: 00:00:00.0707607
+2025-06-07 22:23:40.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 22:23:41.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 22:23:41.4|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 22:23:42.4|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 22:23:43.0|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 22:23:45.0|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 22:23:46.3|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 22:23:46.3|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 22:23:47.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 22:23:47.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 22:23:47.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 22:23:47.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 22:23:47.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 22:23:47.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 22:31:26.0|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 22:31:26.1|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 22:31:26.1|Debug|ProcessProvider| - [311] Prowlarr
+2025-06-07 22:31:26.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:31:26.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:31:27.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:31:27.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:31:27.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:31:27.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3160248s
+2025-06-07 22:31:27.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:31:27.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3273422s
+2025-06-07 22:31:27.6|Debug|MigrationController|Took: 00:00:01.2816491
+2025-06-07 22:31:27.6|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:31:27.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:31:27.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:31:27.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:31:27.7|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:31:27.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0086569s
+2025-06-07 22:31:27.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:31:27.7|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0104535s
+2025-06-07 22:31:27.7|Debug|MigrationController|Took: 00:00:00.0730730
+2025-06-07 22:31:29.3|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 22:31:30.1|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 22:31:30.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 22:31:30.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 22:31:31.1|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 22:31:33.2|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 22:31:35.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 22:31:35.2|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 22:31:36.1|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 22:31:36.1|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 22:31:36.1|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 22:31:36.1|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 22:31:36.1|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 22:31:36.1|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 22:34:38.9|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 22:34:39.0|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 22:34:39.0|Debug|ProcessProvider| - [302] Prowlarr
+2025-06-07 22:34:39.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:34:39.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:34:40.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:34:40.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:34:40.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:34:40.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.4073351s
+2025-06-07 22:34:40.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:34:40.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.4188587s
+2025-06-07 22:34:40.7|Debug|MigrationController|Took: 00:00:01.4233710
+2025-06-07 22:34:40.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:34:40.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:34:40.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:34:40.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:34:40.8|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:34:40.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0076784s
+2025-06-07 22:34:40.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:34:40.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0095788s
+2025-06-07 22:34:40.8|Debug|MigrationController|Took: 00:00:00.0710036
+2025-06-07 22:34:42.5|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 22:34:43.3|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 22:34:43.4|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 22:34:43.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 22:34:44.5|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 22:34:46.3|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 22:34:48.5|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 22:34:48.5|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 22:34:49.4|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 22:34:49.4|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 22:34:49.4|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 22:34:49.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 22:34:49.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 22:34:49.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 22:54:02.8|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 22:54:02.9|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 22:54:02.9|Debug|ProcessProvider| - [309] Prowlarr
+2025-06-07 22:54:03.2|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:54:03.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:54:04.0|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:54:04.0|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:54:04.3|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:54:04.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2798261s
+2025-06-07 22:54:04.3|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:54:04.3|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2916846s
+2025-06-07 22:54:04.5|Debug|MigrationController|Took: 00:00:01.3096692
+2025-06-07 22:54:04.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 22:54:04.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 22:54:04.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 22:54:04.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 22:54:04.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 22:54:04.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0085947s
+2025-06-07 22:54:04.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 22:54:04.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0106012s
+2025-06-07 22:54:04.6|Debug|MigrationController|Took: 00:00:00.0877639
+2025-06-07 22:54:06.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 22:54:07.0|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 22:54:07.0|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 22:54:07.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 22:54:08.2|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 22:54:10.5|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 22:54:13.1|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 22:54:13.1|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 22:54:14.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 22:54:14.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 22:54:14.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 22:54:14.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 22:54:14.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 22:54:14.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 23:16:10.7|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 23:16:10.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 23:16:10.7|Debug|ProcessProvider| - [311] Prowlarr
+2025-06-07 23:16:11.0|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 23:16:11.7|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 23:16:11.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 23:16:11.8|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 23:16:12.1|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 23:16:12.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2958836s
+2025-06-07 23:16:12.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 23:16:12.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3103626s
+2025-06-07 23:16:12.3|Debug|MigrationController|Took: 00:00:01.3054047
+2025-06-07 23:16:12.3|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 23:16:12.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 23:16:12.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 23:16:12.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 23:16:12.4|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 23:16:12.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0093956s
+2025-06-07 23:16:12.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 23:16:12.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0120465s
+2025-06-07 23:16:12.4|Debug|MigrationController|Took: 00:00:00.0955051
+2025-06-07 23:16:14.1|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 23:16:15.0|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 23:16:15.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 23:16:15.4|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 23:16:16.3|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 23:16:18.2|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 23:16:20.2|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 23:16:20.2|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 23:16:21.0|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 23:16:21.0|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 23:16:21.0|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 23:16:21.0|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 23:16:21.0|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 23:16:21.0|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-07 23:21:18.2|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-07 23:21:18.3|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-07 23:21:18.3|Debug|ProcessProvider| - [305] Prowlarr
+2025-06-07 23:21:18.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 23:21:19.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 23:21:19.3|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 23:21:19.3|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 23:21:19.6|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 23:21:19.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2949964s
+2025-06-07 23:21:19.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 23:21:19.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.3072421s
+2025-06-07 23:21:19.8|Debug|MigrationController|Took: 00:00:01.2649661
+2025-06-07 23:21:19.8|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-07 23:21:19.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-07 23:21:19.8|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-07 23:21:19.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-07 23:21:19.9|Info|DatabaseEngineVersionCheck|SQLite 3.48.0
+2025-06-07 23:21:19.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0081005s
+2025-06-07 23:21:19.9|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-07 23:21:19.9|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0099261s
+2025-06-07 23:21:19.9|Debug|MigrationController|Took: 00:00:00.0689289
+2025-06-07 23:21:21.6|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-07 23:21:22.4|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-07 23:21:22.4|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-07 23:21:22.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-07 23:21:23.5|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-07 23:21:25.4|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-07 23:21:27.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-07 23:21:27.4|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-07 23:21:28.3|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-07 23:21:28.3|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-07 23:21:28.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-07 23:21:28.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-07 23:21:28.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-07 23:21:28.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-08 02:49:24.5|Debug|InstallUpdateService|Checking for updates
+2025-06-08 02:49:25.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-08 08:49:26.6|Debug|InstallUpdateService|Checking for updates
+2025-06-08 08:49:27.2|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-08 13:15:57.7|Info|HistoryService|Removing items older than 30 days from history
+2025-06-08 13:15:57.7|Debug|HistoryService|History has been cleaned up.
+2025-06-08 13:16:27.8|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-08 13:16:27.8|Info|HousekeepingService|Running housecleaning tasks
+2025-06-08 13:16:27.8|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-08 13:16:27.8|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-08 13:16:27.8|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-08 13:16:27.9|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-08 13:16:28.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-08 13:16:28.3|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-08 13:16:28.3|Info|Database|Vacuuming Main database
+2025-06-08 13:16:28.4|Info|Database|Main database compressed
+2025-06-08 13:16:28.9|Debug|HttpClient|Downloading Completed. took 1s
+2025-06-08 13:16:29.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-08 14:49:28.2|Debug|InstallUpdateService|Checking for updates
+2025-06-08 14:49:28.8|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-08 20:49:30.4|Debug|InstallUpdateService|Checking for updates
+2025-06-08 20:49:31.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-09 02:49:32.6|Debug|InstallUpdateService|Checking for updates
+2025-06-09 02:49:33.3|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-09 08:49:34.4|Debug|InstallUpdateService|Checking for updates
+2025-06-09 08:49:35.1|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-09 13:16:05.8|Info|HistoryService|Removing items older than 30 days from history
+2025-06-09 13:16:05.8|Debug|HistoryService|History has been cleaned up.
+2025-06-09 13:16:35.9|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-09 13:16:35.9|Info|HousekeepingService|Running housecleaning tasks
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-09 13:16:35.9|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-09 13:16:36.0|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-09 13:16:36.0|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.35.1.5034] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-09 13:16:36.1|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-09 13:16:36.1|Info|Database|Vacuuming Main database
+2025-06-09 13:16:36.2|Info|Database|Main database compressed
+2025-06-09 13:16:36.8|Debug|HttpClient|Downloading Completed. took 0s
+2025-06-09 13:16:37.6|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-09 14:49:36.4|Debug|InstallUpdateService|Checking for updates
+2025-06-09 14:49:37.0|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-09 20:49:37.9|Debug|InstallUpdateService|Checking for updates
+2025-06-09 20:49:38.5|Debug|InstallUpdateService|Auto-update not enabled, not installing available update.
+2025-06-09 22:29:16.0|Info|Microsoft.Hosting.Lifetime|Application is shutting down...
+2025-06-09 22:29:16.3|Info|ConsoleApp|Exiting main.
+2025-06-09 22:53:51.9|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-09 22:53:52.0|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-09 22:53:52.0|Debug|ProcessProvider| - [311] Prowlarr
+2025-06-09 22:53:52.2|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-09 22:53:52.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-09 22:53:52.9|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-09 22:53:52.9|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-09 22:53:53.2|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-09 22:53:53.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2754367s
+2025-06-09 22:53:53.2|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-09 22:53:53.2|Info|FluentMigrator.Runner.MigrationRunner|=> 0.2886499s
+2025-06-09 22:53:53.4|Debug|MigrationController|Took: 00:00:01.1801377
+2025-06-09 22:53:53.4|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-09 22:53:53.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-09 22:53:53.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-09 22:53:53.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-09 22:53:53.5|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-09 22:53:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0159782s
+2025-06-09 22:53:53.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-09 22:53:53.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.017931s
+2025-06-09 22:53:53.5|Debug|MigrationController|Took: 00:00:00.0719528
+2025-06-09 22:53:55.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-09 22:53:56.1|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-09 22:53:56.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-09 22:53:56.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-09 22:53:57.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-09 22:53:59.2|Debug|HttpClient|Downloading Completed. took 2s
+2025-06-09 22:54:00.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-09 22:54:00.4|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-09 22:54:01.2|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-09 22:54:01.2|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-09 22:54:01.3|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-09 22:54:01.3|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-09 22:54:01.3|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-09 22:54:01.3|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-10 02:49:58.3|Debug|InstallUpdateService|Checking for updates
+2025-06-10 02:49:59.0|Debug|InstallUpdateService|No update available
+2025-06-10 08:49:59.9|Debug|InstallUpdateService|Checking for updates
+2025-06-10 08:50:00.5|Debug|InstallUpdateService|No update available
+2025-06-10 13:16:31.3|Info|HistoryService|Removing items older than 30 days from history
+2025-06-10 13:16:31.3|Debug|HistoryService|History has been cleaned up.
+2025-06-10 13:17:01.4|Info|HousekeepingService|Running housecleaning tasks
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupAdditionalUsers
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupAdditionalUsers
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupCommandQueue
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupCommandQueue
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupOrphanedApplicationStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupOrphanedApplicationStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupOrphanedDownloadClientStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupOrphanedDownloadClientStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupOrphanedHistoryItems
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupOrphanedHistoryItems
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupOrphanedIndexerStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupOrphanedIndexerStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupOrphanedNotificationStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupOrphanedNotificationStatus
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupTemporaryUpdateFiles
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Completed CleanupTemporaryUpdateFiles
+2025-06-10 13:17:01.4|Debug|HousekeepingService|Starting CleanupUnusedTags
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed CleanupUnusedTags
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting FixFutureApplicationStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed FixFutureApplicationStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting FixFutureDownloadClientStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed FixFutureDownloadClientStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting FixFutureIndexerStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed FixFutureIndexerStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting FixFutureNotificationStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed FixFutureNotificationStatusTimes
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting FixFutureRunScheduledTasks
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Completed FixFutureRunScheduledTasks
+2025-06-10 13:17:01.5|Debug|HousekeepingService|Starting TrimLogDatabase
+2025-06-10 13:17:01.5|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-10 13:17:01.5|Error|HousekeepingService|Error running housekeeping task: TrimLogDatabase
+
+[v1.37.0.5076] code = Corrupt (11), message = System.Data.SQLite.SQLiteException (0x800007EF): database disk image is malformed
+database disk image is malformed
+   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) in /_/Dapper/SqlMapper.cs:line 2938
+   at Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 648
+   at NzbDrone.Core.Datastore.BasicRepository`1.Delete(SqlBuilder builder) in ./Prowlarr.Core/Datastore/BasicRepository.cs:line 263
+   at NzbDrone.Core.Instrumentation.LogRepository.Trim() in ./Prowlarr.Core/Instrumentation/LogRepository.cs:line 22
+   at NzbDrone.Core.Housekeeping.Housekeepers.TrimLogDatabase.Clean() in ./Prowlarr.Core/Housekeeping/Housekeepers/TrimLogDatabase.cs:line 24
+   at NzbDrone.Core.Housekeeping.HousekeepingService.Clean() in ./Prowlarr.Core/Housekeeping/HousekeepingService.cs:line 31
+
+
+2025-06-10 13:17:01.7|Debug|HousekeepingService|Compressing main database after housekeeping
+2025-06-10 13:17:01.7|Info|Database|Vacuuming Main database
+2025-06-10 13:17:01.8|Info|Database|Main database compressed
+2025-06-10 13:17:02.6|Debug|HttpClient|Downloading Completed. took 1s
+2025-06-10 13:17:03.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-10 14:50:02.1|Debug|InstallUpdateService|Checking for updates
+2025-06-10 14:50:02.7|Debug|InstallUpdateService|No update available
+2025-06-10 20:50:04.1|Debug|InstallUpdateService|Checking for updates
+2025-06-10 20:50:04.7|Debug|InstallUpdateService|No update available
+2025-06-10 21:46:45.0|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-10 21:46:45.1|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-10 21:46:45.1|Debug|ProcessProvider| - [311] Prowlarr
+2025-06-10 21:46:45.4|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-10 21:46:46.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-10 21:46:46.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-10 21:46:46.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-10 21:46:46.7|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-10 21:46:46.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.6401028s
+2025-06-10 21:46:46.8|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-10 21:46:46.8|Info|FluentMigrator.Runner.MigrationRunner|=> 0.654313s
+2025-06-10 21:46:47.0|Debug|MigrationController|Took: 00:00:01.6340157
+2025-06-10 21:46:47.0|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-10 21:46:47.0|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-10 21:46:47.1|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-10 21:46:47.1|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-10 21:46:47.1|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-10 21:46:47.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0077702s
+2025-06-10 21:46:47.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-10 21:46:47.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0106366s
+2025-06-10 21:46:47.1|Debug|MigrationController|Took: 00:00:00.0719519
+2025-06-10 21:46:48.8|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-10 21:46:49.6|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-10 21:46:49.6|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-10 21:46:50.0|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-10 21:46:51.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-10 21:46:53.3|Debug|HttpClient|Downloading Completed. took 3s
+2025-06-10 21:46:54.9|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-10 21:46:54.9|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-10 21:46:55.7|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-10 21:46:55.7|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-10 21:46:55.7|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-10 21:46:55.7|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-10 21:46:55.7|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-10 21:46:55.7|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-10 22:26:21.6|Debug|ProcessProvider|Found 0 processes with the name: Prowlarr.Console
+2025-06-10 22:26:21.7|Debug|ProcessProvider|Found 1 processes with the name: Prowlarr
+2025-06-10 22:26:21.7|Debug|ProcessProvider| - [308] Prowlarr
+2025-06-10 22:26:21.9|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-10 22:26:22.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-10 22:26:22.7|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-10 22:26:22.7|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-10 22:26:23.1|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-10 22:26:23.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.408878s
+2025-06-10 22:26:23.1|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-10 22:26:23.1|Info|FluentMigrator.Runner.MigrationRunner|=> 0.4245437s
+2025-06-10 22:26:23.3|Debug|MigrationController|Took: 00:00:01.4034109
+2025-06-10 22:26:23.4|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-10 22:26:23.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-10 22:26:23.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-10 22:26:23.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-10 22:26:23.4|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-10 22:26:23.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0105619s
+2025-06-10 22:26:23.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-10 22:26:23.4|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0125026s
+2025-06-10 22:26:23.4|Debug|MigrationController|Took: 00:00:00.0749162
+2025-06-10 22:26:25.2|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-10 22:26:25.9|Debug|NotificationFactory|Initializing Providers. Count 20
+2025-06-10 22:26:26.0|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-10 22:26:27.2|Debug|HttpClient|Downloading [https://indexers.prowlarr.com/master/11/package.zip] to [/config/Definitions/indexers.zip]
+2025-06-10 22:26:28.2|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-10 22:26:30.7|Debug|HttpClient|Downloading Completed. took 3s
+2025-06-10 22:26:32.4|Debug|IndexerDefinitionUpdateService|Updated indexer definitions
+2025-06-10 22:26:32.4|Debug|IndexerFactory|Initializing Providers. Count 67
+2025-06-10 22:26:33.2|Debug|IndexerProxyFactory|Initializing Providers. Count 4
+2025-06-10 22:26:33.2|Debug|DownloadClientFactory|Initializing Providers. Count 18
+2025-06-10 22:26:33.2|Debug|ApplicationFactory|Initializing Providers. Count 7
+2025-06-10 22:26:33.2|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-10 22:26:33.2|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-10 22:26:33.2|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
