@@ -14,6 +14,9 @@ class CaesarAIMusicStreamRecommendation:
     def __init__(self,browser=True,oauth=False):        
         # Initialize YTMusic with authentication
         auth_filename = 'browser.json' if browser and not oauth else "oauth.json"
+        with open("music_recommendation_headers.txt", "r") as file:
+            headers_raw = file.read()
+        ytmusicapi.setup(filepath="browser.json", headers_raw=headers_raw)
         self.yt = YTMusic(auth_filename)
 
     @classmethod
