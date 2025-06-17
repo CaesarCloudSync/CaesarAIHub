@@ -1,3 +1,4 @@
 .env
 venv/
 CaesarAIJackett/config/Jackett/
+CaesarAIProwlarr/config/
