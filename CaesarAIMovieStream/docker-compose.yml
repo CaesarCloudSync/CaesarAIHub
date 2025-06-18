@@ -12,6 +12,9 @@ services:
       file: ../CaesarAIRedis/docker-compose.yml
       service: redis
   celery_worker:
+    extends:
+      file: ../CaesarAICelery/docker-compose.yml
+      service: celery_worker
     depends_on:
       - redis
       - moviestreaming
@@ -28,4 +31,12 @@ services:
       - "8082:8082"
     volumes:
       - .:/app
+  cloudflared:
+    extends:
+      file: ../CaesarAICloudFlare/docker-compose.yml
+      service: cloudflared
 
+volumes:
+  redis-data:  
+  postgres_data:
+    driver: local

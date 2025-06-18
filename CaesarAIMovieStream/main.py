@@ -110,6 +110,7 @@ async def stream_get_episodews(websocket: WebSocket):
         while True:
             data = EpisodesRequest.model_validate(await websocket.receive_json())
             indexers = await CaesarAIJackett.get_current_torrent_indexers_async()
+            print(indexers,flush=True)
             async for event in CaesarAIJackett.stream_get_episodews(data.title,data.season,data.episode,indexers):
                 #print(event)
                 await websocket.send_json(event)
@@ -312,5 +313,12 @@ async def get_container_links(_id:str):
         return {"streams":await caesaraird.get_container_links(_id)}
     except Exception as ex:
         return {"error":f"{type(ex)},{ex}"}
+@app.get ("/api/v1/update_all_torrent_indexers")# GET # allow all origins all methods.
+async def update_all_torrent_indexers():
+    try:
+        
+        return CaesarAISchedules.update_all_torrent_indexers()
+    except Exception as ex:
+        return {"status":"error","message":f"{type(ex)},{ex}"}
 if __name__ == "__main__":
     uvicorn.run("main:app",port=8080,log_level="info")

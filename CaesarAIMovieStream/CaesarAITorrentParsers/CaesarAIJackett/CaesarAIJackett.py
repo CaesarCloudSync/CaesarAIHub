@@ -233,6 +233,7 @@ class CaesarAIJackett:
         sorted_indexers = sorted(indexers, key=lambda x: (x not in [CaesarAIConstants.Nyaasi, CaesarAIConstants.EZTV], x))
         logging.info(sorted_indexers)
         cr.setkey("indexers",json.dumps(sorted_indexers))
+        return sorted_indexers
 
 
 
@@ -328,6 +329,7 @@ class CaesarAIJackett:
         for indexer in indexers:   
             exists_in_db = await caejackett.check_batch_episodes_db_async(title,season,episode)         
             if exists_in_db:
+                print({"event":{"log":"extracting db"}},flush=True)
                 #print("Hello")
                 yield {"event":{"log":"extracting db"}}
                 torrentinfo = await caejackett.get_episodes_db_async(title,season,episode)
@@ -339,6 +341,7 @@ class CaesarAIJackett:
 
             else:
                 if service == "jackett":
+                    print({"event":{"log":"extracting jackett"}},flush=True)
                     yield {"event":{"log":"extracting jackett"}}
                     url = f"{CaesarAIConstants.BASE_JACKETT_URL}{CaesarAIConstants.TORZNAB_ALL_SUFFIX.replace('all',indexer)}?apikey={CaesarAIConstants.JACKETT_API_KEY}&t={CaesarAIConstants.ENDPOINT}&q={title}&season={season}"
                     caejackett = CaesarAIJackett(url)
