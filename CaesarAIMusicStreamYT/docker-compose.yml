@@ -7,6 +7,4 @@ services:
       - "8080:8080"
     volumes:
       - .:/app   
-      - /usr/bin/firefox:/usr/bin/firefox:ro
-      - ${PWD}/.mozilla/firefox/:${PWD}/.mozilla/firefox:ro
 
