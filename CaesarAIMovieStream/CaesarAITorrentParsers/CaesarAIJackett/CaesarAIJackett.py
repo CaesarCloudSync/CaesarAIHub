@@ -230,10 +230,22 @@ class CaesarAIJackett:
         response = requests.get(url)
         indexers_data = response.json()["Indexers"]
         indexers = list(set([indexer["ID"] for indexer in indexers_data]))
-        sorted_indexers = sorted(indexers, key=lambda x: (x not in [CaesarAIConstants.Nyaasi, CaesarAIConstants.EZTV], x))
+
+        # Sort so that Nyaasi is first, then EZTV, then the rest alphabetically
+        sorted_indexers = sorted(
+            indexers,
+            key=lambda x: (
+                0 if x == CaesarAIConstants.Nyaasi else
+                1 if x == CaesarAIConstants.EZTV else
+                2,
+                x
+            )
+        )
+
         logging.info(sorted_indexers)
-        cr.setkey("indexers",json.dumps(sorted_indexers))
+        cr.setkey("indexers", json.dumps(sorted_indexers))
         return sorted_indexers
+
 
 
 
