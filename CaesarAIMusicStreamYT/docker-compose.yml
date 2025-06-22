@@ -7,4 +7,7 @@ services:
       - "8080:8080"
     volumes:
       - .:/app   
+      - /usr/bin/firefox:/usr/bin/firefox:ro
+      - /home/amari/.mozilla/firefox/:/home/user/.mozilla/firefox:ro
+      - /home/amari/snap/firefox/common/.mozilla/firefox:/home/user/snap/firefox/common/.mozilla/firefox:ro 
 

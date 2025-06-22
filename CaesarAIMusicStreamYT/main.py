@@ -8,7 +8,6 @@ from fastapi.responses import StreamingResponse
 from fastapi import WebSocket,WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
-
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -28,9 +27,11 @@ async def index():
 async def healthcheck():
     return {"status":"OK"}
 @app.get('/getaudio')# GET # allow all origins all methods.
-async def getaudio(url: str = Query(...)):
+async def getaudio(url: str = Query(...),proxy: str = Query(None)):
     try:
-        response_string = subprocess.getoutput('yt-dlp -U -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url {}'.format(url))
+        proxy_option = f"--cookies-from-browser firefox  --proxy {proxy}"  if proxy else "" #socks5://104.248.203.234:1080
+        response_string = subprocess.getoutput('yt-dlp {} -U -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url {}'.format(proxy_option,url))
+        print(response_string)        
         response_info = response_string.split("\n")
         streaming_link = next((s for s in response_info if "https://rr" in s or ".m3u8" in s), None)
         print(response_string)
