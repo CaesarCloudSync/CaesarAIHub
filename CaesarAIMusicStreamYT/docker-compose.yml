@@ -8,5 +8,5 @@ services:
     volumes:
       - .:/app   
       - /usr/bin/firefox:/usr/bin/firefox:ro
-      - ${PWD}/.mozilla/firefox/:${PWD}/.mozilla/firefox:ro
+      - /home/amari/.mozilla/firefox/:/home/user/.mozilla/firefox:ro
 
