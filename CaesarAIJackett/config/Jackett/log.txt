@@ -18114,3 +18114,102 @@ Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. P
 2025-06-22 15:39:12.4023 Info Adding filter indexer ('type:private' indexer) ...
 2025-06-22 15:39:12.4023 Info Adding filter indexer ('type:semi-public' indexer) ...
 2025-06-22 15:39:12.5189 Info Jackett startup finished in 3.401 s
+2025-06-22 15:46:11.0005 Info Starting Jackett v0.22.2032
+2025-06-22 15:46:11.4334 Info Environment version: 8.0.17 (/opt/Jackett/)
+2025-06-22 15:46:11.4391 Info OS version: Unix 6.11.0.26 (64bit OS) (64bit process)
+2025-06-22 15:46:11.4414 Info Jackett variant: CoreLinuxAmdx64
+2025-06-22 15:46:11.4414 Info File /etc/issue: Debian GNU/Linux 11 \n \l
+2025-06-22 15:46:11.4414 Info Running in Docker: Yes (image build: unknown)
+2025-06-22 15:46:11.4424 Info ThreadPool MaxThreads: 32767 workerThreads, 1000 completionPortThreads
+2025-06-22 15:46:11.4424 Info App config/log directory: /config/Jackett
+2025-06-22 15:46:11.4439 Info Using proxy: Disabled
+2025-06-22 15:46:11.4439 Info Using FlareSolverr: No
+2025-06-22 15:46:11.4451 Info Using HTTP Client: HttpWebClient2
+2025-06-22 15:46:11.4474 Info Loading Native indexers ...
+2025-06-22 15:46:11.4829 Info Loaded 75 Native indexers.
+2025-06-22 15:46:11.4844 Info Loading Cardigann indexers from: /config/cardigann/definitions/, /etc/xdg/cardigan/definitions/, /opt/Jackett/Definitions
+2025-06-22 15:46:13.4026 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-06-22 15:46:13.4077 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-06-22 15:46:13.8682 Info Loaded 525 Cardigann indexers.
+2025-06-22 15:46:13.8682 Info Loaded 600 indexers in total
+2025-06-22 15:46:13.8734 Error Failed loading configuration for AudioBook Bay, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-06-22 15:46:13.8757 Error Failed loading backup configuration for AudioBook Bay, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-06-22 15:46:13.8797 Error Failed loading configuration for Anime Time, trying backup
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 50
+2025-06-22 15:46:13.8818 Error Failed loading backup configuration for Anime Time, you must reconfigure this indexer
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: <. Path '[1].name', line 12, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JArray.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.ReadFrom(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JToken.Parse(String json)
+   at Jackett.Common.Services.IndexerConfigurationService.Load(IIndexer indexer) in ./Jackett.Common/Services/IndexerConfigurationService.cs:line 61
+2025-06-22 15:46:13.8854 Info Adding aggregate indexer ('all' indexer) ...
+2025-06-22 15:46:13.8899 Info Adding filter indexer ('type:public' indexer) ...
+2025-06-22 15:46:13.8904 Info Adding filter indexer ('type:private' indexer) ...
+2025-06-22 15:46:13.8904 Info Adding filter indexer ('type:semi-public' indexer) ...
+2025-06-22 15:46:14.0213 Info Jackett startup finished in 3.232 s

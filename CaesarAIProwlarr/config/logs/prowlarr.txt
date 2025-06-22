@@ -5788,3 +5788,29 @@ database disk image is malformed
 2025-06-22 15:39:01.8|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
 2025-06-22 15:39:01.8|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
 2025-06-22 15:39:01.8|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
+2025-06-22 15:46:14.7|Info|Bootstrap|Starting Prowlarr - /app/bin/Prowlarr - Version 1.37.0.5076
+2025-06-22 15:46:14.8|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-06-22 15:46:14.8|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-06-22 15:46:15.2|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2025-06-22 15:46:15.3|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-22 15:46:15.4|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-22 15:46:15.4|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-22 15:46:15.4|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-22 15:46:15.5|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-22 15:46:15.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0693334s
+2025-06-22 15:46:15.5|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-22 15:46:15.5|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0721043s
+2025-06-22 15:46:15.6|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3;busytimeout=100 ***
+2025-06-22 15:46:15.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrating
+2025-06-22 15:46:15.6|Info|FluentMigrator.Runner.MigrationRunner|PerformDBOperation 
+2025-06-22 15:46:15.6|Info|NzbDrone.Core.Datastore.Migration.Framework.NzbDroneSQLiteProcessor|Performing DB Operation
+2025-06-22 15:46:15.6|Info|DatabaseEngineVersionCheck|SQLite 3.49.2
+2025-06-22 15:46:15.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0021533s
+2025-06-22 15:46:15.6|Info|FluentMigrator.Runner.MigrationRunner|DatabaseEngineVersionCheck migrated
+2025-06-22 15:46:15.6|Info|FluentMigrator.Runner.MigrationRunner|=> 0.0027307s
+2025-06-22 15:46:15.9|Info|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:9696
+2025-06-22 15:46:16.0|Info|CommandExecutor|Starting 3 threads for tasks.
+2025-06-22 15:46:16.4|Info|ManagedHttpDispatcher|IPv4 is available: True, IPv6 will be disabled
+2025-06-22 15:46:17.4|Info|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2025-06-22 15:46:17.4|Info|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2025-06-22 15:46:17.4|Info|Microsoft.Hosting.Lifetime|Content root path: /app/bin
