@@ -48,9 +48,13 @@ services:
     extends:
       file: ./CaesarAIGameStream/docker-compose.yml
       service: gamestreaming
-
+  n8n:
+    extends:
+      file: ./CaesarAIn8n/docker-compose.yml
+      service: n8n
 volumes:
   redis-data:  
+  n8n_data:
   postgres_data:
     driver: local
 

@@ -34,6 +34,7 @@ caps:
     - {id: 32, cat: TV/Other, desc: "Series/TV SP3: Other"}
     - {id: 38, cat: TV/Other, desc: "Series/TV [TMDB unlisted]"}
     - {id: 40, cat: TV/Documentary, desc: "Series: Documentary"}
+    - {id: 46, cat: Other, desc: "Collections [Various Media]"}
     - {id: 20, cat: TV/Other, desc: "Culture: Stand-up"}
     - {id: 7, cat: Books/EBook, desc: "Culture: Ebooks"}
     - {id: 3, cat: Audio, desc: "Culture: Music"}
@@ -110,8 +111,8 @@ login:
 
 search:
   paths:
-    # https://github.com/HDInnovations/UNIT3D-Community-Edition/wiki/Torrent-API-(UNIT3D-v8.x.x)
-    # https://github.com/HDInnovations/UNIT3D-Community-Edition/blob/master/app/Http/Controllers/API/TorrentController.php#L476
+    # https://hdinnovations.github.io/UNIT3D/torrent_api.html
+    # https://github.com/HDInnovations/UNIT3D/blob/master/app/Http/Controllers/API/TorrentController.php#L657
     - path: api/torrents/filter
       response:
         type: json
