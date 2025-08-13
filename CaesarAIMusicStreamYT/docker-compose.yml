@@ -10,4 +10,7 @@ services:
       - /usr/bin/firefox:/usr/bin/firefox:ro
       - /home/amari/.mozilla/firefox/:/home/user/.mozilla/firefox:ro
       - /home/amari/snap/firefox/common/.mozilla/firefox:/home/user/snap/firefox/common/.mozilla/firefox:ro 
-
+  cloudflared:
+    extends:
+      file: ../CaesarAICloudFlare/docker-compose.yml
+      service: cloudflared
