@@ -47,7 +47,7 @@ async def getaudio(url: str = Query(...),proxy: str = Query(None)):
 @app.get('/api/v2/getaudio')# GET # allow all origins all methods.
 async def getaudiov2(query: str):
     try:
-        response_string = subprocess.getoutput('yt-dlp ytsearch:"{}" -U -g -f best --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 -f bestaudio --print "title:%(artist)s - %(title)s" --get-url'.format(query))
+        response_string = subprocess.getoutput('yt-dlp ytsearch:"{}" -U -g -f "bestaudio[protocol!=m3u8][protocol!=m3u8_native]"  --no-playlist --no-check-formats --socket-timeout 10 --cache-dir /tmp/yt-dlp-cache --geo-bypass --audio-format mp3 --print "title:%(artist)s - %(title)s" --get-url'.format(query))
         response_info = response_string.split("\n")
         streaming_link = next((s for s in response_info if "https://rr" in s), None)
         print(response_string)
